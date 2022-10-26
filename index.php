@@ -74,7 +74,7 @@
             <div class="card-body">
               <!-- Logo -->
               <div class="app-brand justify-content-center">
-                <a href="index.html" class="app-brand-link gap-2">
+                <a href="index" class="app-brand-link gap-2">
                   <img aria-hidden="true" class="object-contain w-full h-full" src="./assets/img/logolarge.png" width="160">
                   <!-- <span class="app-brand-text demo text-body fw-bolder">MoneyMCS</span> -->
                 </a>
