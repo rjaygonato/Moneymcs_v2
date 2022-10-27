@@ -60,10 +60,16 @@
 
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
+    
+    <script src="https://www.paypal.com/sdk/js?client-id=ASQAcFkDyzt_DJLIp2B-5fvNvKwB8RmF56Z82REWkieRIppWs7XoDGZuFJabXe1bly8X8ZncyuXDEULP" data-sdk-integration-source="button-factory"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+
+    <!-- Paypal Express -->
+    <!-- <script src="https://www.paypalobjects.com/api/checkout.js"></script> -->
+
   </head>
 
   <body>
@@ -122,7 +128,7 @@
             <li class="menu-item">
               <a href="#" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-plus'></i>
-                <div data-i18n="Basic">Add clients</div>
+                <div data-i18n="Basic">Add Clients</div>
               </a>
             </li>
 
@@ -316,9 +322,15 @@
                 <h6>
                   Start receiving commissions by inviting other agents to become a part of the affiliate program and by delivering potential clients to us!</h6>
 
-                  <button type="button" class="btn btn-outline-success">
+                  <!-- <button type="button" class="btn btn-outline-success">
                     <i class='bx bxl-paypal'></i>&nbsp; Subscribe Now
-                  </button>
+                  </button> -->
+
+                  <input type="text" name="total" value="99.00" />
+                  <input type="text" name="subs_name" value="MoneyMCS Subscription" />
+
+                  <div id="paypal-button-container"></div>
+                  <!-- <div id='paypal-button'></div> -->
               </div>
               <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
@@ -359,5 +371,101 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <script>
+        paypal.Buttons({
+            style: {
+                shape: "rect",
+                color: 'blue',
+             
+                buttonSize: 'large',
+                layout: 'horizontal',
+                label: 'subscribe',
+              
+            },
+            createOder: function(data, actions) {
+            return action.order.create({
+              purchase_units: [{
+                amount: {
+                  value: '200',
+                  currency: 'USD'
+                }
+              }]
+            })
+          },
+          onApprove: function (data, actions) {
+            console.log('Data :' + data);
+            console.log('Action :' +actions);
+            return actions.order.capture().then(function(details) {
+              console.log(details);
+            })
+          }
+            // createSubscription: function (data, actions) {
+            //     return actions.subscription.create({
+            //         /* Creates the subscription */
+            //         plan_id: 'P-61V41049A37344334MNLIYGA'
+            //     });
+            // },
+            // onApprove: function (data, actions) {
+            //     //alert(data.subscriptionID);// You can add optional success message for the subscriber here
+            //     // returnurl: '/Membership/Success'
+            //     alert(data.subscriptionID);
+            //     alert(data.orderID);
+         
+            //     console.log(data);
+            // },
+            
+
+            // handle unrecoverable errors
+            // onError: (err) => {
+            //     console.log(err);
+            // }
+        }).render('#paypal-button-container'); // Renders the PayPal button
+    </script>
+
+
+    <!-- Paypal Express -->
+    <!-- <script>
+      var total = 0;
+      paypal.Button.render({
+          env: 'sandbox', // change for production if app is live,
+
+        client: {
+              sandbox:    'ASb1ZbVxG5ZFzCWLdYLi_d1-k5rmSjvBZhxP2etCxBKXaJHxPba13JJD_D3dTNriRbAv3Kp_72cgDvaZ',
+              //production: 'AaBHKJFEej4V6yaArjzSx9cuf-UYesQYKqynQVCdBlKuZKawDDzFyuQdidPOBSGEhWaNQnnvfzuFB9SM'
+          },
+
+          commit: true, // Show a 'Pay Now' button
+
+          style: {
+            color: 'gold',
+            size: 'small'
+          },
+
+         
+          // payment: function(data, actions) {
+          //     return actions.payment.create({
+          //         payment: {
+          //             transactions: [
+          //                 {
+          //                   //total purchase
+          //                     amount: { 
+          //                       total: total, 
+          //                       currency: 'USD' 
+          //                     }
+          //                 }
+          //             ]
+          //         }
+          //     });
+          // },
+
+          // onAuthorize: function(data, actions) {
+          //     return actions.payment.execute().then(function(payment) {
+          //   window.location = 'sales.php?pay='+payment.id;
+          //     });
+          // },
+
+      }, '#paypal-button-container');
+      </script> -->
   </body>
 </html>
