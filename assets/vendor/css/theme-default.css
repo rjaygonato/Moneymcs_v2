@@ -285,8 +285,8 @@ button.list-group-item-primary.active {
 
 .dropdown-item:not(.disabled).active,
 .dropdown-item:not(.disabled):active {
-  background-color: rgba(105, 108, 255, 0.08);
-  color: #696cff !important;
+  background-color: rgb(43 227 147 / 8%);
+  color: #14a054 !important;
 }
 
 .dropdown-menu > li:not(.disabled) > a:not(.dropdown-item):active,
@@ -296,11 +296,11 @@ button.list-group-item-primary.active {
 }
 
 .nav .nav-link:hover, .nav .nav-link:focus {
-  color: #5f61e6;
+  color: #37a14e;
 }
 
 .nav-pills .nav-link.active, .nav-pills .nav-link.active:hover, .nav-pills .nav-link.active:focus {
-  background-color: #696cff;
+  background-color: #37a14e;
   color: #fff;
   box-shadow: 0 2px 4px 0 rgba(105, 108, 255, 0.4);
 }
@@ -763,7 +763,7 @@ html:not(.layout-menu-collapsed) .bg-menu-theme .menu-inner .menu-item .menu-lin
 }
 
 .app-brand .layout-menu-toggle {
-  background-color: #696cff;
+  background-color: #6e925d;
   border: 7px solid #f5f5f9;
 }
 .app-brand .layout-menu-toggle i {

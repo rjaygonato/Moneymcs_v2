@@ -3101,7 +3101,7 @@ textarea.form-control-lg {
 }
 .dropdown-item:hover, .dropdown-item:focus {
   color: #5f6e7f;
-  background-color: rgba(67, 89, 113, 0.04);
+  background-color: rgb(43 227 147 / 8%);
 }
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
@@ -3278,7 +3278,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #5f61e6;
+  color: #37a14e;
 }
 .nav-link.disabled {
   color: #c7cdd4;

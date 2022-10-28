@@ -33,14 +33,9 @@
     <meta name="description" content="" />
 
     <?php include 'includes/headers.php'; ?>
-    
 
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
-
-    <!-- Paypal Express -->
-    <!-- <script src="https://www.paypalobjects.com/api/checkout.js"></script> -->
-    <!-- <script src="https://www.paypal.com/sdk/js?client-id=ASQAcFkDyzt_DJLIp2B-5fvNvKwB8RmF56Z82REWkieRIppWs7XoDGZuFJabXe1bly8X8ZncyuXDEULP" data-sdk-integration-source="button-factory"></script> -->
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
@@ -71,7 +66,7 @@
 
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="home" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
@@ -159,7 +154,7 @@
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <li class="nav-item lh-1 me-3">
-                  <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#smallModal" data-backdrop="static" data-keyboard="false" >Subscription </button>
+                  <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#smallModal" data-backdrop="static" data-keyboard="false" >Subscription</button>
                 </li>
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
@@ -228,35 +223,75 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="row">
-                <div class="col-lg-12 mb-4 order-0">
-                  <div class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
-                          <p class="mb-4">
-                            Welcome to MoneyMCS, You have <span class="fw-bold">7</span> commission today. Check your new downline now.
-                          </p>
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Subscriptions</h4>
 
-                          <a href="javascript:;" class="btn btn-sm btn-outline-success">Downlines</a>
-                          <a href="javascript:;" class="btn btn-sm btn-outline-success">Clients</a>
-                        </div>
-                      </div>
-                      <div class="col-sm-5 text-center text-sm-left">
-                        <div class="card-body pb-0 px-0 px-md-4">
-                          <img
-                            src="../assets/img/logolarge.png"
-                            
-                            width="180"
-                            alt="View Badge User"
-                            data-app-dark-img="illustrations/man-with-laptop-dark.png"
-                            data-app-light-img="illustrations/man-with-laptop-light.png"
-                          />
-                        </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-tabs flex-column flex-md-row mb-3">
+                    <li class="nav-item">
+                      <a class="nav-link " href="#"><i class="bx bx-user me-1"></i> Profile</a>
+                    </li>
+                   <li class="nav-item">
+                      <a class="nav-link active" href="subscription"
+                        >  <i class='bx bx-user-pin'></i> Subscription</a
+                      >
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-connections.html"
+                        ><i class="bx bx-link-alt me-1"></i> Connections</a
+                      >
+                    </li> -->
+                  </ul>
+                  <div class="card mb-4">
+                    <h5 class="card-header">Subscription History</h5>
+                    <!-- Account -->
+                    <div class="card-body">
+                      <div class="d-flex align-items-start align-items-sm-center gap-4">
+                        
+                      <table id="example1" class="table table-responsive text-nowrap">
+                        <thead>
+                          <th>Subscription</th>
+                          <th>Amount</th>
+                          <th>Transaction #</th>
+                          <th>Status</th>
+                          <th>Date Expired</th>
+                        </thead>
+                        <tbody>
+                        <?php
+                          $conn = $pdo->open();
+
+                          try{
+                            $stmt = $conn->prepare("SELECT * FROM subscriptions WHERE user_id=:user" );
+                            $stmt->execute(['user'=>$admin['id']]);
+                            foreach($stmt as $row){
+                              $status = ($row['status']) ? '<span class="badge bg-label-success">active</span>' : '<span class="badge bg-label-danger">not verified</span>';
+                              $active = (!$row['status']) ? '<span class="pull-right"><a href="#activate" class="status" data-toggle="modal" data-id="'.$row['id'].'"><i class="fa fa-check-square-o"></i></a></span>' : '';
+                              echo "
+                                <tr>
+                                 
+                                  <td>".$row['subs_name']."</td>
+                                  <td>$ ".$row['total']."</td>
+                                  <td>".$row['trans_id']."</td>
+                                  <td>".$status."</td>
+                                  <td>".date('M d, Y', strtotime($row['date_expired']))."</td>
+                                  
+                                </tr>
+                              ";
+                            }
+                          }
+                          catch(PDOException $e){
+                            echo $e->getMessage();
+                          }
+
+                          $pdo->close();
+                        ?>
+                        </tbody>
+                      </table>
                       </div>
                     </div>
+                    <!-- /Account -->
                   </div>
+                
                 </div>
               </div>
             </div>
@@ -291,9 +326,6 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
-
-         <?php include 'includes/subs_form.php'; ?>
-
       </div>
 
       <!-- Overlay -->
@@ -301,7 +333,7 @@
     </div>
     <!-- / Layout wrapper -->
 
-    
+    <?php include 'includes/subs_form.php'; ?>
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
@@ -314,17 +346,15 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
     <!-- Main JS -->
     <script src="../assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="../assets/js/dashboards-analytics.js"></script>
+    <script src="../assets/js/pages-account-settings-account.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-
 
     <?php include 'includes/payment_script.php'; ?>
   </body>

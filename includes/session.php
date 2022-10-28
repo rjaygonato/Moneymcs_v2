@@ -3,7 +3,7 @@
 	session_start();
 
 	if(isset($_SESSION['admin'])){
-		header('location: pages/home.php');
+		header('location: pages/home');
 	}
 
 	if(isset($_SESSION['user'])){
