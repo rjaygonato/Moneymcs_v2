@@ -250,31 +250,23 @@
                         
                       <table id="example1" class="table table-responsive text-nowrap">
                         <thead>
-                          <th>Subscription</th>
-                          <th>Amount</th>
                           <th>Transaction #</th>
-                          <th>Status</th>
-                          <th>Date Expired</th>
+                          <th>Date</th>
                         </thead>
                         <tbody>
                         <?php
                           $conn = $pdo->open();
 
                           try{
-                            $stmt = $conn->prepare("SELECT * FROM subscriptions WHERE user_id=:user" );
+                            $stmt = $conn->prepare("SELECT * FROM subscriptions WHERE user_id=:user ORDER BY id DESC" );
                             $stmt->execute(['user'=>$admin['id']]);
                             foreach($stmt as $row){
                               $status = ($row['status']) ? '<span class="badge bg-label-success">active</span>' : '<span class="badge bg-label-danger">not verified</span>';
                               $active = (!$row['status']) ? '<span class="pull-right"><a href="#activate" class="status" data-toggle="modal" data-id="'.$row['id'].'"><i class="fa fa-check-square-o"></i></a></span>' : '';
                               echo "
                                 <tr>
-                                 
-                                  <td>".$row['subs_name']."</td>
-                                  <td>$ ".$row['total']."</td>
                                   <td>".$row['trans_id']."</td>
-                                  <td>".$status."</td>
-                                  <td>".date('M d, Y', strtotime($row['date_expired']))."</td>
-                                  
+                                  <td>".date('M d, Y', strtotime($row['date_added']))."</td>
                                 </tr>
                               ";
                             }

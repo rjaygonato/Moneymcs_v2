@@ -35,12 +35,15 @@
 
               //console.log(transaction.id);
               //const element = document.getElementById('paypal-button-container');
-              
+              var user = document.getElementById('user').value;
               var transid = document.getElementById('transactid');
+
+             
               transid = transaction.id;
               //document.getElementById('transactid');
               $('#transactid').val(transid);
               //console.log(transid);
+              console.log(user);
 
               //window.location = 'subs.php?transid='+transid;
               // $("#transactid").blur(function(){
@@ -50,7 +53,9 @@
               var myInput = document.getElementById("transactid");
               if (myInput && myInput.value) {
                 //console.log(myInput);
-               document.getElementById("myForm").submit();
+               //document.getElementById("myForm").submit();
+               
+               window.location = 'subs.php?transid='+transid;
               }
 
             });
