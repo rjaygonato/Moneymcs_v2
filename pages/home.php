@@ -57,7 +57,7 @@
           <div class="app-brand demo">
             <a href="#" class="app-brand-link">
               <span class="app-brand-logo demo">
-                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/logolarge.png" width="50">
+                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/earnmoney.png" width="50">
               </span>
               <span class="app-brand-text demo menu-text fw-bolder ms-2">MoneyMCS</span>
             </a>
@@ -246,7 +246,7 @@
                       <div class="col-sm-5 text-center text-sm-left">
                         <div class="card-body pb-0 px-0 px-md-4">
                           <img
-                            src="../assets/img/logolarge.png"
+                            src="../assets/img/earnmoney.png"
                             
                             width="180"
                             alt="View Badge User"
