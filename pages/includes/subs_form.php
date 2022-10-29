@@ -14,11 +14,21 @@
           </div>
           <div class="modal-body">
             <!-- <center><img src="../assets/img/logolarge.png" width="100" alt=""></center> -->
-            Select Subscribe Plan<br>
-              <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                <option value="99">$ 99 Monthly Membership - Basic</option>
-                <!-- <option value="1,188">$ 1,188 Yearly Membership</option> -->
-              </select><br>
+           
+              <!-- <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                <option value="99"></option>
+                
+                 <option value="1,188">$ 1,188 Yearly Membership</option> 
+              </select> --> Monthly Membership - Basic
+              <!-- $<input class="form-control" type="text"  name="" /> -->
+
+              <div class="input-group input-group-merge">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" id="t_amount" name="total" placeholder="100" value="99.00" aria-label="Amount (to the nearest dollar)">
+                <!-- <span class="input-group-text">.00</span> -->
+              </div>
+              
+              <br>
               <div id="smart-button-container">
                 <div style="text-align: center;">
                   <div id="paypal-button-container"></div>
@@ -32,7 +42,7 @@
                 <input type="hidden" name="usersid" id="user" value="<?php echo $admin['id']; ?>" />
                 <input type="hidden" id="transactid" name="trans_id" />
                 <input type="hidden" name="date" />
-                <!-- <input type="hidden" name="subs_name" value="" /> -->
+                <input type="hidden" name="totalp" id="totalp" />
                 <!-- <input style="" type="submit" name="autosave"> -->
                 <button style="display: none" name="autosave" type="submit">Sign in</button>
               </form>

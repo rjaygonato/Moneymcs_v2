@@ -1,3 +1,6 @@
+<?php
+	include 'includes/session.php';
+?>
 <!DOCTYPE html>
 <!-- =========================================================
 * MoneyMCS
@@ -69,7 +72,23 @@
     <div class="container-xxl container-p-y">
       <div class="misc-wrapper">
         <h2 class="mb-2 mx-2">Thank you for your payment!</h2>
-        <p class="mb-4 mx-2"></p>
+        <p class="mb-4 mx-2">
+          <?php
+            if(isset($_SESSION['error'])){
+                echo "
+                <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
+                ";
+                unset($_SESSION['error']);
+            }
+            if(isset($_SESSION['success'])){
+                echo "
+              
+                <div class='alert alert-dark' role='alert'><i class='bx bx-check-circle'></i> ".$_SESSION['success']." </div>
+                ";
+                unset($_SESSION['success']);
+            }
+          ?>
+          </p>
         <a href="subscription" class="btn btn-success">View My Subscription</a>
         <div class="mt-4">
           <img src="../assets/img/earnmoney.png" width="180" alt="View Badge User" data-app-dark-img="illustrations/man-with-laptop-dark.png" data-app-light-img="illustrations/man-with-laptop-light.png">

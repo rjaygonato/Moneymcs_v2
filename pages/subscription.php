@@ -243,6 +243,21 @@
                     </li> -->
                   </ul>
                   <div class="card mb-4">
+                  <?php
+                    if(isset($_SESSION['error'])){
+                        echo "
+                        <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
+                        ";
+                        unset($_SESSION['error']);
+                    }
+                    if(isset($_SESSION['success'])){
+                        echo "
+                      
+                        <div class='alert alert-success' role='alert'><i class='bx bx-check-circle'></i> ".$_SESSION['success']." </div>
+                        ";
+                        unset($_SESSION['success']);
+                    }
+                  ?>
                     <h5 class="card-header">Subscription History</h5>
                     <!-- Account -->
                     <div class="card-body">
@@ -251,6 +266,7 @@
                       <table id="example1" class="table table-responsive text-nowrap">
                         <thead>
                           <th>Transaction #</th>
+                          <th>Amount</th>
                           <th>Date</th>
                         </thead>
                         <tbody>
@@ -266,6 +282,7 @@
                               echo "
                                 <tr>
                                   <td>".$row['trans_id']."</td>
+                                  <td>".$row['totalp']."</td>
                                   <td>".date('M d, Y', strtotime($row['date_added']))."</td>
                                 </tr>
                               ";

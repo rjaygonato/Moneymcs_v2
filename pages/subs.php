@@ -3,7 +3,8 @@
 
 	if(isset($_GET['transid'])){
 		
-		$user_id = $admin['user_id'];
+		// $user_id = $admin['user_id'];
+		$totalp = $_GET['totalp'];
 		$trans_id = $_GET['transid'];
 		$date = date('Y-m-d');
 
@@ -11,12 +12,13 @@
 
 		try{
 			
-			$stmt = $conn->prepare("INSERT INTO subscriptions (user_id, trans_id, date_added) VALUES (:user_id, :trans_id, :date_added)");
-			$stmt->execute(['user_id'=>$admin['id'], 'trans_id'=>$trans_id,'date_added'=>$date]);
+			$stmt = $conn->prepare("INSERT INTO subscriptions (user_id, totalp, trans_id, date_added) VALUES (:user_id, :totalp, :trans_id, :date_added)");
+			$stmt->execute(['user_id'=>$admin['id'], 'totalp'=>$totalp,'trans_id'=>$trans_id, 'date_added'=>$date]);
 			//$salesid = $conn->lastInsertId();
 			
 			
-			$_SESSION['success'] = 'Transaction successful. Thank you.';
+			$_SESSION['success'] = 'You are now subscribed. To see all the transaction details, log in to your PayPal account. <br>
+			It may take a few moments for this transaction to appear in your account.';
 
 		}
 		catch(PDOException $e){
