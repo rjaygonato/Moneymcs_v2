@@ -16,7 +16,7 @@
                     "amount":
                     {
                         "currency_code":"USD",
-                        "value":1
+                        "value":99
                     }
                 }]
             });

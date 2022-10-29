@@ -3,7 +3,7 @@
 
 	if(isset($_GET['transid'])){
 		
-		//$user_id = $_GET['usersid'];
+		$user_id = $admin['user_id'];
 		$trans_id = $_GET['transid'];
 		$date = date('Y-m-d');
 
@@ -12,7 +12,7 @@
 		try{
 			
 			$stmt = $conn->prepare("INSERT INTO subscriptions (user_id, trans_id, date_added) VALUES (:user_id, :trans_id, :date_added)");
-			$stmt->execute(['user_id'=>1, 'trans_id'=>$trans_id,'date_added'=>$date]);
+			$stmt->execute(['user_id'=>$admin['id'], 'trans_id'=>$trans_id,'date_added'=>$date]);
 			//$salesid = $conn->lastInsertId();
 			
 			
