@@ -282,7 +282,7 @@
                               echo "
                                 <tr>
                                   <td>".$row['trans_id']."</td>
-                                  <td>".$row['totalp']."</td>
+                                  <td>$".$row['totalp']."</td>
                                   <td>".date('M d, Y', strtotime($row['date_added']))."</td>
                                 </tr>
                               ";
