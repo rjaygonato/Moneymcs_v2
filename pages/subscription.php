@@ -84,7 +84,7 @@
             <li class="menu-item">
               <a href="#" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
-                <div data-i18n="Basic">Comissions/Referrals</div>
+                <div data-i18n="Basic">Commissions/Referrals</div>
               </a>
             </li>
 
@@ -154,7 +154,7 @@
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <li class="nav-item lh-1 me-3">
-                  <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#smallModal" data-backdrop="static" data-keyboard="false" >Subscription</button>
+                  <button class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#smallModal" data-backdrop="static" data-keyboard="false" >Subscription</button>
                 </li>
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">

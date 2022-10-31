@@ -84,7 +84,7 @@
             <li class="menu-item">
               <a href="#" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
-                <div data-i18n="Basic">Comissions/Referrals</div>
+                <div data-i18n="Basic">Commissions/Referrals</div>
               </a>
             </li>
 

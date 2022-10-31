@@ -87,7 +87,7 @@
             </li>
 
             <li class="menu-item">
-              <a href="comissions" class="menu-link">
+              <a href="commissions" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="Basic">Comissions/Referrals</div>
               </a>
@@ -236,7 +236,7 @@
                         <div class="card-body">
                           <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
                           <p class="mb-4">
-                            Welcome to MoneyMCS, You have <span class="fw-bold">7</span> commission today. Check your new downline now.
+                            Welcome to MoneyMCS, You have <span class="fw-bold">7</span> commission(s) today. Check your new downline now.
                           </p>
 
                           <a href="javascript:;" class="btn btn-sm btn-outline-success">Downlines</a>

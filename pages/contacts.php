@@ -87,9 +87,9 @@
             </li>
 
             <li class="menu-item">
-              <a href="comissions" class="menu-link">
+              <a href="commissions" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
-                <div data-i18n="Basic">Comissions/Referrals</div>
+                <div data-i18n="Basic">Commissions/Referrals</div>
               </a>
             </li>
 
