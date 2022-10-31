@@ -106,13 +106,13 @@
                     id="email"
                     name="email"
                     placeholder="Enter your email or username" autocomplete="false"
-                    autofocus="true"
+                    autofocus="true"  value="admin@admin.com"
                   />
                 </div>
                 <div class="mb-3 form-password-toggle">
                   <div class="d-flex justify-content-between">
                     <label class="form-label" for="password" autocomplete="chrome-off">Password</label>
-                    <a href="auth-forgot-password-basic.html">
+                    <a href="#">
                       <small>Forgot Password?</small>
                     </a>
                   </div>
@@ -123,7 +123,7 @@
                       class="form-control"
                       name="password"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                      aria-describedby="password"
+                      aria-describedby="password" value="password"
                     />
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                   </div>
