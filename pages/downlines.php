@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Comission</title>
+    <title>MoneyMCS - Downlines</title>
 
     <meta name="description" content="" />
 
@@ -86,7 +86,7 @@
               </a>
             </li>
 
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="commissions" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="Basic">Commissions/Referrals</div>
@@ -107,7 +107,7 @@
               </a>
             </li> -->
 
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="downlines" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-branch'></i>
                 <div data-i18n="Basic">Downlines</div>

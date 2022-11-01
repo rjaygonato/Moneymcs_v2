@@ -96,19 +96,19 @@
             <li class="menu-item active">
               <a href="clients" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-rectangle'></i>
-                <div data-i18n="Basic">Client Dashboard</div>
+                <div data-i18n="Basic">Clients</div>
               </a>
             </li>
 
-            <li class="menu-item">
+            <!-- <li class="menu-item">
               <a href="#" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-plus'></i>
                 <div data-i18n="Basic">Add Clients</div>
               </a>
-            </li>
+            </li> -->
 
             <li class="menu-item">
-              <a href="#" class="menu-link">
+              <a href="downlines" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-branch'></i>
                 <div data-i18n="Basic">Downlines</div>
               </a>
