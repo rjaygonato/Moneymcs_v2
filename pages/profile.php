@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS</title>
+    <title>MoneyMCS - Profile</title>
 
     <meta name="description" content="" />
 
@@ -67,7 +67,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item">
-              <a href="#" class="menu-link">
+              <a href="home" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
@@ -75,35 +75,35 @@
 
             <!-- Layouts -->
             <li class="menu-item">
-              <a href="#" class="menu-link">
+              <a href="resources" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="Basic">Resource Library</div>
               </a>
             </li>
 
             <li class="menu-item">
-              <a href="#" class="menu-link">
+              <a href="commissions" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="Basic">Commissions/Referrals</div>
               </a>
             </li>
 
             <li class="menu-item">
-              <a href="#" class="menu-link">
+              <a href="clients" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-rectangle'></i>
                 <div data-i18n="Basic">Client Dashboard</div>
               </a>
             </li>
 
-            <li class="menu-item">
+            <!-- <li class="menu-item">
               <a href="#" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-plus'></i>
                 <div data-i18n="Basic">Add Clients</div>
               </a>
-            </li>
+            </li> -->
 
             <li class="menu-item">
-              <a href="#" class="menu-link">
+              <a href="downlines" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-branch'></i>
                 <div data-i18n="Basic">Downlines</div>
               </a>
@@ -140,7 +140,7 @@
               <!-- Search -->
               <div class="navbar-nav align-items-center">
                 <div class="nav-item d-flex align-items-center">
-                  MoneyMCS Home
+                  MoneyMCS
                   <!-- <i class="bx bx-search fs-4 lh-0"></i> -->
                   <!-- <input
                     type="text"
@@ -154,13 +154,13 @@
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <li class="nav-item lh-1 me-3">
-                  <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#smallModal" data-backdrop="static" data-keyboard="false" >Subscription</button>
+                  <button class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#smallModal" data-backdrop="static" data-keyboard="false" >Subscription</button>
                 </li>
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -169,12 +169,12 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                              <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
-                            <small class="text-muted">Admin</small>
+                            <span class="fw-semibold d-block"><?php echo $admin['firstname'].' '.$admin['lastname']; ?></span>
+                            <small class="text-muted"><?php echo $admin['level']; ?></small>
                           </div>
                         </div>
                       </a>
@@ -183,17 +183,23 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="profile">
                         <i class="bx bx-user me-2"></i>
-                        <span class="align-middle">My Profile</span>
+                        <span class="align-middle">Profile</span>
                       </a>
                     </li>
                     <li>
+                      <a class="dropdown-item" href="subscription">
+                      <i class='bx bx-detail me-2'></i>
+                        <span class="align-middle">Subscription History</span>
+                      </a>
+                    </li>
+                    <!-- <li>
                       <a class="dropdown-item" href="transactions">
                         <i class='bx bx-folder-open'></i>
                         <span class="align-middle">Transactions</span>
                       </a>
-                    </li>
+                    </li> -->
                     <li>
                       <div class="dropdown-divider"></div>
                     </li>
@@ -217,17 +223,17 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Transactions</h4>
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Profile</h4>
 
               <div class="row">
                 <div class="col-md-12">
-                  <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                <ul class="nav nav-tabs flex-column flex-md-row mb-3">
                     <li class="nav-item">
-                      <a class="nav-link " href="javascript:void(0);"><i class="bx bx-user me-1"></i> Profile</a>
+                      <a class="nav-link active" href="#"><i class="bx bx-user me-1"></i> Profile</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="pages-account-settings-notifications.html"
-                        ><i class="bx bx-folder-open"></i> Transactions</a
+                   <li class="nav-item">
+                      <a class="nav-link " href="subscription"
+                        >  <i class='bx bx-user-pin'></i> Subscription</a
                       >
                     </li>
                     <!-- <li class="nav-item">
@@ -242,7 +248,7 @@
                     <div class="card-body">
                       <div class="d-flex align-items-start align-items-sm-center gap-4">
                         <img
-                          src="../assets/img/avatars/1.png"
+                          src="../assets/img/avatars/default.jpg"
                           alt="user-avatar"
                           class="d-block rounded"
                           height="100"
@@ -250,7 +256,7 @@
                           id="uploadedAvatar"
                         />
                         <div class="button-wrapper">
-                          <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                          <!-- <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
                             <span class="d-none d-sm-block">Upload new photo</span>
                             <i class="bx bx-upload d-block d-sm-none"></i>
                             <input
@@ -260,10 +266,10 @@
                               hidden
                               accept="image/png, image/jpeg"
                             />
-                          </label>
+                          </label> -->
                           <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
                             <i class="bx bx-reset d-block d-sm-none"></i>
-                            <span class="d-none d-sm-block">Reset</span>
+                            <span class="d-none d-sm-block">Update</span>
                           </button>
 
                           <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
@@ -281,13 +287,13 @@
                               type="text"
                               id="firstName"
                               name="firstName"
-                              value="John"
-                              autofocus
+                              value="<?php echo $admin['firstname']; ?>"
+                               readonly
                             />
                           </div>
                           <div class="mb-3 col-md-6">
                             <label for="lastName" class="form-label">Last Name</label>
-                            <input class="form-control" type="text" name="lastName" id="lastName" value="Doe" />
+                            <input class="form-control" type="text" name="lastName" id="lastName" value="<?php echo $admin['lastname']; ?>" readonly />
                           </div>
                           <div class="mb-3 col-md-6">
                             <label for="email" class="form-label">E-mail</label>
@@ -296,53 +302,35 @@
                               type="text"
                               id="email"
                               name="email"
-                              value="john.doe@example.com"
-                              placeholder="john.doe@example.com"
+                              value="<?php echo $admin['email']; ?>"
+                              placeholder="" readonly
                             />
                           </div>
+                         
                           <div class="mb-3 col-md-6">
-                            <label for="organization" class="form-label">Organization</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="organization"
-                              name="organization"
-                              value="ThemeSelection"
-                            />
-                          </div>
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="phoneNumber">Phone Number</label>
+                            <label class="form-label" for="phoneNumber">Password</label>
                             <div class="input-group input-group-merge">
-                              <span class="input-group-text">US (+1)</span>
                               <input
-                                type="text"
-                                id="phoneNumber"
-                                name="phoneNumber"
+                                type="password"
+                                id=""
+                                name=""
                                 class="form-control"
-                                placeholder="202 555 0111"
+                                placeholder="" value="<?php echo $admin['password']; ?>" readonly
                               />
                             </div>
                           </div>
                           <div class="mb-3 col-md-6">
-                            <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                            <label for="address" class="form-label">Referral link</label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="http://moneymcs.com/create?new=<?php echo $admin['regcode']; ?>" />
                           </div>
-                          <div class="mb-3 col-md-6">
+
+                          <!-- <div class="mb-3 col-md-6">
                             <label for="state" class="form-label">State</label>
                             <input class="form-control" type="text" id="state" name="state" placeholder="California" />
-                          </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="zipCode" class="form-label">Zip Code</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="zipCode"
-                              name="zipCode"
-                              placeholder="231465"
-                              maxlength="6"
-                            />
-                          </div>
-                          <div class="mb-3 col-md-6">
+                          </div> -->
+                         
+
+                          <!-- <div class="mb-3 col-md-6">
                             <label class="form-label" for="country">Country</label>
                             <select id="country" class="select2 form-select">
                               <option value="">Select</option>
@@ -371,8 +359,9 @@
                               <option value="United Kingdom">United Kingdom</option>
                               <option value="United States">United States</option>
                             </select>
-                          </div>
-                          <div class="mb-3 col-md-6">
+                          </div> -->
+
+                          <!-- <div class="mb-3 col-md-6">
                             <label for="language" class="form-label">Language</label>
                             <select id="language" class="select2 form-select">
                               <option value="">Select Language</option>
@@ -381,51 +370,19 @@
                               <option value="de">German</option>
                               <option value="pt">Portuguese</option>
                             </select>
-                          </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="timeZones" class="form-label">Timezone</label>
-                            <select id="timeZones" class="select2 form-select">
-                              <option value="">Select Timezone</option>
-                              <option value="-12">(GMT-12:00) International Date Line West</option>
-                              <option value="-11">(GMT-11:00) Midway Island, Samoa</option>
-                              <option value="-10">(GMT-10:00) Hawaii</option>
-                              <option value="-9">(GMT-09:00) Alaska</option>
-                              <option value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
-                              <option value="-8">(GMT-08:00) Tijuana, Baja California</option>
-                              <option value="-7">(GMT-07:00) Arizona</option>
-                              <option value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
-                              <option value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
-                              <option value="-6">(GMT-06:00) Central America</option>
-                              <option value="-6">(GMT-06:00) Central Time (US & Canada)</option>
-                              <option value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
-                              <option value="-6">(GMT-06:00) Saskatchewan</option>
-                              <option value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
-                              <option value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
-                              <option value="-5">(GMT-05:00) Indiana (East)</option>
-                              <option value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
-                              <option value="-4">(GMT-04:00) Caracas, La Paz</option>
-                            </select>
-                          </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="currency" class="form-label">Currency</label>
-                            <select id="currency" class="select2 form-select">
-                              <option value="">Select Currency</option>
-                              <option value="usd">USD</option>
-                              <option value="euro">Euro</option>
-                              <option value="pound">Pound</option>
-                              <option value="bitcoin">Bitcoin</option>
-                            </select>
-                          </div>
+                          </div> -->
+                          
+                          
                         </div>
-                        <div class="mt-2">
+                        <!-- <div class="mt-2">
                           <button type="submit" class="btn btn-primary me-2">Save changes</button>
                           <button type="reset" class="btn btn-outline-secondary">Cancel</button>
-                        </div>
+                        </div> -->
                       </form>
                     </div>
                     <!-- /Account -->
                   </div>
-                  <div class="card">
+                  <div class="card ">
                     <h5 class="card-header">Delete Account</h5>
                     <div class="card-body">
                       <div class="mb-3 col-12 mb-0">
@@ -459,30 +416,21 @@
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
                 <div class="mb-2 mb-md-0">
-                  ©
+                  <!-- ©
                   <script>
                     document.write(new Date().getFullYear());
-                  </script>
-                  , made with ❤️ by
-                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+                  </script> -->
+                  <!-- , made with ❤️ by -->
+                  <!-- <a href="#" target="_blank" class="footer-link fw-bolder"></a> -->
                 </div>
                 <div>
-                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
-
-                  <a
-                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                  <!-- <a href="#" class="footer-link me-4" target="_blank"></a> -->
+                  <!-- <a
+                    href=""
                     target="_blank"
                     class="footer-link me-4"
-                    >Documentation</a
-                  >
-
-                  <a
-                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Support</a
-                  >
+                    ></a
+                  > -->
                 </div>
               </div>
             </footer>
@@ -500,15 +448,7 @@
     </div>
     <!-- / Layout wrapper -->
 
-    <div class="buy-now">
-      <a
-        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
-    </div>
-
+    <?php include 'includes/subs_form.php'; ?>
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
@@ -529,5 +469,6 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <?php include 'includes/payment_script.php'; ?>
   </body>
 </html>

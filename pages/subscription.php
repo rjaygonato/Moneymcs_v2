@@ -75,14 +75,14 @@
 
             <!-- Layouts -->
             <li class="menu-item">
-              <a href="#" class="menu-link">
+              <a href="resources" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="Basic">Resource Library</div>
               </a>
             </li>
 
             <li class="menu-item">
-              <a href="#" class="menu-link">
+              <a href="commissions" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="Basic">Commissions/Referrals</div>
               </a>
@@ -160,7 +160,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -169,7 +169,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                              <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -183,7 +183,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="profile">
                         <i class="bx bx-user me-2"></i>
                         <span class="align-middle">Profile</span>
                       </a>
@@ -229,7 +229,7 @@
                 <div class="col-md-12">
                   <ul class="nav nav-tabs flex-column flex-md-row mb-3">
                     <li class="nav-item">
-                      <a class="nav-link " href="#"><i class="bx bx-user me-1"></i> Profile</a>
+                      <a class="nav-link " href="profile"><i class="bx bx-user me-1"></i> Profile</a>
                     </li>
                    <li class="nav-item">
                       <a class="nav-link active" href="subscription"
