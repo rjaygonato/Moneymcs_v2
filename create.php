@@ -26,7 +26,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Sign in</title>
+    <title>MoneyMCS - Sign up</title>
 
     <meta name="description" content="" />
 
@@ -75,13 +75,13 @@
               <!-- Logo -->
               <div class="app-brand justify-content-center">
                 <a href="index" class="app-brand-link gap-2">
-                  <img aria-hidden="true" class="object-contain w-full h-full" src="./assets/img/earnmoney.png" width="160">
+                  <img aria-hidden="true" class="object-contain w-full h-full" src="./assets/img/earnmoney.png" width="100">
                   <!-- <span class="app-brand-text demo text-body fw-bolder">MoneyMCS</span> -->
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Welcome to MoneyMCS</h4>
-              <p class="mb-4">Please sign-in to your account</p>
+              <h4 class="mb-2">New Agent Registration</h4>
+              <p class="mb-4">Please sign-up form below</p>
               <?php
                 if(isset($_SESSION['error'])){
                     echo "
@@ -97,7 +97,41 @@
                     unset($_SESSION['success']);
                 }
                 ?>
-              <form id="formAuthentication" class="mb-3" action="verify" method="POST">
+              <form id="formAuthentication" class="mb-3" action="createaccount" method="POST">
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Firstname</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="firstname"
+                    placeholder="" autocomplete="false"
+                    autofocus="true"  
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Lastname</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="lastname"
+                    placeholder="" autocomplete="false"
+                  />
+                </div>
+
+                <!-- <div class="mb-3">
+                  <label for="email" class="form-label">Middle</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    name=""
+                    placeholder="" autocomplete="false"
+                    autofocus="true"  
+                  />
+                </div> -->
+
                 <div class="mb-3">
                   <label for="email" class="form-label">Email or Username</label>
                   <input
@@ -105,16 +139,13 @@
                     class="form-control"
                     id="email"
                     name="email"
-                    placeholder="Enter your email or username" autocomplete="false"
-                    autofocus="true"  value="admin@admin.com"
+                    placeholder="" autocomplete="false"
                   />
                 </div>
+
                 <div class="mb-3 form-password-toggle">
                   <div class="d-flex justify-content-between">
                     <label class="form-label" for="password" autocomplete="chrome-off">Password</label>
-                    <a href="#">
-                      <small>Forgot Password?</small>
-                    </a>
                   </div>
                   <div class="input-group input-group-merge">
                     <input
@@ -122,27 +153,53 @@
                       id="password"
                       class="form-control"
                       name="password"
-                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                      aria-describedby="password" value="password"
+                      placeholder=""
+                      aria-describedby="password" 
                     />
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                   </div>
                 </div>
-                <!-- <div class="mb-3">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="remember-me" />
-                    <label class="form-check-label" for="remember-me"> Remember Me </label>
+
+                <div class="mb-3 form-password-toggle">
+                  <div class="d-flex justify-content-between">
+                    <label class="form-label" for="password" autocomplete="chrome-off">Confirmed Password</label>
                   </div>
-                </div> -->
+                  <div class="input-group input-group-merge">
+                    <input
+                      type="password"
+                      id="password"
+                      class="form-control"
+                      name="repassword"
+                      aria-describedby="password" 
+                    />
+                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="">Verification Code</label>
+                  <?php
+                    $str = str_shuffle('ABCDEFGHJKMNPQRSTWXYZ');
+                    $_SESSION['captcha_code'] = substr($str, 0, 6); 
+                  ?>
+                  <img src="captcha" alt="" class="w-100">
+                  <input type="text" name="captcha" placeholder="Please type the verification code" class="form-control mt-3 no_border" required>
+                </div>
+                <br>
+                <?php
+                  $token = uniqid();
+                  $_SESSION['token'] = $token;
+                  $csrf_token = md5($token);
+                ?>
+                <input type="hidden" name="token" value="<?php echo $csrf_token; ?>" />
                 <div class="mb-3">
-                  <button class="btn btn-success d-grid w-100" name="login" type="submit">Sign in</button>
+                  <button class="btn btn-success d-grid w-100" name="create" type="submit">Create Account</button>
                 </div>
               </form>
 
               <p class="text-center">
-                <span>Become an agent?</span>
-                <a href="create">
-                  <span>Create an account</span>
+                <span>I already have an account</span>
+                <a href="index">
+                  <span>Sign in</span>
                 </a>
               </p>
             </div>
