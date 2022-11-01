@@ -160,7 +160,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                        <img src="<?php echo (!empty($admin['photo'])) ? '../images/'.$admin['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -169,7 +169,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                                <img src="<?php echo (!empty($admin['photo'])) ? '../images/'.$admin['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -223,6 +223,21 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
+            <?php
+                    if(isset($_SESSION['error'])){
+                        echo "
+                        <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
+                        ";
+                        unset($_SESSION['error']);
+                    }
+                    if(isset($_SESSION['success'])){
+                        echo "
+                      
+                        <div class='alert alert-success' role='alert'><i class='bx bx-check-circle'></i> ".$_SESSION['success']." </div>
+                        ";
+                        unset($_SESSION['success']);
+                    }
+                  ?>
               <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Profile</h4>
 
               <div class="row">
@@ -247,14 +262,8 @@
                     <!-- Account -->
                     <div class="card-body">
                       <div class="d-flex align-items-start align-items-sm-center gap-4">
-                        <img
-                          src="../assets/img/avatars/default.jpg"
-                          alt="user-avatar"
-                          class="d-block rounded"
-                          height="100"
-                          width="100"
-                          id="uploadedAvatar"
-                        />
+                      <img src="<?php echo (!empty($admin['photo'])) ? '../images/'.$admin['photo'] : '../images/default.png'; ?>" alt="user-avatar" class="d-block rounded" height="100" width="100">
+                      
                         <div class="button-wrapper">
                           <!-- <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
                             <span class="d-none d-sm-block">Upload new photo</span>
@@ -267,8 +276,8 @@
                               accept="image/png, image/jpeg"
                             />
                           </label> -->
-                          <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
-                            <i class="bx bx-reset d-block d-sm-none"></i>
+                          <button type="button" class="btn btn-outline-secondary account-image-reset mb-4" data-bs-toggle="modal" data-bs-target="#profileModal" data-backdrop="static" data-keyboard="false">
+                            <i class="bx bx-edit d-block d-sm-none"></i>
                             <span class="d-none d-sm-block">Update</span>
                           </button>
 
@@ -321,7 +330,7 @@
                           </div>
                           <div class="mb-3 col-md-6">
                             <label for="address" class="form-label">Referral link</label>
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="http://moneymcs.com/create?new=<?php echo $admin['regcode']; ?>" />
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="http://moneymcs.com/create?referral=<?php echo $admin['regcode']; ?>" />
                           </div>
 
                           <!-- <div class="mb-3 col-md-6">
@@ -449,6 +458,7 @@
     <!-- / Layout wrapper -->
 
     <?php include 'includes/subs_form.php'; ?>
+    <?php include 'includes/prof_form.php'; ?>
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
