@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Contact Us</title>
+    <title>MoneyMCS - Home</title>
 
     <meta name="description" content="" />
 
@@ -46,7 +46,7 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
   </head>
-
+  
   <body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
@@ -165,7 +165,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                    <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -174,7 +174,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                            <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -188,7 +188,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="profile">
+                      <a class="dropdown-item" href="#">
                         <i class="bx bx-user me-2"></i>
                         <span class="align-middle">Profile</span>
                       </a>
@@ -227,11 +227,86 @@
           <div class="content-wrapper">
             <!-- Content -->
 
+            
             <div class="container-xxl flex-grow-1 container-p-y">
-           
+              <div class="row">
+                <div class="col-lg-12 mb-4 order-0">
+                  <div class="card">
+                    <div class="d-flex align-items-start row align-center">
+                      <div class="col-sm-6 p-5">
+                        <div class="card-body">
+                          <h5 class="card-title text-primary">Get in Touch</h5>
+                          <p class="mb-4">
+                            Fill in the form to start a conversation
+                          </p>
+                          <a class="mb-4 " href="#">
+                            <i class="m-2 bx bx-map-pin"></i>
+                            <span class="text-dark">6655 W Sahara Ave #B200, Las Vegas, NV 89146</span>
+                          </a>
+                          <div>
+                          <a class="mb-4" href="#">
+                            <i class="m-2 bx bx-phone"></i>
+                            <span class="text-dark">(702) 930-3131</span>
+                          </a>
+                          </div>
+                          <div>
+                          <a class="mb-4" href="#">
+                            <i class="m-2 bx bx-envelope"></i>
+                            <span class="text-dark">info@moneymcs.com</span>
+                          </a>
+                          </div>
+                          
+                        </div>
+                        
+                        
+                      </div>
+                      <div class="col-sm-6 p-5 text-center text-sm-left ">
+                        <div class="card-body pb-0 px-0 px-md-4">
+                        <form id="formAuthentication" class="mb-3" action="submit_contact" method="POST">
+                          <div class="mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="fullname"
+                              name="fullname"
+                              placeholder="Full Name" autocomplete="false"
+                              autofocus="true"
+                            />
+                          </div>
+                          <div class="mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="email"
+                              name="email"
+                              placeholder="Email" autocomplete="false"
+                              autofocus="true"
+                            />
+                          </div>
+                          <div class="mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="telnumber"
+                              name="telnumber"
+                              placeholder="Telephone Number" autocomplete="false"
+                              autofocus="true"
+                            />
+                          </div>
+                          <div class="mb-3">
+                            <button class="btn btn-success d-grid w-100" name="submit_contact" type="submit">Submit</button>
+                          </div>
+                        </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+           
             <!-- / Content -->
-
+            
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
