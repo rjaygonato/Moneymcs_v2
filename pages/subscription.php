@@ -52,7 +52,7 @@
           <div class="app-brand demo">
             <a href="#" class="app-brand-link">
               <span class="app-brand-logo demo">
-                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/logolarge.png" width="50">
+                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/earnmoney.png" width="50">
               </span>
               <span class="app-brand-text demo menu-text fw-bolder ms-2">MoneyMCS</span>
             </a>
@@ -110,7 +110,7 @@
             </li>
 
             <li class="menu-item">
-              <a href="#" class="menu-link">
+              <a href="contacts" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-phone-outgoing'></i>
                 <div data-i18n="Basic">Contact Us</div>
               </a>
@@ -304,6 +304,8 @@
                 </div>
               </div>
             </div>
+
+            <?php include 'includes/google_translate.php'; ?>
             <!-- / Content -->
 
             <!-- Footer -->
@@ -317,15 +319,7 @@
                   <!-- , made with ❤️ by -->
                   <!-- <a href="#" target="_blank" class="footer-link fw-bolder"></a> -->
                 </div>
-                <div>
-                  <!-- <a href="#" class="footer-link me-4" target="_blank"></a> -->
-                  <!-- <a
-                    href=""
-                    target="_blank"
-                    class="footer-link me-4"
-                    ></a
-                  > -->
-                </div>
+                <?php include 'includes/custome_footer.php'; ?>
               </div>
             </footer>
             <!-- / Footer -->
@@ -344,27 +338,7 @@
 
     <?php include 'includes/subs_form.php'; ?>
 
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../assets/vendor/js/bootstrap.js"></script>
-    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-    <script src="../assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
-
-    <!-- Main JS -->
-    <script src="../assets/js/main.js"></script>
-
-    <!-- Page JS -->
-    <script src="../assets/js/pages-account-settings-account.js"></script>
-
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-
+    <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
   </body>
 </html>

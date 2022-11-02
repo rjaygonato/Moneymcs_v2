@@ -165,11 +165,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-<<<<<<< Updated upstream
-                    <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
-=======
                         <img src="<?php echo (!empty($admin['photo'])) ? '../images/'.$admin['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
->>>>>>> Stashed changes
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -178,11 +174,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-<<<<<<< Updated upstream
-                            <img src="../assets/img/avatars/default.jpg" alt class="w-px-40 h-auto rounded-circle" />
-=======
                                 <img src="<?php echo (!empty($admin['photo'])) ? '../images/'.$admin['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
->>>>>>> Stashed changes
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -310,6 +302,7 @@
                     </div>
                   </div>
                 </div>
+                <?php include 'includes/google_translate.php'; ?>
               </div>
             </div>
            
@@ -326,15 +319,7 @@
                   <!-- , made with ❤️ by -->
                   <!-- <a href="#" target="_blank" class="footer-link fw-bolder"></a> -->
                 </div>
-                <div>
-                  <!-- <a href="#" class="footer-link me-4" target="_blank"></a> -->
-                  <!-- <a
-                    href=""
-                    target="_blank"
-                    class="footer-link me-4"
-                    ></a
-                  > -->
-                </div>
+                <?php include 'includes/custome_footer.php'; ?>
               </div>
             </footer>
             <!-- / Footer -->
@@ -354,31 +339,7 @@
     </div>
     <!-- / Layout wrapper -->
 
-    
-
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../assets/vendor/js/bootstrap.js"></script>
-    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-    <script src="../assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
-
-    <!-- Main JS -->
-    <script src="../assets/js/main.js"></script>
-
-    <!-- Page JS -->
-    <script src="../assets/js/dashboards-analytics.js"></script>
-
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-
+    <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
   </body>
 </html>

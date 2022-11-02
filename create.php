@@ -67,6 +67,7 @@
     <!-- Content -->
 
     <div class="container-xxl">
+    <div id="google_translate_element"></div>
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
           <!-- Register -->
@@ -97,6 +98,20 @@
                     unset($_SESSION['success']);
                 }
                 ?>
+                <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+ 
+    <script type="text/javascript"
+            src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+    </script>
               <form id="formAuthentication" class="mb-3" action="createaccount" method="POST">
 
                 <div class="mb-3">

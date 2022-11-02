@@ -13,7 +13,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <!-- <center><img src="../assets/img/logolarge.png" width="100" alt=""></center> -->
+            <!-- <center><img src="../assets/img/earnmoney.png" width="100" alt=""></center> -->
            
               <!-- <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
                 <option value="99"></option>
