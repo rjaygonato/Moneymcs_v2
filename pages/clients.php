@@ -242,7 +242,21 @@
                         unset($_SESSION['success']);
                     }
                   ?>
-                <h5 class="card-header">Clients</h5>
+                <div class="card-header">
+                  <h5>Clients</h5>
+
+                  <button
+                          type="button"
+                          class="btn btn-success"
+                          data-bs-toggle="modal"
+                          data-bs-target="#clientModal"
+                        >
+                          Add Client
+                  </button>
+                  
+                </div>
+                  
+                  
                 <div class="table-responsive text-nowrap">
                   <table class="table">
                     <thead>
@@ -320,6 +334,7 @@
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
+    <?php include 'includes/add_client_form.php'; ?>
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
