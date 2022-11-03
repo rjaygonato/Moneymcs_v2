@@ -153,9 +153,7 @@
               <!-- /Search -->
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <li class="nav-item lh-1 me-3">
-                  <button class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#smallModal" data-backdrop="static" data-keyboard="false" >Subscription</button>
-                </li>
+                <?php include 'includes/subs_button.php'; ?>
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
@@ -223,7 +221,7 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Subscriptions</h4>
+              <!-- <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Subscriptions</h4> -->
 
               <div class="row">
                 <div class="col-md-12">
@@ -242,6 +240,13 @@
                       >
                     </li> -->
                   </ul>
+                  <!-- <div class="card shadow-none bg-transparent border border-secondary mb-3">
+                    <div class="card-body">
+                     
+                      <p class="card-text">Some quick example text to build on the card title and make up.</p>
+                    </div>
+                  </div> -->
+                  <!-- <h5 class="card-title">You already Subscribe for the month of November 2022</h5> -->
                   <div class="card mb-4">
                   <?php
                     if(isset($_SESSION['error'])){
@@ -319,7 +324,7 @@
                   <!-- , made with ❤️ by -->
                   <!-- <a href="#" target="_blank" class="footer-link fw-bolder"></a> -->
                 </div>
-                <?php include 'includes/custome_footer.php'; ?>
+                <?php include 'includes/custom_footer.php'; ?>
               </div>
             </footer>
             <!-- / Footer -->

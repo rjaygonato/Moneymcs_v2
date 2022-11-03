@@ -67,7 +67,6 @@
     <!-- Content -->
 
     <div class="container-xxl">
-    <div id="google_translate_element"></div>
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
           <!-- Register -->
@@ -98,20 +97,7 @@
                     unset($_SESSION['success']);
                 }
                 ?>
-                <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                {pageLanguage: 'en'},
-                'google_translate_element'
-            );
-        }
-    </script>
- 
-    <script type="text/javascript"
-            src=
-"https://translate.google.com/translate_a/element.js?
-cb=googleTranslateElementInit">
-    </script>
+           
               <form id="formAuthentication" class="mb-3" action="verify" method="POST">
                 <div class="mb-3">
                   <label for="email" class="form-label">Email or Username</label>
@@ -148,12 +134,11 @@ cb=googleTranslateElementInit">
                     <input class="form-check-input" type="checkbox" id="remember-me" />
                     <label class="form-check-label" for="remember-me"> Remember Me </label>
                   </div>
-                </div> -->
+                </div> --><br>
                 <div class="mb-3">
                   <button class="btn btn-success d-grid w-100" name="login" type="submit">Sign in</button>
                 </div>
-              </form>
-
+              </form><br>
               <p class="text-center">
                 <span>Become an agent?</span>
                 <a href="create">
@@ -163,29 +148,26 @@ cb=googleTranslateElementInit">
             </div>
           </div>
           <!-- /Register -->
+          <!-- Footer -->
+          <footer class="content-footer footer bg-footer-theme">
+            <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                <div class="mb-2 mb-md-0">
+                  <!-- ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script> -->
+                  <!-- , made with ❤️ by -->
+                  <!-- <a href="#" target="_blank" class="footer-link fw-bolder"></a> -->
+                </div>
+                <?php include './pages/includes/custom_footer.php'; ?>
+              </div>
+            </footer>
+            <!-- / Footer -->
         </div>
       </div>
     </div>
     <!-- / Content -->
-
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="./assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="./assets/vendor/libs/popper/popper.js"></script>
-    <script src="./assets/vendor/js/bootstrap.js"></script>
-    <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-    <script src="./assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
-
-    <!-- Main JS -->
-    <script src="./assets/js/main.js"></script>
-
-    <!-- Page JS -->
-
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <?php include './pages/includes/google_translate.php'; ?>
+    <?php include 'includes/footer_links.php'; ?>
   </body>
 </html>

@@ -153,9 +153,7 @@
               <!-- /Search -->
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <li class="nav-item lh-1 me-3">
-                  <button class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#smallModal" data-backdrop="static" data-keyboard="false" >Subscription</button>
-                </li>
+                <?php include 'includes/subs_button.php'; ?>
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
@@ -238,7 +236,7 @@
                         unset($_SESSION['success']);
                     }
                   ?>
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Profile</h4>
+              <!-- <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Profile</h4> -->
 
               <div class="row">
                 <div class="col-md-12">
@@ -276,12 +274,12 @@
                               accept="image/png, image/jpeg"
                             />
                           </label> -->
-                          <button type="button" class="btn btn-outline-secondary account-image-reset mb-4" data-bs-toggle="modal" data-bs-target="#profileModal" data-backdrop="static" data-keyboard="false">
+                          <b><?php echo $admin['lastname']; ?>, <?php echo $admin['firstname']; ?></b><br>
+                          <button type="button" class="btn btn-sm btn-outline-secondary account-image-reset mb-4" data-bs-toggle="modal" data-bs-target="#profileModal" data-backdrop="static" data-keyboard="false">
                             <i class="bx bx-edit d-block d-sm-none"></i>
-                            <span class="d-none d-sm-block">Update</span>
+                            <span class="d-none d-sm-block">Edit Profile</span>
                           </button>
 
-                          <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
                         </div>
                       </div>
                     </div>
@@ -434,7 +432,7 @@
                   <!-- , made with ❤️ by -->
                   <!-- <a href="#" target="_blank" class="footer-link fw-bolder"></a> -->
                 </div>
-                <?php include 'includes/custome_footer.php'; ?>
+                <?php include 'includes/custom_footer.php'; ?>
               </div>
             </footer>
             <!-- / Footer -->

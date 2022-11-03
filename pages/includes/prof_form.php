@@ -32,7 +32,7 @@
                 </div><br>
                 <div class="input-group input-group-merge">
                     <span class="input-group-text">Password:</span>
-                    <input type="password" class="form-control" id="" name="password" value="<?php echo $admin['password']; ?>" aria-label="">
+                    <input type="password" class="form-control" id="" name="password" value="" aria-label="">
                 </div><hr>
                 <h5> Enter current password to verify </h5>
                 <div class="input-group input-group-merge">
