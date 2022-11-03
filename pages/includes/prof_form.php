@@ -12,10 +12,10 @@
               aria-label="Close"
             ></button>
           </div>
-          <form action="profile_update" method="POST">
+          <form action="profile_update" method="POST" enctype="multipart/form-data">
             <div class="modal-body">
                 <div class="input-group">
-                    <input type="file" class="form-control" id="photo" aria-describedby="" name="photo">
+                    <input type="file" class="form-control" id="photo" name="photo">
                     <!-- <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon04">Button</button> -->
                 </div><br>
                 <div class="input-group input-group-merge">
