@@ -326,11 +326,18 @@
                               />
                             </div>
                           </div>
-                          <div class="mb-3 col-md-6">
+                          <!-- <div class="mb-3 col-md-6">
                             <label for="address" class="form-label">Referral link</label>
                             <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="http://moneymcs.com/create?referral=<?php echo $admin['regcode']; ?>" />
-                          </div>
+                          </div> -->
 
+                          <div class="mb-3 col-md-6">
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="http://moneymcs.com/create?referral=<?php echo $admin['regcode']; ?>" id="myrefCode">
+
+                              <button class="btn btn-outline-secondary" type="button" id="buttonrefcode"  data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span id='myTooltip'>Copy to Clipboard</span>"><i class='bx bx-copy-alt' onclick="copyClip()" onmouseout="outFunc()"></i></button>
+                            </div>
+                          </div>
                           <!-- <div class="mb-3 col-md-6">
                             <label for="state" class="form-label">State</label>
                             <input class="form-control" type="text" id="state" name="state" placeholder="California" />

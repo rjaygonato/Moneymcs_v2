@@ -21,16 +21,33 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 <script async defer>
-      // Subs Status
-      $( document ).ready(function() {
-        $(".nosubscriptions").hide();
+    // Subs Status
+    $( document ).ready(function() {
+    $(".nosubscriptions").hide();
 
-          if($("#substats").length){
-               // console.log( "visible!" );
-                $(".nosubscriptions").hide();
-            } else{
-             // console.log( "hidden!" );
-              $(".nosubscriptions").show();
-            }
-      });
-    </script>
+        if($("#substats").length){
+            // console.log( "visible!" );
+            $(".nosubscriptions").hide();
+        } else{
+            // console.log( "hidden!" );
+            $(".nosubscriptions").show();
+        }
+    });
+</script>
+
+<script>
+function copyClip() {
+  var copyText = document.getElementById("myrefCode");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to Clipboard";
+}
+</script>
