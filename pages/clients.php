@@ -226,7 +226,65 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-           
+            <div class="card">
+            <?php
+                    if(isset($_SESSION['error'])){
+                        echo "
+                        <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
+                        ";
+                        unset($_SESSION['error']);
+                    }
+                    if(isset($_SESSION['success'])){
+                        echo "
+                      
+                        <div class='alert alert-success' role='alert'><i class='bx bx-check-circle'></i> ".$_SESSION['success']." </div>
+                        ";
+                        unset($_SESSION['success']);
+                    }
+                  ?>
+                <h5 class="card-header">Clients</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>State</th>
+                        <th>Type</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <?php
+                          $conn = $pdo->open();
+
+                          try{
+                            $stmt = $conn->prepare("SELECT * FROM clients ORDER BY id DESC" );
+                            $stmt->execute(['user'=>$admin['id']]);
+                            foreach($stmt as $row){
+                              echo "
+                                <tr>
+                                  <td>".$row['firstname']."</td>
+                                  <td>".$row['lastname']."</td>
+                                  <td>".$row['email']."</td>
+                                  <td>".$row['phonenum']."</td>
+                                  <td>".$row['state']."</td>
+                                  <td>".$row['type']."</td>
+                                </tr>
+                              ";
+                            }
+                          }
+                          catch(PDOException $e){
+                            echo $e->getMessage();
+                          }
+
+                          $pdo->close();
+                        ?>
+                    </tbody>
+                  </table>
+                </div>
+              </div> 
             </div>
 
             <?php include 'includes/google_translate.php'; ?>
