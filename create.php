@@ -121,17 +121,16 @@
                   />
                 </div>
 
-                <!-- <div class="mb-3">
-                  <label for="email" class="form-label">Middle</label>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Mobile Number</label>
                   <input
                     type="text"
                     class="form-control"
                     id=""
-                    name=""
+                    name="contact_info"
                     placeholder="" autocomplete="false"
-                    autofocus="true"  
                   />
-                </div> -->
+                </div>
 
                 <div class="mb-3">
                   <label for="email" class="form-label">Email or Username</label>

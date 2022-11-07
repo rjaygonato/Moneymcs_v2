@@ -13,11 +13,12 @@
 
 		$firstname = trim(stripcslashes($_POST['firstname']));
         $lastname = trim(stripcslashes($_POST['lastname']));
+		$contact_info = trim(stripcslashes($_POST['contact_info']));
 		$email = trim(stripcslashes($_POST['email']));
 		$password = trim(stripcslashes($_POST['password']));
 		$repassword = trim(stripcslashes($_POST['repassword'])); 
 
-		if ( empty($firstname) || empty($lastname) || empty($email) || empty($password) || empty($repassword) ) {
+		if ( empty($firstname) || empty($lastname) || empty($contact_info) || empty($email) || empty($password) || empty($repassword) ) {
 
 			$_SESSION['error'] = 'Some fields are required';
 			header('location: create');
@@ -61,8 +62,8 @@
 				$moneymcid=substr(str_shuffle($regcode), 0, 5);
 				
 				try{
-					$stmt = $conn->prepare("INSERT INTO users (regcode, moneymcid, firstname, lastname, email, password, type, status, created_on, ip) VALUES (:code, :moneymcid, :firstname, :lastname, :email, :password, :type, :status, :created_on, :ip)");
-					$stmt->execute(['code'=>$code, 'moneymcid'=>$moneymcid, 'firstname'=>$firstname, 'lastname'=>$lastname, 'email'=>$email, 'password'=>$password, 'type'=>'1', 'status'=>'1', 'created_on'=>$now, 'ip' => get_ip()]);
+					$stmt = $conn->prepare("INSERT INTO users (regcode, moneymcid, firstname, lastname, contact_info, email, password, type, status, created_on, ip) VALUES (:code, :moneymcid, :firstname, :lastname, :contact_info, :email, :password, :type, :status, :created_on, :ip)");
+					$stmt->execute(['code'=>$code, 'moneymcid'=>$moneymcid, 'firstname'=>$firstname, 'lastname'=>$lastname, 'contact_info'=>$contact_info, 'email'=>$email, 'password'=>$password, 'type'=>'1', 'status'=>'1', 'created_on'=>$now, 'ip' => get_ip()]);
                     
 					$_SESSION['success'] = 'Sign in now and get your referral link';
 				}
