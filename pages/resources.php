@@ -230,9 +230,14 @@
                   <div class="col-lg-12 mb-4 order-0">
                     <div class="card">
                       <div class="d-flex align-items-end row">
-                        <div class="col-sm-7">
+                        <div class="col-sm-12">
                           <div class="card-body">
-                            <h5 class="card-title text-primary">Resource Library</h5>
+                            <a href="resources_search">
+                              <div class="input-group input-group-merge">
+                                <span class="input-group-text" id="basic-addon-search31"><i class="bx bx-search"></i></span>
+                                <input type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="basic-addon-search31">
+                              </div>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -240,12 +245,20 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-lg-6 mb-4 order-0">
+                  <div class="col-lg-12 mb-4 order-0">
                     <div class="card">
                       <div class="d-flex align-items-end row">
-                        <div class="col-sm-7">
+                        <div class="col-sm-12">
                           <div class="card-body">
-                            <h5 class="card-title text-primary">Resource Library</h5>
+                            <h5 class="card-title">Resource Library</h5>
+                            <p class="card-text">The Partner Resource Library is a wealth of resources at your fingertips to help you with many aspects of growing your business!</p>
+
+                            <p class="card-text">Within each of the Categories on the left hand side you will find many flyers, emails, PowerPoints, videos, guides, and much more that will help you to market and sell this amazing program to your clients.</p>
+                            <p class="card-text">All you have to do to view what is in a Category is to select it and then the content from that Category will reflect here.</p>
+
+                            <p class="card-text">If you have any questions on any Category, please contact us at 800-497-0499. We are here to help!</p>
+
+
                           </div>
                         </div>
                       </div>

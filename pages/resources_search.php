@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Clients</title>
+    <title>MoneyMCS - Resources</title>
 
     <meta name="description" content="" />
 
@@ -79,7 +79,7 @@
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item ">
+            <li class="menu-item active">
               <a href="resources" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="Basic">Resource Library</div>
@@ -93,7 +93,7 @@
               </a>
             </li>
 
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="clients" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-rectangle'></i>
                 <div data-i18n="Basic">Clients</div>
@@ -220,101 +220,46 @@
           </nav>
 
           <!-- / Navbar -->
-
+      
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
-
+           
             <div class="container-xxl flex-grow-1 container-p-y">
-            <div class="card">
-            <?php
-                    if(isset($_SESSION['error'])){
-                        echo "
-                        <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
-                        ";
-                        unset($_SESSION['error']);
-                    }
-                    if(isset($_SESSION['success'])){
-                        echo "
-                      
-                        <div class='alert alert-success' role='alert'><i class='bx bx-check-circle'></i> ".$_SESSION['success']." </div>
-                        ";
-                        unset($_SESSION['success']);
-                    }
-                  ?>
-                <div class="card-header">
-                  <h5>Clients</h5>
-
-                  <button
-                          type="button"
-                          class="btn btn-success"
-                          data-bs-toggle="modal"
-                          data-bs-target="#clientModal"
-                        >
-                          Add Client
-                  </button>
-                  
+              <div class="row">
+                <div class="col-6">
+                  <a href="resources" class="btn btn-sm btn-dark "> <i class='bx bx-left-arrow-alt'></i> Back</a>
+                </div><br><br>
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="card">
+                      <div class="d-flex align-items-end row">
+                        <div class="col-sm-12">
+                          <div class="card-body">
+                            <a href="resources_search">
+                              <div class="input-group input-group-merge">
+                                <span class="input-group-text" id="basic-addon-search31"><i class="bx bx-search"></i></span>
+                                <input type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="basic-addon-search31">
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                  
-                  
-                <div class="table-responsive text-nowrap">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Phone Number</th>
-                        <th>State</th>
-                        <th>Type</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-border-bottom-0">
-                      <?php
-                          $conn = $pdo->open();
-
-                          try{
-                            $stmt = $conn->prepare("SELECT * FROM clients ORDER BY id DESC" );
-                            $stmt->execute();
-                            foreach($stmt as $row){
-                              echo "
-                                <tr>
-                                  <td>".$row['firstname']."</td>
-                                  <td>".$row['lastname']."</td>
-                                  <td>".$row['email']."</td>
-                                  <td>".$row['phonenum']."</td>
-                                  <td>".$row['state']."</td>
-                                  <td>".$row['type']."</td>
-                                  <td><div class='dropdown'>
-                                  <button type='button' class='btn p-0 dropdown-toggle hide-arrow' data-bs-toggle='dropdown'>
-                                    <i class='bx bx-dots-vertical-rounded'></i>
-                                  </button>
-                                  <div class='dropdown-menu'>
-                                    <a class='dropdown-item' data-bs-toggle='modal'
-                                    data-bs-target='#editClient' data-id='".$row['id']."' href='javascript:void(0);'
-                                      ><i class='bx bx-edit-alt me-1'></i> Edit</a
-                                    >
-                                    <a class='dropdown-item' data-id='".$row['id']."' href='javascript:void(0);'
-                                      ><i class='bx bx-trash me-1'></i> Delete</a
-                                    >
-                                  </div>
-                                </div></td>
-                                </tr>
-
-                              ";
-                            }
-                          }
-                          catch(PDOException $e){
-                            echo $e->getMessage();
-                          }
-
-                          $pdo->close();
-                        ?>
-                    </tbody>
-                  </table>
+                <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="card">
+                      <div class="d-flex align-items-end row">
+                        <div class="col-sm-12">
+                          <div class="card-body">
+                            <h5 class="card-title text-primary">Search Results</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div> 
             </div>
 
             <?php include 'includes/google_translate.php'; ?>
@@ -332,6 +277,7 @@
                   <!-- <a href="#" target="_blank" class="footer-link fw-bolder"></a> -->
                 </div>
                 <?php include 'includes/custom_footer.php'; ?>
+                </div>
               </div>
             </footer>
             <!-- / Footer -->
@@ -350,8 +296,6 @@
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-    <?php include 'includes/add_client_form.php'; ?>
-    <?php include 'includes/edit_client_form.php'; ?>
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
