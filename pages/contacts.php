@@ -265,10 +265,10 @@
                             <input
                               type="text"
                               class="form-control"
-                              id="fullname"
                               name="fullname"
                               placeholder="Full Name" autocomplete="false"
                               autofocus="true"
+                              value='<?php echo $agent['firstname'].' '.$agent['lastname']; ?>'
                             />
                           </div>
                           <div class="mb-3">
@@ -279,6 +279,7 @@
                               name="email"
                               placeholder="Email" autocomplete="false"
                               autofocus="true"
+                              value='<?php echo $agent['email'] ?>'
                             />
                           </div>
                           <div class="mb-3">
@@ -289,7 +290,18 @@
                               name="telnumber"
                               placeholder="Telephone Number" autocomplete="false"
                               autofocus="true"
+                              value='<?php echo $agent['contact_info']?>'
                             />
+                          </div>
+                          <div class="mb-3">
+                          
+                        <textarea 
+                        class="form-control" 
+                        id="messageBox"
+                        name="messageBox" 
+                        placeholder="Enter Message Here"
+                        rows="4"></textarea>
+                     
                           </div>
                           <div class="mb-3">
                             <button class="btn btn-success d-grid w-100" name="submit_contact" type="submit">Submit</button>

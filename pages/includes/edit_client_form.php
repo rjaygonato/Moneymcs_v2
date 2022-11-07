@@ -11,8 +11,9 @@
           aria-label="Close"
           ></button>
           </div>
-          <form id="client_add" action="client_edit" method="POST">
-          <div class="modal-body">                    
+          <form id="client_edit" action="client_edit" method="POST">
+          <div class="modal-body"> 
+          <?php                   
             <div class="row g-2 mb-3">
               <div class="col mb-0">
                 <label for="firstname" class="form-label">First Name</label>
