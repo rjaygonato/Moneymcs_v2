@@ -1,6 +1,10 @@
 <?php
 	include 'includes/session.php';
+	include 'includes/getip.php';
 	$conn = $pdo->open();
+
+	date_default_timezone_set("Asia/Manila");
+	$now = date('Y-m-d h:i:s');
 
 	if(isset($_POST['login'])){
 		
@@ -17,9 +21,29 @@
 					if(password_verify($password, $row['password'])){
 						if($row['type']){
 							$_SESSION['admin'] = $row['id'];
+
+							$sql = "UPDATE users SET last_login=:last_login, last_login_ip=:last_login_ip WHERE id=:id";
+							$stmt = $conn->prepare($sql);
+							$stmt->execute([
+								'id' => $row['id'],
+								'last_login_ip' => get_ip(),
+								'last_login' => $now,
+							]);
+						}
+						elseif ($row['type'] == 2){
+
+							$_SESSION['developer'] = $row['id'];
 						}
 						else{
 							$_SESSION['user'] = $row['id'];
+
+							$sql = "UPDATE users SET last_login=:last_login, last_login_ip=:last_login_ip WHERE id=:id";
+							$stmt = $conn->prepare($sql);
+							$stmt->execute([
+								'id' => $row['id'],
+								'last_login_ip' => get_ip(),
+								'last_login' => $now,
+							]);
 						}
 					}
 					else{
