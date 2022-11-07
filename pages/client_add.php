@@ -32,5 +32,5 @@
 	$pdo->close();
 
 	
-	//header('location: clients');
+	header('location: clients');
 ?>
