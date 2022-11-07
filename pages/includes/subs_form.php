@@ -39,7 +39,7 @@
           Start receiving commissions by inviting other agents to become a part of the affiliate program and by delivering potential clients to us!</h6>
 
           <form id="myForm" action="subs" method="POST">
-            <input type="hidden" name="usersid" id="user" value="<?php echo $admin['id']; ?>" />
+            <input type="hidden" name="usersid" id="user" value="<?php echo $agent['id']; ?>" />
             <input type="hidden" id="transactid" name="trans_id" />
             <input type="hidden" name="date" />
             <input type="hidden" name="totalp" id="totalp" />
@@ -92,7 +92,7 @@
           Start receiving commissions by inviting other agents to become a part of the affiliate program and by delivering potential clients to us!</h6>
 
           <form id="myForm" action="subs" method="POST">
-            <input type="hidden" name="usersid" id="user" value="<?php echo $admin['id']; ?>" />
+            <input type="hidden" name="usersid" id="user" value="<?php echo $agent['id']; ?>" />
             <input type="hidden" id="transactid" name="trans_id" />
             <input type="hidden" name="date" />
             <input type="hidden" name="totalp" id="totalp" />

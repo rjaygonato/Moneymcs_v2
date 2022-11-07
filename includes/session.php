@@ -2,7 +2,7 @@
 	include 'includes/conn.php';
 	session_start();
 
-	if(isset($_SESSION['admin'])){
+	if(isset($_SESSION['agent'])){
 		header('location: pages/home');
 	}
 

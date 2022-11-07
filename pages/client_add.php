@@ -16,7 +16,7 @@
 		try{
 			
 			$stmt = $conn->prepare("INSERT INTO clients (user_id, firstname, lastname, email, phonenum, state, type) VALUES (:user_id, :firstname, :lastname, :email, :phonenum, :state, :type)");
-			$stmt->execute(['user_id'=>$admin['id'], 'firstname'=>$firstname,'lastname'=>$lastname, 'email'=>$email, 'phonenum'=>$phonenum, 'state'=>$state, 'type'=>$type]);
+			$stmt->execute(['user_id'=>$agent['id'], 'firstname'=>$firstname,'lastname'=>$lastname, 'email'=>$email, 'phonenum'=>$phonenum, 'state'=>$state, 'type'=>$type]);
 			//$salesid = $conn->lastInsertId();
 			
 			

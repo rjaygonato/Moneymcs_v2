@@ -158,7 +158,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                        <img src="<?php echo (!empty($admin['photo'])) ? '../images/'.$admin['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
+                        <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -167,12 +167,12 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                                <img src="<?php echo (!empty($admin['photo'])) ? '../images/'.$admin['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
+                                <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block"><?php echo $admin['firstname'].' '.$admin['lastname']; ?></span>
-                            <small class="text-muted"><?php echo $admin['level']; ?></small>
+                            <span class="fw-semibold d-block"><?php echo $agent['firstname'].' '.$agent['lastname']; ?></span>
+                            <small class="text-muted"><?php echo $agent['level']; ?></small>
                           </div>
                         </div>
                       </a>
@@ -260,7 +260,7 @@
                     <!-- Account -->
                     <div class="card-body">
                       <div class="d-flex align-items-start align-items-sm-center gap-4">
-                      <img src="<?php echo (!empty($admin['photo'])) ? '../images/'.$admin['photo'] : '../images/default.png'; ?>" alt="user-avatar" class="d-block rounded" height="100" width="100">
+                      <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" alt="user-avatar" class="d-block rounded" height="100" width="100">
                       
                         <div class="button-wrapper">
                           <!-- <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
@@ -274,7 +274,7 @@
                               accept="image/png, image/jpeg"
                             />
                           </label> -->
-                          <b><?php echo $admin['lastname']; ?>, <?php echo $admin['firstname']; ?></b><br>
+                          <b><?php echo $agent['lastname']; ?>, <?php echo $agent['firstname']; ?></b><br>
                           <button type="button" class="btn btn-sm btn-outline-secondary account-image-reset mb-4" data-bs-toggle="modal" data-bs-target="#profileModal" data-backdrop="static" data-keyboard="false">
                             <i class="bx bx-edit d-block d-sm-none"></i>
                             <span class="d-none d-sm-block">Edit Profile</span>
@@ -294,13 +294,13 @@
                               type="text"
                               id="firstName"
                               name="firstName"
-                              value="<?php echo $admin['firstname']; ?>"
+                              value="<?php echo $agent['firstname']; ?>"
                                readonly
                             />
                           </div>
                           <div class="mb-3 col-md-6">
                             <label for="lastName" class="form-label">Last Name</label>
-                            <input class="form-control" type="text" name="lastName" id="lastName" value="<?php echo $admin['lastname']; ?>" readonly />
+                            <input class="form-control" type="text" name="lastName" id="lastName" value="<?php echo $agent['lastname']; ?>" readonly />
                           </div>
                           <div class="mb-3 col-md-6">
                             <label for="email" class="form-label">E-mail</label>
@@ -309,7 +309,7 @@
                               type="text"
                               id="email"
                               name="email"
-                              value="<?php echo $admin['email']; ?>"
+                              value="<?php echo $agent['email']; ?>"
                               placeholder="" readonly
                             />
                           </div>
@@ -322,18 +322,18 @@
                                 id=""
                                 name=""
                                 class="form-control"
-                                placeholder="" value="<?php echo $admin['password']; ?>" readonly
+                                placeholder="" value="<?php echo $agent['password']; ?>" readonly
                               />
                             </div>
                           </div>
                           <!-- <div class="mb-3 col-md-6">
                             <label for="address" class="form-label">Referral link</label>
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="http://moneymcs.com/create?referral=<?php echo $admin['regcode']; ?>" />
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="http://moneymcs.com/create?referral=<?php echo $agent['regcode']; ?>" />
                           </div> -->
 
                           <div class="mb-3 col-md-6">
                             <div class="input-group">
-                              <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="http://moneymcs.com/create?referral=<?php echo $admin['regcode']; ?>" id="myrefCode">
+                              <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="http://moneymcs.com/create?referral=<?php echo $agent['regcode']; ?>" id="myrefCode">
 
                               <button class="btn btn-outline-secondary" type="button" id="buttonrefcode"  data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span id='myTooltip'>Copy to Clipboard</span>"><i class='bx bx-copy-alt' onclick="copyClip()" onmouseout="outFunc()"></i></button>
                             </div>

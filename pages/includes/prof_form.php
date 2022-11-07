@@ -20,15 +20,15 @@
                 </div><br>
                 <div class="input-group input-group-merge">
                     <span class="input-group-text">Firstname:</span>
-                    <input type="text" class="form-control"  name="firstname" value="<?php echo $admin['firstname']; ?>" aria-label="">
+                    <input type="text" class="form-control"  name="firstname" value="<?php echo $agent['firstname']; ?>" aria-label="">
                 </div><br>
                 <div class="input-group input-group-merge">
                     <span class="input-group-text">Lastname:</span>
-                    <input type="text" class="form-control" id="" name="lastname" value="<?php echo $admin['lastname']; ?>" aria-label="">
+                    <input type="text" class="form-control" id="" name="lastname" value="<?php echo $agent['lastname']; ?>" aria-label="">
                 </div><br>
                 <div class="input-group input-group-merge">
                     <span class="input-group-text">Email:</span>
-                    <input type="text" class="form-control" id="" name="email" value="<?php echo $admin['email']; ?>" aria-label="">
+                    <input type="text" class="form-control" id="" name="email" value="<?php echo $agent['email']; ?>" aria-label="">
                 </div><br>
                 <div class="input-group input-group-merge">
                     <span class="input-group-text">Password:</span>

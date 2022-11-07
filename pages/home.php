@@ -163,7 +163,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                        <img src="<?php echo (!empty($admin['photo'])) ? '../images/'.$admin['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
+                        <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -172,13 +172,13 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <!--   <img src="<?php echo (!empty($admin['photo'])) ? '../images/'.$admin['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle"> -->
-                              <img src="<?php echo (!empty($admin['photo'])) ? '../images/'.$admin['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
+                              <!--   <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle"> -->
+                              <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block"><?php echo $admin['firstname'].' '.$admin['lastname']; ?></span>
-                            <small class="text-muted"><?php echo $admin['level']; ?></small>
+                            <span class="fw-semibold d-block"><?php echo $agent['firstname'].' '.$agent['lastname']; ?></span>
+                            <small class="text-muted"><?php echo $agent['level']; ?></small>
                           </div>
                         </div>
                       </a>
