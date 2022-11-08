@@ -16,7 +16,7 @@
 		try{
 			
 			$stmt = $conn->prepare("UPDATE clients SET firstname=:firstname, lastname=:lastname, email=:email, phonenum=:phonenum, state=:state, type=:type WHERE id=:id");
-			$stmt->execute(['firstname'=>$firstname,'lastname'=>$lastname, 'email'=>$email, 'phonenum'=>$phonenum, 'state'=>$state, 'type'=>$type]);
+			$stmt->execute(['firstname'=>$firstname,'lastname'=>$lastname, 'email'=>$email, 'phonenum'=>$phonenum, 'state'=>$state, 'type'=>$type, 'id'=>$id]);
 			
 			
 			
@@ -32,5 +32,5 @@
 	$pdo->close();
 
 	
-	//header('location: clients');
+	header('location: clients');
 ?>
