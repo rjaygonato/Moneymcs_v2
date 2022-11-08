@@ -45,9 +45,7 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
-    <script>
-   var client_id = $(this).attr('data-id');
-  </script>
+
   </head>
 
   <body>
@@ -294,7 +292,7 @@
                                     <i class='bx bx-dots-vertical-rounded'></i>
                                   </button>
                                   <div class='dropdown-menu'>
-                                    <a class='dropdown-item' data-bs-toggle='modal'
+                                    <a class='dropdown-item editbtn' data-bs-toggle='modal'
                                     data-bs-target='#editClient' data-id='".$row['id']."' href='javascript:void(0);'
                                       ><i class='bx bx-edit-alt me-1'></i> Edit</a
                                     >
@@ -355,6 +353,7 @@
     <!-- / Layout wrapper -->
     <?php include 'includes/add_client_form.php'; ?>
     <?php include 'includes/edit_client_form.php'; ?>
+    <?php include 'includes/edit_client_script.php'; ?>
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>

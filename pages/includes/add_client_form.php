@@ -19,6 +19,7 @@
                   <input
                     type="text"
                     id="firstname"
+                    name="firstname"
                     class="form-control"
                     placeholder="Enter Name"
                   />
@@ -27,6 +28,7 @@
                     <label for="lastname" class="form-label">Last Name</label>
                     <input
                       type="text"
+                      name="lastname"
                       id="lastname"
                       class="form-control"
                       placeholder="Enter Name"
@@ -38,6 +40,7 @@
                     <label for="email" class="form-label">Email</label>
                     <input 
                       type="text"
+                      name="email"
                       id="email"
                       class="form-control"
                       placeholder="Enter Email"
@@ -47,6 +50,7 @@
                       <label for="phonenum" class="form-label">Phone Number</label>
                       <input
                       type="text"
+                      name="phonenum"
                       id="phonenum"
                       class="form-control"
                       placeholder="Enter Phone Number"
@@ -59,6 +63,7 @@
                       <div class="input-group">
                         <select
                           class="form-select"
+                          name="state"
                           id="state"
                           aria-label="state"
                           >
@@ -74,6 +79,7 @@
                       <div class="input-group">
                         <select
                         class="form-select"
+                        name="type"
                         id="type"
                         aria-label="type"
                         >

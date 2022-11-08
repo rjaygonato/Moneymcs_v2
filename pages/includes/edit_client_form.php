@@ -11,23 +11,28 @@
           aria-label="Close"
           ></button>
           </div>
+          
           <form id="client_edit" action="client_edit" method="POST">
-          <div class="modal-body">                     
+          <div class="modal-body">  
+          <input type="hidden" name="update_id" id="update_id" value="0"/>                   
             <div class="row g-2 mb-3">
               <div class="col mb-0">
                 <label for="firstname" class="form-label">First Name</label>
                   <input
                     type="text"
-                    id="firstname"
+                    name="firstname"
+                    id="firstnameE"
                     class="form-control"
                     placeholder="Enter Name"
+             
                   />
                   </div>
                   <div class="col mb-0">
                     <label for="lastname" class="form-label">Last Name</label>
                     <input
                       type="text"
-                      id="lastname"
+                      name="lastname"
+                      id="lastnameE"
                       class="form-control"
                       placeholder="Enter Name"
                     />
@@ -38,7 +43,8 @@
                     <label for="email" class="form-label">Email</label>
                     <input 
                       type="text"
-                      id="email"
+                      name="email"
+                      id="emailE"
                       class="form-control"
                       placeholder="Enter Email"
                       />
@@ -47,7 +53,8 @@
                       <label for="phonenum" class="form-label">Phone Number</label>
                       <input
                       type="text"
-                      id="phonenum"
+                      name="phonenum"
+                      id="phonenumE"
                       class="form-control"
                       placeholder="Enter Phone Number"
                       />
@@ -59,13 +66,14 @@
                       <div class="input-group">
                         <select
                           class="form-select"
-                          id="state"
+                          name="state"
+                          id="stateE"
                           aria-label="state"
                           >
                           <option selected>Choose...</option>
-                          <option value="1">Alabama</option>
-                          <option value="2">Arizona</option>
-                          <option value="3">Arkansas</option>
+                          <option value="Alabama">Alabama</option>
+                          <option value="Arizona">Arizona</option>
+                          <option value="Arkansas">Arkansas</option>
                         </select>
                       </div>
                     </div>
@@ -74,12 +82,13 @@
                       <div class="input-group">
                         <select
                         class="form-select"
-                        id="type"
+                        name="type"
+                        id="typeE"
                         aria-label="type"
                         >
                         <option selected>Choose...</option>
-                        <option value="1">Business Credit Builder</option>
-                        <option value="2">Direct Funding</option>
+                        <option value="Business Credit Builder">Business Credit Builder</option>
+                        <option value="Direct Funding">Direct Funding</option>
                       </select>
                     </div>
                   </div>
@@ -89,7 +98,7 @@
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                   Close
                 </button>
-                <button class="btn btn-success" name="edit" type="submit">Add</button>
+                <button class="btn btn-success" name="edit" type="submit">Edit</button>
               </div>
             </div>
           </div>

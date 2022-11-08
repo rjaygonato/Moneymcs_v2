@@ -3,14 +3,14 @@
 	$conn = $pdo->open();
 	
 	
-	if(isset($_POST['firstname'])) {
+	
 		
 		$firstname = ($_POST['firstname']);
-		$lastname = "lastname";
-		$email = "email";
-		$phonenum = "phonenum";
-		$state = "state";
-		$type = "type";
+		$lastname = ($_POST['lastname']);
+		$email = ($_POST['email']);
+		$phonenum = ($_POST['phonenum']);
+		$state = ($_POST['state']);
+		$type = ($_POST['type']);
 		
 
 		try{
@@ -28,7 +28,7 @@
 		}
 
 		
-	}	
+		
 	$pdo->close();
 
 	
