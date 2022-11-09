@@ -13,7 +13,7 @@
 		$type = ($_POST['type']);
 
 		if(empty($firstname)||empty($lastname)||empty($email)||empty($phonenum)||empty($state)||empty($type)){
-			$_SESSION['error'] = 'Please dont leave any form blank';
+			$_SESSION['error'] = 'Please dont leave the form blank';
 			header('location: clients');
 			return;
 		}

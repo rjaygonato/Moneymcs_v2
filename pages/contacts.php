@@ -227,6 +227,21 @@
 
             
             <div class="container-xxl flex-grow-1 container-p-y">
+            <?php
+                    if(isset($_SESSION['error'])){
+                        echo "
+                        <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
+                        ";
+                        unset($_SESSION['error']);
+                    }
+                    if(isset($_SESSION['success'])){
+                        echo "
+                      
+                        <div class='alert alert-success' role='alert'><i class='bx bx-check-circle'></i> ".$_SESSION['success']." </div>
+                        ";
+                        unset($_SESSION['success']);
+                    }
+                  ?>
               <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
                   <div class="card">
@@ -256,7 +271,6 @@
                           
                         </div>
                         
-                        
                       </div>
                       <div class="col-sm-6 p-5 text-center text-sm-left ">
                         <div class="card-body pb-0 px-0 px-md-4">
@@ -269,6 +283,7 @@
                               placeholder="Full Name" autocomplete="false"
                               autofocus="true"
                               value='<?php echo $agent['firstname'].' '.$agent['lastname']; ?>'
+                              readonly
                             />
                           </div>
                           <div class="mb-3">
@@ -280,6 +295,7 @@
                               placeholder="Email" autocomplete="false"
                               autofocus="true"
                               value='<?php echo $agent['email'] ?>'
+                              readonly
                             />
                           </div>
                           <div class="mb-3">
@@ -291,6 +307,7 @@
                               placeholder="Telephone Number" autocomplete="false"
                               autofocus="true"
                               value='<?php echo $agent['contact_info']?>'
+                              readonly
                             />
                           </div>
                           <div class="mb-3">
