@@ -243,9 +243,12 @@
                         unset($_SESSION['success']);
                     }
                   ?>
-                <div class="card-header">
+                <div class="card-header ">
+                <div class="d-flex align-items-start row align-center">
+                <div class="col-sm-10 mr-auto">
                   <h5>Clients</h5>
-
+                  </div>
+                  <div class="col-sm-2 ml-auto">
                   <button
                           type="button"
                           class="btn btn-success"
@@ -254,7 +257,9 @@
                         >
                           Add Client
                   </button>
-                  
+                  </div>
+                  </div>
+                 
                 </div>
                   
                   
