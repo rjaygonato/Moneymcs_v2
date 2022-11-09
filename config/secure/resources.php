@@ -105,20 +105,24 @@
                 <div data-i18n="Basic">Resources</div>
               </a>
             </li> -->
-            <li class="menu-item" style="">
+            <li class="menu-item active open" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-copy"></i>
-                <div data-i18n="">Resources</div>
+                <div data-i18n="">Resource Library</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="resources" class="menu-link">
+                <li class="menu-item ">
+                  <a href="categories" class="menu-link">
                     <div data-i18n="">Categories</div>
+                  </a>
+                </li>
+                <li class="menu-item active">
+                  <a href="resources" class="menu-link">
+                    <div data-i18n="">Resources</div>
                   </a>
                 </li>
               </ul>
             </li>
-
 
             <li class="menu-item">
               <a href="accounts" class="menu-link">
@@ -126,42 +130,6 @@
                 <div data-i18n="">Accounts</div>
               </a>
             </li>
-
-            <!-- <li class="menu-item">
-              <a href="commissions" class="menu-link">
-                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
-                <div data-i18n="Basic">Commissions/Referrals</div>
-              </a>
-            </li> -->
-
-            <!-- <li class="menu-item">
-              <a href="clients" class="menu-link">
-                <i class='menu-icon tf-icons bx bxs-user-rectangle'></i>
-                <div data-i18n="Basic">Clients</div>
-              </a>
-            </li> -->
-
-            <!-- <li class="menu-item">
-              <a href="#" class="menu-link">
-                <i class='menu-icon tf-icons bx bxs-user-plus'></i>
-                <div data-i18n="Basic">Add Clients</div>
-              </a>
-            </li> -->
-
-            <!-- <li class="menu-item">
-              <a href="downlines" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-git-branch'></i>
-                <div data-i18n="Basic">Downlines</div>
-              </a>
-            </li> -->
-
-            <!-- <li class="menu-item">
-              <a href="contacts" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-phone-outgoing'></i>
-                <div data-i18n="Basic">Contact Us</div>
-              </a>
-            </li> -->
-
 
            
           </ul>
@@ -228,7 +196,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="profile">
+                      <a class="dropdown-item" href="">
                         <i class="bx bx-user me-2"></i>
                         <span class="align-middle">Profile</span>
                       </a>
@@ -261,39 +229,78 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
-
             <div class="container-xxl flex-grow-1 container-p-y">
-              <!-- <div class="row">
+              <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
+                <?php
+                    if(isset($_SESSION['error'])){
+                        echo "
+                        <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
+                        ";
+                        unset($_SESSION['error']);
+                    }
+                    if(isset($_SESSION['success'])){
+                        echo "
+                      
+                        <div class='alert alert-success' role='alert'><i class='bx bx-check-circle'></i> ".$_SESSION['success']." </div>
+                        ";
+                        unset($_SESSION['success']);
+                    }
+                  ?>
                   <div class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
-                          <p class="mb-4">
-                            Welcome to MoneyMCS, You have <span class="fw-bold">7</span> commission(s) today. Check your new downline now.
-                          </p>
+                  <!-- <h5 class="card-header">Resource Categories</h5> -->
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h5 class="mb-0">All Resources</h5>
+                      <!-- <small class="text-muted float-end">Default label</small> -->
+                      <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addresourcemodal">
+                          Add New
+                        </button>
+                    </div>
 
-                          <a href="javascript:;" class="btn btn-sm btn-outline-success">Downlines</a>
-                          <a href="javascript:;" class="btn btn-sm btn-outline-success">Clients</a>
-                        </div>
-                      </div>
-                      <div class="col-sm-5 text-center text-sm-left">
-                        <div class="card-body pb-0 px-0 px-md-4">
-                          <img
-                            src="../assets/img/earnmoney.png"
-                            
-                            width="165"
-                            alt="View Badge User"
-                            data-app-dark-img="illustrations/man-with-laptop-dark.png"
-                            data-app-light-img="illustrations/man-with-laptop-light.png"
-                          />
-                        </div>
-                      </div>
+                    <div class="table-responsive text-nowrap">
+                      <table id="" class="table table-bordered">
+                        <thead>
+                          <th>Resource Name</th>
+                          <th>Category</th>
+                          <th>File</th>
+                          <th>Status</th>
+                          <th>Actions</th>
+                        </thead>
+                        <tbody>
+                          <?php
+                            $conn = $pdo->open();
+
+                            try{
+                              $stmt = $conn->prepare("SELECT * FROM resources WHERE status=:status");
+                              $stmt->execute(['status'=>1]);
+                              foreach($stmt as $row){
+
+                                $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
+                                echo "
+                                  <tr>
+                                    <td>".$row['resources']."</td>
+                                    <td>".$row['category']."</td>
+                                    <td>".$row['filenames']."</td>
+                                    <td>".$status."</td>
+                                    <td>
+                                      <button class='btn btn-outline-success btn-sm editresource' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit Resource</button>
+                                      <button class='btn btn-outline-danger btn-sm deleteresource ' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
+                                    </td>
+                                  </tr>
+                                ";
+                              }
+                            }
+                            catch(PDOException $e){
+                              echo $e->getMessage();
+                            }
+                            $pdo->close();
+                          ?>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
             </div>
 
            
@@ -320,7 +327,7 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
-       
+        <?php include 'includes/resource_modal.php'; ?>
       </div>
 
       <!-- Overlay -->
@@ -350,5 +357,45 @@
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <script>
+    $(function(){
+      $(document).on('click', '.editresource', function(e){
+        e.preventDefault();
+        $('#editsource').modal('show');
+        var id = $(this).data('id');
+        getsourceRow(id);
+
+        //console.log(id);
+      });
+
+      $(document).on('click', '.deleteresource', function(e){
+        e.preventDefault();
+        $('#deleteresource').modal('show');
+        var id = $(this).data('id');
+        getsourceRow(id);
+       // console.log(id);
+      });
+
+    });
+
+    function getsourceRow(id){
+      $.ajax({
+        type: 'POST',
+        url: 'resource_row.php',
+        data: {id:id},
+        dataType: 'json',
+        success: function(response){
+          $('.resid').val(response.id);
+          $('#editreso').val(response.resources);
+          $('#editcats').val(response.category);
+          $('#editfile').val(response.filenames);
+
+          $('.files').html(response.resources);
+          //console.log(response);
+        }
+      });
+    }
+  </script>
   </body>
 </html>

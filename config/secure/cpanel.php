@@ -94,22 +94,40 @@
             <li class="menu-item active">
               <a href="cpanel" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Dashboard</div>
+                <div data-i18n="">Dashboard</div>
               </a>
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item">
+            <!-- <li class="menu-item">
               <a href="files" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="Basic">Resources</div>
               </a>
+            </li> -->
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-copy"></i>
+                <div data-i18n="">Resource Library</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="categories" class="menu-link">
+                    <div data-i18n="">Categories</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="resources" class="menu-link">
+                    <div data-i18n="">Resources</div>
+                  </a>
+                </li>
+              </ul>
             </li>
 
             <li class="menu-item">
               <a href="accounts" class="menu-link">
               <i class='menu-icon tf-icons bx bxs-user-badge'></i>
-                <div data-i18n="Basic">Accounts</div>
+                <div data-i18n="">Accounts</div>
               </a>
             </li>
 
@@ -214,7 +232,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="profile">
+                      <a class="dropdown-item" href="">
                         <i class="bx bx-user me-2"></i>
                         <span class="align-middle">Profile</span>
                       </a>
