@@ -296,7 +296,8 @@
                                     data-bs-target='#editClient' data-id='".$row['id']."' href='javascript:void(0);'
                                       ><i class='bx bx-edit-alt me-1'></i> Edit</a
                                     >
-                                    <a class='dropdown-item' data-id='".$row['id']."' href='javascript:void(0);'
+                                    <a class='dropdown-item deletebtn' data-bs-toggle='modal'
+                                    data-bs-target='#deleteClient' data-id='".$row['id']."' href='javascript:void(0);'
                                       ><i class='bx bx-trash me-1'></i> Delete</a
                                     >
                                   </div>
@@ -353,7 +354,9 @@
     <!-- / Layout wrapper -->
     <?php include 'includes/add_client_form.php'; ?>
     <?php include 'includes/edit_client_form.php'; ?>
+    <?php include 'includes/delete_client_form.php'; ?>
     <?php include 'includes/edit_client_script.php'; ?>
+    <?php include 'includes/delete_client_script.php'; ?>
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>

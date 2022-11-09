@@ -4,30 +4,23 @@
 <script> 
  
 
-$('.editbtn').on('click', function () {
 
-    $('#editClient').modal('show');
+$('.deletebtn').on('click', function () {
+
+    $('#deleteClient').modal('show');
 
     $tr = $(this).closest('tr');
 
     var data = $tr.children("td").map(function () {
         return $(this).text();
     }).get();
-
+    console.log(data);
     
     var clientID = $(this).data("id");
-    
-    $('#firstnameE').val(data[0]);
-    $('#lastnameE').val(data[1]);
-    $('#emailE').val(data[2]);
-    $('#phonenumE').val(data[3]);
-    $('#stateE').val(data[4]); 
-    $('#typeE').val(data[5]);
-    $('#update_id').val(clientID);
-             
+    $("#clientName").text(data[0]+" "+data[1]); 
+    $('#delete_id').val(clientID);
    
 });
-
 
   
 </script>
