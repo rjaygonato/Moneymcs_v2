@@ -384,7 +384,7 @@
           $('.catid').val(response.id);
           $('#edit_cat').val(response.category);
           $('.category').html(response.category);
-           console.log(response);
+           //console.log(response);
         }
       });
     }

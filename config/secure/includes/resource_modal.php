@@ -131,7 +131,8 @@
                 <input type="hidden" class="resid" name="id">
                 <div class="text-center">
                     <p>Delete this Resources?</p>
-                    <h3 class="files"></h3>
+                    <h3 class="resource"></h3>
+                    <!-- <input type="text" class="files" > -->
                 </div>
             </div>
             <div class="modal-footer">

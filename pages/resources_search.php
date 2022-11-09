@@ -251,10 +251,38 @@
                   <div class="col-lg-12 mb-4 order-0">
                     <div class="card">
                       <div class="d-flex align-items-end row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-4">
                           <div class="card-body">
-                            <h5 class="card-title text-primary">Search Results</h5>
+                            <h5 class="card-title text-primary">Resources</h5>
+                            <div class="card mb-12">
+
+                              
+                              <?php
+                                  $conn = $pdo->open();
+
+                                  try{
+                                    $stmt = $conn->prepare("SELECT * FROM resources WHERE status=:status");
+                                    $stmt->execute(['status'=>1]);
+                                    foreach($stmt as $row){
+
+                                      //$status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
+                                      echo "
+                                          <div class='card-body'>
+                                            <h5 class='card-title'>".$row['resources']."</h5>
+                                            <p class='card-text'>".$row['filenames']."</p>
+                                            <a href='javascript:void(0)' class='btn btn-success'>View</a>
+                                          </div><br>
+                                      ";
+                                    }
+                                  }
+                                  catch(PDOException $e){
+                                    echo $e->getMessage();
+                                  }
+                                  $pdo->close();
+                                ?>
+                            </div>
                           </div>
+                          
                         </div>
                       </div>
                     </div>

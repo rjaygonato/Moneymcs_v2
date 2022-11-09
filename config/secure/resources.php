@@ -284,7 +284,7 @@
                                     <td>".$status."</td>
                                     <td>
                                       <button class='btn btn-outline-success btn-sm editresource' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit Resource</button>
-                                      <button class='btn btn-outline-danger btn-sm deleteresource ' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
+                                      <button class='btn btn-outline-danger btn-sm deleteresource' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
                                     </td>
                                   </tr>
                                 ";
@@ -364,7 +364,7 @@
         e.preventDefault();
         $('#editsource').modal('show');
         var id = $(this).data('id');
-        getsourceRow(id);
+        getRow(id);
 
         //console.log(id);
       });
@@ -373,13 +373,13 @@
         e.preventDefault();
         $('#deleteresource').modal('show');
         var id = $(this).data('id');
-        getsourceRow(id);
+        getRow(id);
        // console.log(id);
       });
 
     });
 
-    function getsourceRow(id){
+    function getRow(id){
       $.ajax({
         type: 'POST',
         url: 'resource_row.php',
@@ -391,7 +391,7 @@
           $('#editcats').val(response.category);
           $('#editfile').val(response.filenames);
 
-          $('.files').html(response.resources);
+          $('.resource').html(response);
           //console.log(response);
         }
       });
