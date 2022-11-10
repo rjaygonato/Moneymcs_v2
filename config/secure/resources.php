@@ -280,7 +280,7 @@
                                   <tr>
                                     <td>".$row['resources']."</td>
                                     <td>".$row['category']."</td>
-                                    <td>".$row['filenames']."</td>
+                                    <td>".$row['type']."</td>
                                     <td>".$status."</td>
                                     <td>
                                       <button class='btn btn-outline-success btn-sm editresource' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit Resource</button>
@@ -389,6 +389,7 @@
           $('.resid').val(response.id);
           $('#editreso').val(response.resources);
           $('#editcats').val(response.category);
+          $('#type').val(response.type);
           $('#editfile').val(response.filenames);
 
           $('.resource').html(response);

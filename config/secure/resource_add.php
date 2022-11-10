@@ -5,6 +5,7 @@
 
         $resources = $_POST['resources'];
 		$category = $_POST['category'];
+		$type = $_POST['type'];
         $filenames = $_FILES['filenames']['name'];
 
 		$conn = $pdo->open();
@@ -27,8 +28,8 @@
 		}
 		else{	
 			try{
-				$stmt = $conn->prepare("INSERT INTO resources (resources, filenames, category, status) VALUES (:resources, :filenames, :category, :status)");
-				$stmt->execute(['resources'=>$resources , 'filenames'=>$filenames , 'category'=>$category , 'status'=>'1']);
+				$stmt = $conn->prepare("INSERT INTO resources (resources, filenames, category, type, status) VALUES (:resources, :filenames, :category, :type, :status)");
+				$stmt->execute(['resources'=>$resources , 'filenames'=>$filenames , 'category'=>$category , 'type'=>$type , 'status'=>'1']);
 
 				$_SESSION['success'] = 'Resource File added successfully';
 			}

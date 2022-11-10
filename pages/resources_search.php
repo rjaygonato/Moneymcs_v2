@@ -235,7 +235,7 @@
                       <div class="d-flex align-items-end row">
                         <div class="col-sm-12">
                           <div class="card-body">
-                            <a href="resources_search">
+                            <a href="#">
                               <div class="input-group input-group-merge">
                                 <span class="input-group-text" id="basic-addon-search31"><i class="bx bx-search"></i></span>
                                 <input type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="basic-addon-search31">
@@ -247,16 +247,14 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                   <div class="col-lg-12 mb-4 order-0">
                     <div class="card">
                       <div class="d-flex align-items-end row">
                         <div class="col-sm-4">
                           <div class="card-body">
                             <h5 class="card-title text-primary">Resources</h5>
-                            <div class="card mb-12">
-
-                              
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
                               <?php
                                   $conn = $pdo->open();
 
@@ -267,10 +265,12 @@
 
                                       //$status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
                                       echo "
-                                          <div class='card-body'>
-                                            <h5 class='card-title'>".$row['resources']."</h5>
-                                            <p class='card-text'>".$row['filenames']."</p>
-                                            <a href='javascript:void(0)' class='btn btn-success'>View</a>
+                                          <div class='card-body text-center'>
+                                          <img aria-hidden='true' class='object-contain w-full h-full' src='../assets/img/folder_green.png' width='80'>
+                                          </span>
+                                            <h6 class='card-title'>".$row['resources']."</h6>
+                                            <small>".$row['filenames']."</small><br>
+                                            <a href='javascript:void(0)' class='btn btn-sm btn-success text-center'>View</a>
                                           </div><br>
                                       ";
                                     }
@@ -287,7 +287,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
             </div>
 
             <?php include 'includes/google_translate.php'; ?>
