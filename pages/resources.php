@@ -288,13 +288,13 @@
                         <div class="col-sm-4">
                           <div class="card-body">
                             <h5 class="card-title text-primary">Categories</h5>
-                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                            <div class="card shadow-none bg-transparent border  mb-3">
                               <div class="card-body text-center">
                                 <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
                                 </span>
                                   <h6 class="card-title">Sales Resources</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="sales_resources" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -302,13 +302,13 @@
                         <div class="col-sm-4">
                           <div class="card-body">
                             <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
-                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                            <div class="card shadow-none bg-transparent border  mb-3">
                               <div class="card-body text-center">
                                 <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
                                 </span>
                                   <h6 class="card-title">Testimonials</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="testimonials" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -316,13 +316,13 @@
                         <div class="col-sm-4">
                           <div class="card-body">
                             <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
-                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                            <div class="card shadow-none bg-transparent border  mb-3">
                               <div class="card-body text-center">
                                 <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
                                 </span>
                                   <h6 class="card-title">Contracts & Agreements</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="contracts_agreements" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -334,13 +334,13 @@
                         <div class="col-sm-4">
                           <div class="card-body">
                             <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
-                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                            <div class="card shadow-none bg-transparent border mb-3">
                               <div class="card-body text-center">
                                 <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
                                 </span>
                                   <h6 class="card-title">Finance Resources</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="finance" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -348,13 +348,13 @@
                         <div class="col-sm-4">
                           <div class="card-body">
                             <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
-                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                            <div class="card shadow-none bg-transparent border mb-3">
                               <div class="card-body text-center">
                                 <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
                                 </span>
                                   <h6 class="card-title">Marketing Articles</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="articles" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -362,13 +362,13 @@
                         <div class="col-sm-4">
                           <div class="card-body">
                             <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
-                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                            <div class="card shadow-none bg-transparent border  mb-3">
                               <div class="card-body text-center">
                                 <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
                                 </span>
                                   <h6 class="card-title">Marketing Ebooks</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="ebooks" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -387,7 +387,7 @@
                                 </span>
                                   <h6 class="card-title">Marketing Flyers</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="flyers" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -401,7 +401,7 @@
                                 </span>
                                   <h6 class="card-title">Marketing PowerPoints</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="powerpoints" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -415,7 +415,7 @@
                                 </span>
                                   <h6 class="card-title">Marketing Press Releases</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="press_releases" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -434,7 +434,7 @@
                                 </span>
                                   <h6 class="card-title">Marketing Seminars</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="seminars" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -448,7 +448,7 @@
                                 </span>
                                   <h6 class="card-title">Marketing Social Media</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="social_media" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -462,7 +462,7 @@
                                 </span>
                                   <h6 class="card-title">All Marketing Videos</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="videos" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
@@ -479,9 +479,9 @@
                               <div class="card-body text-center">
                                 <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
                                 </span>
-                                  <h6 class="card-title">Marketing Seminars</h6>
+                                  <h6 class="card-title">Marketing Website Template</h6>
                                   <hr>
-                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                  <center><a href="web_template" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
                                 </div>
                             </div>
                           </div>
