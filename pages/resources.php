@@ -247,19 +247,36 @@
                 <div class="row">
                   <div class="col-lg-12 mb-4 order-0">
                     <div class="card">
-                      <div class="d-flex align-items-end row">
+                      <!-- <div class="d-flex align-items-end row">
                         <div class="col-sm-12">
                           <div class="card-body">
-                            <!-- <h5 class="card-title">Resource Library</h5> -->
+                            <h5 class="card-title">Resource Library</h5>
                             <p class="card-text">The Partner Resource Library is a wealth of resources at your fingertips to help you with many aspects of growing your business!</p>
 
                             <p class="card-text">Within each of the Categories you will find many Flyers, Emails, PowerPoints, Videos, Guides, and much more that will help you to market and sell this amazing program to your clients.</p>
-                            <!-- <p class="card-text">All you have to do to view what is in a Category is to select it and then the content from that Category will reflect here.</p> -->
+                            <p class="card-text">All you have to do to view what is in a Category is to select it and then the content from that Category will reflect here.</p>
 
                             <p class="card-text">If you have any questions on any Category, please contact us at 800-497-0499. We are here to help!</p>
                           </div>
                         </div>
+                      </div> -->
+                      <div class="card accordion-item active">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                            Resource Library
+                          </button>
+                        </h2>
+
+                      <div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          The Partner Resource Library is a wealth of resources at your fingertips to help you with many aspects of growing your business!
+                          Within each of the Categories you will find many Flyers, Emails, PowerPoints, Videos, Guides, and much more that will help you to market and sell this amazing program to your clients.</p>
+                          <p class="card-text">All you have to do to view what is in a Category is to select it and then the content from that Category will reflect here.</p>
+
+                          <p class="card-text">If you have any questions on any Category, please contact us at 800-497-0499. We are here to help!</p>
+                        </div>
                       </div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -270,37 +287,206 @@
                       <div class="d-flex align-items-end row">
                         <div class="col-sm-4">
                           <div class="card-body">
-                            <h5 class="card-title text-primary">Resource Categories</h5>
+                            <h5 class="card-title text-primary">Categories</h5>
                             <div class="card shadow-none bg-transparent border border-success mb-3">
-                              <?php
-                                  $conn = $pdo->open();
-
-                                  try{
-                                    $stmt = $conn->prepare("SELECT * FROM resources WHERE status=:status");
-                                    $stmt->execute(['status'=>1]);
-                                    foreach($stmt as $row){
-
-                                      //$status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
-                                      echo "
-                                          <div class='card-body text-center'>
-                                          <img aria-hidden='true' class='object-contain w-full h-full' src='../assets/img/folder.png' width='80'>
-                                          </span>
-                                            <h6 class='card-title'>".$row['resources']."</h6>
-                                            <small>".$row['filenames']."</small><hr>
-                                            <center><a href='javascript:void(0)' class='btn btn-md btn-success '>View</a></center>
-                                          </div>
-                                      ";
-                                    }
-                                  }
-                                  catch(PDOException $e){
-                                    echo $e->getMessage();
-                                  }
-                                  $pdo->close();
-                                ?>
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Sales Resources</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
                             </div>
                           </div>
-                          
                         </div>
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Testimonials</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Contracts & Agreements</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="d-flex align-items-end row">
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Finance Resources</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Marketing Articles</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Marketing Ebooks</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="d-flex align-items-end row">
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Marketing Flyers</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Marketing PowerPoints</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Marketing Press Releases</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="d-flex align-items-end row">
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Marketing Seminars</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Marketing Social Media</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">All Marketing Videos</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="d-flex align-items-end row">
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none bg-transparent border border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Marketing Seminars</h6>
+                                  <hr>
+                                  <center><a href="javascript:void(0)" class="btn btn-md btn-success ">View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        
                       </div>
                     </div>
                   </div>
