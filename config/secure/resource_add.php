@@ -7,6 +7,8 @@
 		$category = $_POST['category'];
 		$type = $_POST['type'];
         $filenames = $_FILES['filenames']['name'];
+		$type=$_FILES['filenames']['type'];
+		$temp=$_FILES['file']['tmp_name'];
 
 		$conn = $pdo->open();
 
