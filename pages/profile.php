@@ -332,66 +332,15 @@
                           </div> -->
 
                           <div class="mb-3 col-md-6">
+                          <label class="form-label" for="">Referral Link</label>
                             <div class="input-group">
-                              <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="http://moneymcs.com/create?referral=<?php echo $agent['regcode']; ?>" id="myrefCode">
+                              <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" id="myrefCode">
 
                               <button class="btn btn-outline-secondary" type="button" id="buttonrefcode"  data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span id='myTooltip'>Copy to Clipboard</span>"><i class='bx bx-copy-alt' onclick="copyClip()" onmouseout="outFunc()"></i></button>
                             </div>
                           </div>
-                          <!-- <div class="mb-3 col-md-6">
-                            <label for="state" class="form-label">State</label>
-                            <input class="form-control" type="text" id="state" name="state" placeholder="California" />
-                          </div> -->
-                         
-
-                          <!-- <div class="mb-3 col-md-6">
-                            <label class="form-label" for="country">Country</label>
-                            <select id="country" class="select2 form-select">
-                              <option value="">Select</option>
-                              <option value="Australia">Australia</option>
-                              <option value="Bangladesh">Bangladesh</option>
-                              <option value="Belarus">Belarus</option>
-                              <option value="Brazil">Brazil</option>
-                              <option value="Canada">Canada</option>
-                              <option value="China">China</option>
-                              <option value="France">France</option>
-                              <option value="Germany">Germany</option>
-                              <option value="India">India</option>
-                              <option value="Indonesia">Indonesia</option>
-                              <option value="Israel">Israel</option>
-                              <option value="Italy">Italy</option>
-                              <option value="Japan">Japan</option>
-                              <option value="Korea">Korea, Republic of</option>
-                              <option value="Mexico">Mexico</option>
-                              <option value="Philippines">Philippines</option>
-                              <option value="Russia">Russian Federation</option>
-                              <option value="South Africa">South Africa</option>
-                              <option value="Thailand">Thailand</option>
-                              <option value="Turkey">Turkey</option>
-                              <option value="Ukraine">Ukraine</option>
-                              <option value="United Arab Emirates">United Arab Emirates</option>
-                              <option value="United Kingdom">United Kingdom</option>
-                              <option value="United States">United States</option>
-                            </select>
-                          </div> -->
-
-                          <!-- <div class="mb-3 col-md-6">
-                            <label for="language" class="form-label">Language</label>
-                            <select id="language" class="select2 form-select">
-                              <option value="">Select Language</option>
-                              <option value="en">English</option>
-                              <option value="fr">French</option>
-                              <option value="de">German</option>
-                              <option value="pt">Portuguese</option>
-                            </select>
-                          </div> -->
-                          
                           
                         </div>
-                        <!-- <div class="mt-2">
-                          <button type="submit" class="btn btn-primary me-2">Save changes</button>
-                          <button type="reset" class="btn btn-outline-secondary">Cancel</button>
-                        </div> -->
                       </form>
                     </div>
                     <!-- /Account -->
