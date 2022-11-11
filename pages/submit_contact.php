@@ -2,13 +2,13 @@
 include 'includes/session.php';
  
 if(isset($_POST['submit_contact'])) {
- $mailto = "concerns.vaprocareers@gmail.com";  
+ $mailto = "info@moneymcs.com";  
 
  $name = $_POST['fullname']; 
  $fromEmail = $_POST['email']; 
  $telnumber = $_POST['telnumber']; 
  $messageBox = $_POST['messageBox'];
- $subject = "MoneyMCS Concern";
+ $subject = "MoneyMCS Contact";
 
  if(empty($messageBox)){
   $_SESSION['error'] = 'Please dont leave the form blank';
@@ -19,6 +19,7 @@ if(isset($_POST['submit_contact'])) {
  
  $message = "Client Name: " . $name . "\n"
  . "Phone Number: " . $telnumber . "\n\n"
+ . "Email: " . $email . "\n\n"
  . "Client Message: " . $messageBox .  "\n"  ;
  
  $headers = "From: " . $fromEmail; 

@@ -13,7 +13,7 @@ $('.editbtn').on('click', function () {
     var data = $tr.children("td").map(function () {
         return $(this).text();
     }).get();
-
+    console.log(data);
     
     var clientID = $(this).data("id");
     

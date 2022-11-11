@@ -267,13 +267,14 @@
                   <table class="table">
                     <thead>
                       <tr>
+                        <th>Company Name</th>
                         <th>First Name</th>
                         <th>Last Name</th>
-                        <th>Email</th>
                         <th>Phone Number</th>
-                        <th>State</th>
-                        <th>Type</th>
-                        <th>Action</th>
+                        <th>Email</th>
+                        <th>Paid</th>
+                        <th>Date Joined</th>
+                        
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
@@ -283,15 +284,19 @@
                           try{
                             $stmt = $conn->prepare("SELECT * FROM clients ORDER BY id DESC" );
                             $stmt->execute();
+                        
                             foreach($stmt as $row){
+                              
+                              
                               echo "
                                 <tr>
+                                  <td>".$row['company_name']."</td>
                                   <td>".$row['firstname']."</td>
                                   <td>".$row['lastname']."</td>
-                                  <td>".$row['email']."</td>
                                   <td>".$row['phonenum']."</td>
-                                  <td>".$row['state']."</td>
-                                  <td>".$row['type']."</td>
+                                  <td>".$row['email']."</td>
+                                  <td>".$row['paid_user']."</td>
+                                  <td>".$row['date_added']."</td>
                                   <td><div class='dropdown'>
                                   <button type='button' class='btn p-0 dropdown-toggle hide-arrow' data-bs-toggle='dropdown'>
                                     <i class='bx bx-dots-vertical-rounded'></i>
@@ -299,11 +304,15 @@
                                   <div class='dropdown-menu'>
                                     <a class='dropdown-item editbtn' data-bs-toggle='modal'
                                     data-bs-target='#editClient' data-id='".$row['id']."' href='javascript:void(0);'
-                                      ><i class='bx bx-edit-alt me-1'></i> Edit</a
+                                      ><i class='bx bx-edit-alt me-1'></i>Edit</a
+                                    >
+                                    <a class='dropdown-item viewbtn' data-bs-toggle='modal'
+                                    data-bs-target='#viewClient' data-id='".$row['id']."' href='javascript:void(0);'
+                                      ><i class='bx bx-low-vision me-1'></i>View</a
                                     >
                                     <a class='dropdown-item deletebtn' data-bs-toggle='modal'
                                     data-bs-target='#deleteClient' data-id='".$row['id']."' href='javascript:void(0);'
-                                      ><i class='bx bx-trash me-1'></i> Delete</a
+                                      ><i class='bx bx-trash me-1'></i>Delete</a
                                     >
                                   </div>
                                 </div></td>
@@ -362,6 +371,7 @@
     <?php include 'includes/delete_client_form.php'; ?>
     <?php include 'includes/edit_client_script.php'; ?>
     <?php include 'includes/delete_client_script.php'; ?>
+    <?php include 'includes/view_client_form.php'; ?>
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
