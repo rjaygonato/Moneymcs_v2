@@ -277,7 +277,7 @@
                                           <tr>
                                             <td>".$row['filenames']."</td>
                                             <td>
-                                              <button class='btn btn-outline-success btn-sm edit' data-id='".$row['id']."'><i class='bx bxs-download'></i><a href='../config/files/".$row['filenames']."' target='_blank'>Download</a></button>
+                                              <button class='btn btn-outline-success btn-sm edit' data-id='".$row['id']."'><i class='fa fa-edit'></i> Download</button>
                                               
                                             </td>
                                           </tr>
