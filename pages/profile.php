@@ -78,7 +78,7 @@
             <!-- Layouts -->
             <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
-              <i class='menu-icon tf-icons bx bx-book-reader'></i>
+                <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="">Partner Resources</div>
               </a>
               <ul class="menu-sub">
