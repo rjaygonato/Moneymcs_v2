@@ -100,6 +100,7 @@
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="Basic">Commissions/Referrals</div>
               </a>
+              tests
             </li>
 
             <li class="menu-item">
