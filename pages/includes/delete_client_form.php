@@ -26,7 +26,7 @@
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                   Close
                 </button>
-                <button class="btn btn-success" name="delete" type="submit">Delete</button>
+                <button class="btn btn-danger" name="delete" type="submit">Delete</button>
               </div>
             </div>
           </div>

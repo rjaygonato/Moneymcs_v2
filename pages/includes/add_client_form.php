@@ -12,7 +12,19 @@
           ></button>
           </div>
           <form id="client_add" action="client_add" method="POST">
-          <div class="modal-body">                    
+          <div class="modal-body">  
+          <div class="row g-2 mb-3">
+              <div class="col mb-0">
+                <label for="company_name" class="form-label">Company Name</label>
+                  <input
+                    type="text"
+                    id="company_name"
+                    name="company_name"
+                    class="form-control"
+                    placeholder="Enter Company Name"
+                  />
+                  </div>
+                </div>                  
             <div class="row g-2 mb-3">
               <div class="col mb-0">
                 <label for="firstname" class="form-label">First Name</label>
@@ -56,7 +68,37 @@
                       placeholder="Enter Phone Number"
                       />
                     </div>
+                    
                   </div>
+                  <div class="row g-1 mb-3">
+                  <label for="paid_user"class="form-label">Paid</label>
+                  <div class="form-check ">
+                            <input
+                              name="paid_user"
+                              class="form-check-input"
+                              type="radio"
+                              value="1"
+                              id="paid_yes"
+                            />
+                            <label class="form-check-label" for="paid_yes"> Yes </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              name="paid_user"
+                              class="form-check-input"
+                              type="radio"
+                              value="0"
+                              id="paid_no"
+                            />
+                            <label class="form-check-label" for="paid_no"> No </label>
+                          </div>
+                  </div>
+                  <div class="mb-3">
+                        <label for="date_joined" class="col-md-2 col-form-label">Date</label>
+                        <div class="col">
+                          <input class="form-control" name="date_joined " type="date" value="2021-06-18" id="date_joined" />
+                        </div>
+                      </div>
                   <div class="row g-2">
                     <div class="col mb-0">
                       <label for="email" class="form-label">State</label>

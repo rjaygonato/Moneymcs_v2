@@ -4,11 +4,13 @@
 	
 	
 	if(isset($_POST['add'])) {
-		
+		$company_name = ($_POST['company_name']);
 		$firstname = ($_POST['firstname']);
 		$lastname = ($_POST['lastname']);
 		$email = ($_POST['email']);
 		$phonenum = ($_POST['phonenum']);
+		$paid_user = ($_POST['paid_user']);
+		$date_added = date('Y-m-d');
 		$state = ($_POST['state']);
 		$type = ($_POST['type']);
 
@@ -29,14 +31,11 @@
 				return;
 			}
 		else{
-			
-
-			
-
+		
 		try{
 			
-			$stmt = $conn->prepare("INSERT INTO clients(user_id, firstname, lastname, email, phonenum, state, type) VALUES (:user_id, :firstname, :lastname, :email, :phonenum, :state, :type)");
-			$stmt->execute(['user_id'=>$agent['id'], 'firstname'=>$firstname,'lastname'=>$lastname, 'email'=>$email, 'phonenum'=>$phonenum, 'state'=>$state, 'type'=>$type]);
+			$stmt = $conn->prepare("INSERT INTO clients(user_id, company_name, firstname, lastname, email, phonenum, paid_user, date_added, state, type) VALUES (:user_id, :company_name, :firstname, :lastname, :email, :phonenum, :paid_user, :date_added, :state, :type)");
+			$stmt->execute(['user_id'=>$agent['id'], 'company_name'=>$company_name, 'firstname'=>$firstname,'lastname'=>$lastname, 'email'=>$email, 'phonenum'=>$phonenum, 'paid_user'=>$paid_user, 'date_added'=>$date_added,'state'=>$state, 'type'=>$type]);
 			//$salesid = $conn->lastInsertId();
 			
 			
@@ -53,5 +52,5 @@
 	$pdo->close();
 
 	
-	header('location: clients');
+	//header('location: clients');
 ?>
