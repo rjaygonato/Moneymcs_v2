@@ -80,7 +80,7 @@
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">New Agent Registration</h4>
+              <h4 class="mb-2">New Agent Register</h4>
               <p class="mb-4">Please sign-up form below</p>
               <?php
                 if(isset($_SESSION['error'])){

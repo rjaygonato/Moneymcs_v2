@@ -80,7 +80,7 @@
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">New Agent Registration</h4>
+              <h4 class="mb-2">New Agent Register</h4>
               <p class="mb-4">Please sign-up form below</p>
               <?php
                 if(isset($_SESSION['error'])){
@@ -101,13 +101,13 @@
               <form id="formAuthentication" class="mb-3" action="createaccount" method="POST">
 
                 <div class="mb-3">
-                  <label for="" class="form-label">Referral Code</label>
-                  <input type="text" class="form-control" id="refcode" name="" readonly />
+                  <label for="" class="form-label" style="display:none;">Referral Code</label>
+                  <input type="hidden" class="form-control" id="refcode" name="refcode" readonly />
                 </div>
 
                 <div class="mb-3">
                   <label for="" class="form-label" style="display:none;">Referral Link</label>
-                  <input type="hidden" class="form-control" id="reflink" name="" readonly />
+                  <input type="hidden" class="form-control" id="reflink" name="reflink" readonly />
                 </div>
 
                 <div class="mb-3">

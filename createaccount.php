@@ -16,7 +16,7 @@
 		$contact_info = trim(stripcslashes($_POST['contact_info']));
 		$email = trim(stripcslashes($_POST['email']));
 		$password = trim(stripcslashes($_POST['password']));
-		$repassword = trim(stripcslashes($_POST['repassword'])); 
+		$repassword = trim(stripcslashes($_POST['repassword']));
 
 		if ( empty($firstname) || empty($lastname) || empty($contact_info) || empty($email) || empty($password) || empty($repassword) ) {
 
@@ -60,11 +60,19 @@
 				$regcode='1234567890';
 				$code=substr(str_shuffle($set), 0, 15);
 				$moneymcid=substr(str_shuffle($regcode), 0, 5);
+
+				$refcode = $_POST['refcode'];
+				$reflink = $_POST['reflink'];
 				
 				try{
 					$stmt = $conn->prepare("INSERT INTO users (regcode, moneymcid, firstname, lastname, contact_info, email, password, type, status, created_on, ip) VALUES (:code, :moneymcid, :firstname, :lastname, :contact_info, :email, :password, :type, :status, :created_on, :ip)");
 					$stmt->execute(['code'=>$code, 'moneymcid'=>$moneymcid, 'firstname'=>$firstname, 'lastname'=>$lastname, 'contact_info'=>$contact_info, 'email'=>$email, 'password'=>$password, 'type'=>'1', 'status'=>'1', 'created_on'=>$now, 'ip' => get_ip()]);
-                    
+
+                    //referral magic goes here 
+					$stmt = $conn->prepare("INSERT INTO refer_user (firstname, lastname, email, refcode, reflink, status, date_added) VALUES (:firstname, :lastname, :email, :refcode, :reflink, :status, :date_added)");
+
+					$stmt->execute(['firstname'=>$firstname, 'lastname'=>$lastname, 'email'=>$email, 'refcode'=>$refcode, 'reflink'=>$reflink,'status'=>'1', 'date_added'=>$now]);
+
 					$_SESSION['success'] = 'Sign in now and get your referral link';
 				}
 				catch(PDOException $e){

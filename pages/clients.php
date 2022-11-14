@@ -69,7 +69,9 @@
           </div>
 
           <div class="menu-inner-shadow"></div>
-
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Main Menu</span>
+          </li>
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item ">
@@ -80,11 +82,23 @@
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item ">
-              <a href="resources" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-book-reader'></i>
-                <div data-i18n="Basic">Resource Library</div>
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+              <i class='menu-icon tf-icons bx bx-book-reader'></i>
+                <div data-i18n="">Partner Resources</div>
               </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="resources" class="menu-link">
+                    <div data-i18n="">Resource Library</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <div data-i18n="">Resource Page</div>
+                  </a>
+                </li>
+              </ul>
             </li>
 
             <li class="menu-item">
@@ -121,7 +135,9 @@
                 <div data-i18n="Basic">Contact Us</div>
               </a>
             </li>
-
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Main Menu</span>
+            </li>
 
            
           </ul>
