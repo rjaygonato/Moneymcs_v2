@@ -136,9 +136,29 @@
               </a>
             </li>
             <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Main Menu</span>
+              <span class="menu-header-text">Reports</span>
+            </li>
+            
+            <li class="menu-item">
+              <a href="" class="menu-link">
+              <i class='menu-icon tf-icons bx bx-receipt'></i>
+                <div data-i18n="Basic">Ledger</div>
+              </a>
             </li>
 
+            <li class="menu-item">
+              <a href="" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-current-location'></i>
+                <div data-i18n="Basic">Link Tracking Stats</div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-money'></i>
+                <div data-i18n="Basic">Commissions Generated</div>
+              </a>
+            </li>
            
           </ul>
         </aside>

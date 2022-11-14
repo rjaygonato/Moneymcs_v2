@@ -145,6 +145,27 @@
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Reports
             </li>
+
+            <li class="menu-item">
+              <a href="" class="menu-link">
+              <i class='menu-icon tf-icons bx bx-receipt'></i>
+                <div data-i18n="Basic">Ledger</div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-current-location'></i>
+                <div data-i18n="Basic">Link Tracking Stats</div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-money'></i>
+                <div data-i18n="Basic">Commissions Generated</div>
+              </a>
+            </li>
            
           </ul>
         </aside>
@@ -251,7 +272,7 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
-                <div class="col-lg-12 mb-4 order-0">
+                <div class="col-lg-8 mb-4 order-0">
                   <div class="card">
                     <div class="d-flex align-items-end row">
                       <div class="col-sm-7">
@@ -261,15 +282,14 @@
                             Welcome to MoneyMCS, You have <span class="fw-bold">7</span> commission(s) today. Check your new downline now.
                           </p>
 
-                          <a href="javascript:;" class="btn btn-sm btn-outline-success">Downlines</a>
-                          <a href="javascript:;" class="btn btn-sm btn-outline-success">Clients</a>
+                          <!-- <a href="javascript:;" class="btn btn-sm btn-outline-success">Downlines</a>
+                          <a href="javascript:;" class="btn btn-sm btn-outline-success">Clients</a> -->
                         </div>
                       </div>
                       <div class="col-sm-5 text-center text-sm-left">
                         <div class="card-body pb-0 px-0 px-md-4">
                           <img
                             src="../assets/img/earnmoney.png"
-                            
                             width="165"
                             alt="View Badge User"
                             data-app-dark-img="illustrations/man-with-laptop-dark.png"
@@ -280,57 +300,20 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-12 mb-4 order-0">
-                  <div class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
-                          <p class="mb-4">
-                            Welcome to MoneyMCS, You have <span class="fw-bold">7</span> commission(s) today. Check your new downline now.
-                          </p>
-
-                          <a href="javascript:;" class="btn btn-sm btn-outline-success">Downlines</a>
-                          <a href="javascript:;" class="btn btn-sm btn-outline-success">Clients</a>
-                        </div>
-                      </div>
-                      <div class="col-sm-5 text-center text-sm-left">
-                        <div class="card-body pb-0 px-0 px-md-4">
-                          <img
-                            src="../assets/img/earnmoney.png"
-                            
-                            width="165"
-                            alt="View Badge User"
-                            data-app-dark-img="illustrations/man-with-laptop-dark.png"
-                            data-app-light-img="illustrations/man-with-laptop-light.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- <div class="col-lg-4 col-md-4 order-1">
+               
+                <div class="col-lg-4 col-md-4 order-1">
                   <div class="row">
                   <div class="col-lg-6 col-md-12 col-6 mb-4">
                       <div class="card">
                         <div class="card-body">
                           <div class="card-title d-flex align-items-start justify-content-between">
                             <div class="avatar flex-shrink-0">
-                              <img src="../assets/img/icons/unicons/wallet-info.png" alt="Credit Card" class="rounded">
-                            </div>
-                            <div class="dropdown">
-                              <button class="btn p-0" type="button" id="cardOpt6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                              </button>
-                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
-                                <a class="dropdown-item" href="javascript:void(0);">&nbsp;</a>
-                                <a class="dropdown-item" href="javascript:void(0);">&nbsp;</a>
-                              </div>
+                            <i class='bx bxs-user-badge bx-md'></i>
                             </div>
                           </div>
-                          <span></span>
-                          <h3 class="card-title text-nowrap mb-1">$0</h3>
-                          <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> 0%</small>
+                          <span class="fw-semibold d-block mb-1">Clients</span>
+                          <h2 class="card-title text-nowrap mb-1">0</h2>
+                          <small class="text-success fw-semibold"> &nbsp;</small>
                         </div>
                       </div>
                     </div>
@@ -339,26 +322,17 @@
                         <div class="card-body">
                           <div class="card-title d-flex align-items-start justify-content-between">
                             <div class="avatar flex-shrink-0">
-                              <img src="../assets/img/icons/unicons/wallet-info.png" alt="Credit Card" class="rounded">
-                            </div>
-                            <div class="dropdown">
-                              <button class="btn p-0" type="button" id="cardOpt6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                              </button>
-                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
-                                <a class="dropdown-item" href="javascript:void(0);">&nbsp;</a>
-                                <a class="dropdown-item" href="javascript:void(0);">&nbsp;</a>
-                              </div>
+                              <i class='bx bx-git-branch bx-md'></i>
                             </div>
                           </div>
-                          <span></span>
-                          <h3 class="card-title text-nowrap mb-1">$0</h3>
-                          <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> 0%</small>
+                          <span class="fw-semibold d-block mb-1">Downlines</span>
+                          <h2 class="card-title text-nowrap mb-1">0</h2>
+                          <small class="text-success fw-semibold">&nbsp;</small>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div> -->
+                </div>
               </div>
             </div>
 

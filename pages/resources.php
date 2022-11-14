@@ -68,6 +68,7 @@
           </div>
 
           <?php include 'includes/resource_sidemenu.php'; ?>
+          
            
           </ul>
         </aside>
