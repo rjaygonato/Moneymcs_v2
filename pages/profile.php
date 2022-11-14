@@ -78,7 +78,7 @@
             <!-- Layouts -->
             <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
-              <i class='menu-icon tf-icons bx bx-book-reader'></i>
+                <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="">Partner Resources</div>
               </a>
               <ul class="menu-sub">
@@ -100,7 +100,6 @@
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="Basic">Commissions/Referrals</div>
               </a>
-              tests
             </li>
 
             <li class="menu-item">
