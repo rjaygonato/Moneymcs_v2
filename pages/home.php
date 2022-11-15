@@ -107,29 +107,29 @@
               </ul>
             </li>
 
-            <li class="menu-item">
+            <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="">Commissions/Referrals</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="#" class="menu-link">
+                  <a href="programs" class="menu-link">
                     <div data-i18n="">My Programs</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="linkgenerator" class="menu-link">
                     <div data-i18n="">Link Generator</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="emailtemplates" class="menu-link">
                     <div data-i18n="">Email Templates</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="banners" class="menu-link">
                     <div data-i18n="">Banners</div>
                     </a>
                 </li>
@@ -169,21 +169,21 @@
             </li>
 
             <li class="menu-item">
-              <a href="" class="menu-link">
+              <a href="ledger" class="menu-link">
               <i class='menu-icon tf-icons bx bx-receipt'></i>
                 <div data-i18n="Basic">Ledger</div>
               </a>
             </li>
 
             <li class="menu-item">
-              <a href="" class="menu-link">
+              <a href="linktrackingstats" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-current-location'></i>
                 <div data-i18n="Basic">Link Tracking Stats</div>
               </a>
             </li>
 
             <li class="menu-item">
-              <a href="" class="menu-link">
+              <a href="commissionsgenerated" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-money'></i>
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>

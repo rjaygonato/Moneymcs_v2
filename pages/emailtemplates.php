@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
   include 'includes/session.php';
 ?>
 <!DOCTYPE html>
@@ -28,14 +28,19 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Subscription</title>
+    <title>MoneyMCS - Comission</title>
 
     <meta name="description" content="" />
 
     <?php include 'includes/headers.php'; ?>
+    
 
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
+
+    <!-- Paypal Express -->
+    <!-- <script src="https://www.paypalobjects.com/api/checkout.js"></script> -->
+    <!-- <script src="https://www.paypal.com/sdk/js?client-id=ASQAcFkDyzt_DJLIp2B-5fvNvKwB8RmF56Z82REWkieRIppWs7XoDGZuFJabXe1bly8X8ZncyuXDEULP" data-sdk-integration-source="button-factory"></script> -->
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
@@ -68,7 +73,7 @@
           </li>
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item">
+            <li class="menu-item ">
               <a href="home" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
@@ -95,7 +100,7 @@
               </ul>
             </li>
 
-            <li class="menu-item">
+            <li class="menu-item open">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="">Commissions/Referrals</div>
@@ -111,7 +116,7 @@
                     <div data-i18n="">Link Generator</div>
                     </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item active">
                     <a href="emailtemplates" class="menu-link">
                     <div data-i18n="">Email Templates</div>
                     </a>
@@ -153,7 +158,7 @@
             </li>
 
             <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Reports</span>
+              <span class="menu-header-text">Reports
             </li>
 
             <li class="menu-item">
@@ -176,7 +181,6 @@
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
             </li>
-
            
           </ul>
         </aside>
@@ -284,95 +288,64 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <!-- <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Subscriptions</h4> -->
-
-              <div class="row">
-                <div class="col-md-12">
-                  <ul class="nav nav-tabs flex-column flex-md-row mb-3">
-                    <li class="nav-item">
-                      <a class="nav-link " href="profile"><i class="bx bx-user me-1"></i> Profile</a>
-                    </li>
-                   <li class="nav-item">
-                      <a class="nav-link active" href="subscription"
-                        >  <i class='bx bx-user-pin'></i> Subscription</a
-                      >
-                    </li>
-                    <!-- <li class="nav-item">
-                      <a class="nav-link" href="pages-account-settings-connections.html"
-                        ><i class="bx bx-link-alt me-1"></i> Connections</a
-                      >
-                    </li> -->
-                  </ul>
-                  <!-- <div class="card shadow-none bg-transparent border border-secondary mb-3">
+                <div class="card">
                     <div class="card-body">
-                     
-                      <p class="card-text">Some quick example text to build on the card title and make up.</p>
-                    </div>
-                  </div> -->
-                  <!-- <h5 class="card-title">You already Subscribe for the month of November 2022</h5> -->
-                  <div class="card mb-4">
-                  <?php
-                    if(isset($_SESSION['error'])){
-                        echo "
-                        <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
-                        ";
-                        unset($_SESSION['error']);
-                    }
-                    if(isset($_SESSION['success'])){
-                        echo "
-                      
-                        <div class='alert alert-success' role='alert'><i class='bx bx-check-circle'></i> ".$_SESSION['success']." </div>
-                        ";
-                        unset($_SESSION['success']);
-                    }
-                  ?>
-                    <h5 class="card-header">Subscription History</h5>
-                    <!-- Account -->
-                    <div class="card-body">
-                      <div class="d-flex align-items-start align-items-sm-center gap-4">
-                        
-                      <table id="example1" class="table table-responsive text-nowrap">
-                        <thead>
-                          <th>Transaction #</th>
-                          <th>Amount</th>
-                          <th>Date</th>
-                        </thead>
-                        <tbody>
-                        <?php
-                          $conn = $pdo->open();
+                        <h3 class="card-title text-primary">Email Templates</h3>
+                        <p class="card-text">
+                            Below are emails you can use in your marketing. When you find one you want to use, 
+                            select the applicable Referral Partner, redirect, and ad that you want to track and 
+                            click the button to generate the email with the appropriate tracking link.
+                        </p>
+                        <p class="mb-0">
+                            After you have generated the email, you can copy and paste it into your email client 
+                            to send to your prospects.
+                        </p>
+                        <br>
+                        <!-- Button ModalScrollable -->
+                        <button
+                            type="button"
+                            class="btn btn-success"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalScrollable"
+                        >
+                            Generate Email
+                        </button>
+                        <div class="modal fade" id="modalScrollable" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalScrollableTitle">Email Template</h5>
+                                        <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                        ></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Subject: [contact first name] I want you at this webinar</p>
 
-                          try{
-                            $stmt = $conn->prepare("SELECT * FROM subscriptions WHERE user_id=:user ORDER BY id DESC" );
-                            $stmt->execute(['user'=>$agent['id']]);
-                            foreach($stmt as $row){
-                              $status = ($row['status']) ? '<span class="badge bg-label-success">active</span>' : '<span class="badge bg-label-danger">not verified</span>';
-                              $active = (!$row['status']) ? '<span class="pull-right"><a href="#activate" class="status" data-toggle="modal" data-id="'.$row['id'].'"><i class="fa fa-check-square-o"></i></a></span>' : '';
-                              echo "
-                                <tr>
-                                  <td>".$row['trans_id']."</td>
-                                  <td>$".$row['totalp']."</td>
-                                  <td>".date('M d, Y', strtotime($row['date_added']))."</td>
-                                </tr>
-                              ";
-                            }
-                          }
-                          catch(PDOException $e){
-                            echo $e->getMessage();
-                          }
-
-                          $pdo->close();
-                        ?>
-                        </tbody>
-                      </table>
-                      </div>
+                                        <p>Hey [INSERT CONTACT FIRST NAME],</p>
+                                        <p>
+                                        Do you own a business or have you been thinking about starting a business?
+                                        If so, would you be interested in getting money and building business credit for your business?
+                                        Give me a call today so I can talk with you more about how to get money for your business.
+                                        </p>
+                                        <p>Thank you,</p>
+                                        <p>[INSERT SIGNATURE]</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                        Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- /Account -->
-                  </div>
-                
                 </div>
-              </div>
             </div>
-
+            
             <?php include 'includes/google_translate.php'; ?>
             <!-- / Content -->
 
@@ -397,14 +370,15 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
+
+         <?php include 'includes/subs_form.php'; ?>
+
       </div>
 
       <!-- Overlay -->
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-
-    <?php include 'includes/subs_form.php'; ?>
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
