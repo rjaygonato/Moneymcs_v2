@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Downlines</title>
+    <title>MoneyMCS - Subscription Plans</title>
 
     <meta name="description" content="" />
 
@@ -81,6 +81,13 @@
             </li>
 
             <!-- Layouts -->
+            <!-- <li class="menu-item">
+              <a href="resources" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-book-reader'></i>
+                <div data-i18n="Basic">Resource Library</div>
+              </a>
+            </li> -->
+
             <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
               <i class='menu-icon tf-icons bx bx-book-reader'></i>
@@ -101,32 +108,10 @@
             </li>
 
             <li class="menu-item">
-              <a href="javascript:void(0)" class="menu-link menu-toggle">
+              <a href="commissions" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
-                <div data-i18n="">Commissions/Referrals</div>
+                <div data-i18n="Basic">Commissions/Referrals</div>
               </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="#" class="menu-link">
-                    <div data-i18n="">My Programs</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-link">
-                    <div data-i18n="">Link Generator</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-link">
-                    <div data-i18n="">Email Templates</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-link">
-                    <div data-i18n="">Banners</div>
-                    </a>
-                </li>
-              </ul>
             </li>
 
             <li class="menu-item">
@@ -143,7 +128,7 @@
               </a>
             </li> -->
 
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="downlines" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-git-branch'></i>
                 <div data-i18n="Basic">Downlines</div>
@@ -156,12 +141,12 @@
                 <div data-i18n="Basic">Contact Us</div>
               </a>
             </li>
+            
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Reports
+            </li>
 
-          <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Reports</span>
-          </li>
-          
-          <li class="menu-item">
+            <li class="menu-item">
               <a href="" class="menu-link">
               <i class='menu-icon tf-icons bx bx-receipt'></i>
                 <div data-i18n="Basic">Ledger</div>
@@ -189,7 +174,7 @@
         <!-- Layout container -->
         <div class="layout-page">
           <!-- Navbar -->
-
+         
           <nav
             class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
             id="layout-navbar"
@@ -234,7 +219,8 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                                <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
+                              <!--   <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle"> -->
+                              <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -286,9 +272,112 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
-
             <div class="container-xxl flex-grow-1 container-p-y">
-           
+              <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <h5 class="card-title text-primary">Subscription Plans</h5>
+                    <p class="card-text">We bring you the best pricing plan for you</p>
+                    <section class="pricing py-5">
+                      <div class="container">
+                        <div class="row">
+                          <!-- Free Tier -->
+                          <!-- <div class="col-lg-4">
+                            <div class="card mb-5 mb-lg-0">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Starter</h5>
+                                <h6 class="card-price text-center"> Free </h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For Affiliates Agent only</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                </ul>
+                                <div class="d-grid">
+                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div> -->
+                          
+                          <!-- Plus Tier -->
+                          <div class="col-lg-4">
+                            <div class="card mb-5 mb-lg-0">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Economy</h5>
+                                <h6 class="card-price text-center">$99<span class="period"> / Month</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For Affiliates Agent</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                </ul>
+                                <div class="d-grid">
+                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Pro Tier -->
+                          <div class="col-lg-4">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Deluxe</h5>
+                                <h6 class="card-price text-center">$299<span class="period"> / Month</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                </ul>
+                                <div class="d-grid">
+                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="card mb-5 mb-lg-0">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Ultimate</h5>
+                                <h6 class="card-price text-center">$1,188<span class="period"> / Year</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                </ul>
+                                <div class="d-grid">
+                                  <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                
             </div>
 
             <?php include 'includes/google_translate.php'; ?>
@@ -324,8 +413,10 @@
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-
+  
+    
     <?php include 'includes/footer_links.php'; ?>
+
     <?php include 'includes/payment_script.php'; ?>
   </body>
 </html>
