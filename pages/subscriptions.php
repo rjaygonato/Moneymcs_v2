@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Home</title>
+    <title>MoneyMCS - Subscription Plans</title>
 
     <meta name="description" content="" />
 
@@ -46,7 +46,7 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
   </head>
-  
+
   <body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
@@ -81,6 +81,13 @@
             </li>
 
             <!-- Layouts -->
+            <!-- <li class="menu-item">
+              <a href="resources" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-book-reader'></i>
+                <div data-i18n="Basic">Resource Library</div>
+              </a>
+            </li> -->
+
             <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
               <i class='menu-icon tf-icons bx bx-book-reader'></i>
@@ -128,18 +135,18 @@
               </a>
             </li>
 
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="contacts" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-phone-outgoing'></i>
                 <div data-i18n="Basic">Contact Us</div>
               </a>
             </li>
+            
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Reports
+            </li>
 
-          <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Reports</span>
-          </li>
-
-          <li class="menu-item">
+            <li class="menu-item">
               <a href="" class="menu-link">
               <i class='menu-icon tf-icons bx bx-receipt'></i>
                 <div data-i18n="Basic">Ledger</div>
@@ -159,8 +166,6 @@
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
             </li>
-
-
            
           </ul>
         </aside>
@@ -169,7 +174,7 @@
         <!-- Layout container -->
         <div class="layout-page">
           <!-- Navbar -->
-
+         
           <nav
             class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
             id="layout-navbar"
@@ -214,7 +219,8 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                                <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
+                              <!--   <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle"> -->
+                              <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -266,117 +272,117 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
-
-            
             <div class="container-xxl flex-grow-1 container-p-y">
-            <?php
-                    if(isset($_SESSION['error'])){
-                        echo "
-                        <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
-                        ";
-                        unset($_SESSION['error']);
-                    }
-                    if(isset($_SESSION['success'])){
-                        echo "
-                      
-                        <div class='alert alert-success' role='alert'><i class='bx bx-check-circle'></i> ".$_SESSION['success']." </div>
-                        ";
-                        unset($_SESSION['success']);
-                    }
-                  ?>
               <div class="row">
-                <div class="col-lg-12 mb-4 order-0">
-                  <div class="card">
-                    <div class="d-flex align-items-start row align-center">
-                      <div class="col-sm-6 p-5">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Get in Touch</h5>
-                          <p class="mb-4">
-                            Fill in the form to start a conversation
-                          </p>
-                          <a class="mb-4 " href="#">
-                            <i class="m-2 bx bx-map-pin"></i>
-                            <span class="text-dark">6655 W Sahara Ave #B200, Las Vegas, NV 89146</span>
-                          </a>
-                          <div>
-                          <a class="mb-4" href="#">
-                            <i class="m-2 bx bx-phone"></i>
-                            <span class="text-dark">(702) 930-3131</span>
-                          </a>
-                          </div>
-                          <div>
-                          <a class="mb-4" href="#">
-                            <i class="m-2 bx bx-envelope"></i>
-                            <span class="text-dark">info@moneymcs.com</span>
-                          </a>
-                          </div>
+                  <div class="col-lg-12 mb-4 order-0">
+                    <h5 class="card-title text-primary">Subscription Plans</h5>
+                    <p class="card-text">We bring you the best pricing plan for you</p>
+                    <section class="pricing py-5">
+                      <div class="container">
+                        <div class="row">
+                          <!-- Free Tier -->
+                          <!-- <div class="col-lg-4">
+                            <div class="card mb-5 mb-lg-0">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Starter</h5>
+                                <h6 class="card-price text-center"> Free </h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For Affiliates Agent only</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                </ul>
+                                <div class="d-grid">
+                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div> -->
                           
+                          <!-- Plus Tier -->
+                          <div class="col-lg-4">
+                            <div class="card mb-5 mb-lg-0">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Economy</h5>
+                                <h6 class="card-price text-center">$99<span class="period"> / Month</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For Affiliates Agent</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                </ul>
+                                <div class="d-grid">
+                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Pro Tier -->
+                          <div class="col-lg-4">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Deluxe</h5>
+                                <h6 class="card-price text-center">$299<span class="period"> / Month</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                </ul>
+                                <div class="d-grid">
+                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="card mb-5 mb-lg-0">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Ultimate</h5>
+                                <h6 class="card-price text-center">$1,188<span class="period"> / Year</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                  <li>&nbsp;</li>
+                                </ul>
+                                <div class="d-grid">
+                                  <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        
                       </div>
-                      <div class="col-sm-6 p-5 text-center text-sm-left ">
-                        <div class="card-body pb-0 px-0 px-md-4">
-                        <form id="formAuthentication" class="mb-3" action="submit_contact" method="POST">
-                          <div class="mb-3">
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="fullname"
-                              placeholder="Full Name" autocomplete="false"
-                              autofocus="true"
-                              value='<?php echo $agent['firstname'].' '.$agent['lastname']; ?>'
-                              readonly
-                            />
-                          </div>
-                          <div class="mb-3">
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="email"
-                              name="email"
-                              placeholder="Email" autocomplete="false"
-                              autofocus="true"
-                              value='<?php echo $agent['email'] ?>'
-                              readonly
-                            />
-                          </div>
-                          <div class="mb-3">
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="telnumber"
-                              name="telnumber"
-                              placeholder="Telephone Number" autocomplete="false"
-                              autofocus="true"
-                              value='<?php echo $agent['contact_info']?>'
-                              readonly
-                            />
-                          </div>
-                          <div class="mb-3">
-                          
-                        <textarea 
-                        class="form-control" 
-                        id="messageBox"
-                        name="messageBox" 
-                        placeholder="Enter Message Here"
-                        rows="4"></textarea>
-                     
-                          </div>
-                          <div class="mb-3">
-                            <button class="btn btn-success d-grid w-100" name="submit_contact" type="submit">Submit</button>
-                          </div>
-                        </form>
-                        </div>
-                      </div>
-                    </div>
+                    </section>
                   </div>
                 </div>
-                <?php include 'includes/google_translate.php'; ?>
-              </div>
+                
             </div>
-           
+
+            <?php include 'includes/google_translate.php'; ?>
             <!-- / Content -->
-            
+
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
@@ -407,8 +413,10 @@
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-
+  
+    
     <?php include 'includes/footer_links.php'; ?>
+
     <?php include 'includes/payment_script.php'; ?>
   </body>
 </html>
