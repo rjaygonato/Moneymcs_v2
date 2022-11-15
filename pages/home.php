@@ -108,10 +108,32 @@
             </li>
 
             <li class="menu-item">
-              <a href="commissions" class="menu-link">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
-                <div data-i18n="Basic">Commissions/Referrals</div>
+                <div data-i18n="">Commissions/Referrals</div>
               </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <div data-i18n="">My Programs</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                    <div data-i18n="">Link Generator</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                    <div data-i18n="">Email Templates</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                    <div data-i18n="">Banners</div>
+                    </a>
+                </li>
+              </ul>
             </li>
 
             <li class="menu-item">
