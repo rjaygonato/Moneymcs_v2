@@ -175,7 +175,7 @@
               </a>
             </li>
 
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="linktrackingstats" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-current-location'></i>
                 <div data-i18n="Basic">Link Tracking Stats</div>

@@ -107,7 +107,7 @@
               </ul>
             </li>
 
-            <li class="menu-item open">
+            <li class="menu-item open active">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="">Commissions/Referrals</div>
@@ -298,6 +298,76 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title text-primary">Banners</h3>
+                        <p>
+                            Below are banner ads you can use in your marketing. When you find one you want to use, select the applicable Referral Partner, redirect, and ad that you want to track and click the button to generate the html code with the appropriate tracking link.
+                        </p>
+                        <p>
+                            After you have generated the html code, you can copy and paste it into your site(s) to begin to generate traffic.
+                        </p>
+                        <h6 class="text-primary">TEMPLATES</h6>
+                        <!-- Basic Bootstrap Table -->
+                        <div class="table-responsive text-nowrap">
+                            <table class="table">
+                            <thead>
+                                <tr>
+                                <th>File Name</th>
+                                <th>File Size</th>
+                                <th>Link</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0 col-12">
+                                <tr>
+                                <td>Test Banner FB image</td>
+                                <td>1200X628</td>
+                                <td>
+                                    <!-- Button ModalScrollable -->
+                                    <button
+                                        type="button"
+                                        class="btn btn-success"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#BannerModal"
+                                    >
+                                        Generate Banner
+                                    </button>
+                                    <!--/ Button ModalScrollable -->
+                                </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                            
+                        </div>
+                        <!--/ Basic Bootstrap Table -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="BannerModal" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="BannerModalTitle">Banner</h5>
+                                        <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                        ></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Copy the text in the box below and paste it into any web page to generate a link tracking banner!</p>
+
+                                        <div>
+                                            <textarea class="form-control" id="" rows="3" scrollable><a href="" target="_blank"><img src="" border="0"></a></textarea>
+                                        </div>
+
+                                        <p>This is what the banner will look like:</p>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                        Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Modal-->
                     </div>
                 </div>
             </div>
