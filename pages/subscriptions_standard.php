@@ -303,114 +303,26 @@
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
-                  <div class="col-lg-12 mb-4 order-0">
-                    <h5 class="card-title text-primary">Subscription Plans</h5>
-                    <p class="card-text">We bring you the best pricing plan for you</p>
-                    <section class="pricing py-5">
-                      <div class="container">
-                        <div class="row">
-                          <!-- Free Tier -->
-                          <!-- <div class="col-lg-4">
-                            <div class="card mb-5 mb-lg-0">
-                              <div class="card-body">
-                                <h5 class="card-title text-muted text-uppercase text-center">Starter</h5>
-                                <h6 class="card-price text-center"> Free </h6>
-                                <hr>
-                                <ul class="fa-ul">
-                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For Affiliates Agent only</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                </ul>
-                                <div class="d-grid">
-                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div> -->
-                          
-                          <!-- Plus Tier -->
-                          <div class="col-lg-3">
-                            <div class="card mb-5 mb-lg-0">
-                              <div class="card-body">
-                                <h5 class="card-title text-muted text-uppercase text-center">Affiliate Starter</h5>
-                                <h6 class="card-price text-center"><span class="period"> FREE </span></h6>
-                                <hr>
-                                <ul class="fa-ul">
-                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For affiliate agents</li>
-                                </ul>
-                                <br><br><br><br><br><br>
-                                <br>
-                                <div class="d-grid">
-                                <!-- <a href="#" class="btn btn-success text-uppercase" disabled>Select</a> -->
-                                <!-- <button type="button" class="btn btn-success" disabled="">Disabled</button> -->
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-3">
-                            <div class="card mb-5 mb-lg-0"><center class="btn-success">MOST POPULAR</center>
-                              <div class="card-body border border-success">
-                                <h5 class="card-title text-muted text-uppercase text-center"><b>Standard</b></h5>
-                                <h6 class="card-price text-center">$99.00<span class="period"> / Month</span></h6>
-                                <h6 class="card-price text-center"><del>$1,188.00<span class="period"> / Year *</span></del></h6>
-                                <h6 class="card-price text-center"><b>$1000.00<span class="period"> / Year</b></span></h6>
-                                <hr>
-                                <ul class="fa-ul">
-                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For affiliate agents with portal access / higher referral commission</li>
-                                </ul>
-                                <div class="d-grid">
-                                <a href="subscriptions_standard" class="btn btn-success text-uppercase">Select</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Pro Tier -->
-                          <div class="col-lg-3">
-                            <div class="card">
-                              <div class="card-body">
-                                <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
-                                <h6 class="card-price text-center">$299.00<span class="period"> / Month</span></h6>
-                                <hr>
-                                <ul class="fa-ul">
-                                  <li><span class="fa-li"><i class="fas fa-check"></i></span> For affiliate agents with services ( Bookkeping and Tax Services)</li>
-                                  <br><br><br>
-                                </ul>
-                                <div class="d-grid">
-                                <a href="#" class="btn btn-success text-uppercase">Select</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-3">
-                            <div class="card mb-5 mb-lg-0">
-                              <div class="card-body">
-                                <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
-                                <h6 class="card-price text-center">$599.00<span class="period"> / Month</span></h6>
-                                <hr>
-                                <ul class="fa-ul">
-                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>  For affiliate agents with services ( Bookkeping , Personal credit repair and Tax Services)</li>
-                                  <br>
-                                </ul>
-                                <div class="d-grid">
-                                  <a href="#" class="btn btn-success text-uppercase">Select</a>
-                                </div>
-                              </div>
-                            </div>
+                <div class="container-fluid  mt-100">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-header">
+                          <h5>Plan: Standard</h5>
+                        </div>
+                        <div class="card-body cart">
+                          <div class="col-sm-12 empty-cart-cls text-center">
+                            <h4><strong>You're selecting a Standard Subscription</strong></h4>
+                            <!-- <h5>Add something to make me happy :)</h5> -->
+                            <a href="#" class="btn btn-success cart-btn-transform m-3" data-abc="true">Pay now</a>
                           </div>
                         </div>
                       </div>
-                    </section>
-                      <center><p>For more options, Please contact us for pricing | <a href="contacts" class="btn btn-success btn-sm">Contact us</a></p></center>
-                    <hr>
+                    </div>
                   </div>
                 </div>
-                
-            </div>
+              </div>
+          </div>
 
             <?php include 'includes/google_translate.php'; ?>
             <!-- / Content -->
