@@ -352,7 +352,6 @@
                               class="form-control"
                               name="fullname"
                               placeholder="Full Name" autocomplete="false"
-                              autofocus="true"
                               value='<?php echo $agent['firstname'].' '.$agent['lastname']; ?>'
                               readonly
                             />
@@ -364,7 +363,6 @@
                               id="email"
                               name="email"
                               placeholder="Email" autocomplete="false"
-                              autofocus="true"
                               value='<?php echo $agent['email'] ?>'
                               readonly
                             />
@@ -376,7 +374,6 @@
                               id="telnumber"
                               name="telnumber"
                               placeholder="Telephone Number" autocomplete="false"
-                              autofocus="true"
                               value='<?php echo $agent['contact_info']?>'
                               readonly
                             />
@@ -388,7 +385,7 @@
                         id="messageBox"
                         name="messageBox" 
                         placeholder="Enter Message Here"
-                        rows="4"></textarea>
+                        rows="4" autofocus="true"></textarea>
                      
                           </div>
                           <div class="mb-3">
