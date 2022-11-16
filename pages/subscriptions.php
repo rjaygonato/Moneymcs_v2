@@ -355,7 +355,8 @@
                               <div class="card-body border border-success">
                                 <h5 class="card-title text-muted text-uppercase text-center"><b>Standard</b></h5>
                                 <h6 class="card-price text-center">$99.00<span class="period"> / Month</span></h6>
-                                <h6 class="card-price text-center">$1000.00<span class="period"> / Year</span></h6>
+                                <h6 class="card-price text-center"><del>$1,188.00<span class="period"> / Year *</span></del></h6>
+                                <h6 class="card-price text-center"><b>$1000.00<span class="period"> / Year</b></span></h6>
                                 <hr>
                                 <ul class="fa-ul">
                                   <li><span class="fa-li"><i class="fas fa-check"></i></span>For affiliate agents with portal access / higher referral commission</li>
