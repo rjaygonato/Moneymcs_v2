@@ -267,37 +267,59 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <!-- <div class="row">
+              <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
+                  <b>Registered Users</b>
                   <div class="card">
                     <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
+                      <div class="col-sm-12">
                         <div class="card-body">
-                          <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
-                          <p class="mb-4">
-                            Welcome to MoneyMCS, You have <span class="fw-bold">7</span> commission(s) today. Check your new downline now.
-                          </p>
+                          <div class="table-responsive text-nowrap">
+                            <table id="" class="table table-bordered">
+                              <thead>
+                                <th>Names</th>
+                                <th>Emails</th>
+                                <th>Date Registered</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                              </thead>
+                              <tbody>
+                                <?php
+                                  $conn = $pdo->open();
 
-                          <a href="javascript:;" class="btn btn-sm btn-outline-success">Downlines</a>
-                          <a href="javascript:;" class="btn btn-sm btn-outline-success">Clients</a>
-                        </div>
-                      </div>
-                      <div class="col-sm-5 text-center text-sm-left">
-                        <div class="card-body pb-0 px-0 px-md-4">
-                          <img
-                            src="../assets/img/earnmoney.png"
-                            
-                            width="165"
-                            alt="View Badge User"
-                            data-app-dark-img="illustrations/man-with-laptop-dark.png"
-                            data-app-light-img="illustrations/man-with-laptop-light.png"
-                          />
+                                  try{
+                                    $stmt = $conn->prepare("SELECT * FROM users WHERE status=:status");
+                                    $stmt->execute(['status'=>1]);
+                                    foreach($stmt as $row){
+
+                                      $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
+                                      echo "
+                                        <tr>
+                                          <td>".$row['firstname']." ".$row['lastname']."</td>
+                                          <td>".$row['email']."</td>
+                                          <td>".$row['created_on']."</td>
+                                          <td>".$status."</td>
+                                          <td>
+                                            -
+                                          </td>
+                                        </tr>
+                                      ";
+                                    }
+                                  }
+                                  catch(PDOException $e){
+                                    echo $e->getMessage();
+                                  }
+                                  $pdo->close();
+                                ?>
+                              </tbody>
+                            </table>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
             </div>
 
            
