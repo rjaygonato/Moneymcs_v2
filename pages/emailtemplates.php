@@ -107,7 +107,7 @@
               </ul>
             </li>
 
-            <li class="menu-item open">
+            <li class="menu-item open active">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="">Commissions/Referrals</div>
@@ -317,6 +317,8 @@
                         >
                             Generate Email
                         </button>
+
+                        <!-- Modal -->
                         <div class="modal fade" id="modalScrollable" tabindex="-1" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
@@ -349,6 +351,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!--/ Button ModalScrollable -->
                     </div>
                 </div>
             </div>
