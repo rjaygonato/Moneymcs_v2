@@ -80,6 +80,13 @@
               </a>
             </li>
 
+            <li class="menu-item active">
+              <a href="subscriptions" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-list-ul'></i>
+                <div data-i18n="Analytics">Subscription Plans</div>
+              </a>
+            </li>
+
             <!-- Layouts -->
             <!-- <li class="menu-item">
               <a href="resources" class="menu-link">
@@ -164,7 +171,7 @@
               </a>
             </li>
             
-            <li class="menu-header small text-uppercase">
+            <!-- <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Reports
             </li>
 
@@ -187,7 +194,7 @@
                 <i class='menu-icon tf-icons bx bx-money'></i>
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
-            </li>
+            </li> -->
            
           </ul>
         </aside>
@@ -225,9 +232,9 @@
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
               <?//php include 'includes/subs_button.php'; ?>
-              <li class="nav-item lh-1 me-3">
+               <!-- <li class="nav-item lh-1 me-3">
                 <a class="github-button" href="subscriptions" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="">Subscription Plans</a>
-              </li>
+              </li> -->
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">

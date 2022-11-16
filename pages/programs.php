@@ -80,6 +80,13 @@
               </a>
             </li>
 
+            <li class="menu-item ">
+              <a href="subscriptions" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-list-ul'></i>
+                <div data-i18n="Analytics">Subscription Plans</div>
+              </a>
+            </li>
+
             <!-- Layouts -->
             <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">

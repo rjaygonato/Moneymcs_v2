@@ -152,7 +152,7 @@
               </a>
             </li>
 
-            <li class="menu-header small text-uppercase">
+            <!-- <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Reports</span>
             </li>
 
@@ -175,7 +175,7 @@
                 <i class='menu-icon tf-icons bx bx-money'></i>
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
-            </li>
+            </li> -->
 
            
           </ul>
@@ -214,9 +214,9 @@
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
               <?//php include 'includes/subs_button.php'; ?>
-              <li class="nav-item lh-1 me-3">
+               <!-- <li class="nav-item lh-1 me-3">
                 <a class="github-button" href="subscriptions" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="">Subscription Plans</a>
-              </li>
+              </li> -->
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">

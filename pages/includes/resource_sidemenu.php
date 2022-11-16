@@ -11,6 +11,13 @@
     </a>
 </li>
 
+<li class="menu-item ">
+    <a href="subscriptions" class="menu-link">
+    <i class='menu-icon tf-icons bx bx-list-ul'></i>
+    <div data-i18n="Analytics">Subscription Plans</div>
+    </a>
+</li>
+
 <!-- Layouts -->
 <!-- <li class="menu-item active">
     <a href="resources" class="menu-link">
@@ -95,7 +102,7 @@
     </a>
 </li>
 
-<li class="menu-header small text-uppercase">
+<!-- <li class="menu-header small text-uppercase">
     <span class="menu-header-text">Reports
 </li>
 
@@ -118,4 +125,4 @@
     <i class='menu-icon tf-icons bx bx-money'></i>
     <div data-i18n="Basic">Commissions Generated</div>
     </a>
-</li>
+</li> -->
