@@ -107,7 +107,7 @@
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="#" class="menu-link">
+                  <a href="resource" class="menu-link">
                     <div data-i18n="">Resource Page</div>
                   </a>
                 </li>
@@ -345,7 +345,7 @@
                                 </ul>
                                 <br><br><br><br>
                                 <div class="d-grid">
-                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                <a href="#" class="btn btn-success text-uppercase">Select</a>
                                 </div>
                               </div>
                             </div>
@@ -361,7 +361,7 @@
                                   <br>
                                 </ul>
                                 <div class="d-grid">
-                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                <a href="#" class="btn btn-success text-uppercase">Select</a>
                                 </div>
                               </div>
                             </div>
@@ -378,7 +378,7 @@
                                   <br>
                                 </ul>
                                 <div class="d-grid">
-                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                <a href="#" class="btn btn-success text-uppercase">Select</a>
                                 </div>
                               </div>
                             </div>
@@ -393,7 +393,7 @@
                                   <li><span class="fa-li"><i class="fas fa-check"></i></span>  For affiliate agents with services ( Bookkeping , Personal credit repair and Tax Services)</li>
                                 </ul>
                                 <div class="d-grid">
-                                  <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                  <a href="#" class="btn btn-success text-uppercase">Select</a>
                                 </div>
                               </div>
                             </div>

@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Comission</title>
+    <title>MoneyMCS - Resource Page</title>
 
     <meta name="description" content="" />
 
@@ -88,7 +88,7 @@
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item" style="">
+            <li class="menu-item open active" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
               <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="">Partner Resources</div>
@@ -99,7 +99,7 @@
                     <div data-i18n="">Resource Library</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="resource" class="menu-link">
                     <div data-i18n="">Resource Page</div>
                   </a>
@@ -107,7 +107,7 @@
               </ul>
             </li>
 
-            <li class="menu-item">
+            <li class="menu-item ">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="">Commissions/Referrals</div>
@@ -123,7 +123,7 @@
                     <div data-i18n="">Link Generator</div>
                     </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item ">
                     <a href="emailtemplates" class="menu-link">
                     <div data-i18n="">Email Templates</div>
                     </a>
@@ -164,7 +164,7 @@
               </a>
             </li>
 
-            <li class="menu-header small text-uppercase">
+            <!-- <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Reports
             </li>
 
@@ -187,7 +187,7 @@
                 <i class='menu-icon tf-icons bx bx-money'></i>
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
-            </li>
+            </li> -->
            
           </ul>
         </aside>
@@ -295,9 +295,59 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="card">
+                <div class="card accordion-item active">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                    Below are links to pages that offer you additional resources to assist you in your marketing efforts.
+                    </button>
+                  </h2>
+
+                  <!-- <div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p class="card-text"></p>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <br>
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title text-primary">Link Tracking Stats</h3>
+                        <h5 class="card-title text-primary">Facebook Group</h5>
+                        <p class="card-text">
+                          Join other Credit Suite partners and the Partner Success team to discuss marketing ideas, ask questions about the program, and network with each other.
+                        </p>
+                        <a href="#" class="btn btn-sm btn-success">Go to Source</a>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">How To Use The Link Generator</h5>
+                        <p class="card-text">
+                          Watch a video on how to use the link generator to better track your referrals and clicks
+                        </p>
+                        <a href="#" class="btn btn-sm btn-success">Go to Source</a>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">How To Use The Email Templates</h5>
+                        <p class="card-text">
+                        In this video, we'll show you how to use the email templates feature where we provide pre-written emails for you.
+                        </p>
+                        <a href="#" class="btn btn-sm btn-success">Go to Source</a>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">How To Use Banners</h5>
+                        <p class="card-text">
+                        Watch a quick video on how to use the banners feature so that you can drive traffic to the offer of your choice with pre-made creatives!	
+                        </p>
+                        <a href="#" class="btn btn-sm btn-success">Go to Source</a>
                     </div>
                 </div>
             </div>

@@ -217,16 +217,16 @@
                           </button>
                         </h2>
 
-                      <div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          The Partner Resource Library is a wealth of resources at your fingertips to help you with many aspects of growing your business!
-                          Within each of the Categories you will find many Flyers, Emails, PowerPoints, Videos, Guides, and much more that will help you to market and sell this amazing program to your clients.</p>
-                          <p class="card-text">All you have to do to view what is in a Category is to select it and then the content from that Category will reflect here.</p>
+                        <div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            The Partner Resource Library is a wealth of resources at your fingertips to help you with many aspects of growing your business!
+                            Within each of the Categories you will find many Flyers, Emails, PowerPoints, Videos, Guides, and much more that will help you to market and sell this amazing program to your clients.</p>
+                            <p class="card-text">All you have to do to view what is in a Category is to select it and then the content from that Category will reflect here.</p>
 
-                          <p class="card-text">If you have any questions on any Category, please contact us at 800-497-0499. We are here to help!</p>
+                            <p class="card-text">If you have any questions on any Category, please contact us at 800-497-0499. We are here to help!</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
                     </div>
                   </div>
                 </div>
