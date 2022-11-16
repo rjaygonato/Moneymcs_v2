@@ -182,7 +182,7 @@
               </a>
             </li>
 
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="commissionsgenerated" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-money'></i>
                 <div data-i18n="Basic">Commissions Generated</div>
