@@ -334,21 +334,31 @@
                           </div> -->
                           
                           <!-- Plus Tier -->
-                          <div class="col-lg-4">
+                          <div class="col-lg-3">
+                            <div class="card mb-5 mb-lg-0">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Starter</h5>
+                                <h6 class="card-price text-center"><span class="period"> FREE </span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For affiliate agents</li>
+                                </ul>
+                                <br><br><br><br>
+                                <div class="d-grid">
+                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
                             <div class="card mb-5 mb-lg-0">
                               <div class="card-body">
                                 <h5 class="card-title text-muted text-uppercase text-center">Economy</h5>
                                 <h6 class="card-price text-center">$99<span class="period"> / Month</span></h6>
                                 <hr>
                                 <ul class="fa-ul">
-                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For Affiliates Agent</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For affiliate agents with portal access / higher referral commission</li>
+                                  <br>
                                 </ul>
                                 <div class="d-grid">
                                 <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
@@ -357,21 +367,15 @@
                             </div>
                           </div>
                           <!-- Pro Tier -->
-                          <div class="col-lg-4">
+                          <div class="col-lg-3">
                             <div class="card">
                               <div class="card-body">
                                 <h5 class="card-title text-muted text-uppercase text-center">Deluxe</h5>
                                 <h6 class="card-price text-center">$299<span class="period"> / Month</span></h6>
                                 <hr>
                                 <ul class="fa-ul">
-                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span> For affiliate agents with services ( Bookkeping and Tax Services)</li>
+                                  <br>
                                 </ul>
                                 <div class="d-grid">
                                 <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
@@ -379,21 +383,14 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-lg-4">
+                          <div class="col-lg-3">
                             <div class="card mb-5 mb-lg-0">
                               <div class="card-body">
                                 <h5 class="card-title text-muted text-uppercase text-center">Ultimate</h5>
                                 <h6 class="card-price text-center">$1,188<span class="period"> / Year</span></h6>
                                 <hr>
                                 <ul class="fa-ul">
-                                  <li><span class="fa-li"><i class="fas fa-check"></i></span></li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>  For affiliate agents with services ( Bookkeping , Personal credit repair and Tax Services)</li>
                                 </ul>
                                 <div class="d-grid">
                                   <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
