@@ -107,7 +107,7 @@
               </ul>
             </li>
 
-            <li class="menu-item">
+            <li class="menu-item open active">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="">Commissions/Referrals</div>
@@ -297,9 +297,49 @@
             <div class="container-xxl flex-grow-1 container-p-y">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title text-primary">Link Tracking Stats</h3>
+                        <h3 class="card-title text-primary mb-5">Link Tracking Stats</h3>
+
+                        <div class="input-group input-daterange mb-5">
+                          <span class="col-md-2 col-form-label fw-semibold">Date Range:</span>
+						  <input class="form-control" name="date_from" type="date" value="" id="date_from" />
+						  <div class="input-group-addon m-2">to</div> 
+						  <input class="form-control" name="date_to" type="date" value="" id="date_to" />
+						  <button type="button" class="btn btn-success" id="dateRange">Set</button>
+                        </div>
+
+                        <!-- Basic Bootstrap Table -->
+						<div class="table-responsive text-nowrap mb-5">
+							<table class="table">
+							<thead>
+								<tr>
+								<th>Redirect</th>
+                                <th>Ad</th>
+                                <th>Hits</th>
+                                <th>Opt-ins</th>
+                                <th>Orders</th>
+                                <th>Subscriptions</th>
+                                <th>Hits/orders</th>
+                                <th>Hits/subscriptions</th>
+                                <th>Clickdate</th>
+								</tr>
+							</thead>
+							<tbody class="table-border-bottom-0 col-12">
+								<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								</tr>
+							</tbody>
+							</table>
+						</div>
+							<!--/ Basic Bootstrap Table -->
+
                     </div>
                 </div>
+
             </div>
             
             <?php include 'includes/google_translate.php'; ?>

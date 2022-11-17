@@ -107,7 +107,7 @@
 			  </ul>
 			</li>
 
-			<li class="menu-item">
+			<li class="menu-item open active">
 			  <a href="javascript:void(0)" class="menu-link menu-toggle">
 				<i class='menu-icon tf-icons bx bxs-user-detail'></i>
 				<div data-i18n="">Commissions/Referrals</div>
@@ -299,7 +299,7 @@
 					<div class="card-body">
 						<h3 class="card-title text-primary mb-5">Ledger for <?php echo $agent['firstname'].' '.$agent['lastname']; ?></h3>
 						
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-5">
                           <span for="date_from" class="col-md-2 col-form-label fw-semibold">Date Range:</span>
 						  <input class="form-control col-md-2" name="date_from" type="date" value="2022-06-18" id="date_from" />
 						  <span class="m-2">to</span> 

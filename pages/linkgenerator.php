@@ -318,7 +318,7 @@
                                 </thead>
                                 <tbody class="table-border-bottom-0 col-12">
                                   <tr>
-                                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?php echo $agent['firstname'].' '.$agent['lastname']; ?></strong></td>
+                                    <td>Referral Registration</td>
                                     <td><?php echo $agent['regcode']; ?></td>
                                     <td class=" input-group">
                                       <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" id="myrefCode">
