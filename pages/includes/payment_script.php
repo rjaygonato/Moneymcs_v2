@@ -4,67 +4,134 @@
                 //console.log(amountt);
 </script>
 
-  <script>
-      function initPayPalButton() {
-        paypal.Buttons({
-          style: {
-            shape: 'rect',
-            color: 'silver',
-            layout: 'horizontal',
-            label: 'pay',
-          },
-          createOrder: function(data, actions) {
-            return actions.order.create({
-              purchase_units: [
-                {
-                    "amount":
-                    {
-                        "currency_code":"USD",
-                        "value": amountt
-                    }
-                }]
-            });
-          },
-          
-          onApprove: (data, actions) => {
-            return actions.order.capture().then(function(orderData) {
-              // Successful capture! For dev/demo purposes:
-              //console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-              const transaction = orderData.purchase_units[0].payments.captures[0];
-              //alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
-              // When ready to go live, remove the alert and show a success message within this page. For example:
-              // const element = document.getElementById('paypal-button-container');
-              // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-              // Or go to another URL:  actions.redirect('thank_you.html');
-              //console.log(orderData.payments(value));
-              //const element = document.getElementById('paypal-button-container');
-              var user = document.getElementById('user').value;
-              var transid = document.getElementById('transactid');
-              transid = transaction.id;
-              //document.getElementById('transactid');
-              $('#transactid').val(transid);
-              $('#totalp').val(amountt);
-              //console.log(transid);
-              //console.log(user);
-              //window.location = 'subs.php?transid='+transid;
-              // $("#transactid").blur(function(){
-              //   alert("The text has been changed.");
-              // });
-              amountt = document.getElementById("totalp").value;
-              var myInput = document.getElementById("transactid");
-              if (myInput && myInput.value) {
-                //console.log(myInput);
-               //document.getElementById("myForm").submit();
-               
-               window.location = 'subs.php?transid='+transid + "&totalp=" + amountt;
-              }
 
-            });
-          },
-          onError: function(err) {
-            console.log(err);
+<!-- Yearly -->
+<script>
+  function initPayPalButton() {
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'silver',
+        layout: 'horizontal',
+        label: 'pay',
+      },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [
+            {
+                "amount":
+                {
+                    "currency_code":"USD",
+                    "value": amountt
+                }
+            }]
+        });
+      },
+      
+      onApprove: (data, actions) => {
+        return actions.order.capture().then(function(orderData) {
+          // Successful capture! For dev/demo purposes:
+          //console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          const transaction = orderData.purchase_units[0].payments.captures[0];
+          //alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+          // When ready to go live, remove the alert and show a success message within this page. For example:
+          // const element = document.getElementById('paypal-button-container');
+          // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+          // Or go to another URL:  actions.redirect('thank_you.html');
+          //console.log(orderData.payments(value));
+          //const element = document.getElementById('paypal-button-container');
+          var user = document.getElementById('user').value;
+          var transid = document.getElementById('transactid');
+          transid = transaction.id;
+          //document.getElementById('transactid');
+          $('#transactid').val(transid);
+          $('#totalp').val(amountt);
+          //console.log(transid);
+          //console.log(user);
+          //window.location = 'subs.php?transid='+transid;
+          // $("#transactid").blur(function(){
+          //   alert("The text has been changed.");
+          // });
+          amountt = document.getElementById("totalp").value;
+          var myInput = document.getElementById("transactid");
+          if (myInput && myInput.value) {
+            //console.log(myInput);
+            //document.getElementById("myForm").submit();
+            
+            window.location = 'subs.php?transid='+transid + "&totalp=" + amountt;
           }
-        }).render('#paypal-button-container');
+
+        });
+      },
+      onError: function(err) {
+        console.log(err);
       }
-      initPayPalButton();
-    </script>
+    }).render('#paypal-button-container');
+  }
+  initPayPalButton();
+</script>
+
+<script>
+  function initPayPalButton() {
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'silver',
+        layout: 'horizontal',
+        label: 'pay',
+      },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [
+            {
+                "amount":
+                {
+                    "currency_code":"USD",
+                    "value": amountt
+                }
+            }]
+        });
+      },
+      
+      onApprove: (data, actions) => {
+        return actions.order.capture().then(function(orderData) {
+          // Successful capture! For dev/demo purposes:
+          //console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          const transaction = orderData.purchase_units[0].payments.captures[0];
+          //alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+          // When ready to go live, remove the alert and show a success message within this page. For example:
+          // const element = document.getElementById('paypal-button-container');
+          // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+          // Or go to another URL:  actions.redirect('thank_you.html');
+          //console.log(orderData.payments(value));
+          //const element = document.getElementById('paypal-button-container');
+          var user = document.getElementById('user').value;
+          var transid = document.getElementById('transactid');
+          transid = transaction.id;
+          //document.getElementById('transactid');
+          $('#transactid').val(transid);
+          $('#totalp').val(amountt);
+          //console.log(transid);
+          //console.log(user);
+          //window.location = 'subs.php?transid='+transid;
+          // $("#transactid").blur(function(){
+          //   alert("The text has been changed.");
+          // });
+          amountt = document.getElementById("totalp").value;
+          var myInput = document.getElementById("transactid");
+          if (myInput && myInput.value) {
+            //console.log(myInput);
+            //document.getElementById("myForm").submit();
+            
+            window.location = 'subs.php?transid='+transid + "&totalp=" + amountt;
+          }
+
+        });
+      },
+      onError: function(err) {
+        console.log(err);
+      }
+    }).render('#paypal-button-containeryear');
+  }
+  initPayPalButton();
+</script>
