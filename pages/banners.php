@@ -338,12 +338,15 @@
                                       $stmt = $conn->prepare("SELECT * FROM resources WHERE status=:status AND category=:category");
                                       $stmt->execute(['status'=>1, 'category'=>'Banners']);
                                       foreach($stmt as $row){
+                                          $imgsize_arr = getimagesize("../config/files/".$row['filenames']);
+                                          $img_width = $imgsize_arr[0];
+                                          $img_height = $imgsize_arr[1];
 
                                         $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
                                         echo "
                                           <tr>
                                             <td>".$row['resources']."</td>
-                                            <td>".filesize("../config/files/".$row['filenames']);"</td>
+                                            <td>".$img_width.'x'.$img_height."</td>
                                             <td>
                                             <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#BannerModal'>
                                                 Generate Banner
@@ -385,11 +388,11 @@
                                 <p>Copy the text in the box below and paste it into any web page to generate a link tracking banner!</p>
 
                                 <div>
-                                    <textarea class="form-control" id="" rows="3" scrollable><a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src='../config/files/".<?php $row['filenames']?>' border="0"></a></textarea>
+                                    <textarea class="form-control" id="" rows="3" scrollable><a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src='../config/files/<?php echo $row['filenames']?>' border="0"></a></textarea>
                                 </div>
 
                                 <p>This is what the banner will look like:</p>
-                                <img src='../config/files/".<?php $row['filenames']?>' border="0">
+                                <a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src='../config/files/<?php echo $row['filenames']?>' border="0"></a>
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
