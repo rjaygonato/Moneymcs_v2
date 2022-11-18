@@ -131,7 +131,7 @@
 
           <div class="input-group input-group-merge">
             <span class="input-group-text">$</span>
-            <input type="text" class="form-control" id="t_amount" name="total" placeholder="100" value="1000.00" aria-label="Amount (to the nearest dollar)">
+            <input type="text" class="form-control" id="t_amounty" name="total" placeholder="100" value="1000.00" aria-label="Amount (to the nearest dollar)">
             <!-- <span class="input-group-text">.00</span> -->
           </div>
           
