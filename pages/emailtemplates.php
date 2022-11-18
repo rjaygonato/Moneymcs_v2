@@ -295,19 +295,31 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title text-primary">Email Templates</h3>
-                        <p class="card-text">
+                <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="card">
+                      <div class="card accordion-item active">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                            Email Templates
+                          </button>
+                        </h2>
+
+                        <div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
                             Below are emails you can use in your marketing. When you find one you want to use, 
                             select the applicable Referral Partner, redirect, and ad that you want to track and 
-                            click the button to generate the email with the appropriate tracking link.
-                        </p>
-                        <p class="mb-0">
-                            After you have generated the email, you can copy and paste it into your email client 
-                            to send to your prospects.
-                        </p>
-                        <br>
+                            click the button to generate the email with the appropriate tracking link.</p>
+                            <p class="card-text">After you have generated the email, you can copy and paste it into your email client 
+                            to send to your prospects.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
                         <!-- Button ModalScrollable -->
                         <button
                             type="button"

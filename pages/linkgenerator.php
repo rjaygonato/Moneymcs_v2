@@ -295,20 +295,39 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title text-primary">Referral Link</h3>
-                        <p class="card-text">The link generator allows you to generate tracking links you can use in your 
+                <div class="row">
+                    <div class="col-lg-12 mb-4 order-0">
+                    <div class="card">
+                        <div class="card accordion-item active">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                            Referral Link
+                            </button>
+                        </h2>
+
+                        <div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                            The link generator allows you to generate tracking links you can use in your 
                             marketing efforts so that you receive credit for leads that are generated and orders
                             that are placed. You can quickly access any of your own tracking links by copying them
                             from the "My Sales Websites" section. If you want to create a tracking link for one of
                             your sub-referral partners, or if you want to create an Ad for tracking purposes and insert
                             the code into a tracking link, you will need to use the link generator tool at the bottom of the screen.
-                        </p>
-                        <!-- Basic Bootstrap Table -->
-                          <div class="card">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="card">
+                      <div class="d-flex align-items-end">
+                        <div class="col-sm-12">
+                          <div class="card-body">
+                            <!--<h5 class="card-title text-primary">Templates</h5>-->
                             <div class="table-responsive text-nowrap">
-                              <table class="table">
+                              <table class="table table-borderless">
                                 <thead>
                                   <tr>
                                     <th>Name</th>
@@ -329,8 +348,10 @@
                               </table>
                             </div>
                           </div>
-                        <!--/ Basic Bootstrap Table -->
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
             </div>
             

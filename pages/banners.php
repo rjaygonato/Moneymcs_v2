@@ -388,12 +388,12 @@
                                 <p>Copy the text in the box below and paste it into any web page to generate a link tracking banner!</p>
 
                                 <div>
-                                    <textarea class="form-control" id="" rows="3" scrollable><a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src='../config/files/<?php echo $row['filenames']?>' border="0"></a></textarea>
+                                    <textarea class="form-control" id="" rows="3" scrollable><a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src="../config/files/<?php echo $row['filenames']?>" border="0"></a></textarea>
                                 </div>
 
                                 <p>This is what the banner will look like:</p>
-                                <a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src='../config/files/<?php echo $row['filenames']?>' border="0"></a>
-
+                                <a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src="../config/files/<?php echo $row['filenames']?>" border="0"></a>
+                                
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                                 Close
