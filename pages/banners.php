@@ -295,81 +295,112 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title text-primary">Banners</h3>
-                        <p>
-                            Below are banner ads you can use in your marketing. When you find one you want to use, select the applicable Referral Partner, redirect, and ad that you want to track and click the button to generate the html code with the appropriate tracking link.
-                        </p>
-                        <p>
-                            After you have generated the html code, you can copy and paste it into your site(s) to begin to generate traffic.
-                        </p>
-                        <h6 class="text-primary">TEMPLATES</h6>
-                        <!-- Basic Bootstrap Table -->
-                        <div class="table-responsive text-nowrap">
-                            <table class="table">
-                            <thead>
-                                <tr>
-                                <th>File Name</th>
-                                <th>File Size</th>
-                                <th>Link</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-border-bottom-0 col-12">
-                                <tr>
-                                <td>Test Banner FB image</td>
-                                <td>1200X628</td>
-                                <td>
-                                    <!-- Button ModalScrollable -->
-                                    <button
-                                        type="button"
-                                        class="btn btn-success"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#BannerModal"
-                                    >
-                                        Generate Banner
-                                    </button>
-                                    <!--/ Button ModalScrollable -->
-                                </td>
-                                </tr>
-                            </tbody>
-                            </table>
-                            
+                <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="card">
+                      <div class="card accordion-item active">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                            Banners
+                          </button>
+                        </h2>
+
+                        <div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            Below are banner ads you can use in your marketing. When you find one you want to use, select the applicable Referral Partner, redirect, and ad that you want to track and click the button to generate the html code with the appropriate tracking link.</p>
+                            <p class="card-text">After you have generated the html code, you can copy and paste it into your site(s) to begin to generate traffic.</p>
+                          </div>
                         </div>
-                        <!--/ Basic Bootstrap Table -->
-                        <!-- Modal -->
-                        <div class="modal fade" id="BannerModal" tabindex="-1" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="BannerModalTitle">Banner</h5>
-                                        <button
-                                        type="button"
-                                        class="btn-close"
-                                        data-bs-dismiss="modal"
-                                        aria-label="Close"
-                                        ></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Copy the text in the box below and paste it into any web page to generate a link tracking banner!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                                        <div>
-                                            <textarea class="form-control" id="" rows="3" scrollable><a href="" target="_blank"><img src="" border="0"></a></textarea>
-                                        </div>
+                <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="card">
+                      <div class="d-flex align-items-end">
+                        <div class="col-sm-12">
+                          <div class="card-body">
+                            <h5 class="card-title text-primary">Templates</h5>
+                            <div class="table-responsive text-nowrap">
+                              <table id="" class="table table-borderless">
+                                <thead>
+                                  <th>File Name</th>
+                                  <th>File Size</th>
+                                  <th>Link</th>
+                                </thead>
+                                <tbody>
+                                  <?php
+                                    $conn = $pdo->open();
 
-                                        <p>This is what the banner will look like:</p>
+                                    try{
+                                      $stmt = $conn->prepare("SELECT * FROM resources WHERE status=:status AND category=:category");
+                                      $stmt->execute(['status'=>1, 'category'=>'Banners']);
+                                      foreach($stmt as $row){
 
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Close
-                                        </button>
-                                    </div>
+                                        $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
+                                        echo "
+                                          <tr>
+                                            <td>".$row['resources']."</td>
+                                            <td>".filesize("../config/files/".$row['filenames']);"</td>
+                                            <td>
+                                            <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#BannerModal'>
+                                                Generate Banner
+                                            </button>
+                                            </td>
+                                          </tr>
+                                        ";
+                                      }
+                                    }
+                                    catch(PDOException $e){
+                                      echo $e->getMessage();
+                                    }
+                                    $pdo->close();
+                                  ?>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="BannerModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="BannerModalTitle">Banner</h5>
+                                <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Copy the text in the box below and paste it into any web page to generate a link tracking banner!</p>
+
+                                <div>
+                                    <textarea class="form-control" id="" rows="3" scrollable><a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src='../config/files/".<?php $row['filenames']?>' border="0"></a></textarea>
                                 </div>
+
+                                <p>This is what the banner will look like:</p>
+                                <img src='../config/files/".<?php $row['filenames']?>' border="0">
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                Close
+                                </button>
+                            </div>
                             </div>
                         </div>
-                        <!--/Modal-->
                     </div>
                 </div>
+                <!--/Modal-->
             </div>
             
             <?php include 'includes/google_translate.php'; ?>

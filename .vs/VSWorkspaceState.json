@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\pages",
+    "\\pages\\includes"
   ],
-  "SelectedNode": "\\C:\\xampp\\htdocs\\moneymcs",
+  "SelectedNode": "\\pages\\includes\\footer_links.php",
   "PreviewInSolutionExplorer": false
 }
