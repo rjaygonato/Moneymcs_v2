@@ -347,7 +347,7 @@
                                             <td>
                                             <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#BannerModal'>
                                                 Generate Banner
-                                            </button>
+                                            </button> 
                                             </td>
                                           </tr>
                                         ";

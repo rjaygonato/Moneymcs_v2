@@ -53,8 +53,8 @@
           //document.getElementById('transactid');
           $('#transactid').val(transid);
           $('#totalp').val(amountt);
-          console.log(transid);
-          console.log(user);
+          //console.log(transid);
+          //console.log(user);
           //window.location = 'subs.php?transid='+transid;
           // $("#transactid").blur(function(){
           //   alert("The text has been changed.");
@@ -62,7 +62,7 @@
           amountt = document.getElementById("totalp").value;
           var myInput = document.getElementById("transactid");
           if (myInput && myInput.value) {
-            console.log(myInput);
+            //console.log(myInput);
             //document.getElementById("myForm").submit();
             
             window.location = 'subs.php?transid='+transid + "&totalp=" + amountt;
