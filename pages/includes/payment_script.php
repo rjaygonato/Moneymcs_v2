@@ -2,6 +2,9 @@
 <script>
   var amountt= document.getElementById("t_amount").value; 
                 //console.log(amountt);
+
+   var sb_type = document.getElementById('sub_type').value;
+          //console.log(sb_type);
 </script>
 
 
@@ -9,6 +12,9 @@
 <script>
   var amountty= document.getElementById("t_amounty").value; 
                 //console.log(amountt);
+
+  var sby_type = document.getElementById('suby_type').value;
+  console.log(sby_type);
 </script>
 
 
@@ -55,6 +61,8 @@
           $('#totalp').val(amountt);
           //console.log(transid);
           //console.log(user);
+          // var sb_type = document.getElementById('subs_name').value;
+          // console.log(sb_type);
           //window.location = 'subs.php?transid='+transid;
           // $("#transactid").blur(function(){
           //   alert("The text has been changed.");
@@ -65,7 +73,7 @@
             //console.log(myInput);
             //document.getElementById("myForm").submit();
             
-            window.location = 'subs.php?transid='+transid + "&totalp=" + amountt;
+            window.location = 'subs.php?transid='+transid + "&totalp=" + amountt + "&subs_name=" + sb_type;
           }
 
         });
@@ -130,7 +138,7 @@
             //console.log(myInput);
             //document.getElementById("myForm").submit();
             
-            window.location = 'subs.php?transid='+transid + "&totalp=" + amountty;
+            window.location = 'subs.php?transid='+transid + "&totalp=" + amountty + "&subs_name=" + sby_type;
           }
 
         });

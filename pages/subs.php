@@ -6,14 +6,15 @@
 		// $user_id = $agent['user_id'];
 		$totalp = $_GET['totalp'];
 		$trans_id = $_GET['transid'];
+		$subs_name = $_GET['subs_name'];
 		$date = date('Y-m-d');
 
 		$conn = $pdo->open();
 
 		try{
 			
-			$stmt = $conn->prepare("INSERT INTO subscriptions (user_id, totalp, trans_id, date_added) VALUES (:user_id, :totalp, :trans_id, :date_added)");
-			$stmt->execute(['user_id'=>$agent['id'], 'totalp'=>$totalp,'trans_id'=>$trans_id, 'date_added'=>$date]);
+			$stmt = $conn->prepare("INSERT INTO subscriptions (user_id, totalp, trans_id, subs_name, date_added) VALUES (:user_id, :totalp, :trans_id, :subs_name, :date_added)");
+			$stmt->execute(['user_id'=>$agent['id'], 'totalp'=>$totalp,'trans_id'=>$trans_id, 'subs_name'=>$subs_name, 'date_added'=>$date]);
 			//$salesid = $conn->lastInsertId();
 			
 			
@@ -28,6 +29,6 @@
 		$pdo->close();
 	}
 	
-	header('location: subscription_success');
+	 header('location: subscription_success');
 	
 ?>
