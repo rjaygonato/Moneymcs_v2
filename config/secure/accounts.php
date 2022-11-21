@@ -121,6 +121,11 @@
                     <div data-i18n="">Resources</div>
                   </a>
                 </li>
+                <li class="menu-item">
+                  <a href="banner" class="menu-link">
+                    <div data-i18n="">Banner</div>
+                  </a>
+                </li>
               </ul>
             </li>
 

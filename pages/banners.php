@@ -342,7 +342,6 @@
                                           $img_width = $imgsize_arr[0];
                                           $img_height = $imgsize_arr[1];
 
-                                        $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
                                         echo "
                                           <tr>
                                             <td>".$row['resources']."</td>
@@ -386,9 +385,23 @@
                             </div>
                             <div class="modal-body">
                                 <p>Copy the text in the box below and paste it into any web page to generate a link tracking banner!</p>
+                                
+                                <?php
+                                echo "<pre>";
+                                echo $_SERVER['DOCUMENT_ROOT'];
+                                echo "<br>";
+                                echo $_SERVER['SERVER_NAME'];
+                                echo "<br>";
+                                echo $_SERVER['REQUEST_URI'];
+                                echo "<br>";
+                                echo "</pre>";
+                                //$image = '..config/files/'.$row['filenames'];
+                                //$directory = substr($image, 0, strrpos($image, '/', -2) + 1 );
+                                //echo $directory;
+                                ?>
 
                                 <div>
-                                    <textarea class="form-control" id="" rows="3" scrollable><a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src="../config/files/<?php echo $row['filenames']?>" border="0"></a></textarea>
+                                    <textarea class="form-control" id="" rows="3" scrollable><a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src="<?php echo dirname('..config/files/'.$row['filenames']);?>" border="0"></a></textarea>
                                 </div>
 
                                 <p>This is what the banner will look like:</p>

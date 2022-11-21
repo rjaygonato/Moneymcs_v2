@@ -318,54 +318,71 @@
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <!-- Button ModalScrollable -->
-                        <button
-                            type="button"
-                            class="btn btn-success"
-                            data-bs-toggle="modal"
-                            data-bs-target="#modalScrollable"
-                        >
-                            Generate Email
-                        </button>
+                <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="card">
+                      <div class="d-flex align-items-end">
+                        <div class="col-sm-12">
+                          <div class="card-body">
+                            <h5 class="card-title text-primary">Templates</h5>
+                            <div class="table-responsive text-nowrap">
+                              <table id="" class="table table-borderless">
+                                <thead>
+                                  <th>Type</th>
+                                  <th>Description</th>
+                                  <th>Link</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalScrollable">Generate Email</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="modalScrollable" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalScrollableTitle">Email Template</h5>
+                                <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Subject: [contact first name] I want you at this webinar</p>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="modalScrollable" tabindex="-1" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-scrollable" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modalScrollableTitle">Email Template</h5>
-                                        <button
-                                        type="button"
-                                        class="btn-close"
-                                        data-bs-dismiss="modal"
-                                        aria-label="Close"
-                                        ></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Subject: [contact first name] I want you at this webinar</p>
-
-                                        <p>Hey [INSERT CONTACT FIRST NAME],</p>
-                                        <p>
-                                        Do you own a business or have you been thinking about starting a business?
-                                        If so, would you be interested in getting money and building business credit for your business?
-                                        Give me a call today so I can talk with you more about how to get money for your business.
-                                        </p>
-                                        <p>Thank you,</p>
-                                        <p>[INSERT SIGNATURE]</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Close
-                                        </button>
-                                    </div>
-                                </div>
+                                <p>Hey [INSERT CONTACT FIRST NAME],</p>
+                                <p>
+                                Do you own a business or have you been thinking about starting a business?
+                                If so, would you be interested in getting money and building business credit for your business?
+                                Give me a call today so I can talk with you more about how to get money for your business.
+                                </p>
+                                <p>Thank you,</p>
+                                <p>[INSERT SIGNATURE]</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                Close
+                                </button>
                             </div>
                         </div>
-                        <!--/ Button ModalScrollable -->
                     </div>
                 </div>
+                <!--/ Modal-->
             </div>
             
             <?php include 'includes/google_translate.php'; ?>
