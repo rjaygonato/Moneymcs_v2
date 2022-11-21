@@ -303,13 +303,13 @@
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
-              <p> Standard Subscription </p>
+              <p> Standard Memberships </p>
                 <div class="container-fluid  mt-100">
                   <div class="row">
                     <div class="col-md-4">
                       <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">$99.00 - Monthly Subscription</h5>
+                            <h5 class="card-title text-primary">$99.00 - Monthly </h5>
                             <p class="card-text">
                               For affiliate agents with portal access / higher referral commission
                             </p>
@@ -321,7 +321,7 @@
                     <div class="col-md-4">
                       <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">$1,000.00 - Yearly Subscription</h5>
+                            <h5 class="card-title text-primary">$1,000.00 - Yearly </h5>
                             <p class="card-text">
                               For affiliate agents with portal access / higher referral commission
                             </p>

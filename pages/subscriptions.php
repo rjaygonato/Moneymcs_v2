@@ -327,7 +327,7 @@
                       $stmt->execute(['user'=>$agent['id']]);
                       foreach($stmt as $row){
                         echo "
-                        <p id='hasSubs'>Subscribed: <b>".$row['subs_name']."</b></p>
+                        <p id='hasSubs'>Subscription: <b>".$row['subs_name']."</b></p>
                         ";
                       }
                     }
