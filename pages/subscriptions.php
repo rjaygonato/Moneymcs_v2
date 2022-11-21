@@ -45,6 +45,15 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+    <style>
+      .isDisabled {
+        color: currentColor;
+        cursor: not-allowed;
+        opacity: 0.5;
+        text-decoration: none;
+        color: white;
+      }
+    </style>
   </head>
 
   <body>
@@ -303,9 +312,41 @@
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
+                <div class="col-lg-5 ">
+                  <h5 class="card-title text-primary">Subscription Plans</h5>
+                  <p class="card-text">We bring you the best pricing plan for you</p>
+                </div>
+                <div class="col-lg-7 ">
+                  <div class=" text-end p-3">
+                  
+
+                  <?php
+                    $conn = $pdo->open();
+                    try{
+                      $stmt = $conn->prepare("SELECT * FROM subscriptions WHERE user_id=:user LIMIT 1");
+                      $stmt->execute(['user'=>$agent['id']]);
+                      foreach($stmt as $row){
+                        echo "
+                        <p id='hasSubs'>Subscription: <b>".$row['subs_name']."</b></p>
+                        ";
+                      }
+                    }
+                    catch(PDOException $e){
+                      echo $e->getMessage();
+                    }
+                    $pdo->close();
+                  ?>
+                    <!--<figure class="p-3 mb-0">
+                      <blockquote class="block quote">
+                        <p>You are already Subscribed to a Monthly Subscription Plan</p>
+                      </blockquote>
+                       <figcaption class=" mb-0 text-muted">
+                       Date:  <cite title="Source Title">Nov 18, 2022</cite>
+                      </figcaption>
+                    </figure> -->
+                  </div>
+                </div>
                   <div class="col-lg-12 mb-4 order-0">
-                    <h5 class="card-title text-primary">Subscription Plans</h5>
-                    <p class="card-text">We bring you the best pricing plan for you</p>
                     <section class="pricing py-5">
                       <div class="container">
                         <div class="row">
@@ -364,7 +405,7 @@
                                   <li><span class="fa-li"><i class="fas fa-check"></i></span>For affiliate agents with portal access / higher referral commission</li>
                                 </ul>
                                 <div class="d-grid">
-                                <a href="subscriptions_standard" class="btn btn-success text-uppercase">Select</a>
+                                <a href="subscriptions_standard" class="sub_button btn btn-success text-uppercase"   >Select</a>
                                 </div>
                               </div>
                             </div>
@@ -381,7 +422,7 @@
                                   <br><br><br>
                                 </ul>
                                 <div class="d-grid">
-                                <a href="subscriptions_plus" class="btn btn-success text-uppercase">Select</a>
+                                <a href="subscriptions_plus" class="sub_button btn btn-success text-uppercase" >Select</a>
                                 </div>
                               </div>
                             </div>
@@ -397,7 +438,7 @@
                                   <br>
                                 </ul>
                                 <div class="d-grid">
-                                  <a href="subscriptions_pro" class="btn btn-success text-uppercase">Select</a>
+                                  <a href="subscriptions_pro" class="sub_button btn btn-success text-uppercase" >Select</a>
                                 </div>
                               </div>
                             </div>
@@ -434,6 +475,7 @@
             <div class="content-backdrop fade"></div>
           </div>
           <!-- Content wrapper -->
+          <?php include 'includes/subscription_status.php'; ?>
         </div>
         <!-- / Layout page -->
 
@@ -450,5 +492,18 @@
     <?php include 'includes/footer_links.php'; ?>
 
     <?php include 'includes/payment_script.php'; ?>
+
+    <script src="includes/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+      if($("#hasSubs").length){
+            //console.log( "visible!" );
+            $('.sub_button').addClass('isDisabled');
+            $('.sub_button').css('display', 'none');
+      } else{
+            //console.log( "hidden!" );
+      }
+    });
+  </script> 
   </body>
 </html>

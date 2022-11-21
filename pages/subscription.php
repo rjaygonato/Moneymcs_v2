@@ -341,6 +341,7 @@
                       <table id="example1" class="table table-responsive text-nowrap">
                         <thead>
                           <th>Transaction #</th>
+                          <th>Type</th>
                           <th>Amount</th>
                           <th>Date</th>
                         </thead>
@@ -357,6 +358,7 @@
                               echo "
                                 <tr>
                                   <td>".$row['trans_id']."</td>
+                                  <td>".$row['subs_name']."</td>
                                   <td>$".$row['totalp']."</td>
                                   <td>".date('M d, Y', strtotime($row['date_added']))."</td>
                                 </tr>

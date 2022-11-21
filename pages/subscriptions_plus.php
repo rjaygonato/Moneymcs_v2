@@ -303,19 +303,18 @@
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
+              <p> Plus Membership </p>
                 <div class="container-fluid  mt-100">
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-5">
                       <div class="card">
-                        <div class="card-header">
-                          <h5>Plan: Plus</h5>
-                        </div>
-                        <div class="card-body cart">
-                          <div class="col-sm-12 empty-cart-cls text-center">
-                            <h4><strong>You're selecting the Plus Subscription</strong></h4>
-                            <!-- <h5>Add something to make me happy :)</h5> -->
-                            <a href="#" class="btn btn-success cart-btn-transform m-3" data-abc="true">Pay now</a>
-                          </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">$299.00 - Monthly </h5>
+                            <p class="card-text">
+                              For affiliate agents with services ( Bookkeping and Tax Services)
+                            </p>
+                            <!-- <a href="#" class="btn btn-sm btn-success">Pay now</a> -->
+                            <button class="btn btn-sm btn-success nosubscriptions hidden" data-bs-toggle="modal" data-bs-target="#plusSub" data-backdrop="static" data-keyboard="false" > Select </button> 
                         </div>
                       </div>
                     </div>
