@@ -386,20 +386,6 @@
                             <div class="modal-body">
                                 <p>Copy the text in the box below and paste it into any web page to generate a link tracking banner!</p>
                                 
-                                <?php
-                                echo "<pre>";
-                                echo $_SERVER['DOCUMENT_ROOT'];
-                                echo "<br>";
-                                echo $_SERVER['SERVER_NAME'];
-                                echo "<br>";
-                                echo $_SERVER['REQUEST_URI'];
-                                echo "<br>";
-                                echo "</pre>";
-                                //$image = '..config/files/'.$row['filenames'];
-                                //$directory = substr($image, 0, strrpos($image, '/', -2) + 1 );
-                                //echo $directory;
-                                ?>
-
                                 <div>
                                     <textarea class="form-control" id="" rows="3" scrollable><a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src="<?php echo dirname('..config/files/'.$row['filenames']);?>" border="0"></a></textarea>
                                 </div>
