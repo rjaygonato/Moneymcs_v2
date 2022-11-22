@@ -502,6 +502,7 @@
             $('.sub_button').css('display', 'none');
       } else{
             //console.log( "hidden!" );
+           // $('.sub_button').removeClass('isDisabled');
       }
     });
   </script> 
