@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\pages"
+    "\\config\\assets\\img",
+    "\\config\\secure",
+    "\\pages\\includes"
   ],
   "PreviewInSolutionExplorer": false
 }

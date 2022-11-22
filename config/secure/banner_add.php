@@ -1,7 +1,7 @@
 <?php
 	include 'includes/session.php';
 
-	if(isset($_POST['addresource'])){
+	if(isset($_POST['addbanner'])){
 
         $resources = $_POST['resources'];
 		$category = $_POST['category'];
@@ -13,7 +13,7 @@
 		$conn = $pdo->open();
 
         if(!empty($filenames)){
-            move_uploaded_file($_FILES['filenames']['tmp_name'], '.../images/'.$filenames);
+            move_uploaded_file($_FILES['filenames']['tmp_name'], '../../images/'.$filenames);
             $filename = $filenames;	
         }
         else{
@@ -26,14 +26,14 @@
 		$row = $stmt->fetch();
 
 		if($row['numrows'] > 0){
-			$_SESSION['error'] = 'Resource File already exist';
+			$_SESSION['error'] = 'Banner already exist';
 		}
 		else{	
 			try{
 				$stmt = $conn->prepare("INSERT INTO resources (resources, filenames, category, type, status) VALUES (:resources, :filenames, :category, :type, :status)");
 				$stmt->execute(['resources'=>$resources , 'filenames'=>$filenames , 'category'=>$category , 'type'=>$type , 'status'=>'1']);
 
-				$_SESSION['success'] = 'Resource File added successfully';
+				$_SESSION['success'] = 'Banner added successfully';
 			}
 			catch(PDOException $e){
 				$_SESSION['error'] = $e->getMessage();
@@ -43,7 +43,7 @@
 		$pdo->close();
 	}
 	else{
-		$_SESSION['error'] = 'Fill up resources form first';
+		$_SESSION['error'] = 'Fill up Banner form first';
 	}
 
 	header('location: banner');

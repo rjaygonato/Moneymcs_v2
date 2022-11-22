@@ -288,8 +288,8 @@
                                     <td>".$row['type']."</td>
                                     <td>".$status."</td>
                                     <td>
-                                      <button class='btn btn-outline-success btn-sm editresource' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit Resource</button>
-                                      <button class='btn btn-outline-danger btn-sm deleteresource' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
+                                      <button class='btn btn-outline-success btn-sm editbanner' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit Banner</button>
+                                      <button class='btn btn-outline-danger btn-sm deletebanner' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
                                     </td>
                                   </tr>
                                 ";
@@ -365,18 +365,18 @@
 
   <script>
     $(function(){
-      $(document).on('click', '.editresource', function(e){
+      $(document).on('click', '.editbanner', function(e){
         e.preventDefault();
-        $('#editsource').modal('show');
+        $('#editbanner').modal('show');
         var id = $(this).data('id');
         getRow(id);
 
         //console.log(id);
       });
 
-      $(document).on('click', '.deleteresource', function(e){
+      $(document).on('click', '.deletebanner', function(e){
         e.preventDefault();
-        $('#deleteresource').modal('show');
+        $('#deletebanner').modal('show');
         var id = $(this).data('id');
         getRow(id);
        // console.log(id);

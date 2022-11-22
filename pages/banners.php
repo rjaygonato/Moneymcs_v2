@@ -337,10 +337,15 @@
                                     try{
                                       $stmt = $conn->prepare("SELECT * FROM resources WHERE status=:status AND category=:category");
                                       $stmt->execute(['status'=>1, 'category'=>'Banners']);
+
+                                      
+
                                       foreach($stmt as $row){
-                                          $imgsize_arr = getimagesize("../config/files/".$row['filenames']);
+                                          $imgsize_arr = getimagesize("../images/".$row['filenames']);
                                           $img_width = $imgsize_arr[0];
                                           $img_height = $imgsize_arr[1];
+                                          $dir = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+                                          $imgdir = dirname($dir, 2);
 
                                         echo "
                                           <tr>
@@ -352,6 +357,39 @@
                                             </button> 
                                             </td>
                                           </tr>
+                        <!-- Modal -->
+                                        <div class='modal fade' id='BannerModal' tabindex='-1' aria-hidden='true'>
+                                            <div class='modal-dialog modal-dialog-scrollable modal-dialog-centered' role='document'>
+                                                <div class='modal-content'>
+                                                    <div class='modal-header'>
+                                                        <h5 class='modal-title' id='BannerModalTitle'>Banner</h5>
+                                                        <button
+                                                        type='button'
+                                                        class='btn-close'
+                                                        data-bs-dismiss='modal'
+                                                        aria-label='Close'
+                                                        ></button>
+                                                    </div>
+                                                    <div class='modal-body'>
+                                                        <p>Copy the text in the box below and paste it into any web page to generate a link tracking banner!</p>
+                                
+                                                        <div>
+                                                            <textarea class='form-control' id='' rows='3' scrollable><a href='http://joinmoneymcs.com/createref.php?referral=".$agent['regcode']." target='_blank'><img src='".$imgdir."/images/".$row['filenames']."' border='0'></a></textarea>
+                                                        </div>
+
+                                                        <p>This is what the banner will look like:</p>
+                                                        <a href='http://joinmoneymcs.com/createref.php?referral=".$agent['regcode']." target='_blank'><img src='".$imgdir."/images/".$row['filenames']."' border='0'></a>
+                                
+                                                    <div class='modal-footer'>
+                                                        <button type='button' class='btn btn-outline-secondary' data-bs-dismiss='modal'>
+                                                        Close
+                                                        </button>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/Modal-->
                                         ";
                                       }
                                     }
@@ -370,7 +408,7 @@
                   </div>
                 </div>
 
-                <!-- Modal -->
+                <!-- Modal 
                 <div class="modal fade" id="BannerModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -387,11 +425,11 @@
                                 <p>Copy the text in the box below and paste it into any web page to generate a link tracking banner!</p>
                                 
                                 <div>
-                                    <textarea class="form-control" id="" rows="3" scrollable><a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src="<?php echo dirname('..config/files/'.$row['filenames']);?>" border="0"></a></textarea>
+                                    <textarea class="form-control" id="" rows="3" scrollable><a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src="" border="0"></a></textarea>
                                 </div>
 
                                 <p>This is what the banner will look like:</p>
-                                <a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src="../config/files/<?php echo $row['filenames']?>" border="0"></a>
+                                <a href="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" target="_blank"><img src="" border="0"></a>
                                 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
@@ -402,7 +440,7 @@
                         </div>
                     </div>
                 </div>
-                <!--/Modal-->
+                /Modal-->
             </div>
             
             <?php include 'includes/google_translate.php'; ?>

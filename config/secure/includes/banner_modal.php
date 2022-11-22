@@ -23,7 +23,7 @@
                 <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">Category</label>
                   <div class="col-md-10">
-                    <select class="form-select " name="category" required disabled>
+                    <select class="form-select " name="category" required>
                       <option value="0">--Select Category--</option>
                         <?php
                           $conn = $pdo->open();
@@ -31,7 +31,7 @@
                           $stmt->execute();
                           foreach($stmt as $crow){
                             echo "
-                              <option selected value='".$crow['category']."'>".$crow['category']."</option>
+                              <option value='".$crow['category']."'>".$crow['category']."</option>
                             ";
                           }
                           $pdo->close();
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-outline-success btn-md" name="addresource"><i class="fa fa-check-square-o"></i> Add</button>
+              <button type="submit" class="btn btn-outline-success btn-md" name="addbanner"><i class="fa fa-check-square-o"></i> Add</button>
               </form>
             </div>
         </div>
@@ -75,11 +75,11 @@
 </div>
 
 <!-- Edit -->
-<div class="modal fade" id="editsource">
+<div class="modal fade" id="editbanner">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="">Edit Resources</h5>
+            <h5 class="modal-title" id="">Edit Banner</h5>
             <button
               type="button"
               class="btn-close"
@@ -88,7 +88,7 @@
             ></button>
           </div>
             <div class="modal-body">
-              <form class="form-horizontal" method="POST" action="resource_edit.php" enctype="multipart/form-data">
+              <form class="form-horizontal" method="POST" action="banner_edit.php" enctype="multipart/form-data">
                 <input type="hidden" class="resid" name="id">
                 <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">Title</label>
@@ -99,15 +99,15 @@
                 <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">Category</label>
                   <div class="col-md-10">
-                    <select class="form-select " name="category" required id="editcats">
+                    <select disabled class="form-select " name="category" required id="editcats">
                       <option value="0">--Select Category--</option>
                         <?php
                           $conn = $pdo->open();
-                          $stmt = $conn->prepare("SELECT * FROM resource_category");
+                          $stmt = $conn->prepare("SELECT * FROM resource_category WHERE category = 'Banners'");
                           $stmt->execute();
                           foreach($stmt as $crow){
                             echo "
-                              <option value='".$crow['category']."'>".$crow['category']."</option>
+                              <option selected value='".$crow['category']."'>".$crow['category']."</option>
                             ";
                           }
                           $pdo->close();
@@ -122,7 +122,7 @@
                       <option value="0">--Select File Type--</option>
                         <?php
                           $conn = $pdo->open();
-                          $stmt = $conn->prepare("SELECT * FROM resources_type");
+                          $stmt = $conn->prepare("SELECT * FROM resources_type WHERE type = '.JPEG or .JPG' OR type = '.PNG'");
                           $stmt->execute();
                           foreach($stmt as $trow){
                             echo "
@@ -143,7 +143,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-outline-success btn-md" name="editresource"><i class="fa fa-check-square-o"></i> Update</button>
+              <button type="submit" class="btn btn-outline-success btn-md" name="editbanner"><i class="fa fa-check-square-o"></i> Update</button>
               </form>
             </div>
         </div>
@@ -152,11 +152,11 @@
 
 
 <!-- Delete -->
-<div class="modal fade" id="deleteresource">
+<div class="modal fade" id="deletebanner">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="">Deleting Resources</h5>
+            <h5 class="modal-title" id="">Deleting Banner</h5>
             <button
               type="button"
               class="btn-close"
@@ -165,17 +165,17 @@
             ></button>
           </div>
             <div class="modal-body">
-              <form class="form-horizontal" method="POST" action="resource_delete.php">
+              <form class="form-horizontal" method="POST" action="banner_delete.php">
                 <input type="hidden" class="resid" name="id">
                 <div class="text-center">
-                    <p>Delete this Resources?</p>
+                    <p>Delete this Banner?</p>
                     <h3 class="resource"></h3>
                     <!-- <input type="text" class="files" > -->
                 </div>
             </div>
             <div class="modal-footer">
            
-              <button type="submit" class="btn btn-outline-danger btn-md" name="catdelete"><i class="fa fa-trash"></i> Delete</button>
+              <button type="submit" class="btn btn-outline-danger btn-md" name="bannerdelete"><i class="fa fa-trash"></i> Delete</button>
               </form>
             </div>
         </div>
