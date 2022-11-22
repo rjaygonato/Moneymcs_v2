@@ -1,4 +1,4 @@
-<script src="https://www.paypal.com/sdk/js?client-id=AWYz8bFxpQeEk0dNo1iAPBodgfpkYmeoXd9uI8f0Hkd2RXQlE7Kpx-tWtkg3FG657vFoIAD4pfZ_-5Tg" data-sdk-integration-source="button-factory"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AVmIA9-CTDfth7Ts7U7KBW55XAXhehbH3jPAItW1Tz_EyHezE3JXYThNrXXiTGwToddkhjCHIh5MpocO" data-sdk-integration-source="button-factory"></script>
 <script>
   var amountt= document.getElementById("t_amount").value; 
                 //console.log(amountt);
@@ -8,7 +8,7 @@
 </script>
 
 
-<script src="https://www.paypal.com/sdk/js?client-id=AWYz8bFxpQeEk0dNo1iAPBodgfpkYmeoXd9uI8f0Hkd2RXQlE7Kpx-tWtkg3FG657vFoIAD4pfZ_-5Tg" data-sdk-integration-source="button-factory"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AVmIA9-CTDfth7Ts7U7KBW55XAXhehbH3jPAItW1Tz_EyHezE3JXYThNrXXiTGwToddkhjCHIh5MpocO" data-sdk-integration-source="button-factory"></script>
 <script>
   var amountty= document.getElementById("t_amounty").value; 
     //console.log(amountt);
@@ -18,7 +18,7 @@
 </script>
 
 
-<script src="https://www.paypal.com/sdk/js?client-id=AWYz8bFxpQeEk0dNo1iAPBodgfpkYmeoXd9uI8f0Hkd2RXQlE7Kpx-tWtkg3FG657vFoIAD4pfZ_-5Tg" data-sdk-integration-source="button-factory"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AVmIA9-CTDfth7Ts7U7KBW55XAXhehbH3jPAItW1Tz_EyHezE3JXYThNrXXiTGwToddkhjCHIh5MpocO" data-sdk-integration-source="button-factory"></script>
 <script>
   var amounttpl= document.getElementById("t_amountp").value; 
     //console.log(amountt);
@@ -28,7 +28,7 @@
 </script>
 
 
-<script src="https://www.paypal.com/sdk/js?client-id=AWYz8bFxpQeEk0dNo1iAPBodgfpkYmeoXd9uI8f0Hkd2RXQlE7Kpx-tWtkg3FG657vFoIAD4pfZ_-5Tg" data-sdk-integration-source="button-factory"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AVmIA9-CTDfth7Ts7U7KBW55XAXhehbH3jPAItW1Tz_EyHezE3JXYThNrXXiTGwToddkhjCHIh5MpocO" data-sdk-integration-source="button-factory"></script>
 <script>
   var amounttpr= document.getElementById("t_amountpr").value; 
     //console.log(amountt);

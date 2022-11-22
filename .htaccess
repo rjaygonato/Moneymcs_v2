@@ -1,0 +1,15 @@
+# Get rid of those extention files
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+# Error Pages
+Options -Indexes
+ErrorDocument 500 http://localhost/moneymcs/404.html
+
+ErrorDocument 404 http://localhost/moneymcs/404.html
+
+ErrorDocument 403 http://localhost/moneymcs/404.html
+
+
