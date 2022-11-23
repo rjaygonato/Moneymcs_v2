@@ -27,8 +27,8 @@
                       <option value="0">--Select Category--</option>
                         <?php
                           $conn = $pdo->open();
-                          $stmt = $conn->prepare("SELECT * FROM resource_category WHERE category = 'Banners'");
-                          $stmt->execute();
+                          $stmt = $conn->prepare("SELECT * FROM resource_category WHERE category =:category");
+                          $stmt->execute(['category'=>'Banners']);
                           foreach($stmt as $crow){
                             echo "
                               <option value='".$crow['category']."'>".$crow['category']."</option>
@@ -103,8 +103,8 @@
                       <option value="0">--Select Category--</option>
                         <?php
                           $conn = $pdo->open();
-                          $stmt = $conn->prepare("SELECT * FROM resource_category WHERE category = 'Banners'");
-                          $stmt->execute();
+                          $stmt = $conn->prepare("SELECT * FROM resource_category WHERE category =:category");
+                          $stmt->execute(['category'=>'Banners']);
                           foreach($stmt as $crow){
                             echo "
                               <option selected value='".$crow['category']."'>".$crow['category']."</option>

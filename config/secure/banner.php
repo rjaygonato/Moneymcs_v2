@@ -276,8 +276,10 @@
                             $conn = $pdo->open();
 
                             try{
-                              $stmt = $conn->prepare("SELECT * FROM resources WHERE status=:status && category = 'Banners'");
-                              $stmt->execute(['status'=>1]);
+                              $stmt = $conn->prepare("SELECT * FROM resources WHERE status=:status AND category =:category");
+
+                              $stmt->execute(['status'=>1, 'category'=> 'Banners']);
+
                               foreach($stmt as $row){
 
                                 $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
