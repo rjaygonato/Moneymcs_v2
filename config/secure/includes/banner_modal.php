@@ -17,14 +17,14 @@
                 <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">Title</label>
                   <div class="col-md-10">
-                    <input class="form-control" type="text" name="resources">
+                    <input class="form-control" type="text" required name="resources">
                   </div>
                 </div>
                 <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">Category</label>
                   <div class="col-md-10">
                     <select class="form-select " name="category" required>
-                      <option value="0">--Select Category--</option>
+                      <!--<option value="0">--Select Category--</option>-->
                         <?php
                           $conn = $pdo->open();
                           $stmt = $conn->prepare("SELECT * FROM resource_category WHERE category =:category");
@@ -43,7 +43,7 @@
                   <label class="col-md-2 col-form-label">Type</label>
                   <div class="col-md-10">
                     <select class="form-select " name="type" required>
-                      <option value="0">--Select File Type--</option>
+                      <!--<option value="0">--Select File Type--</option>-->
                         <?php
                           $conn = $pdo->open();
                           $stmt = $conn->prepare("SELECT * FROM resources_type WHERE type = '.JPEG or .JPG' OR type = '.PNG'");
@@ -62,7 +62,7 @@
                 <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">File</label>
                   <div class="col-md-10">
-                    <input class="col-sm-3 form-control" type="file" name="filenames">
+                    <input class="col-sm-3 form-control" required type="file" name="filenames">
                   </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                 <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">Category</label>
                   <div class="col-md-10">
-                    <select disabled class="form-select " name="category" required id="editcats">
+                    <select class="form-select " name="category" required id="editcats">
                       <option value="0">--Select Category--</option>
                         <?php
                           $conn = $pdo->open();
@@ -138,7 +138,7 @@
                 <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">File</label>
                   <div class="col-md-10">
-                    <input class="col-sm-3 form-control" type="file" name="filenames" id="editfile">
+                    <input class="col-sm-3 form-control" required type="file" name="filenames" id="editfile">
                   </div>
                 </div>
             </div>

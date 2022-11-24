@@ -301,13 +301,13 @@
 						
                         <div class="input-group mb-5">
                           <span for="date_from" class="col-md-2 col-form-label fw-semibold">Date Range:</span>
-						  <input class="form-control col-md-2" name="date_from" type="date" value="2022-06-18" id="date_from" />
+						  <input class="form-control col-md-2" name="date_from" type="date" value="" id="date_from" />
 						  <span class="m-2">to</span> 
-						  <input class="form-control col-md-2" name="date_to" type="date" value="2022-06-18" id="date_to" />
-						  <button type="button" class="btn btn-success">Refresh Ledger</button>
+						  <input class="form-control col-md-2" name="date_to" type="date" value="" id="date_to" />
+						  <button type="button" class="btn btn-success refreshbtn" id="">Refresh Ledger</button>
                         </div>
 						<div id="CommissionsEarned">
-							<h6 class="text-primary mb-3">Commissions Earned for Date Range ()</h6>
+							<h6 class="text-primary mb-3">Commissions Earned for Date Range (<span class="text-primary" id="commissions_date_range"></span>)</h6>
 							<!-- Basic Bootstrap Table -->
 							<div class="table-responsive text-nowrap mb-5">
 								<table class="table">
@@ -346,7 +346,7 @@
 							<!--/ Basic Bootstrap Table -->
 						</div>
 						<div id="PaymentsMade">
-							<h6 class="text-primary">Payments Made for Date Range ()</h6>
+							<h6 class="text-primary">Payments Made for Date Range (<span class="text-primary" id="payment_date_range"></span>)</h6>
 							<!-- Basic Bootstrap Table -->
 							<div class="table-responsive text-nowrap mb-5">
 								<table class="table">
@@ -383,7 +383,7 @@
 						</div>
 						<div class="text-end">
 							<div class="list-group">
-							  <p class="mb-1 fw-semibold">SUMMARY FOR DATE RANGE ()</p>
+							  <p class="mb-1 fw-semibold">SUMMARY FOR DATE RANGE (<span class="" id="summary_date_range"></span>)</p>
 							  <p class="mb-1">Commissions Earned: $0.00</p>
 							  <p class="mb-1">Total Payments: $0.00</p>
 							  <p class="fw-semibold">Referral Partner Balance: $0.00</p>
@@ -435,5 +435,19 @@
 
 	<?php include 'includes/footer_links.php'; ?>
 	<?php include 'includes/payment_script.php'; ?>
+
+	<script>
+    $(function(){
+      $(document).on('click', '.refreshbtn', function(e){
+        e.preventDefault();
+        var datefrom = document.getElementById("date_from").value;
+        var dateto = document.getElementById("date_to").value;
+        $("#commissions_date_range").html(datefrom+" - "+dateto);
+		$("#payment_date_range").html(datefrom+" - "+dateto);
+		$("#summary_date_range").html(datefrom+" - "+dateto);
+        //console.log(daterange);
+      });
+    });
+    </script>
   </body>
 </html>
