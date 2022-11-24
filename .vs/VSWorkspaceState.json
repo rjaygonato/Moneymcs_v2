@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\config\\secure",
+    "\\pages"
   ],
-  "SelectedNode": "\\C:\\xampp\\htdocs\\moneymcs2",
+  "SelectedNode": "\\pages\\generate_banner_modal.php",
   "PreviewInSolutionExplorer": false
 }

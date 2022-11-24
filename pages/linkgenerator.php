@@ -338,9 +338,13 @@
                                 <tbody class="table-border-bottom-0 col-12">
                                   <tr>
                                     <td>Referral Registration</td>
+                                    <?php
+                                    $dir = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+                                    $imgdir = dirname($dir, 2);
+                                    ?>
                                     <td><?php echo $agent['regcode']; ?></td>
                                     <td class=" input-group">
-                                      <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="http://joinmoneymcs.com/createref.php?referral=<?php echo $agent['regcode']; ?>" id="myrefCode">
+                                      <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="<?php echo $imgdir?>/createref.php?referral=<?php echo $agent['regcode']; ?>" id="myrefCode">
                                       <button class="btn btn-outline-secondary" type="button" id="buttonrefcode"  data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span id='myTooltip'>Copy to Clipboard</span>"><i class='bx bx-copy-alt' onclick="copyClip()" onmouseout="outFunc()"></i></button>
                                     </td>
                                   </tr>
