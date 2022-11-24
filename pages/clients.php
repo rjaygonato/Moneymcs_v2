@@ -322,8 +322,14 @@
                       </div> -->
                       <div class="d-flex align-items-end">
                         <div class="col-sm-12">
-                          <div class="card-body">
-                            <h5 class="card-title text-primary">Clients</h5>
+                          <div class="card">
+                          <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Clients</h5>
+                            <!-- <small class="text-muted float-end">Default label</small> -->
+                            <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addclient">
+                                Add New
+                              </button>
+                          </div>
                             <div class="table-responsive text-nowrap">
                               <table id="" class="table table-borderless">
                                 <thead>
@@ -332,7 +338,6 @@
                                   <th> Email </th>
                                   <th> Contact </th>
                                   <th> Type </th>
-                                  <th> Date Added </th>
                                   <th> Actions</th>
                                 </thead>
                                 <tbody>
@@ -351,7 +356,6 @@
                                             <td>".$row['email']."</td>
                                             <td>".$row['phonenum']."</td>
                                             <td>".$row['type']."</td>
-                                            <td>".$row['date_join']."</td>
                                             <td></td>
                                           </tr>
                                         ";
@@ -399,7 +403,7 @@
         </div>
         <!-- / Layout page -->
 
-         <?php include 'includes/subs_form.php'; ?>
+         <?php include 'includes/add_client.php'; ?>
 
       </div>
 

@@ -1,9 +1,9 @@
 <!-- Modal -->
-<div class="modal fade" id="clientModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="addclient" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalCenterTitle">Add Client</h5>
+        <h5 class="modal-title" id="modalCenterTitle">New Client</h5>
         <button
           type="button"
           class="btn-close"
@@ -71,8 +71,8 @@
                     
                   </div>
                   <div class="row g-1 mb-3">
-                  <label for="paid_user"class="form-label">Paid</label>
-                  <div class="form-check ">
+                  <!-- <label for="paid_user"class="form-label">Paid</label> -->
+                  <!-- <div class="form-check ">
                             <input
                               name="paid_user"
                               class="form-check-input"
@@ -92,11 +92,11 @@
                             />
                             <label class="form-check-label" for="paid_no"> No </label>
                           </div>
-                  </div>
+                  </div> -->
                   <div class="mb-3">
                         <label for="date_joined" class="col-md-2 col-form-label">Date</label>
                         <div class="col">
-                          <input class="form-control" name="date_joined " type="date" value="2021-06-18" id="date_joined" />
+                          <input class="form-control" name="date_joined " type="date" value="" id="date_joined" />
                         </div>
                       </div>
                   <div class="row g-2">

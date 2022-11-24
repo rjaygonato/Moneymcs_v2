@@ -224,7 +224,7 @@
                                         $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
                                         echo "
                                           <tr>
-                                            <td>".$row['filenames']."</td>
+                                            <td>".$row['resources']."</td>
                                             <td>
                                               <button class='btn btn-outline-success btn-sm edit' data-id='".$row['id']."'><i class='fa fa-edit'></i> Download</button>
                                               
