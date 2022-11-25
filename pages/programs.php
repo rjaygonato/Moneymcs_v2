@@ -316,11 +316,189 @@
           <div class="content-wrapper">
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title text-primary">My Programs</h3>
+                <div class="row">
+                    <div class="col-lg-12 mb-4 order-0">
+                    <div class="card">
+                      <div class="card accordion-item active">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                            My Programs
+                          </button>
+                        </h2>
+
+                        <!--<div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                          </div>
+                        </div>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <!--  -->
+              <div class="row">
+                <div class="col-lg-12 mb-4 order-0">
+                    <div class="">
+                        <div class="d-flex align-items-end row">
+                        <div class="col-sm-4">
+                            <div class="card-body">
+                            <h5 class="card-title text-primary">Monthly Courses Available</h5>
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">January</h6>
+                                    <hr>
+                                    <center><a href="jan_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card-body">
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">February</h6>
+                                    <hr>
+                                    <center><a href="feb_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">March</h6>
+                                    <hr>
+                                    <center><a href="march_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card-body">
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">April</h6>
+                                    <hr>
+                                    <center><a href="april_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card-body">
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">May</h6>
+                                    <hr>
+                                    <center><a href="may_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">June</h6>
+                                    <hr>
+                                    <center><a href="june_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card-body">
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">July</h6>
+                                    <hr>
+                                    <center><a href="july_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card-body">
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">August</h6>
+                                    <hr>
+                                    <center><a href="aug_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">September</h6>
+                                    <hr>
+                                    <center><a href="sept_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card-body">
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">October</h6>
+                                    <hr>
+                                    <center><a href="oct_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card-body">
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">November</h6>
+                                    <hr>
+                                    <center><a href="nov_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                            <div class="card shadow-none border-success mb-3">
+                                <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
+                                </span>
+                                    <h6 class="card-title">December</h6>
+                                    <hr>
+                                    <center><a href="dec_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+              </div>
             </div>
 
             <?php include 'includes/google_translate.php'; ?>

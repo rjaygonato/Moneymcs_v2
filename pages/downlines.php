@@ -114,22 +114,22 @@
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="#" class="menu-link">
+                  <a href="programs" class="menu-link">
                     <div data-i18n="">My Programs</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="linkgenerator" class="menu-link">
                     <div data-i18n="">Link Generator</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="emailtemplates" class="menu-link">
                     <div data-i18n="">Email Templates</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="banners" class="menu-link">
                     <div data-i18n="">Banners</div>
                     </a>
                 </li>

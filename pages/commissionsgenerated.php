@@ -301,13 +301,16 @@
 
                         <div class="input-group input-daterange mb-5">
                           <span class="col-md-2 col-form-label fw-semibold">Date Range:</span>
-						  <input class="form-control" name="date_from" type="date" value="" id="date_from" />
+						  <input class="form-control datefrom" name="date_from" type="date" value="" id="date_from" />
+
 						  <div class="input-group-addon m-2">to</div> 
+
 						  <input class="form-control" name="date_to" type="date" value="" id="date_to" />
-						  <button type="button" class="btn btn-success" id="dateRange">Set</button>
+
+						  <button type="button" class="btn btn-success daterangebtn" id="dateRange">Set</button>
                         </div>
                         <div id="CommissionsEarned">
-							<h6 class="text-primary mb-2">Commissions Earned for Date Range ()</h6>
+							<h6 class="text-primary mb-2">Commissions Earned for Date Range (<span class="text-primary daterange" id="date_range"></span>)</h6>
 							<!-- Basic Bootstrap Table -->
 							<div class="table-responsive text-nowrap mb-5">
 								<table class="table">
@@ -319,7 +322,7 @@
 								</thead>
 								<tbody class="table-border-bottom-0 col-12">
 									<tr>
-									<td>Net Commissions Earned (In Date Range): <input type="text" id="my_hidden_input"></td>
+									<td>Net Commissions Earned (In Date Range):
 									<td>$0.00</td>
 									</tr>
 								</tbody>
@@ -335,15 +338,6 @@
             <!-- / Content -->
 
             <!--Script -->
-                <script type="text/javascript">
-                    $(document).ready(function(){
-                        $('#date_from').daterangepicker();
-                        $("#dateRange").click(function() {
-                          var startDate = ('#date_from').data('daterangepicker').startDate._d;
-                          console.log(startDate);
-                        });
-                    });
-                </script>
             <!--/ Script -->
 
             <!-- Footer -->
@@ -379,5 +373,18 @@
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
+
+    <script>
+    $(function(){
+      $(document).on('click', '#dateRange', function(e){
+        e.preventDefault();
+        var datefrom = document.getElementById("date_from").value;
+        var dateto = document.getElementById("date_to").value;
+        $("#date_range").html(datefrom+" - "+dateto);
+        //console.log(daterange);
+      });
+    });
+    </script>
+
   </body>
 </html>

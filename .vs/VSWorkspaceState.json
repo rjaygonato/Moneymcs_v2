@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\config\\secure\\includes",
+    "\\pages"
   ],
-  "SelectedNode": "\\C:\\xampp\\htdocs\\moneymcs2",
+  "SelectedNode": "\\pages\\programs.php",
   "PreviewInSolutionExplorer": false
 }
