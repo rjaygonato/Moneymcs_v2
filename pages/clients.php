@@ -356,7 +356,12 @@
                                             <td>".$row['email']."</td>
                                             <td>".$row['phonenum']."</td>
                                             <td>".$row['type']."</td>
-                                            <td></td>
+                                            <td>
+                                            <button class='btn btn-outline-dark btn-sm viewclient' data-id='".$row['id']."'><i class=''></i> View</button>
+                                            <button class='btn btn-outline-success btn-sm editclient' data-id='".$row['id']."'><i class=''></i> Edit Client</button>
+                                            <button class='btn btn-outline-info btn-sm editclient' data-id='".$row['id']."'><i class=''></i> Login as Client</button>
+                                            <!-- <button class='btn btn-outline-danger btn-sm delete ' data-id='".$row['id']."'><i class=''></i> Delete</button> -->
+                                            </td>
                                           </tr>
                                         ";
                                       }
@@ -376,7 +381,7 @@
                   </div>
                 </div>
             </div>
-
+            <?php include 'includes/client_modal.php'; ?>
             <?php include 'includes/google_translate.php'; ?>
             <!-- / Content -->
 
@@ -402,9 +407,8 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
-
          <?php include 'includes/add_client.php'; ?>
-
+      
       </div>
 
       <!-- Overlay -->
@@ -413,6 +417,65 @@
     <!-- / Layout wrapper -->
 
     <?php include 'includes/footer_links.php'; ?>
-    <?php include 'includes/payment_script.php'; ?>
+
+    <script>
+    $(function(){
+
+      $(document).on('click', '.viewclient', function(e){
+        e.preventDefault();
+        $('#clientview').modal('show');
+        var id = $(this).data('id');
+        getRow(id);
+      });
+
+      $(document).on('click', '.editclient', function(e){
+        e.preventDefault();
+        $('#clientedit').modal('show');
+        var id = $(this).data('id');
+        getRow(id);
+
+        //console.log(id);
+      });
+
+      // $(document).on('click', '.deleteresource', function(e){
+      //   e.preventDefault();
+      //   $('#deleteresource').modal('show');
+      //   var id = $(this).data('id');
+      //   getRow(id);
+      //   console.log(id);
+      // });
+
+    });
+
+    function getRow(id){
+      $.ajax({
+        type: 'POST',
+        url: 'client_row.php',
+        data: {id:id},
+        dataType: 'json',
+        success: function(response){
+          $('.clientid').val(response.id);
+          $('#clientf').val(response.firstname);
+          $('#clientl').val(response.lastname);
+          $('#cliente').val(response.email);
+          $('#clientp').val(response.phonenum);
+          $('#clients').val(response.state);
+          $('#clientt').val(response.type);
+
+
+          $('#editclientf').val(response.firstname);
+          $('#editclientl').val(response.lastname);
+          $('#editcliente').val(response.email);
+          $('#editclientp').val(response.phonenum);
+          $('#editclients').val(response.state);
+          $('#editclientt').val(response.type);
+
+          // $('.resource').html(response);
+          //console.log(response);
+        }
+      
+      });
+    }
+  </script>
   </body>
 </html>
