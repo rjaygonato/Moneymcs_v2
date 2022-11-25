@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\config\\secure",
+    "\\config\\secure\\includes",
     "\\pages"
   ],
-  "SelectedNode": "\\pages\\generate_banner_modal.php",
+  "SelectedNode": "\\pages\\programs.php",
   "PreviewInSolutionExplorer": false
 }
