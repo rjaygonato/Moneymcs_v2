@@ -436,7 +436,20 @@
                             </div>
                           </div>
                         </div>
-                        
+                        <div class="col-sm-4">
+                          <div class="card-body">
+                            <!-- <h5 class="card-title text-primary">Resource Categories</h5> -->
+                            <div class="card shadow-none border-success mb-3">
+                              <div class="card-body text-center">
+                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">
+                                </span>
+                                  <h6 class="card-title">Email Templates</h6>
+                                  <hr>
+                                  <center><a href="e_template" class="btn btn-sm btn-success "><i class='bx bx-search-alt'></i> View</a></center>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

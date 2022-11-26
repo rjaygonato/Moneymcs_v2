@@ -371,7 +371,7 @@
               <div class="row">
                 <div class="col-md-6 col-xl-4">
                   <div class="card   mb-3">
-                    <div class="card-header"><b>Clicks last 30 days</b></div>
+                    <div class="card-header"><b>Link usage last 30 days</b></div>
                     <div class="card-body">
                       <h5 class="card-title ">0</h5>
                       <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
@@ -389,7 +389,7 @@
                 </div>
                 <div class="col-md-6 col-xl-4">
                   <div class="card   mb-3">
-                    <div class="card-header"><b>Impressions last 30 days</b></div>
+                    <div class="card-header"><b>Register last 30 days</b></div>
                     <div class="card-body">
                       <h5 class="card-title ">0</h5>
                       <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
@@ -398,6 +398,15 @@
                 </div>
               </div>
               <div class="row">
+                <div class="col-md-6 col-xl-4">
+                  <div class="card   mb-3">
+                    <div class="card-header"><b>News</b></div>
+                      <div class="card-body">
+                        <h5 class="card-title ">New Training Available</h5>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
+                      </div>
+                  </div>
+                </div>
               </div>
             </div>
 
