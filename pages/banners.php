@@ -164,7 +164,31 @@
               </a>
             </li>
 
-            <li class="menu-header small text-uppercase">
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                <div data-i18n="">Reports </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="programs" class="menu-link">
+                    <div data-i18n="">Ledger</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="linkgenerator" class="menu-link">
+                    <div data-i18n="">Link Tracking Stats</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="emailtemplates" class="menu-link">
+                    <div data-i18n="">Commissions Generates</div>
+                    </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Reports
             </li>
 
@@ -187,7 +211,7 @@
                 <i class='menu-icon tf-icons bx bx-money'></i>
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
-            </li>
+            </li> -->
            
           </ul>
         </aside>

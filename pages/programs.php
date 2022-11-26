@@ -249,7 +249,7 @@
               <!-- /Search -->
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <?php include 'includes/subs_button.php'; ?>
+                
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
@@ -320,11 +320,11 @@
                     <div class="col-lg-12 mb-4 order-0">
                     <div class="card">
                       <div class="card accordion-item active">
-                        <h2 class="accordion-header" id="headingOne">
+                        <!-- <h2 class="accordion-header" id="headingOne">
                           <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
                             My Programs
                           </button>
-                        </h2>
+                        </h2> -->
 
                         <!--<div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
                           <div class="accordion-body">
@@ -339,162 +339,98 @@
               <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
                     <div class="">
+                      <h5 class="card-title text-primary">My Program(s)</h5>
                         <div class="d-flex align-items-end row">
-                        <div class="col-sm-4">
-                            <div class="card-body">
-                            <h5 class="card-title text-primary">Monthly Courses Available</h5>
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">January</h6>
-                                    <hr>
-                                    <center><a href="jan_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                          <div class="col-sm-12">
+                          <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+                              <div class="card h-100 SubsCard">
+                                <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                                  <div class="card-title mb-0">
+                                    <h5 class="m-0 me-2">
+                                      <?php
+                                          $conn = $pdo->open();
+
+                                          try{
+                                              $stmt = $conn->prepare("SELECT * FROM subscriptions WHERE user_id=:user AND status=:status LIMIT 1");
+                                              $stmt->execute(['user'=>$agent['id'], 'status'=>1]);
+                                              foreach($stmt as $row){
+                                              
+                                              $status = ($row['status']) ? '<li class="nav-item lh-1 me-3"> <b>Subscribed </b> </li>' : '<li class="nav-item lh-1 me-3"><button class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#smallModal" data-backdrop="static" data-keyboard="false" > Subscribe Now </button></li>';
+
+                                              echo " <div id='hasMem'> ".$row['subs_name']."</div> ";
+                                              
+                                              }
+                                          }
+                                          catch(PDOException $e){
+                                              echo $e->getMessage();
+                                          }
+
+                                          $pdo->close();
+                                      ?>
+                                    </h5>
+                                    <small class="text-muted">
+                                      <?php
+                                              $conn = $pdo->open();
+                                              try{
+                                                  $stmt = $conn->prepare("SELECT * FROM subscriptions WHERE user_id=:user AND status=:status LIMIT 1");
+                                                  $stmt->execute(['user'=>$agent['id'], 'status'=>1]);
+                                                  foreach($stmt as $row){
+                                                  echo " Date Purchased: ".date('F m, Y', strtotime($row["date_added"]))." ";
+                                                  }
+                                              }
+                                              catch(PDOException $e){
+                                                  echo $e->getMessage();
+                                              }
+
+                                              $pdo->close();
+                                          ?>
+                                    </small>
+                                  </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card-body">
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">February</h6>
-                                    <hr>
-                                    <center><a href="feb_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                <div class="card-body">
+                                  <div class="d-flex justify-content-between align-items-center mb-3" style="position: relative;">
+                                    <div class="d-flex flex-column align-items-center gap-1">
+                                      <h2 class="mb-2">
+                                          <?php
+                                              $conn = $pdo->open();
+                                              try{
+                                                  $stmt = $conn->prepare("SELECT * FROM subscriptions WHERE user_id=:user AND status=:status LIMIT 1");
+                                                  $stmt->execute(['user'=>$agent['id'], 'status'=>1]);
+                                                  foreach($stmt as $row){
+                                                  echo "  $".$row['totalp']." ";
+                                                  }
+                                              }
+                                              catch(PDOException $e){
+                                                  echo $e->getMessage();
+                                              }
+
+                                              $pdo->close();
+                                          ?>
+                                      </h2>
+                                      <p>For affiliate agents with services ( Bookkeping , Personal credit repair and Tax Services)</p>
+                                    </div>
+                                  </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card-body">
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">March</h6>
-                                    <hr>
-                                    <center><a href="march_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                              </div>
+                              <div class="card h-100 DefSubsCard">
+                                <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                                  <div class="card-title mb-0">
+                                    <h5 class="m-0 me-2">
+                                      N/A
+                                    </h5>
+                                    <!-- <small class="text-muted">Subscription Plan</small> -->
+                                  </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card-body">
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">April</h6>
-                                    <hr>
-                                    <center><a href="april_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                                <div class="card-body">
+                                  <div class="d-flex justify-content-between align-items-center mb-3" style="position: relative;">
+                                    <div class="d-flex flex-column align-items-center gap-1">
+                                      <h2 class="mb-2"> <h2>
+                                    </div>
+                                  </div>
                                 </div>
+                              </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card-body">
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">May</h6>
-                                    <hr>
-                                    <center><a href="may_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card-body">
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">June</h6>
-                                    <hr>
-                                    <center><a href="june_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card-body">
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">July</h6>
-                                    <hr>
-                                    <center><a href="july_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card-body">
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">August</h6>
-                                    <hr>
-                                    <center><a href="aug_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card-body">
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">September</h6>
-                                    <hr>
-                                    <center><a href="sept_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card-body">
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">October</h6>
-                                    <hr>
-                                    <center><a href="oct_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card-body">
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">November</h6>
-                                    <hr>
-                                    <center><a href="nov_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card-body">
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/course.png" width="80">
-                                </span>
-                                    <h6 class="card-title">December</h6>
-                                    <hr>
-                                    <center><a href="dec_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
-                                </div>
-                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -537,5 +473,22 @@
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
+
+    <script src="includes/jquery-1.9.1.min.js"></script>
+
+    <script type="text/javascript">
+      $( document ).ready(function() {
+
+        if($("#hasMem").length){
+              console.log( "visible!" );
+              // $('.sub_button').addClass('isDisabled');
+               $('.DefSubsCard').css('display', 'none');
+        } else{
+              console.log( "hidden!" );
+            // $('.sub_button').removeClass('isDisabled');
+            $('.SubsCard').css('display', 'none');
+        }
+      });
+    </script>
   </body>
 </html>
