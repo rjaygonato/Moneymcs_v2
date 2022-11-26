@@ -104,6 +104,11 @@
                     <div data-i18n="">Resource Page</div>
                   </a>
                 </li>
+                <li class="menu-item">
+                    <a href="trainingresources" class="menu-link">
+                    <div data-i18n="">Training Resources</div>
+                    </a>
+                </li>
               </ul>
             </li>
 
@@ -136,6 +141,30 @@
               </ul>
             </li>
 
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                <div data-i18n="">Reports </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="programs" class="menu-link">
+                    <div data-i18n="">Ledger</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="linkgenerator" class="menu-link">
+                    <div data-i18n="">Link Tracking Stats</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="emailtemplates" class="menu-link">
+                    <div data-i18n="">Commissions Generated</div>
+                    </a>
+                </li>
+              </ul>
+            </li>
+
             <li class="menu-item">
               <a href="clients" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-rectangle'></i>
@@ -163,31 +192,6 @@
                 <div data-i18n="Basic">Contact Us</div>
               </a>
             </li>
-
-            <li class="menu-item" style="">
-              <a href="javascript:void(0)" class="menu-link menu-toggle">
-                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
-                <div data-i18n="">Reports </div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="programs" class="menu-link">
-                    <div data-i18n="">Ledger</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                    <a href="linkgenerator" class="menu-link">
-                    <div data-i18n="">Link Tracking Stats</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="emailtemplates" class="menu-link">
-                    <div data-i18n="">Commissions Generated</div>
-                    </a>
-                </li>
-              </ul>
-            </li>
-            
 
             <!-- <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Reports
@@ -407,7 +411,7 @@
                                               $pdo->close();
                                           ?>
                                       </h2>
-                                      <p>For affiliate agents with services ( Bookkeping , Personal credit repair and Tax Services)</p>
+                                      <p>For affiliate agents with services ( Bookkeeping , Personal credit repair and Tax Services)</p>
                                     </div>
                                   </div>
                                 </div>

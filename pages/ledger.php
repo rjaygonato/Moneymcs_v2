@@ -104,10 +104,15 @@
 					<div data-i18n="">Resource Page</div>
 				  </a>
 				</li>
+				<li class="menu-item">
+                    <a href="trainingresources" class="menu-link">
+                    <div data-i18n="">Training Resources</div>
+                    </a>
+                </li>
 			  </ul>
 			</li>
 
-			<li class="menu-item open active">
+			<li class="menu-item">
 			  <a href="javascript:void(0)" class="menu-link menu-toggle">
 				<i class='menu-icon tf-icons bx bxs-user-detail'></i>
 				<div data-i18n="">Commissions/Referrals</div>
@@ -135,6 +140,30 @@
 				</li>
 			  </ul>
 			</li>
+
+			<li class="menu-item open active" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                <div data-i18n="">Reports </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item active">
+                  <a href="ledger" class="menu-link">
+                    <div data-i18n="">Ledger</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="linktrackingstats" class="menu-link">
+                    <div data-i18n="">Link Tracking Stats</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="commissionsgenerated" class="menu-link">
+                    <div data-i18n="">Commissions Generated</div>
+                    </a>
+                </li>
+              </ul>
+            </li>
 
 			<li class="menu-item">
 			  <a href="clients" class="menu-link">
@@ -164,7 +193,7 @@
 			  </a>
 			</li>
 
-			<li class="menu-header small text-uppercase">
+			<!--<li class="menu-header small text-uppercase">
 			  <span class="menu-header-text">Reports
 			</li>
 
@@ -187,7 +216,7 @@
 				<i class='menu-icon tf-icons bx bx-money'></i>
 				<div data-i18n="Basic">Commissions Generated</div>
 			  </a>
-			</li>
+			</li>-->
 		   
 		  </ul>
 		</aside>

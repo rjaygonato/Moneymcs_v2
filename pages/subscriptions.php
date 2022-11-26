@@ -120,6 +120,11 @@
                     <div data-i18n="">Resource Page</div>
                   </a>
                 </li>
+                <li class="menu-item">
+                    <a href="trainingresources" class="menu-link">
+                    <div data-i18n="">Training Resources</div>
+                    </a>
+                </li>
               </ul>
             </li>
 
@@ -418,7 +423,7 @@
                                 <h6 class="card-price text-center">$299.00<span class="period"> / Month</span></h6>
                                 <hr>
                                 <ul class="fa-ul">
-                                  <li><span class="fa-li"><i class="fas fa-check"></i></span> For affiliate agents with services ( Bookkeping and Tax Services)</li>
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span> For affiliate agents with services ( Bookkeeping and Tax Services)</li>
                                   <br><br><br>
                                 </ul>
                                 <div class="d-grid">
@@ -434,7 +439,7 @@
                                 <h6 class="card-price text-center">$599.00<span class="period"> / Month</span></h6>
                                 <hr>
                                 <ul class="fa-ul">
-                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>  For affiliate agents with services ( Bookkeping , Personal credit repair and Tax Services)</li>
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>  For affiliate agents with services ( Bookkeeping , Personal credit repair and Tax Services)</li>
                                   <br>
                                 </ul>
                                 <div class="d-grid">
