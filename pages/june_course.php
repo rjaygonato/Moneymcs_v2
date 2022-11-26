@@ -319,56 +319,32 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mb-4 order-0">
-                      <div class="card">
-                        <img class="d-flex mx-auto my-4" height="300" src="../images/corporate.png" alt="" />
+                    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img class="img-fluid d-flex mx-auto my-4" src="../images/self-employed.jpeg" alt="" />
                         <div class="card-body">
-                          <h3 class="card-title text-primary mb-4">Corporate Course</h3>
-                          <h5 class="card-subtitle mb-2">Objective(s):</h5>
+                          <h5 class="card-title">Basic Bookkeeping Course</h5>
                           <p class="card-text">
-                            Corporate training is a means of providing learners with the knowledge and skills they need to perform their jobs at a high level.
+                            This course provides an overview of self-employment and the requirements for success.
                           </p>
+                          <center><a href="june_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
                         </div>
                       </div>
                     </div>
                     <div class="col">
-                      <div class="card h-80">
+                      <div class="card h-100">
+                        <img class="img-fluid d-flex mx-auto my-4" src="../images/self-employed.jpeg" alt="" />
                         <div class="card-body">
-                          <h3 class="card-title mb-5"><span class="text-primary fw-semibold">Price:</span> <span class="fw-semibold"><u>$299.00</u></span></h3>
-                          <p class="text-center mb-5">
-                          <a href="" class="btn btn-success">ENROLL NOW!</a>
+                          <h5 class="card-title">Marketing Course</h5>
+                          <p class="card-text">
+                            This course provides an overview of self-employment and the requirements for success.
                           </p>
-                          <div class="card-text">
-                              <h5 class="fw-semibold">Course Features</h5>
-                              <div class="divider text-start course-features">
-                                  <i class="bx bx-plus text-primary"></i>
-                                  <span class="fw-semibold">Includes:</span> Online system training
-                              </div>
-                              <hr>
-                              <div class="divider text-start course-features">
-                                  <i class='bx bx-time text-primary'></i>
-                                  3 hours (online classes)
-                              </div>
-                              <hr>
-                              <div class="divider text-start course-features">
-                                  <i class='bx bxs-certification text-primary'></i>
-                                  Certification Acceptance Agent
-                              </div>
-                              <hr>
-                              <div class="divider text-start course-features">
-                                  <i class='bx bxs-book text-primary'></i>
-                                  <span class="fw-semibold">Book:</span>
-                              </div>
-                              <hr>
-                              <div class="divider text-start course-features">
-                                  <i class='bx bx-world text-primary'></i>
-                                  <span class="fw-semibold">Language:</span>
-                              </div>
-                              <hr>
-                          </div>
+                          <center><a href="june_course" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
                         </div>
                       </div>
                     </div>
+                </div>
                 </div>
             </div>
             

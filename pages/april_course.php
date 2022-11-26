@@ -321,12 +321,12 @@
                 <div class="row">
                     <div class="col-lg-8 mb-4 order-0">
                       <div class="card">
-                        <img class="d-flex mx-auto my-4" height="300" src="../images/corporate.png" alt="" />
+                        <img class="d-flex mx-auto my-4" height="300" src="../images/ITIN.png" alt="" />
                         <div class="card-body">
-                          <h3 class="card-title text-primary mb-4">Corporate Course</h3>
+                          <h3 class="card-title text-primary mb-4">Tax Course</h3>
                           <h5 class="card-subtitle mb-2">Objective(s):</h5>
                           <p class="card-text">
-                            Corporate training is a means of providing learners with the knowledge and skills they need to perform their jobs at a high level.
+                            Taxation studies prepare professionals who can help organisations take important business decisions, by providing financial counselling and guidance.
                           </p>
                         </div>
                       </div>

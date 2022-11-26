@@ -88,7 +88,7 @@
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item" style="">
+            <li class="menu-item open active" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
               <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="">Partner Resources</div>
@@ -104,16 +104,21 @@
                     <div data-i18n="">Resource Page</div>
                   </a>
                 </li>
+                <li class="menu-item active">
+                    <a href="trainingresources" class="menu-link">
+                    <div data-i18n="">Training Resources</div>
+                    </a>
+                </li>
               </ul>
             </li>
 
-            <li class="menu-item open active">
+            <li class="menu-item">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bxs-user-detail'></i>
                 <div data-i18n="">Commissions/Referrals</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item active">
+                <li class="menu-item">
                   <a href="programs" class="menu-link">
                     <div data-i18n="">My Programs</div>
                   </a>
@@ -164,7 +169,7 @@
               </a>
             </li>
 
-            <li class="menu-header small text-uppercase">
+            <!--<li class="menu-header small text-uppercase">
               <span class="menu-header-text">Reports
             </li>
 
@@ -187,7 +192,7 @@
                 <i class='menu-icon tf-icons bx bx-money'></i>
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
-            </li>
+            </li>-->
            
           </ul>
         </aside>
@@ -316,10 +321,10 @@
                 <div class="row">
                     <div class="col-lg-8 mb-4 order-0">
                       <div class="card">
-                        <img class="img-fluid d-flex mx-auto my-4" src="../images/ITIN.png" alt="" />
+                        <img class="d-flex mx-auto my-4" height="300" src="../images/ITIN.png" alt="" />
                         <div class="card-body">
-                          <h3 class="card-title text-primary">ITIN Course</h3>
-                          <h5 class="card-subtitle text-muted">Objective(s):</h5>
+                          <h3 class="card-title text-primary mb-4">ITIN Course</h3>
+                          <h5 class="card-subtitle mb-2">Objective(s):</h5>
                           <p class="card-text">
                             This course provides comprehensive tax preparer training on the specifics of dealing with non-citizen taxpayers and their tax identification numbers, or ITINs (Individual Taxpayer Identification Numbers).
                           </p>
@@ -327,26 +332,40 @@
                       </div>
                     </div>
                     <div class="col">
-                      <div class="card h-100">
+                      <div class="card h-80">
                         <div class="card-body">
                           <h3 class="card-title mb-5"><span class="text-primary fw-semibold">Price:</span> <span class="fw-semibold"><u>$299.00</u></span></h3>
-                          <p class="text-center m-5">
+                          <p class="text-center mb-5">
                           <a href="" class="btn btn-success">ENROLL NOW!</a>
                           </p>
-                          <p class="card-text">
-                          <h5 class="card-header">Course Features</h5>
-                          <div class="table-responsive text-nowrap">
-                            <table class="table">
-                                <thead>
-                                </thead>
-                                <tbody class="table-border-bottom-0">
-                                  <tr>
-                                    <td></td>
-                                  </tr>
-                                </tbody>
-                            </table>
+                          <div class="card-text">
+                              <h5 class="fw-semibold">Course Features</h5>
+                              <div class="divider text-start course-features">
+                                  <i class="bx bx-plus text-primary"></i>
+                                  <span class="fw-semibold">Includes:</span> Online system training
+                              </div>
+                              <hr>
+                              <div class="divider text-start course-features">
+                                  <i class='bx bx-time text-primary'></i>
+                                  3 hours (online classes)
+                              </div>
+                              <hr>
+                              <div class="divider text-start course-features">
+                                  <i class='bx bxs-certification text-primary'></i>
+                                  Certification Acceptance Agent
+                              </div>
+                              <hr>
+                              <div class="divider text-start course-features">
+                                  <i class='bx bxs-book text-primary'></i>
+                                  <span class="fw-semibold">Book:</span>
+                              </div>
+                              <hr>
+                              <div class="divider text-start course-features">
+                                  <i class='bx bx-world text-primary'></i>
+                                  <span class="fw-semibold">Language:</span>
+                              </div>
+                              <hr>
                           </div>
-                          </p>
                         </div>
                       </div>
                     </div>
