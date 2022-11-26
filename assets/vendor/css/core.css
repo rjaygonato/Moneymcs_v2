@@ -8346,7 +8346,7 @@ button.list-group-item-gray.active {
 
 .card {
   background-clip: padding-box;
-  box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+  box-shadow: 0 2px 6px 0 rgb(67 89 113 / 12%);
 }
 .card .card-link {
   display: inline-block;
@@ -10065,7 +10065,7 @@ button.list-group-item-gray.active {
 
 .bg-success {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+  background-color: darkslategrey;
 }
 
 .bg-info {

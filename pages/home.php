@@ -304,6 +304,7 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
+              
               <div class="row">
                 <div class="col-lg-8 mb-4 order-0">
                   <div class="card">
@@ -366,6 +367,37 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-xl-4">
+                  <div class="card   mb-3">
+                    <div class="card-header"><b>Clicks last 30 days</b></div>
+                    <div class="card-body">
+                      <h5 class="card-title ">0</h5>
+                      <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <div class="card   mb-3">
+                    <div class="card-header"><b>Commission last 30 days</b></div>
+                    <div class="card-body">
+                      <h5 class="card-title ">$0.00</h5>
+                      <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <div class="card   mb-3">
+                    <div class="card-header"><b>Impressions last 30 days</b></div>
+                    <div class="card-body">
+                      <h5 class="card-title ">0</h5>
+                      <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
               </div>
             </div>
 

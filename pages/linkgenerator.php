@@ -182,7 +182,7 @@
                 </li>
                 <li class="menu-item">
                     <a href="emailtemplates" class="menu-link">
-                    <div data-i18n="">Commissions Generates</div>
+                    <div data-i18n="">Commissions Generated</div>
                     </a>
                 </li>
               </ul>
