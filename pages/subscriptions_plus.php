@@ -111,6 +111,11 @@
                     <div data-i18n="">Resource Page</div>
                   </a>
                 </li>
+                <li class="menu-item">
+                    <a href="trainingresources" class="menu-link">
+                    <div data-i18n="">Training Resources</div>
+                    </a>
+                </li>
               </ul>
             </li>
 
@@ -311,7 +316,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-primary">$299.00 - Monthly </h5>
                             <p class="card-text">
-                              For affiliate agents with services ( Bookkeping and Tax Services)
+                              For affiliate agents with services ( Bookkeeping and Tax Services)
                             </p>
                             <!-- <a href="#" class="btn btn-sm btn-success">Pay now</a> -->
                             <button class="btn btn-sm btn-success nosubscriptions hidden" data-bs-toggle="modal" data-bs-target="#plusSub" data-backdrop="static" data-keyboard="false" > Select </button> 

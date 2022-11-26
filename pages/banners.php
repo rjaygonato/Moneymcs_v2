@@ -104,6 +104,11 @@
                     <div data-i18n="">Resource Page</div>
                   </a>
                 </li>
+                <li class="menu-item">
+                    <a href="trainingresources" class="menu-link">
+                    <div data-i18n="">Training Resources</div>
+                    </a>
+                </li>
               </ul>
             </li>
 
@@ -131,6 +136,30 @@
                 <li class="menu-item active">
                     <a href="banners" class="menu-link">
                     <div data-i18n="">Banners</div>
+                    </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                <div data-i18n="">Reports </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="programs" class="menu-link">
+                    <div data-i18n="">Ledger</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="linkgenerator" class="menu-link">
+                    <div data-i18n="">Link Tracking Stats</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="emailtemplates" class="menu-link">
+                    <div data-i18n="">Commissions Generated</div>
                     </a>
                 </li>
               </ul>
@@ -164,29 +193,6 @@
               </a>
             </li>
 
-            <li class="menu-item" style="">
-              <a href="javascript:void(0)" class="menu-link menu-toggle">
-                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
-                <div data-i18n="">Reports </div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="programs" class="menu-link">
-                    <div data-i18n="">Ledger</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                    <a href="linkgenerator" class="menu-link">
-                    <div data-i18n="">Link Tracking Stats</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="emailtemplates" class="menu-link">
-                    <div data-i18n="">Commissions Generated</div>
-                    </a>
-                </li>
-              </ul>
-            </li>
 
             <!-- <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Reports

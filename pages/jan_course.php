@@ -313,17 +313,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
-                    <div class="col">
-                      <div class="card h-100">
+                <div class="row">
+                    <div class="col-lg-8 mb-4 order-0">
+                      <div class="card">
                         <img class="img-fluid d-flex mx-auto my-4" src="../images/ITIN.png" alt="" />
                         <div class="card-body">
-                          <h5 class="card-title">ITIN Course</h5>
+                          <h3 class="card-title text-primary">ITIN Course</h3>
+                          <h5 class="card-subtitle text-muted">Objective(s):</h5>
                           <p class="card-text">
                             This course provides comprehensive tax preparer training on the specifics of dealing with non-citizen taxpayers and their tax identification numbers, or ITINs (Individual Taxpayer Identification Numbers).
                           </p>
-                          <p class="text-center m-0">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h3 class="card-title mb-5"><span class="text-primary fw-semibold">Price:</span> <span class="fw-semibold"><u>$299.00</u></span></h3>
+                          <p class="text-center m-5">
                           <a href="" class="btn btn-success">ENROLL NOW!</a>
+                          </p>
+                          <p class="card-text">
+                          <h5 class="card-header">Course Features</h5>
+                          <div class="table-responsive text-nowrap">
+                            <table class="table">
+                                <thead>
+                                </thead>
+                                <tbody class="table-border-bottom-0">
+                                  <tr>
+                                    <td></td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                          </div>
                           </p>
                         </div>
                       </div>
