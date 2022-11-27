@@ -268,7 +268,7 @@
                     </div>
 
                     <div class="table-responsive text-nowrap">
-                      <table id="" class="table table-bordered">
+                      <table id="" class="table table-fixed table-bordered">
                         <thead>
                           <th>Course Name</th>
                           <th>Category</th>
@@ -294,8 +294,8 @@
                                   <tr>
                                     <td>".$row['course_name']."</td>
                                     <td>".$row['category']."</td>
-                                    <td>".$row['description']."</td>
-                                    <td>".$row['features']."</td>
+                                    <td class='col-md-3'>".$row['description']."</td>
+                                    <td class='col-md-3'>".$row['features']."</td>
                                     <td>".$row['price']."</td>
                                     <td>".$row['filenames']."</td>
                                     <td>".$status."</td>
