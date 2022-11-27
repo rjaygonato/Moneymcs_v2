@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets\\img",
+    "\\pages"
   ],
-  "SelectedNode": "\\C:\\xampp\\htdocs\\moneymcs2",
+  "SelectedNode": "\\pages\\trainingresources.php",
   "PreviewInSolutionExplorer": false
 }

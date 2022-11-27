@@ -148,17 +148,17 @@
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="programs" class="menu-link">
+                  <a href="ledger" class="menu-link">
                     <div data-i18n="">Ledger</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                    <a href="linkgenerator" class="menu-link">
+                    <a href="linktrackingstats" class="menu-link">
                     <div data-i18n="">Link Tracking Stats</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="emailtemplates" class="menu-link">
+                    <a href="commissionsgenerated" class="menu-link">
                     <div data-i18n="">Commissions Generated</div>
                     </a>
                 </li>
@@ -435,6 +435,7 @@
             </div>
             
             <?php include 'includes/google_translate.php'; ?>
+            
             <!-- / Content -->
 
             <!-- Footer -->
@@ -470,6 +471,7 @@
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
+    <?php include 'includes/light_datascript.php'; ?>
 
 <script>
     $(function(){
