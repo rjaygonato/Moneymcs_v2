@@ -139,6 +139,11 @@
                   <button class="btn btn-success d-grid w-100" name="login" type="submit">Sign in</button>
                 </div>
               </form><br>
+
+                <a href="agent_account">
+                  <center><span>Free Agent sample interface</span></center>
+                </a>
+                <br>
               <p class="text-center">
                 <span>Become an agent?</span>
                 <a href="create">
