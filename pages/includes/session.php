@@ -3,7 +3,7 @@
 	session_start();
 
 	if(!isset($_SESSION['agent']) || trim($_SESSION['agent']) == ''){
-		header('location: ../index');
+		header('location: ../agent_account');
 		exit();
 	}
 

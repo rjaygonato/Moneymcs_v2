@@ -66,7 +66,7 @@
 				
 				try{
 					$stmt = $conn->prepare("INSERT INTO users (regcode, moneymcid, firstname, lastname, contact_info, email, password, type, status, created_on, ip) VALUES (:code, :moneymcid, :firstname, :lastname, :contact_info, :email, :password, :type, :status, :created_on, :ip)");
-					$stmt->execute(['code'=>$code, 'moneymcid'=>$moneymcid, 'firstname'=>$firstname, 'lastname'=>$lastname, 'contact_info'=>$contact_info, 'email'=>$email, 'password'=>$password, 'type'=>'1', 'status'=>'1', 'created_on'=>$now, 'ip' => get_ip()]);
+					$stmt->execute(['code'=>$code, 'moneymcid'=>$moneymcid, 'firstname'=>$firstname, 'lastname'=>$lastname, 'contact_info'=>$contact_info, 'email'=>$email, 'password'=>$password, 'type'=>'0', 'status'=>'1', 'created_on'=>$now, 'ip' => get_ip()]);
 
                     //referral magic goes here 
 					$stmt = $conn->prepare("INSERT INTO refer_user (firstname, lastname, email, refcode, reflink, status, date_added) VALUES (:firstname, :lastname, :email, :refcode, :reflink, :status, :date_added)");
