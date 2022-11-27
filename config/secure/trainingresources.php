@@ -297,12 +297,11 @@
                                     <td>".$row['description']."</td>
                                     <td>".$row['features']."</td>
                                     <td>".$row['price']."</td>
-                                    <td>".$row['status']."</td>
-                                    <td>".$row['description']."</td>
+                                    <td>".$row['filenames']."</td>
                                     <td>".$status."</td>
                                     <td>
-                                      <button class='btn btn-outline-success btn-sm editbanner' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit Banner</button>
-                                      <button class='btn btn-outline-danger btn-sm deletebanner' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
+                                      <button class='btn btn-outline-success btn-sm editcourse' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit Course</button>
+                                      <button class='btn btn-outline-danger btn-sm deletecourse' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
                                     </td>
                                   </tr>
                                 ";
@@ -345,7 +344,7 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
-        <?php include 'includes/banner_modal.php'; ?>
+        <?php include 'includes/training_resources_modal.php'; ?>
       </div>
 
       <!-- Overlay -->
@@ -379,18 +378,18 @@
 
   <script>
     $(function(){
-      $(document).on('click', '.editbanner', function(e){
+      $(document).on('click', '.editcourse', function(e){
         e.preventDefault();
-        $('#editbanner').modal('show');
+        $('#editcourse').modal('show');
         var id = $(this).data('id');
         getRow(id);
 
         //console.log(id);
       });
 
-      $(document).on('click', '.deletebanner', function(e){
+      $(document).on('click', '.deletecourse', function(e){
         e.preventDefault();
-        $('#deletebanner').modal('show');
+        $('#deletecourse').modal('show');
         var id = $(this).data('id');
         getRow(id);
        // console.log(id);

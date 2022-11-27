@@ -300,7 +300,52 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-           
+                <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="card">
+                      <div class="card accordion-item active">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                            Downlines
+                          </button>
+                        </h2>
+
+                        <!--<div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            Below are banner ads you can use in your marketing. When you find one you want to use, select the applicable Referral Partner, redirect, and ad that you want to track and click the button to generate the html code with the appropriate tracking link.</p>
+                            <p class="card-text">After you have generated the html code, you can copy and paste it into your site(s) to begin to generate traffic.</p>
+                          </div>
+                        </div>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 mb-4 order-0">
+                    <div class="card">
+                      <div class="d-flex align-items-end">
+                        <div class="col-sm-12">
+                          <div class="card-body">
+                            <!--<h5 class="card-title text-primary">Templates</h5>-->
+                            <div class="table-responsive text-nowrap">
+                              <table id="" class="table table-borderless">
+                                <thead>
+                                  <th>Name</th>
+                                  <th>Date Signed up</th>
+                                  <th>Subscription</th>
+                                  <th>Status</th>
+                                </thead>
+                                <tbody>
+                                  
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
 
             <?php include 'includes/google_translate.php'; ?>
