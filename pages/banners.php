@@ -471,7 +471,7 @@
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
-    <?php include 'includes/light_datascript.php'; ?>
+   <!--<?php include 'includes/light_datascript.php'; ?>-->
 
 <script>
     $(function(){
