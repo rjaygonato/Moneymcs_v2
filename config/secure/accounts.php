@@ -274,11 +274,15 @@
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
-                  <b>Registered Users</b>
+                  <!-- <b>Registered Users</b> -->
                   <div class="card">
                     <div class="d-flex align-items-end row">
                       <div class="col-sm-12">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                          <h5 class="mb-0">Registered Users</h5>
+                        </div>
                         <div class="card-body">
+                          <h5 class="mb-0">Users</h5>
                           <div class="table-responsive text-nowrap">
                             <table id="" class="table table-bordered">
                               <thead>
@@ -381,5 +385,6 @@
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>
