@@ -210,7 +210,7 @@
                               <table id="" class="table table-borderless">
                                 <thead>
                                   <th>Title</th>
-                                  <th>Actions</th>
+                                  <th></th>
                                 </thead>
                                 <tbody>
                                   <?php
@@ -285,5 +285,6 @@
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
+    <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>

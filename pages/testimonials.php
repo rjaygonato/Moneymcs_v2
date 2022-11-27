@@ -209,7 +209,7 @@
                               <table id="" class="table table-borderless">
                                 <thead>
                                   <th>Title</th>
-                                  <th>Actions</th>
+                                  <th></th>
                                 </thead>
                                 <tbody>
                                   <?php
@@ -237,6 +237,9 @@
                                     }
                                     $pdo->close();
                                   ?>
+                                 <!-- <tr id="noData">
+                                    <td>No data available at this moment</td>
+                                 </tr> -->
                                 </tbody>
                               </table>
                             </div>
@@ -285,5 +288,6 @@
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
+    <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>

@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Clients</title>
+    <title>MoneyMCS - Resources</title>
 
     <meta name="description" content="" />
 
@@ -66,133 +66,10 @@
               <i class="bx bx-chevron-left bx-sm align-middle"></i>
             </a>
           </div>
-          <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Main Menu</span>
-          </li>
-          <ul class="menu-inner py-1">
-            <!-- Dashboard -->
-            <li class="menu-item ">
-              <a href="home" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Home</div>
-              </a>
-            </li>
 
-            <li class="menu-item ">
-              <a href="subscriptions" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-list-ul'></i>
-                <div data-i18n="Analytics">Subscription Plans</div>
-              </a>
-            </li>
+          <?php include 'includes/resource_sidemenu.php'; ?>
 
-            <!-- Layouts -->
-            <li class="menu-item" style="">
-              <a href="javascript:void(0)" class="menu-link menu-toggle">
-              <i class='menu-icon tf-icons bx bx-book-reader'></i>
-                <div data-i18n="">Partner Resources</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="resources" class="menu-link">
-                    <div data-i18n="">Resource Library</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="resource" class="menu-link">
-                    <div data-i18n="">Resource Page</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                    <a href="trainingresources" class="menu-link">
-                    <div data-i18n="">Training Resources</div>
-                    </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="menu-item">
-              <a href="javascript:void(0)" class="menu-link menu-toggle">
-                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
-                <div data-i18n="">Commissions/Referrals</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="programs" class="menu-link">
-                    <div data-i18n="">My Programs</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                    <a href="linkgenerator" class="menu-link">
-                    <div data-i18n="">Link Generator</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="emailtemplates" class="menu-link">
-                    <div data-i18n="">Email Templates</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="banners" class="menu-link">
-                    <div data-i18n="">Banners</div>
-                    </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="menu-item active">
-              <a href="clients" class="menu-link">
-                <i class='menu-icon tf-icons bx bxs-user-rectangle'></i>
-                <div data-i18n="Basic">Clients</div>
-              </a>
-            </li>
-
-            <!-- <li class="menu-item">
-              <a href="#" class="menu-link">
-                <i class='menu-icon tf-icons bx bxs-user-plus'></i>
-                <div data-i18n="Basic">Add Clients</div>
-              </a>
-            </li> -->
-
-            <li class="menu-item ">
-              <a href="downlines" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-git-branch'></i>
-                <div data-i18n="Basic">Downlines</div>
-              </a>
-            </li>
-
-            <li class="menu-item">
-              <a href="contacts" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-phone-outgoing'></i>
-                <div data-i18n="Basic">Contact Us</div>
-              </a>
-            </li>
-
-          <!-- <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Reports</span>
-          </li>
-          
-          <li class="menu-item">
-              <a href="" class="menu-link">
-              <i class='menu-icon tf-icons bx bx-receipt'></i>
-                <div data-i18n="Basic">Ledger</div>
-              </a>
-            </li>
-
-            <li class="menu-item">
-              <a href="" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-current-location'></i>
-                <div data-i18n="Basic">Link Tracking Stats</div>
-              </a>
-            </li>
-
-            <li class="menu-item">
-              <a href="" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-money'></i>
-                <div data-i18n="Basic">Commissions Generated</div>
-              </a>
-            </li> -->
-           
-          </ul>
+        </ul>
         </aside>
         <!-- / Menu -->
 
@@ -327,60 +204,42 @@
                       </div> -->
                       <div class="d-flex align-items-end">
                         <div class="col-sm-12">
-                          <div class="card">
-                          <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="mb-0">Clients</h5>
-                            <!-- <small class="text-muted float-end">Default label</small> -->
-                            <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addclient">
-                                Add New
-                              </button>
-                          </div>
-                            <div class="card-body">
-                              <div class="table-responsive text-nowrap">
-                                <table id="" class="table table-borderless">
-                                  <thead>
-                                    <!-- <th>Company </th> -->
-                                    <th> Name </th> 
-                                    <th> Email </th>
-                                    <th> Contact </th>
-                                    <th> Type </th>
-                                    <th> Actions</th>
-                                  </thead>
-                                  <tbody>
-                                    <?php
-                                      $conn = $pdo->open();
+                          <div class="card-body">
+                            <h5 class="card-title text-primary">Email Templates</h5>
+                            <div class="table-responsive text-nowrap">
+                              <table id="" class="table table-borderless">
+                                <thead>
+                                  <th>Title</th>
+                                  <th></th>
+                                </thead>
+                                <tbody>
+                                  <?php
+                                    $conn = $pdo->open();
 
-                                      try{
-                                        $stmt = $conn->prepare("SELECT * FROM clients WHERE status=:status");
-                                        $stmt->execute(['status'=>1]);
-                                        foreach($stmt as $row){
+                                    try{
+                                      $stmt = $conn->prepare("SELECT * FROM resources WHERE status=:status AND category=:category");
+                                      $stmt->execute(['status'=>1, 'category'=>'Email Templates']);
+                                      foreach($stmt as $row){
 
-                                          $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
-                                          echo "
-                                            <tr>
-                                              <td>".$row['firstname'].",".$row['firstname']."</td>
-                                              <td>".$row['email']."</td>
-                                              <td>".$row['phonenum']."</td>
-                                              <td>".$row['type']."</td>
-                                              <td>
-                                              <button class='btn btn-outline-dark btn-sm viewclient' data-id='".$row['id']."'><i class=''></i> View</button>
-                                              <button class='btn btn-outline-success btn-sm editclient' data-id='".$row['id']."'><i class=''></i> Edit Client</button>
-                                              <button class='btn btn-outline-info btn-sm editclient' data-id='".$row['id']."'><i class=''></i> Login as Client</button>
-                                              <!-- <button class='btn btn-outline-danger btn-sm delete ' data-id='".$row['id']."'><i class=''></i> Delete</button> -->
-                                              </td>
-                                            </tr>
-                                          ";
-                                        }
+                                        $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
+                                        echo "
+                                          <tr>
+                                            <td>".$row['resources']."</td>
+                                            <td>
+                                              <button type='button' class='btn btn-outline-success btn-sm edit' data-id='".$row['id']."'><i class='bx bxs-download'></i><a href='../config/files/".$row['filenames']."' target='_blank'>Download</a></button>
+                                            </td>
+                                          </tr>
+                                        ";
                                       }
-                                      catch(PDOException $e){
-                                        echo $e->getMessage();
-                                      }
-                                      $pdo->close();
-                                    ?>
-                                  </tbody>
-                                </table>
-                              </div>
-                            </div> 
+                                    }
+                                    catch(PDOException $e){
+                                      echo $e->getMessage();
+                                    }
+                                    $pdo->close();
+                                  ?>
+                                </tbody>
+                              </table>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -388,7 +247,7 @@
                   </div>
                 </div>
             </div>
-            <?php include 'includes/client_modal.php'; ?>
+
             <?php include 'includes/google_translate.php'; ?>
             <!-- / Content -->
 
@@ -414,8 +273,9 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
-         <?php include 'includes/add_client.php'; ?>
-      
+
+         <?php include 'includes/subs_form.php'; ?>
+
       </div>
 
       <!-- Overlay -->
@@ -424,66 +284,7 @@
     <!-- / Layout wrapper -->
 
     <?php include 'includes/footer_links.php'; ?>
+    <?php include 'includes/payment_script.php'; ?>
     <?php include 'includes/light_datascript.php'; ?>
-
-    <script>
-    $(function(){
-
-      $(document).on('click', '.viewclient', function(e){
-        e.preventDefault();
-        $('#clientview').modal('show');
-        var id = $(this).data('id');
-        getRow(id);
-      });
-
-      $(document).on('click', '.editclient', function(e){
-        e.preventDefault();
-        $('#clientedit').modal('show');
-        var id = $(this).data('id');
-        getRow(id);
-
-        //console.log(id);
-      });
-
-      // $(document).on('click', '.deleteresource', function(e){
-      //   e.preventDefault();
-      //   $('#deleteresource').modal('show');
-      //   var id = $(this).data('id');
-      //   getRow(id);
-      //   console.log(id);
-      // });
-
-    });
-
-    function getRow(id){
-      $.ajax({
-        type: 'POST',
-        url: 'client_row.php',
-        data: {id:id},
-        dataType: 'json',
-        success: function(response){
-          $('.clientid').val(response.id);
-          $('#clientf').val(response.firstname);
-          $('#clientl').val(response.lastname);
-          $('#cliente').val(response.email);
-          $('#clientp').val(response.phonenum);
-          $('#clients').val(response.state);
-          $('#clientt').val(response.type);
-
-
-          $('#editclientf').val(response.firstname);
-          $('#editclientl').val(response.lastname);
-          $('#editcliente').val(response.email);
-          $('#editclientp').val(response.phonenum);
-          $('#editclients').val(response.state);
-          $('#editclientt').val(response.type);
-
-          // $('.resource').html(response);
-          //console.log(response);
-        }
-      
-      });
-    }
-  </script>
   </body>
 </html>

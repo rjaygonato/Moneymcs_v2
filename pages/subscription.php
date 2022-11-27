@@ -341,9 +341,9 @@
                     <h5 class="card-header">Subscription History</h5>
                     <!-- Account -->
                     <div class="card-body">
-                      <div class="d-flex align-items-start align-items-sm-center gap-4">
+                      <div class="  ">
                         
-                      <table id="example1" class="table table-responsive text-nowrap">
+                      <table id="" class="table table-responsive text-nowrap">
                         <thead>
                           <th>Transaction #</th>
                           <th>Type</th>
@@ -422,5 +422,6 @@
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
+    <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>
