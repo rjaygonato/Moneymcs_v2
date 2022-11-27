@@ -33,17 +33,17 @@
 						// elseif ($row['type'] == 2){
 						// 	$_SESSION['super'] = $row['id'];
 						// }
-						// else{
-						// 	$_SESSION['user'] = $row['id'];
+						else{
+							$_SESSION['free_user'] = $row['id'];
 
-						// 	$sql = "UPDATE users SET last_login=:last_login, last_login_ip=:last_login_ip WHERE id=:id";
-						// 	$stmt = $conn->prepare($sql);
-						// 	$stmt->execute([
-						// 		'id' => $row['id'],
-						// 		'last_login_ip' => get_ip(),
-						// 		'last_login' => $now,
-						// 	]);
-						// }
+							$sql = "UPDATE users SET last_login=:last_login, last_login_ip=:last_login_ip WHERE id=:id";
+							$stmt = $conn->prepare($sql);
+							$stmt->execute([
+								'id' => $row['id'],
+								'last_login_ip' => get_ip(),
+								'last_login' => $now,
+							]);
+						}
 					}
 					else{
 						$_SESSION['error'] = 'Incorrect Password';
