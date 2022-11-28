@@ -123,11 +123,34 @@
               </a>
             </li>
 
-            <li class="menu-item ">
+            <!-- <li class="menu-item ">
               <a href="agent_report" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-book-content'></i>
                 <div data-i18n="Analytics">Reports</div>
               </a>
+            </li> -->
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+              <i class='menu-icon tf-icons bx bxs-book-content'></i>
+                <div data-i18n="">Reports </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="agent_ledger" class="menu-link">
+                    <div data-i18n="">Ledger</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="agent_linktracks" class="menu-link">
+                    <div data-i18n="">Link Tracking Stats</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="agent_commgen" class="menu-link">
+                    <div data-i18n="">Commissions Generated</div>
+                    </a>
+                </li>
+              </ul>
             </li>
 
 
@@ -192,12 +215,12 @@
                     <li>
                       <div class="dropdown-divider"></div>
                     </li>
-                    <li>
+                    <!-- <li>
                       <a class="dropdown-item" href="agent_profile">
                         <i class="bx bx-user me-2"></i>
                         <span class="align-middle">Profile</span>
                       </a>
-                    </li>
+                    </li> -->
                     <li>
                       <div class="dropdown-divider"></div>
                     </li>
@@ -228,7 +251,7 @@
                 <div class="col-lg-12 mb-4 order-0">
                   <h5 class="card-title text-primary">Subscription Plans</h5>
                   <h6 class="">We bring you the best pricing plan for you</h6>
-                    <section class="pricing py-5">
+                    <section class="pricing ">
                       <div class="container">
                         <div class="row">
                           <!-- Plus Tier -->

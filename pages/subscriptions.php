@@ -352,33 +352,9 @@
                   </div>
                 </div>
                   <div class="col-lg-12 mb-4 order-0">
-                    <section class="pricing py-5">
+                    <section class="pricing ">
                       <div class="container">
                         <div class="row">
-                          <!-- Free Tier -->
-                          <!-- <div class="col-lg-4">
-                            <div class="card mb-5 mb-lg-0">
-                              <div class="card-body">
-                                <h5 class="card-title text-muted text-uppercase text-center">Starter</h5>
-                                <h6 class="card-price text-center"> Free </h6>
-                                <hr>
-                                <ul class="fa-ul">
-                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For Affiliates Agent only</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                  <li>&nbsp;</li>
-                                </ul>
-                                <div class="d-grid">
-                                <a href="#" class="btn btn-success text-uppercase">Select this Plan</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div> -->
-                          
                           <!-- Plus Tier -->
                           <div class="col-lg-3">
                             <div class="card mb-5 mb-lg-0">
@@ -450,7 +426,7 @@
                           </div>
                         </div>
                       </div>
-                    </section>
+                    </section><br>
                       <center><p>For more options, Please contact us for pricing | <a href="contacts" class="btn btn-success btn-sm">Contact us</a></p></center>
                     <hr>
                   </div>
