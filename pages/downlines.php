@@ -355,12 +355,33 @@
                               <table id="" class="table">
                                 <thead>
                                   <th>Name</th>
-                                  <th>Date Signed up</th>
-                                  <th>Subscription</th>
-                                  <th>Status</th>
+                                  <th>Email</th>
+                                  <th>Date Signed up</th> 
                                 </thead>
                                 <tbody>
-                                  
+                                <?php
+                                    $conn = $pdo->open();
+
+                                    try{
+                                      $stmt = $conn->prepare("SELECT * FROM refer_user WHERE status=:status AND id=:refid ORDER BY date_added DESC");
+                                      $stmt->execute(['status'=>1, 'refid'=>$agent['id']]);
+                                      foreach($stmt as $row){
+
+                                        $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
+                                        echo "
+                                          <tr>
+                                            <td>".$row['firstname']."".$row['firstname']."</td>
+                                            <td>".$row['email']."</td>
+                                            <td>".$row['date_added']."</td>
+                                          </tr>
+                                        ";
+                                      }
+                                    }
+                                    catch(PDOException $e){
+                                      echo $e->getMessage();
+                                    }
+                                    $pdo->close();
+                                  ?>
                                 </tbody>
                               </table>
                             </div>
