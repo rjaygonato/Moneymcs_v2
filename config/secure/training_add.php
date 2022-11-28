@@ -36,7 +36,7 @@
 				$stmt = $conn->prepare("INSERT INTO training_resources (course_name, category, description, price, features, filenames, type, status) VALUES (:course_name, :category, :description, :price, :features, :filenames, :type, :status)");
 				$stmt->execute(['course_name'=>$course_name, 'category'=>$category , 'description'=>$description, 'price'=>$price, 'features'=>$features, 'filenames'=>$filenames, 'type'=>$type , 'status'=>'1']);
 
-				$_SESSION['success'] = 'Course added successfully';
+				$_SESSION['success'] = 'Training Course added successfully';
 			}
 			catch(PDOException $e){
 				$_SESSION['error'] = $e->getMessage();

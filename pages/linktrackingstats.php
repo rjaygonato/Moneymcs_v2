@@ -130,7 +130,7 @@
                 </li>
                 <li class="menu-item">
                     <a href="emailtemplates" class="menu-link">
-                    <div data-i18n="">Email Templates</div>
+                    <div data-i18n="">Email Generator</div>
                     </a>
                 </li>
                 <li class="menu-item">

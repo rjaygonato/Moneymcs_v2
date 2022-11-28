@@ -130,12 +130,36 @@
                 </li>
                 <li class="menu-item">
                     <a href="emailtemplates" class="menu-link">
-                    <div data-i18n="">Email Templates</div>
+                    <div data-i18n="">Email Generator</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="banners" class="menu-link">
                     <div data-i18n="">Banners</div>
+                    </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                <div data-i18n="">Reports </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="ledger" class="menu-link">
+                    <div data-i18n="">Ledger</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="linktrackingstats" class="menu-link">
+                    <div data-i18n="">Link Tracking Stats</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="commissionsgenerated" class="menu-link">
+                    <div data-i18n="">Commissions Generated</div>
                     </a>
                 </li>
               </ul>
@@ -328,36 +352,15 @@
                           <div class="card-body">
                             <!--<h5 class="card-title text-primary">Templates</h5>-->
                             <div class="table-responsive text-nowrap">
-                              <table id="" class="table table-borderless">
+                              <table id="" class="table">
                                 <thead>
                                   <th>Name</th>
-                                  <th>Email</th>
-                                  <th>Date Signed up</th> 
+                                  <th>Date Signed up</th>
+                                  <th>Subscription</th>
+                                  <th>Status</th>
                                 </thead>
                                 <tbody>
-                                <?php
-                                    $conn = $pdo->open();
-
-                                    try{
-                                      $stmt = $conn->prepare("SELECT * FROM refer_user WHERE status=:status AND id=:refid ORDER BY date_added DESC");
-                                      $stmt->execute(['status'=>1, 'refid'=>$agent['id']]);
-                                      foreach($stmt as $row){
-
-                                        $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
-                                        echo "
-                                          <tr>
-                                            <td>".$row['firstname']."".$row['firstname']."</td>
-                                            <td>".$row['email']."</td>
-                                            <td>".$row['date_added']."</td>
-                                          </tr>
-                                        ";
-                                      }
-                                    }
-                                    catch(PDOException $e){
-                                      echo $e->getMessage();
-                                    }
-                                    $pdo->close();
-                                  ?>
+                                  
                                 </tbody>
                               </table>
                             </div>
@@ -405,6 +408,5 @@
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
-    <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>

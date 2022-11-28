@@ -267,16 +267,17 @@
                         </button>
                     </div>
 
-                    <div class="table-responsive text-nowrap">
-                      <table id="" class="table table-bordered">
+                    <div class="table-responsive">
+                      <table id="" class="table table-borderedless">
                         <thead>
-                          <th>Course Name</th>
+                          <th class="text-nowrap">Course Name</th>
                           <th>Category</th>
-                          <th>Description</th>
-                          <th>Features</th>
+                          <th class="text-wrap">Description</th>
+                          <th class="text-wrap">Features</th>
                           <th>Price</th>
+                          <th>File</th>
                           <th>Status</th>
-                          <th>Actions</th>
+                          <th class="text-nowrap">Actions</th>
                         </thead>
                         <tbody>
                           <?php
@@ -292,15 +293,16 @@
                                 $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
                                 echo "
                                   <tr>
-                                    <td>".$row['course_name']."</td>
+                                    <td class='text-nowrap'>".$row['course_name']."</td>
                                     <td>".$row['category']."</td>
-                                    <td style='word-wrap: break-word;min-width: 160px;max-width: 160px;'>".$row['description']."</td>
-                                    <td class='col-md-3'>".$row['features']."</td>
+                                    <td class='text-wrap'>".$row['description']."</td>
+                                    <td class='text-wrap'>".$row['features']."</td>
                                     <td>".$row['price']."</td>
                                     <td>".$row['filenames']."</td>
                                     <td>".$status."</td>
-                                    <td>
+                                    <td class='text-nowrap'>
                                       <button class='btn btn-outline-success btn-sm editcourse' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit Course</button>
+                                        <hr>
                                       <button class='btn btn-outline-danger btn-sm deletecourse' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
                                     </td>
                                   </tr>
@@ -400,17 +402,20 @@
     function getRow(id){
       $.ajax({
         type: 'POST',
-        url: 'resource_row.php',
+        url: 'training_resource_row.php',
         data: {id:id},
         dataType: 'json',
         success: function(response){
           $('.resid').val(response.id);
-          $('#editreso').val(response.resources);
+          $('#edit_course').val(response.course_name);
           $('#editcats').val(response.category);
-          $('#type').val(response.type);
+          $('#edit_desc').val(response.description);
+          $('#edit_feat').val(response.features);
+          $('#edit_price').val(response.price);
           $('#editfile').val(response.filenames);
+          $('#type').val(response.type);
 
-          $('.resource').html(response);
+          //$('.edit_course').html(response);
           //console.log(response);
         }
       });
