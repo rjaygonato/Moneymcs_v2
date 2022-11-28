@@ -363,8 +363,8 @@
                                     $conn = $pdo->open();
 
                                     try{
-                                      $stmt = $conn->prepare("SELECT * FROM refer_user WHERE status=:status AND id=:refid ORDER BY date_added DESC");
-                                      $stmt->execute(['status'=>1, 'refid'=>$agent['id']]);
+                                      $stmt = $conn->prepare("SELECT * FROM refer_user WHERE status=:status ORDER BY date_added DESC");
+                                      $stmt->execute(['status'=>1]);
                                       foreach($stmt as $row){
 
                                         $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
