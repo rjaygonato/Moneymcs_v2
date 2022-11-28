@@ -328,15 +328,24 @@
                           <div class="card-body">
                             <!--<h5 class="card-title text-primary">Templates</h5>-->
                             <div class="table-responsive text-nowrap">
-                              <table id="" class="table table-borderless">
+                              <table id="" class="table">
                                 <thead>
-                                  <th>Name</th>
+                                  <th>Agent Name</th>
                                   <th>Date Signed up</th>
+                                  <th>User Level</th>
                                   <th>Subscription</th>
+                                  <th>No. of Clients</th>
                                   <th>Status</th>
                                 </thead>
                                 <tbody>
-                                  
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
                                 </tbody>
                               </table>
                             </div>
@@ -384,5 +393,6 @@
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
+    <!--<?php include 'includes/light_datascript.php'; ?>-->
   </body>
 </html>

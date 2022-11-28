@@ -93,11 +93,11 @@
 </div>
 
 <!-- Edit -->
-<div class="modal fade" id="editbanner">
+<div class="modal fade" id="editcourse">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="">Edit Banner</h5>
+            <h5 class="modal-title" id="">Edit Course</h5>
             <button
               type="button"
               class="btn-close"
@@ -106,12 +106,12 @@
             ></button>
           </div>
             <div class="modal-body">
-              <form class="form-horizontal" method="POST" action="banner_edit.php" enctype="multipart/form-data">
+              <form class="form-horizontal" method="POST" action="training_edit.php" enctype="multipart/form-data">
                 <input type="hidden" class="resid" name="id">
                 <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">Title</label>
                   <div class="col-md-10">
-                    <input class="form-control" type="text" name="resources" id="editreso">
+                    <input class="form-control" type="text" name="course_name" id="edit_course">
                   </div>
                 </div>
                 <div class="mb-3 row">
@@ -121,8 +121,8 @@
                       <option value="0">--Select Category--</option>
                         <?php
                           $conn = $pdo->open();
-                          $stmt = $conn->prepare("SELECT * FROM resource_category WHERE category =:category");
-                          $stmt->execute(['category'=>'Banners']);
+                          $stmt = $conn->prepare("SELECT * FROM training_category");
+                          $stmt->execute();
                           foreach($stmt as $crow){
                             echo "
                               <option selected value='".$crow['category']."'>".$crow['category']."</option>
@@ -131,6 +131,24 @@
                           $pdo->close();
                         ?>
                     </select>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label">Description</label>
+                  <div class="col-md-10">
+                    <textarea class="form-control" aria-label="Description" name="description" id="edit_desc"></textarea>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label">Features</label>
+                  <div class="col-md-10">
+                    <textarea class="form-control" aria-label="Features" name="features" id="edit_feat"></textarea>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label">Price</label>
+                  <div class="col-md-10">
+                    <input class="form-control" type="text" required name="price" id="edit_price">
                   </div>
                 </div>
                 <div class="mb-3 row">
@@ -161,7 +179,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-outline-success btn-md" name="editbanner"><i class="fa fa-check-square-o"></i> Update</button>
+              <button type="submit" class="btn btn-outline-success btn-md" name="edittraining"><i class="fa fa-check-square-o"></i> Update</button>
               </form>
             </div>
         </div>
@@ -170,7 +188,7 @@
 
 
 <!-- Delete -->
-<div class="modal fade" id="deletebanner">
+<div class="modal fade" id="deletecourse">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">

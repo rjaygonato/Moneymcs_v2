@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets\\img",
+    "\\config",
+    "\\config\\secure",
+    "\\config\\secure\\includes",
     "\\pages"
   ],
-  "SelectedNode": "\\pages\\trainingresources.php",
+  "SelectedNode": "\\pages\\linkgenerator.php",
   "PreviewInSolutionExplorer": false
 }
