@@ -192,7 +192,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="">Deleting Banner</h5>
+            <h5 class="modal-title" id="">Deleting Course</h5>
             <button
               type="button"
               class="btn-close"
@@ -201,17 +201,17 @@
             ></button>
           </div>
             <div class="modal-body">
-              <form class="form-horizontal" method="POST" action="banner_delete.php">
+              <form class="form-horizontal" method="POST" action="training_delete.php">
                 <input type="hidden" class="resid" name="id">
                 <div class="text-center">
-                    <p>Delete this Banner?</p>
-                    <h3 class="resource"></h3>
+                    <p>Delete this course?</p>
+                    <h3 class="course_name"></h3>
                     <!-- <input type="text" class="files" > -->
                 </div>
             </div>
             <div class="modal-footer">
            
-              <button type="submit" class="btn btn-outline-danger btn-md" name="bannerdelete"><i class="fa fa-trash"></i> Delete</button>
+              <button type="submit" class="btn btn-outline-danger btn-md" name="deletecourse"><i class="fa fa-trash"></i> Delete</button>
               </form>
             </div>
         </div>

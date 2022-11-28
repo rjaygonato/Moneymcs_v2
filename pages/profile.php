@@ -125,12 +125,36 @@
                 </li>
                 <li class="menu-item">
                     <a href="emailtemplates" class="menu-link">
-                    <div data-i18n="">Email Templates</div>
+                    <div data-i18n="">Email Generator</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="banners" class="menu-link">
                     <div data-i18n="">Banners</div>
+                    </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                <div data-i18n="">Reports </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="ledger" class="menu-link">
+                    <div data-i18n="">Ledger</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="linktrackingstats" class="menu-link">
+                    <div data-i18n="">Link Tracking Stats</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="commissionsgenerated" class="menu-link">
+                    <div data-i18n="">Commissions Generated</div>
                     </a>
                 </li>
               </ul>
