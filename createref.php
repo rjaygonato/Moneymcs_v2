@@ -111,6 +111,11 @@
                 </div>
 
                 <div class="mb-3">
+                  <label for="" class="form-label" style="display:none;">id</label>
+                  <input type="hidden" class="form-control" id="refid" name="refid" readonly />
+                </div>
+
+                <div class="mb-3">
                   <label for="email" class="form-label">Firstname</label>
                   <input type="text" class="form-control" name="firstname" autocomplete="false" autofocus="true" />
                 </div>
@@ -216,6 +221,7 @@
           var url_string = window.location.href; 
           var url = new URL(url_string);
           var c = url.searchParams.get("referral");
+          var id = url.searchParams.get("id");
 
           ref = url_string;
           // ref = document.getElementById("reflink").innerHTML;
@@ -223,6 +229,7 @@
 
           document.getElementById("reflink").value = url_string;
           document.getElementById("refcode").value = c;
+          document.getElementById("refid").value = id;
           // document.getElementById("reflink").innerHTML = ref; 
           //document.getElementById("reflink").value = ref;
 

@@ -63,15 +63,16 @@
 
 				$refcode = $_POST['refcode'];
 				$reflink = $_POST['reflink'];
+				$refid = $_POST['refid'];
 				
 				try{
 					$stmt = $conn->prepare("INSERT INTO users (regcode, moneymcid, firstname, lastname, contact_info, email, password, type, status, created_on, ip) VALUES (:code, :moneymcid, :firstname, :lastname, :contact_info, :email, :password, :type, :status, :created_on, :ip)");
 					$stmt->execute(['code'=>$code, 'moneymcid'=>$moneymcid, 'firstname'=>$firstname, 'lastname'=>$lastname, 'contact_info'=>$contact_info, 'email'=>$email, 'password'=>$password, 'type'=>'0', 'status'=>'1', 'created_on'=>$now, 'ip' => get_ip()]);
 
                     //referral magic goes here 
-					$stmt = $conn->prepare("INSERT INTO refer_user (firstname, lastname, email, refcode, reflink, status, date_added) VALUES (:firstname, :lastname, :email, :refcode, :reflink, :status, :date_added)");
+					$stmt = $conn->prepare("INSERT INTO refer_user (firstname, lastname, email, refcode, reflink, refid,status, date_added) VALUES (:firstname, :lastname, :email, :refcode, :reflink, :refid, :status, :date_added)");
 
-					$stmt->execute(['firstname'=>$firstname, 'lastname'=>$lastname, 'email'=>$email, 'refcode'=>$refcode, 'reflink'=>$reflink,'status'=>'1', 'date_added'=>$now]);
+					$stmt->execute(['firstname'=>$firstname, 'lastname'=>$lastname, 'email'=>$email, 'refcode'=>$refcode, 'reflink'=>$reflink, 'refid'=>$refid,'status'=>'1', 'date_added'=>$now]);
 
 					$_SESSION['success'] = 'Sign in now and get your referral link';
 				}
