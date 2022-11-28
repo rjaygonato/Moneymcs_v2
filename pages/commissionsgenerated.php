@@ -325,41 +325,42 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
                 <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title text-primary mb-5">Referral Partner Commissions</h3>
+                  <div class="card-body">
+                    <h3 class="card-title text-primary mb-5">Referral Partner Commissions</h3>
 
-                        <div class="input-group input-daterange mb-5">
-                          <span class="col-md-2 col-form-label fw-semibold">Date Range:</span>
-						  <input class="form-control datefrom" name="date_from" type="date" value="" id="date_from" />
+                    <div class="input-group input-daterange mb-5">
+                      <span class="col-md-2 col-form-label fw-semibold">Date Range:</span>
+                      <input class="form-control datefrom" name="date_from" type="date" value="" id="date_from" />
 
-						  <div class="input-group-addon m-2">to</div> 
+                      <div class="input-group-addon m-2">to</div>
 
-						  <input class="form-control" name="date_to" type="date" value="" id="date_to" />
+                      <input class="form-control" name="date_to" type="date" value="" id="date_to" />
 
-						  <button type="button" class="btn btn-success daterangebtn" id="dateRange">Set</button>
-                        </div>
-                        <div id="CommissionsEarned">
-							<h6 class="text-primary mb-2">Commissions Earned for Date Range (<span class="text-primary daterange" id="date_range"></span>)</h6>
-							<!-- Basic Bootstrap Table -->
-							<div class="table-responsive text-nowrap mb-5">
-								<table class="table">
-								<thead>
-									<tr>
-									<th></th>
-									<th></th>
-									</tr>
-								</thead>
-								<tbody class="table-border-bottom-0 col-12">
-									<tr>
-									<td>Net Commissions Earned (In Date Range):
-									<td>$0.00</td>
-									</tr>
-								</tbody>
-								</table>
-							</div>
-							<!--/ Basic Bootstrap Table -->
-						</div>
+                      <button type="button" class="btn btn-success daterangebtn" id="dateRange">Set</button>
                     </div>
+                    <div id="CommissionsEarned">
+                      <h6 class="text-primary mb-2">Commissions Earned for Date Range (<span
+                          class="text-primary daterange" id="date_range"></span>)</h6>
+                      <!-- Basic Bootstrap Table -->
+                      <div class="table-responsive text-nowrap mb-5">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-border-bottom-0 col-12">
+                            <tr>
+                              <td>Net Commissions Earned (In Date Range):
+                              <td>$0.00</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--/ Basic Bootstrap Table -->
+                    </div>
+                  </div>
                 </div>
             </div>
             

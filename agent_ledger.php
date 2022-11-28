@@ -116,7 +116,7 @@
               </a>
             </li>
 
-            <li class="menu-item active">
+            <li class="menu-item ">
               <a href="agent_linkgen" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-link'></i>
                 <div data-i18n="Analytics">Link Generator</div>
@@ -129,13 +129,13 @@
                 <div data-i18n="Analytics">Reports</div>
               </a>
             </li> -->
-            <li class="menu-item" style="">
+            <li class="menu-item active open" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
               <i class='menu-icon tf-icons bx bxs-book-content'></i>
                 <div data-i18n="">Reports </div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="agent_ledger" class="menu-link">
                     <div data-i18n="">Ledger</div>
                   </a>
@@ -248,52 +248,108 @@
                 <a href="agent_subscription">View Available Plans</a>  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div> 
               
-                <div class="row">
-                  <h5 class="card-title text-primary">Link Generator</h5>
-                 
-                  <div class="col-lg-12 mb-4 order-0">
-                    <div class="card">
-                      <div class="d-flex align-items-end">
-                        <div class="col-sm-12">
-                          <div class="card-body">
-                            <!--<h5 class="card-title text-primary">Templates</h5>-->
-                            <div class="table-responsive text-nowrap">
-                              <table class="table table-borderless">
-                                <thead>
-                                  <tr>
-                                    <th>Name</th>
-                                    <!-- <th>Code</th> -->
-                                    <th>Link</th>
-                                  </tr>
-                                </thead>
-                                <tbody class="table-border-bottom-0 col-12">
-                                  <tr>
-                                    <td>Referral Registration</td>
-                                                                        <!-- <td>mGa7XKgXX</td> -->
-                                    <td class=" input-group">
-                                      <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="https://joinmoneymcs.com/moneymcs/createref.php?referral=mGa7XKgXX" id="myrefCode">
-                                      <button class="btn btn-outline-secondary" type="button" id="buttonrefcode" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span id='myTooltip'>Copy to Clipboard</span>"><i class="bx bx-copy-alt" onclick="copyClip()" onmouseout="outFunc()"></i></button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Client Registration</td>
-                                    <!-- <td>mGa7XKgXX</td> -->
-                                    <td class=" input-group">
-                                      <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="https://member.moneymcs.com//login.aspx" id="myrefCode">
-                                      <button class="btn btn-outline-secondary" type="button" id="buttonrefcode" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span id='myTooltip'>Copy to Clipboard</span>"><i class="bx bx-copy-alt" onclick="copyClip()" onmouseout="outFunc()"></i></button>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
+              <div class="card">
+					<div class="card-body">
+						<h3 class="card-title text-primary mb-5">Ledger for <?php echo $free_user['firstname'].' '.$free_user['lastname']; ?></h3>
+						
+                        <div class="input-group mb-5">
+                          <span for="date_from" class="col-md-2 col-form-label fw-semibold">Date Range:</span>
+						  <input class="form-control col-md-2" name="date_from" type="date" value="" id="date_from" />
+						  <span class="m-2">to</span> 
+						  <input class="form-control col-md-2" name="date_to" type="date" value="" id="date_to" />
+						  <button type="button" class="btn btn-success refreshbtn" id="">Refresh Ledger</button>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-              
+						<div id="CommissionsEarned">
+							<h6 class="text-primary mb-3">Commissions Earned for Date Range (<span class="text-primary" id="commissions_date_range"></span>)</h6>
+							<!-- Basic Bootstrap Table -->
+							<div class="table-responsive text-nowrap mb-5">
+								<table class="table">
+								<thead>
+									<tr>
+									<th>Invoice #</th>
+									<th>Date</th>
+									<th>Contact</th>
+									<th>SoldBy</th>
+									<th>Item</th>
+									<th>Amount</th>
+									</tr>
+								</thead>
+								<tbody class="table-border-bottom-0 col-12">
+									<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									</tr>
+								</tbody>
+								<tfoot class="table-border-bottom-0">
+								  <tr>
+									<th><strong>TOTAL:</strong></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th><strong>$0.00</strong></th>
+								  </tr>
+								</tfoot>
+								</table>
+							</div>
+							<!--/ Basic Bootstrap Table -->
+						</div>
+						<div id="PaymentsMade">
+							<h6 class="text-primary">Payments Made for Date Range (<span class="text-primary" id="payment_date_range"></span>)</h6>
+							<!-- Basic Bootstrap Table -->
+							<div class="table-responsive text-nowrap mb-5">
+								<table class="table">
+								<thead>
+									<tr>
+									<th>Edit</th>
+									<th>Date</th>
+									<th>Type</th>
+									<th>Note</th>
+									<th>Amount</th>
+									</tr>
+								</thead>
+								<tbody class="table-border-bottom-0 col-12">
+									<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									</tr>
+								</tbody>
+								<tfoot class="table-border-bottom-0">
+								  <tr>
+									<th><strong>TOTAL:</strong></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th><strong>$0.00</strong></th>
+								  </tr>
+								</tfoot>
+								</table>
+							</div>
+							<!--/ Basic Bootstrap Table -->
+						</div>
+						<div class="text-end">
+							<div class="list-group">
+							  <p class="mb-1 fw-semibold">SUMMARY FOR DATE RANGE (<span class="" id="summary_date_range"></span>)</p>
+							  <p class="mb-1">Commissions Earned: $0.00</p>
+							  <p class="mb-1">Total Payments: $0.00</p>
+							  <p class="fw-semibold">Referral Partner Balance: $0.00</p>
+							</div>
+							<div class="list-group">
+							  <p class="mb-1 fw-semibold">AFFILIATE TOTALS AS OF </p>
+							  <p class="mb-1">Total Commissions Earned: $0.00</p>
+							  <p class="mb-1">Total Payments: $0.00</p>
+							  <p class="fw-semibold">Referral Partner Balance: $0.00</p>
+							</div>
+						</div>
+					</div>
+				</div>
             </div>
 
             <?php include './pages/includes/google_translate.php'; ?>
