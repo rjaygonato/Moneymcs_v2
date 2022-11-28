@@ -412,10 +412,10 @@
           $('#edit_desc').val(response.description);
           $('#edit_feat').val(response.features);
           $('#edit_price').val(response.price);
-          $('#type').val(response.type);
           $('#editfile').val(response.filenames);
+          $('#type').val(response.type);
 
-          $('.edit_course').html(response);
+          //$('.edit_course').html(response);
           //console.log(response);
         }
       });

@@ -11,7 +11,8 @@
 		$price = $_POST['price'];
 		$features = $_POST['features'];
 		$type = $_POST['type'];
-		$filenames = $_POST['filenames'];
+		//$filenames = $_POST['filenames'];
+		$filenames = $_FILES['filenames']['name'];
 
 		$conn = $pdo->open();
 		$stmt = $conn->prepare("SELECT * FROM training_resources WHERE status=:status");
@@ -19,7 +20,7 @@
 		
 		try{
 			$stmt = $conn->prepare("UPDATE training_resources SET course_name=:course_name, category=:category, description=:description, price=:price, features=:features, filenames=:filenames, type=:type WHERE id=:id");
-			$stmt->execute(['course_name'=>$course_name, 'category'=>$category , 'description'=>$description, 'price'=>$price, 'features'=>$features, 'filenames'=>$filenames, 'id'=>$id]);
+			$stmt->execute(['course_name'=>$course_name, 'category'=>$category , 'description'=>$description, 'price'=>$price, 'features'=>$features, 'filenames'=>$filenames, 'type'=>$type, 'id'=>$id]);
 
 			$_SESSION['success'] = 'Training Course updated successfully';
 		}
