@@ -102,7 +102,7 @@
           </li>
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
+            <li class="menu-item ">
               <a href="agent_account" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
@@ -116,7 +116,7 @@
               </a>
             </li>
 
-            <li class="menu-item ">
+            <li class="menu-item active">
               <a href="agent_linkgen" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-link'></i>
                 <div data-i18n="Analytics">Link Generator</div>
@@ -228,99 +228,14 @@
                 <div class="col-lg-4 mb-4 order-0">
                   <div class="card">
                     <div class="d-flex row">
-                      <div class="col-sm-8">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Link usage last 30 days</h5>
-                          <p class="mb-2">
-                            <h5>0</h5>
-                          </p>
-                        </div>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 mb-4 order-0">
-                  <div class="card">
-                    <div class="d-flex row">
-                      <div class="col-sm-9">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Commission last 30 days</h5>
-                          <p class="mb-2">
-                            <h5>0</h5>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 order-1">
-                  <div class="row">
-                  <div class="col-lg-6 col-md-12 col-6 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Clients</h5>
-                          <p class="mb-2">
-                            <h5>0</h5>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-6 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Downlines</h5>
-                          <p class="mb-2">
-                            <h5>0</h5>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                
+                
               </div>
-              <div class="row">
-                <div class="col-lg-12 mb-4 order-0">
-                  <div class="card">
-                    <h5 class="card-header text-primary">Recent Clients</h5>
-                    <div class="table-responsive text-nowrap">
-                  <table class="table">
-                    <thead>
-                      <tr class="text-nowrap">
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Contacts</th>
-                        <th>Type</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Alexander Ponce</td>
-                        <td>test@gmail.com</td>
-                        <td>111111111111</td>
-                        <td>Business Credit Builder</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Kurtis Boyd</td>
-                        <td>test@gmail.com</td>
-                        <td>122222222</td>
-                        <td>Business Credit Builder</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Maxwell Ford</td>
-                        <td>test@gmail.com</td>
-                        <td>122222222</td>
-                        <td>Business Credit Builder</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
 
             <?php include './pages/includes/google_translate.php'; ?>

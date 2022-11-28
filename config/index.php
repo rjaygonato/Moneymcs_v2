@@ -139,12 +139,12 @@
                   <button class="btn btn-success d-grid w-100" name="login" type="submit">Sign in</button>
                 </div>
               </form><br>
-              <!-- <p class="text-center">
-                <span>Become an agent?</span>
-                <a href="create">
-                  <span>Create an account</span>
+              <p class="text-center">
+                <span>Back to </span>
+                <a href="../index">
+                  <span>Agent Accounts</span>
                 </a>
-              </p> -->
+              </p>
             </div>
           </div>
           <!-- /Register -->

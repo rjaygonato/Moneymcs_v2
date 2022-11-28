@@ -1,6 +1,10 @@
 <?php include 'includes/session.php'; ?>
 <!DOCTYPE html>
-
+<?php
+  if(isset($_SESSION['free_user'])){
+    header('location: agent_account');
+  }
+?>
 <!-- =========================================================
 * MoneyMCS
 ==============================================================
@@ -140,10 +144,10 @@
                 </div>
               </form><br>
 
-                <a href="agent_account">
+                <!-- <a href="agent_account">
                   <center><span>Free Agent sample interface</span></center>
                 </a>
-                <br>
+                <br> -->
               <p class="text-center">
                 <span>Become an agent?</span>
                 <a href="create">

@@ -102,14 +102,14 @@
           </li>
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
+            <li class="menu-item ">
               <a href="agent_account" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
             </li>
 
-            <li class="menu-item ">
+            <li class="menu-item active">
               <a href="agent_subscription" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-list-check'></i>
                 <div data-i18n="Analytics">Subscription Plans</div>
@@ -221,105 +221,91 @@
             <!-- Content -->
           
             <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="alert alert-dark alert-dismissible" role="alert"> <i class='bx bxs-error-circle' ></i> Check out our awesome subscription plans | 
+              <!-- <div class="alert alert-dark alert-dismissible" role="alert"> <i class='bx bxs-error-circle' ></i> Check out our awesome subscription plans | 
                 <a href="agent_subscription">View Available Plans</a>  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div> 
-              <div class="row">
-                <div class="col-lg-4 mb-4 order-0">
-                  <div class="card">
-                    <div class="d-flex row">
-                      <div class="col-sm-8">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Link usage last 30 days</h5>
-                          <p class="mb-2">
-                            <h5>0</h5>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 mb-4 order-0">
-                  <div class="card">
-                    <div class="d-flex row">
-                      <div class="col-sm-9">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Commission last 30 days</h5>
-                          <p class="mb-2">
-                            <h5>0</h5>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 order-1">
-                  <div class="row">
-                  <div class="col-lg-6 col-md-12 col-6 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Clients</h5>
-                          <p class="mb-2">
-                            <h5>0</h5>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-6 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Downlines</h5>
-                          <p class="mb-2">
-                            <h5>0</h5>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </div>  -->
               <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
-                  <div class="card">
-                    <h5 class="card-header text-primary">Recent Clients</h5>
-                    <div class="table-responsive text-nowrap">
-                  <table class="table">
-                    <thead>
-                      <tr class="text-nowrap">
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Contacts</th>
-                        <th>Type</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Alexander Ponce</td>
-                        <td>test@gmail.com</td>
-                        <td>111111111111</td>
-                        <td>Business Credit Builder</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Kurtis Boyd</td>
-                        <td>test@gmail.com</td>
-                        <td>122222222</td>
-                        <td>Business Credit Builder</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Maxwell Ford</td>
-                        <td>test@gmail.com</td>
-                        <td>122222222</td>
-                        <td>Business Credit Builder</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                  <h5 class="card-title text-primary">Subscription Plans</h5>
+                  <h6 class="">We bring you the best pricing plan for you</h6>
+                    <section class="pricing py-5">
+                      <div class="container">
+                        <div class="row">
+                          <!-- Plus Tier -->
+                          <div class="col-lg-3">
+                            <div class="card mb-5 mb-lg-0">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Affiliate Starter</h5>
+                                <h6 class="card-price text-center"><span class="period"> FREE </span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For affiliate agents</li>
+                                </ul>
+                                <br><br><br><br><br><br>
+                                <br>
+                                <div class="d-grid">
+                                <!-- <a href="#" class="btn btn-success text-uppercase" disabled>Select</a> -->
+                                <!-- <button type="button" class="btn btn-success" disabled="">Disabled</button> -->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="card mb-5 mb-lg-0"><center class="btn-success">MOST POPULAR</center>
+                              <div class="card-body border border-success">
+                                <h5 class="card-title text-muted text-uppercase text-center"><b>Standard</b></h5>
+                                <h6 class="card-price text-center">$99.00<span class="period"> / Month</span></h6>
+                                <h6 class="card-price text-center"><del>$1,188.00<span class="period"> / Year *</span></del></h6>
+                                <h6 class="card-price text-center"><b>$1,000.00<span class="period"> / Year</span></b></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>For affiliate agents with portal access / higher referral commission</li>
+                                </ul>
+                                <div class="d-grid">
+                                <a href="subscriptions_standard" class="sub_button btn btn-success text-uppercase ">Select</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Pro Tier -->
+                          <div class="col-lg-3">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+                                <h6 class="card-price text-center">$299.00<span class="period"> / Month</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span> For affiliate agents with services ( Bookkeeping and Tax Services)</li>
+                                  <br><br><br><br>
+                                </ul>
+                                <div class="d-grid">
+                                <a href="subscriptions_plus" class="sub_button btn btn-success text-uppercase " >Select</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="card mb-5 mb-lg-0">
+                              <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+                                <h6 class="card-price text-center">$599.00<span class="period"> / Month</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                  <li><span class="fa-li"><i class="fas fa-check"></i></span>  For affiliate agents with services ( Bookkeeping , Personal credit repair and Tax Services)</li>
+                                  <br><br><br>
+                                </ul>
+                                <div class="d-grid">
+                                  <a href="subscriptions_pro" class="sub_button btn btn-success text-uppercase " >Select</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                      <center><p>For more options, Please contact us for pricing | <a href="contacts" class="btn btn-success btn-sm">Contact us</a></p></center>
+                    <hr>
                   </div>
-                </div>
               </div>
             </div>
 
