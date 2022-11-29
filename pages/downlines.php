@@ -351,7 +351,7 @@
                         <div class="col-sm-12">
                           <div class="card-body">
                             <!--<h5 class="card-title text-primary">Templates</h5>-->
-                            <div class="table-responsive text-nowrap">
+                            <div class="table-responsive ">
                               <table id="" class="table">
                                 <thead>
                                   <th>Name</th>

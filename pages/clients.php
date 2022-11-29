@@ -360,7 +360,7 @@
                               </button>
                           </div>
                             <div class="card-body">
-                              <div class="table-responsive text-nowrap">
+                              <div class="table-responsive">
                                 <table id="" class="table table-borderless">
                                   <thead>
                                     <!-- <th>Company </th> -->

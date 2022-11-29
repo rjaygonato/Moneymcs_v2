@@ -321,7 +321,7 @@
                 <div class="col-lg-12 mb-4 order-0">
                   <div class="card">
                     <h5 class="card-header text-primary">Recent Downlines</h5>
-                    <div class="table-responsive text-nowrap">
+                    <div class="table-responsive ">
                       <table id="" class="table">
                         <thead>
                           <th>Name</th>

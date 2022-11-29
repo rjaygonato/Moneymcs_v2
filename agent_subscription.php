@@ -326,7 +326,7 @@
                         </div>
                       </div>
                     </section>
-                      <center><p>For more options, Please contact us for pricing | <a href="contacts" class="btn btn-success btn-sm">Contact us</a></p></center>
+                      <center><p>For more options, Please contact us for pricing | <a href="#" class="btn btn-success btn-sm">Contact us</a></p></center>
                     <hr>
                   </div>
               </div>
