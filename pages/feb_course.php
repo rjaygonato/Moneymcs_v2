@@ -342,19 +342,56 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="row">
-                    <div class="col col-lg-8 mb-4 order-0">
-                      <div class="card">
-                        <img class="d-flex mx-auto my-4" height="300" src="../images/self-employed.jpeg" alt="" />
-                        <div class="card-body">
-                          <h5 class="card-title text-primary mb-4">Self Employed Course</h5>
-                          <h5 class="card-subtitle mb-2">Objective(s):</h5>
-                          <p class="card-text">
-                            This course provides an overview of self-employment and the requirements for success.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <?php
+                    $conn = $pdo->open();
+
+                    try{
+                        $stmt = $conn->prepare("SELECT * FROM training_resources WHERE status=:status AND category=:category");
+                        $stmt->execute(['status'=>1, 'category'=> 'February Courses']);
+                        foreach($stmt as $row){
+
+                        $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
+                        echo "
+                          <div class='col-lg-8 mb-4 order-0'>
+                              <div class='card'>
+                                <img class='d-flex mx-auto my-4' height='300' src='../images/".$row['filenames']."' alt='' />
+                                <div class='card-body'>
+                                  <h3 class='card-title text-primary mb-4'>".$row['course_name']."</h3>
+                                  <h5 class='card-subtitle mb-2'>Objective(s):</h5>
+                                  <p class='card-text'>
+                                    ".$row['description']."
+                                  </p>
+                                </div>
+                              </div>
+                          </div>
+                          <div class='col-sm-4'>
+                              <div class='card h-80'>
+                                <div class='card-body'>
+                                  <h3 class='card-title mb-5'><span class='text-primary fw-semibold'>Price:</span> <span class='fw-semibold'><u>$".$row['price']."</u></span></h3>
+                                  <p class='text-center mb-5'>
+                                  <a href='#' class='btn btn-success'>ENROLL NOW!</a>
+                                  </p>
+                                  <div class='card-text'>
+                                      <h5 class='fw-semibold'>Course Features</h5>
+                                      <div class='divider text-start text-wrap course-features'>
+                                          ".$row['features']."
+                                      </div>
+                                      <hr>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        ";
+                        }
+                    }
+                    catch(PDOException $e){
+                        echo $e->getMessage();
+                    }
+                    $pdo->close();
+                    ?>
+                <!--
                     <div class="col">
                       <div class="card h-80">
                         <div class="card-body">
@@ -371,28 +408,29 @@
                               <hr>
                               <div class="divider text-start course-features">
                                   <i class='bx bx-time text-primary'></i>
-                                   3 hours (online classes)
+                                  3 hours (online classes)
                               </div>
                               <hr>
                               <div class="divider text-start course-features">
                                   <i class='bx bxs-certification text-primary'></i>
-                                   Certification Acceptance Agent
+                                  Certification Acceptance Agent
                               </div>
                               <hr>
                               <div class="divider text-start course-features">
                                   <i class='bx bxs-book text-primary'></i>
-                                   <span class="fw-semibold">Book:</span>
+                                  <span class="fw-semibold">Book:</span>
                               </div>
                               <hr>
                               <div class="divider text-start course-features">
                                   <i class='bx bx-world text-primary'></i>
-                                   <span class="fw-semibold">Language:</span>
+                                  <span class="fw-semibold">Language:</span>
                               </div>
                               <hr>
                           </div>
                         </div>
                       </div>
                     </div>
+                    -->
                 </div>
             </div>
             

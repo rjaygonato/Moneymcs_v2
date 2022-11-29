@@ -330,7 +330,7 @@
                             <div class="card accordion-item active">
                             <h2 class="accordion-header" id="headingOne">
                                 <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
-                                January Courses Available
+                                April Courses Available
                                 </button>
                             </h2>
 
@@ -342,19 +342,56 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="row">
-                    <div class="col-lg-8 mb-4 order-0">
-                      <div class="card">
-                        <img class="d-flex mx-auto my-4" height="300" src="../images/ITIN.png" alt="" />
-                        <div class="card-body">
-                          <h3 class="card-title text-primary mb-4">Tax Course</h3>
-                          <h5 class="card-subtitle mb-2">Objective(s):</h5>
-                          <p class="card-text">
-                            Taxation studies prepare professionals who can help organisations take important business decisions, by providing financial counselling and guidance.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <?php
+                    $conn = $pdo->open();
+
+                    try{
+                        $stmt = $conn->prepare("SELECT * FROM training_resources WHERE status=:status AND category=:category");
+                        $stmt->execute(['status'=>1, 'category'=> 'April Courses']);
+                        foreach($stmt as $row){
+
+                        $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
+                        echo "
+                          <div class='col-lg-8 mb-4 order-0'>
+                              <div class='card'>
+                                <img class='d-flex mx-auto my-4' height='300' src='../images/".$row['filenames']."' alt='' />
+                                <div class='card-body'>
+                                  <h3 class='card-title text-primary mb-4'>".$row['course_name']."</h3>
+                                  <h5 class='card-subtitle mb-2'>Objective(s):</h5>
+                                  <p class='card-text'>
+                                    ".$row['description']."
+                                  </p>
+                                </div>
+                              </div>
+                          </div>
+                          <div class='col-sm-4'>
+                              <div class='card h-80'>
+                                <div class='card-body'>
+                                  <h3 class='card-title mb-5'><span class='text-primary fw-semibold'>Price:</span> <span class='fw-semibold'><u>$".$row['price']."</u></span></h3>
+                                  <p class='text-center mb-5'>
+                                  <a href='#' class='btn btn-success'>ENROLL NOW!</a>
+                                  </p>
+                                  <div class='card-text'>
+                                      <h5 class='fw-semibold'>Course Features</h5>
+                                      <div class='divider text-start text-wrap course-features'>
+                                          ".$row['features']."
+                                      </div>
+                                      <hr>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        ";
+                        }
+                    }
+                    catch(PDOException $e){
+                        echo $e->getMessage();
+                    }
+                    $pdo->close();
+                    ?>
+                <!--
                     <div class="col">
                       <div class="card h-80">
                         <div class="card-body">
@@ -393,6 +430,7 @@
                         </div>
                       </div>
                     </div>
+                    -->
                 </div>
             </div>
             

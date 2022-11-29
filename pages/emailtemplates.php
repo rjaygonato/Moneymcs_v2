@@ -359,17 +359,41 @@
                               <table id="" class="table table-borderless">
                                 <thead>
                                   <th>Type</th>
-                                  <th>Description</th>
+                                  <th>Sender</th>
+                                  <th>Receiver</th>
                                   <th>Link</th>
                                 </thead>
                                 <tbody>
+                                <form class="" method="" action="#">
                                     <tr>
-                                        <td></td>
-                                        <td></td>
+                                        <td>
+                                        <select class="form-=select" name="">
+                                            <option value="0">--Select Category--</option>
+                                            <option value="Engaging Template">Engaging Template</option>
+                                        </select>
+                                        </td>
+                                        <td><?php echo $agent['firstname'].' '.$agent['lastname']; ?></td>
+                                        <td>
+                                        <select class="form-=select" name="">
+                                            <option value="0">--Select Client--</option>
+                                            <?php
+                                              $conn = $pdo->open();
+                                              $stmt = $conn->prepare("SELECT * FROM clients WHERE status =:status");
+                                              $stmt->execute(['status'=>1]);
+                                              foreach($stmt as $crow){
+                                                echo "
+                                                  <option value='".$crow['email']."'>".$crow['email']."</option>
+                                                ";
+                                              }
+                                              $pdo->close();
+                                            ?>
+                                        </select>
+                                        </td>
                                         <td>
                                             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalScrollable">Generate Email</button>
                                         </td>
                                     </tr>
+                                </form>
                                 </tbody>
                               </table>
                             </div>
@@ -393,20 +417,24 @@
                                 ></button>
                             </div>
                             <div class="modal-body">
-                                <p>Subject: [contact first name] I want you at this webinar</p>
+                                <p>Subject: Light at the end of the tunnel</p>
 
-                                <p>Hey [INSERT CONTACT FIRST NAME],</p>
                                 <p>
-                                Do you own a business or have you been thinking about starting a business?
-                                If so, would you be interested in getting money and building business credit for your business?
-                                Give me a call today so I can talk with you more about how to get money for your business.
+                                You’re receiving this email because you requested information about business funding and business credit.
                                 </p>
-                                <p>Thank you,</p>
+                                <p>Dear [name]:</p>
+                                <p>In our experience, many companies and business owners struggle to get the money they need and want to grow and become successful.</p>
+                                <p>Maybe you’ve tried to get a business loan or business credit from a bank. Banks are notoriously difficult when it comes to business lending.</p>
+                                <p>Fortunately, there are thousands of lenders out there that want and need to lend to small businesses.</p>
+                                <p>Two things need to happen. First … you must set up your business correctly so you’re attractive to lenders. Second, you need access to the lenders we just mentioned.</p>
+                                <p>If you want these two things to happen, simply reply to this email or call us right now at <span class="text-primary fw-semibold">(702) 930-3131</span>.</p>
+                                <p>We’ll have a confidential conversation about your goals. And we’ll show you how to get the funding and credit you need and want.</p>
+                                <p>To your success …</p>
                                 <p>[INSERT SIGNATURE]</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                Close
+                                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">
+                                Send Email
                                 </button>
                             </div>
                         </div>
