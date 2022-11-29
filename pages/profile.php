@@ -235,7 +235,7 @@
               <!-- Search -->
               <div class="navbar-nav align-items-center">
                 <div class="nav-item d-flex align-items-center">
-                  MoneyMCS
+                  Money MCS
                   <!-- <i class="bx bx-search fs-4 lh-0"></i> -->
                   <!-- <input
                     type="text"
@@ -432,7 +432,7 @@
                           <div class="mb-3 col-md-10">
                           <label class="form-label" for="">Referral Link</label>
                             <div class="input-group">
-                              <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="http://localhost/moneymcs/createref.php?referral=<?php echo $agent['regcode']; ?>&id=<?php echo $agent['id']; ?>" id="myrefCode">
+                              <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="buttonrefcode" value="http://localhost/moneymcs/createref.php?referral=<?php echo $agent['regcode']; ?>&link=<?php echo $agent['id']; ?>" id="myrefCode">
 
                               <button class="btn btn-outline-secondary" type="button" id="buttonrefcode"  data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span id='myTooltip'>Copy to Clipboard</span>"><i class='bx bx-copy-alt' onclick="copyClip()" onmouseout="outFunc()"></i></button>
                             </div>
