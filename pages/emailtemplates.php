@@ -418,19 +418,29 @@
                             </div>
                             <div class="modal-body">
                                 <p>Subject: Light at the end of the tunnel</p>
+                                <form>
+                                <textarea rows="30" class="form-control" scalable=no>You’re receiving this email because you requested information about business funding and business credit.
+                                
+Dear [name]:
+In our experience, many companies and business owners struggle to get the money they need and want to grow and become successful.
 
-                                <p>
-                                You’re receiving this email because you requested information about business funding and business credit.
-                                </p>
-                                <p>Dear [name]:</p>
-                                <p>In our experience, many companies and business owners struggle to get the money they need and want to grow and become successful.</p>
-                                <p>Maybe you’ve tried to get a business loan or business credit from a bank. Banks are notoriously difficult when it comes to business lending.</p>
-                                <p>Fortunately, there are thousands of lenders out there that want and need to lend to small businesses.</p>
-                                <p>Two things need to happen. First … you must set up your business correctly so you’re attractive to lenders. Second, you need access to the lenders we just mentioned.</p>
-                                <p>If you want these two things to happen, simply reply to this email or call us right now at <span class="text-primary fw-semibold">(702) 930-3131</span>.</p>
-                                <p>We’ll have a confidential conversation about your goals. And we’ll show you how to get the funding and credit you need and want.</p>
-                                <p>To your success …</p>
-                                <p>[INSERT SIGNATURE]</p>
+Maybe you’ve tried to get a business loan or business credit from a bank. Banks are notoriously difficult when it comes to business lending.
+
+Fortunately, there are thousands of lenders out there that want and need to lend to small businesses.
+
+Two things need to happen. First … you must set up your business correctly so you’re attractive to lenders. Second, you need access to the lenders we just mentioned.
+
+If you want these two things to happen, simply reply to this email or call us right now at (702) 930-3131.
+
+We’ll have a confidential conversation about your goals. And we’ll show you how to get the funding and credit you need and want.
+
+
+To your success …
+
+
+[INSERT SIGNATURE]
+                                </textarea>
+                                </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">
