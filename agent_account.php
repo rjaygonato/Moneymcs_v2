@@ -176,7 +176,7 @@
               <!-- Search -->
               <div class="navbar-nav align-items-center">
                 <div class="nav-item d-flex align-items-center">
-                  MoneyMCS - Free Account
+                  Money MCS - Free Account
                   <!-- <i class="bx bx-search fs-4 lh-0"></i> -->
                   <!-- <input
                     type="text"
