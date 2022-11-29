@@ -293,7 +293,23 @@
                         <div class="card-body">
                           <h5 class="card-title text-primary">Downlines</h5>
                           <p class="mb-2">
-                            <h5>0</h5>
+                            <h5>
+                            <?php
+                              $conn = $pdo->open();
+                                try{
+                                  $sql = "SELECT count(*) FROM `refer_user` WHERE refid=:user_id "; 
+                                  $result = $conn->prepare($sql); 
+                                  $result->execute(['user_id'=>$free_user['id']]); 
+                                  $number_of_rows = $result->fetchColumn(); 
+                                  echo "<h3 style='color: #137204; '>$number_of_rows</h3>"  ;
+                                
+                                }
+                                catch(PDOException $e){
+                                  echo $e->getMessage();
+                                }
+                                $pdo->close();
+                              ?>
+                            </h5>
                           </p>
                         </div>
                       </div>
@@ -304,43 +320,43 @@
               <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
                   <div class="card">
-                    <h5 class="card-header text-primary">Recent Clients</h5>
+                    <h5 class="card-header text-primary">Recent Downlines</h5>
                     <div class="table-responsive text-nowrap">
-                  <table class="table">
-                    <thead>
-                      <tr class="text-nowrap">
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Contacts</th>
-                        <th>Type</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Alexander Ponce</td>
-                        <td>test@gmail.com</td>
-                        <td>111111111111</td>
-                        <td>Business Credit Builder</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Kurtis Boyd</td>
-                        <td>test@gmail.com</td>
-                        <td>122222222</td>
-                        <td>Business Credit Builder</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Maxwell Ford</td>
-                        <td>test@gmail.com</td>
-                        <td>122222222</td>
-                        <td>Business Credit Builder</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                      <table id="" class="table">
+                        <thead>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Date Signed up</th> 
+                          <th>Referral Link</th> 
+                        </thead>
+                        <tbody>
+                        <?php
+                            $conn = $pdo->open();
+
+                            try{
+                              $stmt = $conn->prepare("SELECT * FROM refer_user WHERE status=:status AND refid=:user_id ORDER BY date_added DESC");
+                              $stmt->execute(['status'=>1,'user_id'=>$free_user['id']]);
+                              foreach($stmt as $row){
+
+                                $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
+                                echo "
+                                  <tr>
+                                    <td>".$row['firstname']."".$row['firstname']."</td>
+                                    <td>".$row['email']."</td>
+                                    <td>".date('F d, Y', strtotime($row["date_added"]))."</td>
+                                    <td id='referralLink'>".$row['reflink']."</td>
+                                  </tr>
+                                ";
+                              }
+                            }
+                            catch(PDOException $e){
+                              echo $e->getMessage();
+                            }
+                            $pdo->close();
+                          ?>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -397,5 +413,6 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>

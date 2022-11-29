@@ -221,7 +221,7 @@
           var url_string = window.location.href; 
           var url = new URL(url_string);
           var c = url.searchParams.get("referral");
-          var id = url.searchParams.get("id");
+          var id = url.searchParams.get("link");
 
           ref = url_string;
           // ref = document.getElementById("reflink").innerHTML;
