@@ -189,7 +189,7 @@
             <li class="menu-item active">
               <a href="contacts" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-phone-outgoing'></i>
-                <div data-i18n="Basic">Contact Us</div>
+                <div data-i18n="Basic">Helpdesk</div>
               </a>
             </li>
 

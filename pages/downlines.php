@@ -189,7 +189,7 @@
             <li class="menu-item">
               <a href="contacts" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-phone-outgoing'></i>
-                <div data-i18n="Basic">Contact Us</div>
+                <div data-i18n="Basic">Helpdesk</div>
               </a>
             </li>
 
@@ -357,14 +357,15 @@
                                   <th>Name</th>
                                   <th>Email</th>
                                   <th>Date Signed up</th> 
+                                  <th>Referral Link</th> 
                                 </thead>
                                 <tbody>
                                 <?php
                                     $conn = $pdo->open();
 
                                     try{
-                                      $stmt = $conn->prepare("SELECT * FROM refer_user WHERE status=:status ORDER BY date_added DESC");
-                                      $stmt->execute(['status'=>1]);
+                                      $stmt = $conn->prepare("SELECT * FROM refer_user WHERE status=:status AND refid=:user_id ORDER BY date_added DESC");
+                                      $stmt->execute(['status'=>1,'user_id'=>$agent['id']]);
                                       foreach($stmt as $row){
 
                                         $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
@@ -372,7 +373,8 @@
                                           <tr>
                                             <td>".$row['firstname']."".$row['firstname']."</td>
                                             <td>".$row['email']."</td>
-                                            <td>".$row['date_added']."</td>
+                                            <td>".date('F d, Y', strtotime($row["date_added"]))."</td>
+                                            <td id='referralLink'>".$row['reflink']."</td>
                                           </tr>
                                         ";
                                       }
@@ -429,5 +431,6 @@
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
+    <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>

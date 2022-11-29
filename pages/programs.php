@@ -379,7 +379,7 @@
                                                   $stmt = $conn->prepare("SELECT * FROM subscriptions WHERE user_id=:user AND status=:status LIMIT 1");
                                                   $stmt->execute(['user'=>$agent['id'], 'status'=>1]);
                                                   foreach($stmt as $row){
-                                                  echo " Date Purchased: ".date('F m, Y', strtotime($row["date_added"]))." ";
+                                                  echo " Date Purchased: ".date('F d, Y', strtotime($row["date_added"]))." ";
                                                   }
                                               }
                                               catch(PDOException $e){
