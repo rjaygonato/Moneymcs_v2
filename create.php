@@ -192,10 +192,11 @@
                 ?>
                 <input type="hidden" name="token" value="<?php echo $csrf_token; ?>" />
                 <div class="mb-3">
+                  <input type=checkbox class="form-check-input" checked> I agree to the <a href="">Terms of Service</a> and <a href="">Privacy Policy</a><br><br>
                   <button class="btn btn-success d-grid w-100" name="create" type="submit">Create Account</button>
                 </div>
               </form>
-
+              <br>
               <p class="text-center">
                 <span>I already have an account</span>
                 <a href="index">

@@ -316,8 +316,8 @@ button.list-group-item-primary.active {
 }
 
 .form-check-input:focus {
-  border-color: #696cff;
-  box-shadow: 0 2px 4px 0 rgba(105, 108, 255, 0.4);
+  border-color: #37a14e;
+  box-shadow: 0 2px 4px 0 rgb(162 255 105 / 40%);
 }
 .form-check-input:disabled {
   background-color: #eceef1;

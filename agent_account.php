@@ -152,6 +152,16 @@
                 </li>
               </ul>
             </li>
+            <li>
+              <div class="dropdown-divider"></div>
+            </li>
+            <li class="menu-item ">
+              <a href="logout" class="menu-link">
+                <!-- <i class='menu-icon tf-icons bx bx-link'></i> -->
+                <i class="bx bx-power-off me-2"></i>
+                <div data-i18n="Analytics">Logout</div>
+              </a>
+            </li>
 
 
           </ul>
@@ -221,15 +231,15 @@
                         <span class="align-middle">Profile</span>
                       </a>
                     </li> -->
-                    <li>
+                    <!-- <li>
                       <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                       <a class="dropdown-item" href="logout.php">
                         <i class="bx bx-power-off me-2"></i>
                         <span class="align-middle">Log Out</span>
                       </a>
-                    </li>
+                    </li> -->
                   </ul>
                 </li>
                 <!--/ User -->
@@ -283,7 +293,23 @@
                         <div class="card-body">
                           <h5 class="card-title text-primary">Clients</h5>
                           <p class="mb-2">
-                            <h5>0</h5>
+                            <h5>
+                            <?php
+                              $conn = $pdo->open();
+                                try{
+                                  $sql = "SELECT count(*) FROM `clients`   "; 
+                                  $result = $conn->prepare($sql); 
+                                  $result->execute([]); 
+                                  $number_of_rows = $result->fetchColumn(); 
+                                  echo "<h3 style='color: #137204; '>$number_of_rows</h3>"  ;
+                                
+                                }
+                                catch(PDOException $e){
+                                  echo $e->getMessage();
+                                }
+                                $pdo->close();
+                              ?>
+                            </h5>
                           </p>
                         </div>
                       </div>
@@ -360,6 +386,49 @@
                   </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-lg-12 mb-4 order-0">
+                  <div class="card">
+                    <h5 class="card-header text-primary">Recent Clients</h5>
+                    <div class="table-responsive ">
+                      <table id="" class="table">
+                        <thead>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Date Added</th> 
+                         
+                        </thead>
+                        <tbody>
+                        <?php
+                            $conn = $pdo->open();
+
+                            try{
+                              $stmt = $conn->prepare("SELECT * FROM clients WHERE status=:status ORDER BY date_join DESC");
+                              $stmt->execute(['status'=>1]);
+                              foreach($stmt as $row){
+
+                                $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
+                                echo "
+                                  <tr>
+                                    <td>".$row['firstname']."".$row['firstname']."</td>
+                                    <td>".$row['email']."</td>
+                                    <td>".date('F d, Y', strtotime($row["date_join"]))."</td>
+                                    
+                                  </tr>
+                                ";
+                              }
+                            }
+                            catch(PDOException $e){
+                              echo $e->getMessage();
+                            }
+                            $pdo->close();
+                          ?>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <?php include './pages/includes/google_translate.php'; ?>
@@ -416,3 +485,4 @@
     <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>
+                            

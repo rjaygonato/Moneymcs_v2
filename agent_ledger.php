@@ -152,6 +152,16 @@
                 </li>
               </ul>
             </li>
+            <li>
+              <div class="dropdown-divider"></div>
+            </li>
+            <li class="menu-item ">
+              <a href="logout" class="menu-link">
+                <!-- <i class='menu-icon tf-icons bx bx-link'></i> -->
+                <i class="bx bx-power-off me-2"></i>
+                <div data-i18n="Analytics">Logout</div>
+              </a>
+            </li>
 
 
           </ul>
@@ -221,15 +231,15 @@
                         <span class="align-middle">Profile</span>
                       </a>
                     </li> -->
-                    <li>
+                    <!-- <li>
                       <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                       <a class="dropdown-item" href="logout.php">
                         <i class="bx bx-power-off me-2"></i>
                         <span class="align-middle">Log Out</span>
                       </a>
-                    </li>
+                    </li> -->
                   </ul>
                 </li>
                 <!--/ User -->
