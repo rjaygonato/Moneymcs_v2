@@ -330,7 +330,7 @@
                             <div class="card accordion-item active">
                             <h2 class="accordion-header" id="headingOne">
                                 <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
-                                April Courses Available
+                                April Courses
                                 </button>
                             </h2>
 
@@ -355,10 +355,10 @@
                         $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
                         echo "
                           <div class='col-lg-8 mb-4 order-0'>
-                              <div class='card'>
+                              <div class='card CourseCard'>
                                 <img class='d-flex mx-auto my-4' height='300' src='../images/".$row['filenames']."' alt='' />
                                 <div class='card-body'>
-                                  <h3 class='card-title text-primary mb-4'>".$row['course_name']."</h3>
+                                  <h3 class='card-title text-primary mb-4' id='hasCourse'>".$row['course_name']."</h3>
                                   <h5 class='card-subtitle mb-2'>Objective(s):</h5>
                                   <p class='card-text'>
                                     ".$row['description']."
@@ -367,7 +367,7 @@
                               </div>
                           </div>
                           <div class='col-sm-4'>
-                              <div class='card h-80'>
+                              <div class='card h-80 CourseCard'>
                                 <div class='card-body'>
                                   <h3 class='card-title mb-5'><span class='text-primary fw-semibold'>Price:</span> <span class='fw-semibold'><u>$".$row['price']."</u></span></h3>
                                   <p class='text-center mb-5'>
@@ -391,6 +391,15 @@
                     }
                     $pdo->close();
                     ?>
+                    <div class='col-lg-8 mb-4 order-0'>
+                        <div class='card NoCourseCard'>
+                            <div class='card-header'>
+                                <div class='card-title'>
+                                <h3 class='m-0 me-2'>No courses available....</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <!--
                     <div class="col">
                       <div class="card h-80">
@@ -470,5 +479,20 @@
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
+
+    <script type="text/javascript">
+      $( document ).ready(function() {
+
+        if($("#hasCourse").length){
+              console.log( "visible!" );
+              // $('.sub_button').addClass('isDisabled');
+               $('.NoCourseCard').css('display', 'none');
+        } else{
+              //console.log( "hidden!" );
+            // $('.sub_button').removeClass('isDisabled');
+            $('.CourseCard').css('display', 'none');
+        }
+      });
+    </script>
   </body>
 </html>
