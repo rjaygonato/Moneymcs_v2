@@ -88,7 +88,7 @@
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item open active" style="">
+            <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
               <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="">Partner Resources</div>
@@ -104,10 +104,34 @@
                     <div data-i18n="">Resource Page</div>
                   </a>
                 </li>
-                <li class="menu-item active">
+                <!--<li class="menu-item active">
                     <a href="trainingresources" class="menu-link">
                     <div data-i18n="">Training Resources</div>
                     </a>
+                </li>-->
+              </ul>
+            </li>
+
+            <li class="menu-item active open">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-book-open'></i>
+                <div data-i18n="">Training Resources</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="trainingresources active" class="menu-link">
+                    <div data-i18n="">Training Courses</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="traininghistory" class="menu-link">
+                    <div data-i18n="">Training History</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="trainingcertificates" class="menu-link">
+                    <div data-i18n="">Training Certificate(s)</div>
+                  </a>
                 </li>
               </ul>
             </li>
@@ -136,6 +160,30 @@
                 <li class="menu-item">
                     <a href="banners" class="menu-link">
                     <div data-i18n="">Banners</div>
+                    </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-file'></i>
+                <div data-i18n="">Reports </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="ledger" class="menu-link">
+                    <div data-i18n="">Ledger</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="linktrackingstats" class="menu-link">
+                    <div data-i18n="">Link Tracking Stats</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="commissionsgenerated" class="menu-link">
+                    <div data-i18n="">Commissions Generated</div>
                     </a>
                 </li>
               </ul>
@@ -309,7 +357,7 @@
                       <div class="card accordion-item active">
                         <h2 class="accordion-header" id="headingOne">
                           <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
-                            My Programs
+                            Training Courses
                           </button>
                         </h2>
 

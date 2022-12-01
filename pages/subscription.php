@@ -99,10 +99,34 @@
                     <div data-i18n="">Resource Page</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <!--<li class="menu-item active">
                     <a href="trainingresources" class="menu-link">
                     <div data-i18n="">Training Resources</div>
                     </a>
+                </li>-->
+              </ul>
+            </li>
+
+            <li class="menu-item active open">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-book-open'></i>
+                <div data-i18n="">Training Resources</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="trainingresources active" class="menu-link">
+                    <div data-i18n="">Training Courses</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="traininghistory" class="menu-link">
+                    <div data-i18n="">Training History</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="trainingcertificates" class="menu-link">
+                    <div data-i18n="">Training Certificate(s)</div>
+                  </a>
                 </li>
               </ul>
             </li>
@@ -138,7 +162,7 @@
 
             <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
-                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                <i class='menu-icon tf-icons bx bxs-file'></i>
                 <div data-i18n="">Reports </div>
               </a>
               <ul class="menu-sub">
