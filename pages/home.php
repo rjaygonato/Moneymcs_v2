@@ -304,6 +304,12 @@
                         <span class="align-middle">Subscription History</span>
                       </a>
                     </li>
+                    <li>
+                      <a class="dropdown-item" href="payment">
+                      <i class='bx bx-dollar-circle me-2'></i>
+                        <span class="align-middle">Payment</span>
+                      </a>
+                    </li>
                     <!-- <li>
                       <a class="dropdown-item" href="transactions">
                         <i class='bx bx-folder-open'></i>
@@ -340,9 +346,9 @@
                     <div class="d-flex align-items-end row">
                       <div class="col-sm-7">
                         <div class="card-body">
-                          <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
+                          <h5 class="card-title text-primary">Congratulations <?php echo $agent['firstname']; ?>! 🎉</h5>
                           <p class="mb-4">
-                            Welcome to MoneyMCS, You have <span class="fw-bold">7</span> commission(s) today. Check your new downline now.
+                            Welcome to Money MCS, You have <span class="fw-bold">7</span> commission(s) today. Check your new downline now.
                           </p>
 
                           <!-- <a href="javascript:;" class="btn btn-sm btn-outline-success">Downlines</a>

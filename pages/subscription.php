@@ -291,6 +291,12 @@
                         <span class="align-middle">Subscription History</span>
                       </a>
                     </li>
+                    <li>
+                      <a class="dropdown-item" href="payment">
+                      <i class='bx bx-dollar-circle me-2'></i>
+                        <span class="align-middle">Payment</span>
+                      </a>
+                    </li>
                     <!-- <li>
                       <a class="dropdown-item" href="transactions">
                         <i class='bx bx-folder-open'></i>
@@ -331,6 +337,11 @@
                    <li class="nav-item">
                       <a class="nav-link active" href="subscription"
                         >  <i class='bx bx-user-pin'></i> Subscription</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="payment"
+                        >  <i class='bx bx-dollar-circle' ></i> Payment</a
                       >
                     </li>
                     <!-- <li class="nav-item">

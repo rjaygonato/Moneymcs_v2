@@ -28,19 +28,14 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Subscription Plans</title>
+    <title>MoneyMCS - Payment Method</title>
 
     <meta name="description" content="" />
 
     <?php include 'includes/headers.php'; ?>
-    
 
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
-
-    <!-- Paypal Express -->
-    <!-- <script src="https://www.paypalobjects.com/api/checkout.js"></script> -->
-    <!-- <script src="https://www.paypal.com/sdk/js?client-id=ASQAcFkDyzt_DJLIp2B-5fvNvKwB8RmF56Z82REWkieRIppWs7XoDGZuFJabXe1bly8X8ZncyuXDEULP" data-sdk-integration-source="button-factory"></script> -->
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
@@ -73,14 +68,14 @@
           </li>
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item ">
+            <li class="menu-item">
               <a href="home" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
             </li>
-
-            <li class="menu-item active">
+            
+            <li class="menu-item ">
               <a href="subscriptions" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-list-ul'></i>
                 <div data-i18n="Analytics">Subscription Plans</div>
@@ -88,13 +83,6 @@
             </li>
 
             <!-- Layouts -->
-            <!-- <li class="menu-item">
-              <a href="resources" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-book-reader'></i>
-                <div data-i18n="Basic">Resource Library</div>
-              </a>
-            </li> -->
-
             <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
               <i class='menu-icon tf-icons bx bx-book-reader'></i>
@@ -199,9 +187,9 @@
                 <div data-i18n="Basic">Helpdesk</div>
               </a>
             </li>
-            
+
             <!-- <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Reports
+              <span class="menu-header-text">Reports</span>
             </li>
 
             <li class="menu-item">
@@ -224,6 +212,7 @@
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
             </li> -->
+
            
           </ul>
         </aside>
@@ -232,7 +221,7 @@
         <!-- Layout container -->
         <div class="layout-page">
           <!-- Navbar -->
-         
+
           <nav
             class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
             id="layout-navbar"
@@ -277,8 +266,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <!--   <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle"> -->
-                              <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
+                                <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" class="w-px-40 h-auto rounded-circle">
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -301,6 +289,12 @@
                       <a class="dropdown-item" href="subscription">
                       <i class='bx bx-detail me-2'></i>
                         <span class="align-middle">Subscription History</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="payment">
+                      <i class='bx bx-dollar-circle me-2'></i>
+                        <span class="align-middle">Payment</span>
                       </a>
                     </li>
                     <li>
@@ -336,27 +330,110 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
+
             <div class="container-xxl flex-grow-1 container-p-y">
+              <!-- <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Subscriptions</h4> -->
+
               <div class="row">
-              <p> Plus Membership </p>
-                <div class="container-fluid  mt-100">
-                  <div class="row">
-                    <div class="col-md-5">
-                      <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">$299.00 - Monthly </h5>
-                            <p class="card-text">
-                              For affiliate agents with services ( Bookkeeping and Tax Services)
-                            </p>
-                            <!-- <a href="#" class="btn btn-sm btn-success">Pay now</a> -->
-                            <button class="btn btn-sm btn-success nosubscriptions hidden" data-bs-toggle="modal" data-bs-target="#plusSub" data-backdrop="static" data-keyboard="false" > Select </button> 
-                        </div>
+                <div class="col-md-12">
+                  <ul class="nav nav-tabs flex-column flex-md-row mb-3">
+                    <li class="nav-item">
+                      <a class="nav-link " href="profile"><i class="bx bx-user me-1"></i> Profile</a>
+                    </li>
+                   <li class="nav-item">
+                      <a class="nav-link " href="subscription"
+                        >  <i class='bx bx-user-pin'></i> Subscription</a
+                      >
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link active" href="payment"
+                        >  <i class='bx bx-dollar-circle' ></i> Payment</a
+                      >
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-connections.html"
+                        ><i class="bx bx-link-alt me-1"></i> Connections</a
+                      >
+                    </li> -->
+                  </ul>
+                  <!-- <div class="card shadow-none bg-transparent border border-secondary mb-3">
+                    <div class="card-body">
+                     
+                      <p class="card-text">Some quick example text to build on the card title and make up.</p>
+                    </div>
+                  </div> -->
+                  <!-- <h5 class="card-title">You already Subscribe for the month of November 2022</h5> -->
+                  <div class="card mb-4">
+                  <?php
+                    if(isset($_SESSION['error'])){
+                        echo "
+                        <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
+                        ";
+                        unset($_SESSION['error']);
+                    }
+                    if(isset($_SESSION['success'])){
+                        echo "
+                      
+                        <div class='alert alert-success' role='alert'><i class='bx bx-check-circle'></i> ".$_SESSION['success']." </div>
+                        ";
+                        unset($_SESSION['success']);
+                    }
+                  ?>
+                    <!-- <h5 class="card-header">Payment Method</h5> -->
+                    <!-- Account -->
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h5 class="mb-0">Payment Method</h5>
+                      <!-- <small class="text-muted float-end">Default label</small> -->
+                      <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addclient">
+                          Add Payment Method
+                        </button>
+                    </div>
+                    <div class="card-body">
+                      <div class="  ">
+                        
+                      <table id="" class="table table-responsive text-nowrap">
+                        <thead>
+                          <th>Name</th>
+                          <th>Contact</th>
+                          <th>Country</th>
+                          <th>Date</th>
+                        </thead>
+                        <tbody>
+                        <?php
+                          $conn = $pdo->open();
+
+                          try{
+                            $stmt = $conn->prepare("SELECT * FROM payment_method WHERE user_id=:user ORDER BY id DESC" );
+                            $stmt->execute(['user'=>$agent['id']]);
+                            foreach($stmt as $row){
+                              $status = ($row['status']) ? '<span class="badge bg-label-success">active</span>' : '<span class="badge bg-label-danger">not verified</span>';
+                              $active = (!$row['status']) ? '<span class="pull-right"><a href="#activate" class="status" data-toggle="modal" data-id="'.$row['id'].'"><i class="fa fa-check-square-o"></i></a></span>' : '';
+                              echo "
+                                <tr>
+                                  <td>".$row['firstname']."".$row['lastname']."</td>
+                                  <td>".$row['contact']."</td>
+                                  <td>$".$row['	country']."</td>
+                                  <td>".date('M d, Y', strtotime($row['date_added']))."</td>
+                                </tr>
+                              ";
+                            }
+                          }
+                          catch(PDOException $e){
+                            echo $e->getMessage();
+                          }
+
+                          $pdo->close();
+                        ?>
+                        </tbody>
+                      </table>
                       </div>
                     </div>
+                    <!-- /Account -->
                   </div>
+                
                 </div>
               </div>
-          </div>
+            </div>
 
             <?php include 'includes/google_translate.php'; ?>
             <!-- / Content -->
@@ -382,19 +459,17 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
-
-         <?php include 'includes/subs_form.php'; ?>
-
       </div>
 
       <!-- Overlay -->
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-  
-    
-    <?php include 'includes/footer_links.php'; ?>
 
+    <?php include 'includes/subs_form.php'; ?>
+
+    <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
+    <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>
