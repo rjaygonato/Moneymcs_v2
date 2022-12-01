@@ -339,14 +339,13 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              
               <div class="row">
-                <div class="col-lg-8 mb-4 order-0">
-                  <div class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
+                <div class="col-lg-12 mb-4 order-0" >
+                  <div class="card" >
+                    <div class="d-flex  row" style="background-color: #ddebda;border-radius: 8px;">
+                      <div class="col-sm-10">
                         <div class="card-body">
-                          <h5 class="card-title text-primary">Congratulations <?php echo $agent['firstname']; ?>! 🎉</h5>
+                          <h4 class="card-title text-primary">Congratulations <?php echo $agent['firstname']; ?>! 🎉</h4>
                           <p class="mb-4">
                             Welcome to Money MCS, You have <span class="fw-bold">7</span> commission(s) today. Check your new downline now.
                           </p>
@@ -355,14 +354,12 @@
                           <a href="javascript:;" class="btn btn-sm btn-outline-success">Clients</a> -->
                         </div>
                       </div>
-                      <div class="col-sm-5 text-center text-sm-left">
+                      <div class="col-sm-2 text-sm-left">
                         <div class="card-body pb-0 px-0 px-md-4">
                           <img
                             src="../assets/img/earnmoney.png"
-                            width="165"
-                            alt="View Badge User"
-                            data-app-dark-img="illustrations/man-with-laptop-dark.png"
-                            data-app-light-img="illustrations/man-with-laptop-light.png"
+                            width="120"
+                            
                           />
                         </div>
                       </div>
@@ -370,7 +367,7 @@
                   </div>
                 </div>
                
-                <div class="col-lg-4 col-md-4 order-1">
+                <!-- <div class="col-lg-4 col-md-4 order-1">
                   <div class="row">
                   <div class="col-lg-6 col-md-12 col-6 mb-4">
                       <div class="card">
@@ -400,6 +397,35 @@
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div> -->
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-xl-4">
+                  <div class="card   mb-3">
+                    <div class="card-header"><b>News</b></div>
+                      <div class="card-body">
+                        <h5 class="card-title ">New Training Available</h5>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <div class="card   mb-3">
+                    <div class="card-header"><b>Clients</b></div>
+                      <div class="card-body">
+                        <h5 class="card-title ">0</h5>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <div class="card   mb-3">
+                    <div class="card-header"><b>Downlines</b></div>
+                      <div class="card-body">
+                        <h5 class="card-title ">0</h5>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
+                      </div>
                   </div>
                 </div>
               </div>
@@ -432,17 +458,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-6 col-xl-4">
-                  <div class="card   mb-3">
-                    <div class="card-header"><b>News</b></div>
-                      <div class="card-body">
-                        <h5 class="card-title ">New Training Available</h5>
-                        <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
-                      </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
 
             <?php include 'includes/google_translate.php'; ?>
@@ -452,10 +468,10 @@
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
                 <div class="mb-2 mb-md-0">
-                  <!-- ©
+                  ©
                   <script>
                     document.write(new Date().getFullYear());
-                  </script> -->
+                  </script> Money MCS
                   <!-- , made with ❤️ by -->
                   <!-- <a href="#" target="_blank" class="footer-link fw-bolder"></a> -->
                 </div>
