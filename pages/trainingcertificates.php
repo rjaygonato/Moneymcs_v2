@@ -28,19 +28,14 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Comission</title>
+    <title>MoneyMCS - Subscription</title>
 
     <meta name="description" content="" />
 
     <?php include 'includes/headers.php'; ?>
-    
 
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
-
-    <!-- Paypal Express -->
-    <!-- <script src="https://www.paypalobjects.com/api/checkout.js"></script> -->
-    <!-- <script src="https://www.paypal.com/sdk/js?client-id=ASQAcFkDyzt_DJLIp2B-5fvNvKwB8RmF56Z82REWkieRIppWs7XoDGZuFJabXe1bly8X8ZncyuXDEULP" data-sdk-integration-source="button-factory"></script> -->
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
@@ -73,13 +68,13 @@
           </li>
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item ">
+            <li class="menu-item">
               <a href="home" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
             </li>
-
+            
             <li class="menu-item ">
               <a href="subscriptions" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-list-ul'></i>
@@ -128,8 +123,8 @@
                     <div data-i18n="">Training History</div>
                   </a>
                 </li>
-                <li class="menu-item">
-                  <a href="trainingcertificates active" class="menu-link">
+                <li class="menu-item active">
+                  <a href="trainingcertificates" class="menu-link">
                     <div data-i18n="">Training Certificate(s)</div>
                   </a>
                 </li>
@@ -216,10 +211,9 @@
                 <div data-i18n="Basic">Helpdesk</div>
               </a>
             </li>
-            
 
             <!-- <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Reports
+              <span class="menu-header-text">Reports</span>
             </li>
 
             <li class="menu-item">
@@ -242,6 +236,7 @@
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
             </li> -->
+
            
           </ul>
         </aside>
@@ -278,7 +273,10 @@
               <!-- /Search -->
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <?php include 'includes/subs_button.php'; ?>
+              <?//php include 'includes/subs_button.php'; ?>
+               <!-- <li class="nav-item lh-1 me-3">
+                <a class="github-button" href="subscriptions" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="">Subscription Plans</a>
+              </li> -->
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
@@ -350,6 +348,7 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
+
             <div class="container-xxl flex-grow-1 container-p-y">
                 <div class="row">
                     <div class="col-lg-12 mb-4 order-0">
@@ -370,12 +369,36 @@
                   </div>
                 </div>
 
-              <!--  -->
-              <div class="row">
-                <div class="col-lg-12 mb-4 order-0">
-                    
+                <!--  -->
+                <div class="row">
+                    <div class="col-lg-12 mb-4 order-0">
+                        <div class="card">
+                            <div class="d-flex align-items-end">
+                            <div class="col-sm-12">
+                                <div class="card-body">
+                                <!--<h5 class="card-title text-primary">Templates</h5>-->
+                                <div class="table-responsive text-nowrap">
+                                    <table class="table">
+                                    <thead>
+                                        <tr>
+                                        <th>Course Finished</th>
+                                        <th>Certificate</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-border-bottom-0 col-12">
+                                        <tr>
+                                        <td></td>
+                                        <td><button type='button' class='btn btn-outline-success btn-sm edit' data-id=""><i class='bx bxs-download'></i><a href="" target='_blank'>Download</a></button></td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
 
             <?php include 'includes/google_translate.php'; ?>
@@ -402,9 +425,6 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
-
-         <?php include 'includes/subs_form.php'; ?>
-
       </div>
 
       <!-- Overlay -->
@@ -412,7 +432,10 @@
     </div>
     <!-- / Layout wrapper -->
 
+    <?php include 'includes/subs_form.php'; ?>
+
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
+    <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>

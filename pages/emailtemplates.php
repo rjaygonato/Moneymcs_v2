@@ -28,19 +28,14 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Comission</title>
+    <title>MoneyMCS - Payment Method</title>
 
     <meta name="description" content="" />
 
     <?php include 'includes/headers.php'; ?>
-    
 
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
-
-    <!-- Paypal Express -->
-    <!-- <script src="https://www.paypalobjects.com/api/checkout.js"></script> -->
-    <!-- <script src="https://www.paypal.com/sdk/js?client-id=ASQAcFkDyzt_DJLIp2B-5fvNvKwB8RmF56Z82REWkieRIppWs7XoDGZuFJabXe1bly8X8ZncyuXDEULP" data-sdk-integration-source="button-factory"></script> -->
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
@@ -73,13 +68,13 @@
           </li>
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item ">
+            <li class="menu-item">
               <a href="home" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
             </li>
-
+            
             <li class="menu-item ">
               <a href="subscriptions" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-list-ul'></i>
@@ -154,7 +149,7 @@
                 </li>
                 <li class="menu-item active">
                     <a href="emailtemplates" class="menu-link">
-                    <div data-i18n="">Email Templates</div>
+                    <div data-i18n="">Email Generator</div>
                     </a>
                 </li>
                 <li class="menu-item">
@@ -217,9 +212,8 @@
               </a>
             </li>
 
-            
             <!-- <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Reports
+              <span class="menu-header-text">Reports</span>
             </li>
 
             <li class="menu-item">
@@ -242,6 +236,7 @@
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
             </li> -->
+
            
           </ul>
         </aside>
@@ -326,6 +321,7 @@
                         <span class="align-middle">Payment</span>
                       </a>
                     </li>
+                    
                     <!-- <li>
                       <a class="dropdown-item" href="transactions">
                         <i class='bx bx-folder-open'></i>
@@ -355,7 +351,7 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-                <div class="row">
+              <div class="row">
                   <div class="col-lg-12 mb-4 order-0">
                     <div class="card">
                       <div class="card accordion-item active">
@@ -482,9 +478,8 @@ To your success …
                 </div>
                 <!--/ Modal-->
             </div>
-            
+
             <?php include 'includes/google_translate.php'; ?>
-            
             <!-- / Content -->
 
             <!-- Footer -->
@@ -508,9 +503,6 @@ To your success …
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
-
-         <?php include 'includes/subs_form.php'; ?>
-
       </div>
 
       <!-- Overlay -->
@@ -518,8 +510,10 @@ To your success …
     </div>
     <!-- / Layout wrapper -->
 
+    <?php include 'includes/subs_form.php'; ?>
+
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
-     <!--<?php include 'includes/light_datascript.php'; ?>-->
+    <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>
