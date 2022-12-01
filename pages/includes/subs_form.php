@@ -1,6 +1,6 @@
 
 <!---monthly--->
-<div class="modal fade" id="notSubs" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="notSubs" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -54,7 +54,7 @@
 </div>
 
 
-<div class="modal fade" id="smallModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="smallModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -108,7 +108,7 @@
 
 <!---yearly--->
 
-<div class="modal fade" id="yearsubs" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="yearsubs" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -163,7 +163,7 @@
 </div>
 
 <!---plus--->
-<div class="modal fade" id="plusSub" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="plusSub" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -218,7 +218,7 @@
 </div>
 
 <!---pro--->
-<div class="modal fade" id="proSub" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="proSub" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">

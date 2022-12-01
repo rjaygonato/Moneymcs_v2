@@ -1,6 +1,6 @@
 
 <!-- View -->
-<div class="modal fade" id="clientview" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="clientview" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -118,7 +118,7 @@
     </div>
 </div>
 <!-- Edit -->
-<div class="modal fade" id="clientedit" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="clientedit" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">

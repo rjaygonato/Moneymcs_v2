@@ -1,5 +1,5 @@
                         <!-- Modal -->
-                        <div class="modal fade" id="viewClient" tabindex="-1" aria-hidden="true">
+                        <div class="modal fade" id="viewClient" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
                           <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                               <div class="modal-header">

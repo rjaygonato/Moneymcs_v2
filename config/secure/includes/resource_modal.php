@@ -1,5 +1,5 @@
 <!-- Add -->
-<div class="modal fade" id="addresourcemodal">
+<div class="modal fade" id="addresourcemodal" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -75,7 +75,7 @@
 </div>
 
 <!-- Edit -->
-<div class="modal fade" id="editsource">
+<div class="modal fade" id="editsource" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -152,7 +152,7 @@
 
 
 <!-- Delete -->
-<div class="modal fade" id="deleteresource">
+<div class="modal fade" id="deleteresource" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
