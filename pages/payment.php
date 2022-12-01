@@ -297,12 +297,7 @@
                         <span class="align-middle">Payment</span>
                       </a>
                     </li>
-                    <li>
-                      <a class="dropdown-item" href="payment">
-                      <i class='bx bx-dollar-circle me-2'></i>
-                        <span class="align-middle">Payment</span>
-                      </a>
-                    </li>
+                    
                     <!-- <li>
                       <a class="dropdown-item" href="transactions">
                         <i class='bx bx-folder-open'></i>
