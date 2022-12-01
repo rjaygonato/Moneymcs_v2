@@ -379,7 +379,7 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                       <h5 class="mb-0">Payment Method</h5>
                       <!-- <small class="text-muted float-end">Default label</small> -->
-                      <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addclient">
+                      <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addpayment_method">
                           Add Payment Method
                         </button>
                     </div>
@@ -398,16 +398,16 @@
                           $conn = $pdo->open();
 
                           try{
-                            $stmt = $conn->prepare("SELECT * FROM payment_method WHERE user_id=:user ORDER BY id DESC" );
-                            $stmt->execute(['user'=>$agent['id']]);
+                            $stmt = $conn->prepare("SELECT * FROM payment_method WHERE user_id=:id ORDER BY id DESC" );
+                            $stmt->execute(['id'=>$agent['id']]);
                             foreach($stmt as $row){
-                              $status = ($row['status']) ? '<span class="badge bg-label-success">active</span>' : '<span class="badge bg-label-danger">not verified</span>';
-                              $active = (!$row['status']) ? '<span class="pull-right"><a href="#activate" class="status" data-toggle="modal" data-id="'.$row['id'].'"><i class="fa fa-check-square-o"></i></a></span>' : '';
+                              //$status = ($row['status']) ? '<span class="badge bg-label-success">active</span>' : '<span class="badge bg-label-danger">not verified</span>';
+                              //$active = (!$row['status']) ? '<span class="pull-right"><a href="#activate" class="status" data-toggle="modal" data-id="'.$row['id'].'"><i class="fa fa-check-square-o"></i></a></span>' : '';
                               echo "
                                 <tr>
                                   <td>".$row['firstname']."".$row['lastname']."</td>
                                   <td>".$row['contact']."</td>
-                                  <td>$".$row['	country']."</td>
+                                  <td>".$row['country']."</td>
                                   <td>".date('M d, Y', strtotime($row['date_added']))."</td>
                                 </tr>
                               ";
@@ -454,6 +454,7 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
+        <?php include 'includes/add_payment.php'; ?>
       </div>
 
       <!-- Overlay -->

@@ -1,5 +1,5 @@
 <!-- Add -->
-<div class="modal fade" id="addtrainingmodal">
+<div class="modal fade" id="addtrainingmodal" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -93,7 +93,7 @@
 </div>
 
 <!-- Edit -->
-<div class="modal fade" id="editcourse">
+<div class="modal fade" id="editcourse" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -188,7 +188,7 @@
 
 
 <!-- Delete -->
-<div class="modal fade" id="deletecourse">
+<div class="modal fade" id="deletecourse" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">

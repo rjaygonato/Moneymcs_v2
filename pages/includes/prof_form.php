@@ -1,6 +1,6 @@
 
 <!-- Small Modal -->
-<div class="modal fade" id="profileModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="profileModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
       <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
           <div class="modal-header">

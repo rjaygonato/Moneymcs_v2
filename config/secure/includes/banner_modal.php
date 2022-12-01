@@ -1,5 +1,5 @@
 <!-- Add -->
-<div class="modal fade" id="addbannermodal">
+<div class="modal fade" id="addbannermodal" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -75,7 +75,7 @@
 </div>
 
 <!-- Edit -->
-<div class="modal fade" id="editbanner">
+<div class="modal fade" id="editbanner" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -152,7 +152,7 @@
 
 
 <!-- Delete -->
-<div class="modal fade" id="deletebanner">
+<div class="modal fade" id="deletebanner" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
