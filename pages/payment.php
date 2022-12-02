@@ -389,9 +389,8 @@
                       <table id="" class="table table-responsive text-nowrap">
                         <thead>
                           <th>Name</th>
-                          <th>Contact</th>
-                          <th>Country</th>
-                          <th>Date</th>
+                          <th>Type</th>
+                          <th></th>
                         </thead>
                         <tbody>
                         <?php
@@ -405,10 +404,13 @@
                               //$active = (!$row['status']) ? '<span class="pull-right"><a href="#activate" class="status" data-toggle="modal" data-id="'.$row['id'].'"><i class="fa fa-check-square-o"></i></a></span>' : '';
                               echo "
                                 <tr>
-                                  <td>".$row['firstname']."".$row['lastname']."</td>
-                                  <td>".$row['contact']."</td>
-                                  <td>".$row['country']."</td>
-                                  <td>".date('M d, Y', strtotime($row['date_added']))."</td>
+                                  <td>".$row['firstname']." ".$row['lastname']."</td>
+                                  <td>".$row['card_type']."</td>
+                                  <td>
+                                  <button class='btn btn-outline-success btn-sm ' data-id='".$row['id']."'><i class='fa fa-edit'></i> View</button>
+                                  <button class='btn btn-outline-success btn-sm ' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit</button>
+                                  <button class='btn btn-outline-danger btn-sm ' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
+                                  </td>
                                 </tr>
                               ";
                             }
@@ -467,5 +469,18 @@
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
     <?php include 'includes/light_datascript.php'; ?>
+
+    <script src="includes/jquery.creditCardValidator.js"></script>
+    <script>
+    $(function() {
+        $('.card_type').validateCreditCard(function(result) {
+            // $('.log').html('Card type: ' + (result.card_type == null ? '-' : result.card_type.name)
+            //          + '<br>Valid: ' + result.valid
+            //          + '<br>Length valid: ' + result.length_valid
+            //          + '<br>Luhn valid: ' + result.luhn_valid);
+            $('.cardt').val(result.card_type.name);
+        });
+    });
+</script>
   </body>
 </html>
