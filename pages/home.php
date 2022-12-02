@@ -50,16 +50,12 @@
       @keyframes blinking {
         0% {
           background-color: #fff;
-          
         }
         100% {
           background-color: #deeddb96;
-        
         }
       }
-      
       .breath {
-      
         animation: blinking 5s infinite;
       }
     </style>
@@ -387,9 +383,9 @@
                     <div class="d-flex  row" style="background-color: #ddebda;border-radius: 8px;">
                       <div class="col-sm-10">
                         <div class="card-body">
-                          <h4 class="card-title text-primary">Congratulations <?php echo $agent['firstname']; ?>! 🎉</h4>
+                          <h4 class="card-title text-primary"> Welcome to Money MCS, <?php echo $agent['firstname']; ?>! </h4>
                           <p class="mb-4">
-                            Welcome to Money MCS, You have <span class="fw-bold">7</span> commission(s) today. Check your new downline now.
+                            Congratulations! You have <span class="fw-bold">$7.00</span> commission(s) today. <br>Check your new downline now.
                           </p>
 
                           <!-- <a href="javascript:;" class="btn btn-sm btn-outline-success">Downlines</a>
@@ -443,15 +439,7 @@
                 </div> -->
               </div>
               <div class="row">
-                <div class="col-md-6 col-xl-4">
-                  <div class="card mb-3 breath">
-                    <div class="card-header"><b>News</b></div>
-                      <div class="card-body">
-                        <h5 class="card-title ">New Training Available</h5>
-                        <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
-                      </div>
-                  </div>
-                </div>
+                
                 <div class="col-md-6 col-xl-4">
                   <div class="card   mb-3">
                     <div class="card-header"><b>Clients</b></div>
@@ -498,6 +486,15 @@
                               $pdo->close();
                             ?>
                         </h4>
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <div class="card mb-3 breath">
+                    <div class="card-header"><b>News</b></div>
+                      <div class="card-body">
+                        <h5 class="card-title ">New Training Available</h5>
                         <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
                       </div>
                   </div>
