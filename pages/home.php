@@ -45,6 +45,24 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+
+    <style>
+      @keyframes blinking {
+        0% {
+          background-color: #fff;
+          
+        }
+        100% {
+          background-color: #deeddb96;
+        
+        }
+      }
+      
+      .breath {
+      
+        animation: blinking 5s infinite;
+      }
+    </style>
   </head>
 
   <body>
@@ -426,7 +444,7 @@
               </div>
               <div class="row">
                 <div class="col-md-6 col-xl-4">
-                  <div class="card   mb-3">
+                  <div class="card mb-3 breath">
                     <div class="card-header"><b>News</b></div>
                       <div class="card-body">
                         <h5 class="card-title ">New Training Available</h5>
@@ -438,7 +456,23 @@
                   <div class="card   mb-3">
                     <div class="card-header"><b>Clients</b></div>
                       <div class="card-body">
-                        <h5 class="card-title ">0</h5>
+                        <h4 class="card-title " style="color: #137204; ">
+                          <?php
+                            $conn = $pdo->open();
+                              try{
+                                $sql = "SELECT count(*) FROM `clients` WHERE id=:user_id "; 
+                                $result = $conn->prepare($sql); 
+                                $result->execute(['user_id'=>$agent['id']]); 
+                                $number_of_rows = $result->fetchColumn(); 
+                                echo "$number_of_rows"  ;
+                              
+                              }
+                              catch(PDOException $e){
+                                echo $e->getMessage();
+                              }
+                              $pdo->close();
+                            ?>
+                        </h4>
                         <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
                       </div>
                   </div>
@@ -447,7 +481,23 @@
                   <div class="card   mb-3">
                     <div class="card-header"><b>Downlines</b></div>
                       <div class="card-body">
-                        <h5 class="card-title ">0</h5>
+                        <h4 class="card-title " style="color: #137204;">
+                        <?php
+                            $conn = $pdo->open();
+                              try{
+                                $sql = "SELECT count(*) FROM `refer_user` WHERE refid=:user_id "; 
+                                $result = $conn->prepare($sql); 
+                                $result->execute(['user_id'=>$agent['id']]); 
+                                $number_of_rows = $result->fetchColumn(); 
+                                echo "$number_of_rows"  ;
+                              
+                              }
+                              catch(PDOException $e){
+                                echo $e->getMessage();
+                              }
+                              $pdo->close();
+                            ?>
+                        </h4>
                         <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
                       </div>
                   </div>

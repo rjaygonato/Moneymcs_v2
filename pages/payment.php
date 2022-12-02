@@ -403,7 +403,8 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                       <h5 class="mb-0">Payment Method</h5>
                       <!-- <small class="text-muted float-end">Default label</small> -->
-                      <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addpayment_method">
+        
+                      <button type="button" class="btn btn-success btn-sm " id="add_method" data-bs-toggle="modal" data-bs-target="#addpayment_method">
                           Add Payment Method
                         </button>
                     </div>
@@ -431,7 +432,7 @@
                                   <td>".$row['firstname']." ".$row['lastname']."</td>
                                   <td>".$row['card_type']."</td>
                                   <td>
-                                  <button class='btn btn-outline-success btn-sm ' data-id='".$row['id']."'><i class='fa fa-edit'></i> View</button>
+                                  <button class='btn btn-outline-success btn-sm view_method' data-id='".$row['id']."'><i class='fa fa-edit'></i> View</button>
                                   <button class='btn btn-outline-success btn-sm ' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit</button>
                                   <button class='btn btn-outline-danger btn-sm ' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
                                   </td>
@@ -495,16 +496,14 @@
     <?php include 'includes/light_datascript.php'; ?>
 
     <script src="includes/jquery.creditCardValidator.js"></script>
+    
     <script>
-    $(function() {
-        $('.card_type').validateCreditCard(function(result) {
-            // $('.log').html('Card type: ' + (result.card_type == null ? '-' : result.card_type.name)
-            //          + '<br>Valid: ' + result.valid
-            //          + '<br>Length valid: ' + result.length_valid
-            //          + '<br>Luhn valid: ' + result.luhn_valid);
-            $('.cardt').val(result.card_type.name);
-        });
-    });
-</script>
+      $(function() {
+          $('.card_type').validateCreditCard(function(result) {
+              $('.cardt').val(result.card_type.name);
+          });
+      });
+    </script>
+    
   </body>
 </html>
