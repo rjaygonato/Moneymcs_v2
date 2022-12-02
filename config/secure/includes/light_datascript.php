@@ -7,6 +7,7 @@
         const table = new simpleDatatables.DataTable(".table", {
             searchable: true,
             fixedHeight: false,
+            scrollX: true,
         });
     });
 </script>

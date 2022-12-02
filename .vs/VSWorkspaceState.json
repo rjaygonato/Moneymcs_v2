@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\config",
+    "\\config\\secure",
     "\\pages"
   ],
-  "SelectedNode": "\\pages\\contacts.php",
+  "SelectedNode": "\\config\\secure\\trainingresources.php",
   "PreviewInSolutionExplorer": false
 }

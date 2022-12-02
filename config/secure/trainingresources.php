@@ -268,13 +268,16 @@
                     </div>
 
                     <div class="table-responsive">
-                      <table id="" class="table table-borderedless">
+                      <table id="" class="table table-borderedless table-sm" cellspacing="0" width="100%">
                         <thead>
-                          <th class="text-nowrap">Course Name</th>
+                          <th class="text-nowrap">Title</th>
                           <th>Category</th>
+                          <th>Language</th>
+                          <th>Start Date</th>
+                          <th>End Date</th>
+                          <th>Price</th>
                           <th class="text-wrap">Description</th>
                           <th class="text-wrap">Features</th>
-                          <th>Price</th>
                           <th>File</th>
                           <th>Status</th>
                           <th class="text-nowrap">Actions</th>
@@ -295,9 +298,12 @@
                                   <tr>
                                     <td class='text-nowrap'>".$row['course_name']."</td>
                                     <td>".$row['category']."</td>
+                                    <td>".$row['language']."</td>
+                                    <td>".$row['start_date']."</td>
+                                    <td>".$row['end_date']."</td>
+                                    <td>".$row['price']."</td>
                                     <td class='text-wrap'>".$row['description']."</td>
                                     <td class='text-wrap'>".$row['features']."</td>
-                                    <td>".$row['price']."</td>
                                     <td>".$row['filenames']."</td>
                                     <td>".$status."</td>
                                     <td class='text-nowrap'>
@@ -409,9 +415,12 @@
           $('.resid').val(response.id);
           $('#edit_course').val(response.course_name);
           $('#editcats').val(response.category);
+          $('#editlang').val(response.description);
+          $('#editSdate').val(response.description);
+          $('#editEdate').val(response.description);
+          $('#edit_price').val(response.price);
           $('#edit_desc').val(response.description);
           $('#edit_feat').val(response.features);
-          $('#edit_price').val(response.price);
           $('#editfile').val(response.filenames);
           $('#type').val(response.type);
 

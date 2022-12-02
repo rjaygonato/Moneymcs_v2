@@ -7,8 +7,11 @@
 
 		$course_name = $_POST['course_name'];
 		$category = $_POST['category'];
-		$description = $_POST['description'];
+		$language = $_POST['language'];
+		$start_date = $_POST['start_date'];
+		$end_date = $_POST['end_date'];
 		$price = $_POST['price'];
+		$description = $_POST['description'];
 		$features = $_POST['features'];
 		$type = $_POST['type'];
 		//$filenames = $_POST['filenames'];
@@ -19,8 +22,8 @@
 		$stmt->execute(['status'=>1]);
 		
 		try{
-			$stmt = $conn->prepare("UPDATE training_resources SET course_name=:course_name, category=:category, description=:description, price=:price, features=:features, filenames=:filenames, type=:type WHERE id=:id");
-			$stmt->execute(['course_name'=>$course_name, 'category'=>$category , 'description'=>$description, 'price'=>$price, 'features'=>$features, 'filenames'=>$filenames, 'type'=>$type, 'id'=>$id]);
+			$stmt = $conn->prepare("UPDATE training_resources SET course_name=:course_name, category=:category, language=:language, start_date=:start_date, end_date=:end_date, price=:price, description=:description, features=:features, filenames=:filenames, type=:type WHERE id=:id");
+			$stmt->execute(['course_name'=>$course_name, 'category'=>$category , 'language'=>$language, 'start_date'=>$start_date, 'end_date'=>$end_date, 'price'=>$price, 'description'=>$description, 'features'=>$features, 'filenames'=>$filenames, 'type'=>$type, 'id'=>$id]);
 
 			$_SESSION['success'] = 'Training Course updated successfully';
 		}

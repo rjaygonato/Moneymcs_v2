@@ -107,14 +107,14 @@
               </ul>
             </li>
 
-            <li class="menu-item active open">
+            <li class="menu-item">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bxs-book-open'></i>
                 <div data-i18n="">Training Resources</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="trainingresources active" class="menu-link">
+                  <a href="trainingresources" class="menu-link">
                     <div data-i18n="">Training Courses</div>
                   </a>
                 </li>

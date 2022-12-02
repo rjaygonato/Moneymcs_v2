@@ -99,26 +99,34 @@
                     <div data-i18n="">Resource Page</div>
                   </a>
                 </li>
-                <li class="menu-item" style="">
+                <!--<li class="menu-item active">
+                    <a href="trainingresources" class="menu-link">
+                    <div data-i18n="">Training Resources</div>
+                    </a>
+                </li>-->
+              </ul>
+            </li>
+
+            <li class="menu-item">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
-                <i class='menu-icon tf-icons bx bxs-file'></i>
-                <div data-i18n="">Reports </div>
+                <i class='menu-icon tf-icons bx bxs-book-open'></i>
+                <div data-i18n="">Training Resources</div>
               </a>
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="ledger" class="menu-link">
-                    <div data-i18n="">Ledger</div>
+                  <a href="trainingresources" class="menu-link">
+                    <div data-i18n="">Training Courses</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                    <a href="linktrackingstats" class="menu-link">
-                    <div data-i18n="">Link Tracking Stats</div>
-                    </a>
+                  <a href="traininghistory" class="menu-link">
+                    <div data-i18n="">Training History</div>
+                  </a>
                 </li>
                 <li class="menu-item">
-                    <a href="commissionsgenerated" class="menu-link">
-                    <div data-i18n="">Commissions Generated</div>
-                    </a>
+                  <a href="trainingcertificates" class="menu-link">
+                    <div data-i18n="">Training Certificate(s)</div>
+                  </a>
                 </li>
               </ul>
             </li>

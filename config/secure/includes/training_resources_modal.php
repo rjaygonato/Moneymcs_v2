@@ -40,6 +40,43 @@
                   </div>
                 </div>
                 <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label">Language</label>
+                  <div class="col-md-10">
+                    <select class="form-select " name="language" required>
+                      <option value="0">--Select Language--</option>
+                        <?php
+                          $conn = $pdo->open();
+                          $stmt = $conn->prepare("SELECT * FROM language_type");
+                          $stmt->execute();
+                          foreach($stmt as $crow){
+                            echo "
+                              <option value='".$crow['language']."'>".$crow['language']."</option>
+                            ";
+                          }
+                          $pdo->close();
+                        ?>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label">Start Date</label>
+                  <div class="col-md-10">
+                      <input class="form-control" name="start_date" type="date" value="" id="" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label">End Date</label>
+                  <div class="col-md-10">
+                    <input class="form-control" name="end_date" type="date" value="" id="" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label">Price</label>
+                  <div class="col-md-10">
+                    <input class="form-control" type="text" required name="price">
+                  </div>
+                </div>
+                <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">Description</label>
                   <div class="col-md-10">
                     <textarea class="form-control" aria-label="Description" name="description"></textarea>
@@ -52,19 +89,13 @@
                   </div>
                 </div>
                 <div class="mb-3 row">
-                  <label class="col-md-2 col-form-label">Price</label>
-                  <div class="col-md-10">
-                    <input class="form-control" type="text" required name="price">
-                  </div>
-                </div>
-                <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">Type</label>
                   <div class="col-md-10">
                     <select class="form-select " name="type" required>
                       <option value="0">--Select File Type--</option>
                         <?php
                           $conn = $pdo->open();
-                          $stmt = $conn->prepare("SELECT * FROM resources_type WHERE type = '.JPEG or .JPG' OR type = '.PNG'");
+                          $stmt = $conn->prepare("SELECT * FROM resources_type");
                           $stmt->execute();
                           foreach($stmt as $crow){
                             echo "
@@ -134,6 +165,43 @@
                   </div>
                 </div>
                 <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label">Language</label>
+                  <div class="col-md-10">
+                    <select class="form-select " name="language" id="editlang" required>
+                      <option value="0">--Select Language--</option>
+                        <?php
+                          $conn = $pdo->open();
+                          $stmt = $conn->prepare("SELECT * FROM language_type");
+                          $stmt->execute();
+                          foreach($stmt as $crow){
+                            echo "
+                              <option value='".$crow['language']."'>".$crow['language']."</option>
+                            ";
+                          }
+                          $pdo->close();
+                        ?>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label">Start Date</label>
+                  <div class="col-md-10">
+                      <input class="form-control" name="start_date" type="date" value="" id="editSdate" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label">End Date</label>
+                  <div class="col-md-10">
+                    <input class="form-control" name="end_date" type="date" value="" id="editEdate" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label">Price</label>
+                  <div class="col-md-10">
+                    <input class="form-control" type="text" required name="price" id="edit_price">
+                  </div>
+                </div>
+                <div class="mb-3 row">
                   <label class="col-md-2 col-form-label">Description</label>
                   <div class="col-md-10">
                     <textarea class="form-control" aria-label="Description" name="description" id="edit_desc"></textarea>
@@ -143,12 +211,6 @@
                   <label class="col-md-2 col-form-label">Features</label>
                   <div class="col-md-10">
                     <textarea class="form-control" aria-label="Features" name="features" id="edit_feat"></textarea>
-                  </div>
-                </div>
-                <div class="mb-3 row">
-                  <label class="col-md-2 col-form-label">Price</label>
-                  <div class="col-md-10">
-                    <input class="form-control" type="text" required name="price" id="edit_price">
                   </div>
                 </div>
                 <div class="mb-3 row">

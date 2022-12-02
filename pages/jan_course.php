@@ -199,8 +199,31 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row chooselang">
+                    <div class="container-fluid  mt-100">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">ENGLISH</h5>
+                            <button class="btn btn-sm btn-success englishlang" type="button"> Select </button> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">SPANISH</h5>
+                            <button class="btn btn-sm btn-success spanishlang" type="button"> Select </button> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
                 
-                <div class="row">
+                <div class="row courses">
                     <?php
                     $conn = $pdo->open();
 
@@ -339,16 +362,21 @@
 
     <script type="text/javascript">
       $( document ).ready(function() {
-
-        if($("#hasCourse").length){
-              console.log( "visible!" );
-              // $('.sub_button').addClass('isDisabled');
-               $('.NoCourseCard').css('display', 'none');
-        } else{
-              //console.log( "hidden!" );
-            // $('.sub_button').removeClass('isDisabled');
-            $('.CourseCard').css('display', 'none');
-        }
+          $('.courses').css('display', 'none');
+        $('.englishlang').on('click', function(e){
+            e.preventDefault();
+            $('.chooselang').css('display', 'none');
+            $('.courses').css('display', 'block');
+                if($("#hasCourse").length){
+                      console.log( "visible!" );
+                      // $('.sub_button').addClass('isDisabled');
+                       $('.NoCourseCard').css('display', 'none');
+                } else{
+                      //console.log( "hidden!" );
+                    // $('.sub_button').removeClass('isDisabled');
+                    $('.CourseCard').css('display', 'none');
+                }
+        });
       });
     </script>
   </body>
