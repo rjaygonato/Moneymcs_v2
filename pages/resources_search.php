@@ -124,7 +124,7 @@
 
             <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
-                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                <i class='menu-icon tf-icons bx bxs-file'></i>
                 <div data-i18n="">Reports </div>
               </a>
               <ul class="menu-sub">

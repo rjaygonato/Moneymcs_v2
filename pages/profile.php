@@ -99,9 +99,25 @@
                     <div data-i18n="">Resource Page</div>
                   </a>
                 </li>
+                <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-file'></i>
+                <div data-i18n="">Reports </div>
+              </a>
+              <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="trainingresources" class="menu-link">
-                    <div data-i18n="">Training Resources</div>
+                  <a href="ledger" class="menu-link">
+                    <div data-i18n="">Ledger</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="linktrackingstats" class="menu-link">
+                    <div data-i18n="">Link Tracking Stats</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="commissionsgenerated" class="menu-link">
+                    <div data-i18n="">Commissions Generated</div>
                     </a>
                 </li>
               </ul>
@@ -138,7 +154,7 @@
 
             <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
-                <i class='menu-icon tf-icons bx bxs-user-detail'></i>
+                <i class='menu-icon tf-icons bx bxs-file'></i>
                 <div data-i18n="">Reports </div>
               </a>
               <ul class="menu-sub">

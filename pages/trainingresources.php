@@ -28,19 +28,14 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Comission</title>
+    <title>MoneyMCS - Subscription</title>
 
     <meta name="description" content="" />
 
     <?php include 'includes/headers.php'; ?>
-    
 
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
-
-    <!-- Paypal Express -->
-    <!-- <script src="https://www.paypalobjects.com/api/checkout.js"></script> -->
-    <!-- <script src="https://www.paypal.com/sdk/js?client-id=ASQAcFkDyzt_DJLIp2B-5fvNvKwB8RmF56Z82REWkieRIppWs7XoDGZuFJabXe1bly8X8ZncyuXDEULP" data-sdk-integration-source="button-factory"></script> -->
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
@@ -73,13 +68,13 @@
           </li>
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item ">
+            <li class="menu-item">
               <a href="home" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
             </li>
-
+            
             <li class="menu-item ">
               <a href="subscriptions" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-list-ul'></i>
@@ -88,7 +83,7 @@
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item open active" style="">
+            <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
               <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="">Partner Resources</div>
@@ -104,10 +99,34 @@
                     <div data-i18n="">Resource Page</div>
                   </a>
                 </li>
-                <li class="menu-item active">
+                <!--<li class="menu-item active">
                     <a href="trainingresources" class="menu-link">
                     <div data-i18n="">Training Resources</div>
                     </a>
+                </li>-->
+              </ul>
+            </li>
+
+            <li class="menu-item active open">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-book-open'></i>
+                <div data-i18n="">Training Resources</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item active">
+                  <a href="trainingresources" class="menu-link">
+                    <div data-i18n="">Training Courses</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="traininghistory" class="menu-link">
+                    <div data-i18n="">Training History</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="trainingcertificates" class="menu-link">
+                    <div data-i18n="">Training Certificate(s)</div>
+                  </a>
                 </li>
               </ul>
             </li>
@@ -141,6 +160,30 @@
               </ul>
             </li>
 
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class='menu-icon tf-icons bx bxs-file'></i>
+                <div data-i18n="">Reports </div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="ledger" class="menu-link">
+                    <div data-i18n="">Ledger</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                    <a href="linktrackingstats" class="menu-link">
+                    <div data-i18n="">Link Tracking Stats</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="commissionsgenerated" class="menu-link">
+                    <div data-i18n="">Commissions Generated</div>
+                    </a>
+                </li>
+              </ul>
+            </li>
+
             <li class="menu-item">
               <a href="clients" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-rectangle'></i>
@@ -168,10 +211,9 @@
                 <div data-i18n="Basic">Helpdesk</div>
               </a>
             </li>
-            
 
             <!-- <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Reports
+              <span class="menu-header-text">Reports</span>
             </li>
 
             <li class="menu-item">
@@ -194,6 +236,7 @@
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
             </li> -->
+
            
           </ul>
         </aside>
@@ -230,7 +273,10 @@
               <!-- /Search -->
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <?php include 'includes/subs_button.php'; ?>
+              <?//php include 'includes/subs_button.php'; ?>
+               <!-- <li class="nav-item lh-1 me-3">
+                <a class="github-button" href="subscriptions" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="">Subscription Plans</a>
+              </li> -->
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
@@ -302,6 +348,7 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
+
             <div class="container-xxl flex-grow-1 container-p-y">
                 <div class="row">
                     <div class="col-lg-12 mb-4 order-0">
@@ -309,7 +356,7 @@
                       <div class="card accordion-item active">
                         <h2 class="accordion-header" id="headingOne">
                           <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
-                            My Programs
+                            Training Courses
                           </button>
                         </h2>
 
@@ -525,15 +572,14 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
-
-         <?php include 'includes/subs_form.php'; ?>
-
       </div>
 
       <!-- Overlay -->
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
+
+    <?php include 'includes/subs_form.php'; ?>
 
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
