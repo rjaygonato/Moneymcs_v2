@@ -369,6 +369,11 @@
                         >  <i class='bx bx-dollar-circle' ></i> Payment</a
                       >
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="earnings"
+                        >  <i class='bx bx-money'></i> Earnings</a
+                      >
+                    </li>
                     <!-- <li class="nav-item">
                       <a class="nav-link" href="pages-account-settings-connections.html"
                         ><i class="bx bx-link-alt me-1"></i> Connections</a

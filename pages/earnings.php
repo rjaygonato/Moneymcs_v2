@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Subscription</title>
+    <title>MoneyMCS - Profile</title>
 
     <meta name="description" content="" />
 
@@ -74,7 +74,7 @@
                 <div data-i18n="Analytics">Home</div>
               </a>
             </li>
-            
+
             <li class="menu-item ">
               <a href="subscriptions" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-list-ul'></i>
@@ -85,7 +85,7 @@
             <!-- Layouts -->
             <li class="menu-item" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
-              <i class='menu-icon tf-icons bx bx-book-reader'></i>
+                <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="">Partner Resources</div>
               </a>
               <ul class="menu-sub">
@@ -236,7 +236,6 @@
                 <div data-i18n="Basic">Commissions Generated</div>
               </a>
             </li> -->
-
            
           </ul>
         </aside>
@@ -350,44 +349,7 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <!-- <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Subscriptions</h4> -->
-
-              <div class="row">
-                <div class="col-md-12">
-                  <ul class="nav nav-tabs flex-column flex-md-row mb-3">
-                    <li class="nav-item">
-                      <a class="nav-link " href="profile"><i class="bx bx-user me-1"></i> Profile</a>
-                    </li>
-                   <li class="nav-item">
-                      <a class="nav-link active" href="subscription"
-                        >  <i class='bx bx-user-pin'></i> Subscription</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link " href="payment"
-                        >  <i class='bx bx-dollar-circle' ></i> Payment</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link " href="earnings"
-                        >  <i class='bx bx-money'></i> Earnings</a
-                      >
-                    </li>
-                    <!-- <li class="nav-item">
-                      <a class="nav-link" href="pages-account-settings-connections.html"
-                        ><i class="bx bx-link-alt me-1"></i> Connections</a
-                      >
-                    </li> -->
-                  </ul>
-                  <!-- <div class="card shadow-none bg-transparent border border-secondary mb-3">
-                    <div class="card-body">
-                     
-                      <p class="card-text">Some quick example text to build on the card title and make up.</p>
-                    </div>
-                  </div> -->
-                  <!-- <h5 class="card-title">You already Subscribe for the month of November 2022</h5> -->
-                  <div class="card mb-4">
-                  <?php
+            <?php
                     if(isset($_SESSION['error'])){
                         echo "
                         <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
@@ -402,51 +364,67 @@
                         unset($_SESSION['success']);
                     }
                   ?>
-                    <h5 class="card-header">Subscription History</h5>
+              <!-- <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Profile Settings /</span> Profile</h4> -->
+
+              <div class="row">
+                <div class="col-md-12">
+                <ul class="nav nav-tabs flex-column flex-md-row mb-3">
+                    <li class="nav-item">
+                      <a class="nav-link " href="#"><i class="bx bx-user me-1"></i> Profile</a>
+                    </li>
+                   <li class="nav-item">
+                      <a class="nav-link " href="subscription"
+                        >  <i class='bx bx-user-pin'></i> Subscription</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="payment"
+                        >  <i class='bx bx-dollar-circle' ></i> Payment</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="earnings"
+                        >  <i class='bx bx-money'></i> Earnings</a
+                      >
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" href="pages-account-settings-connections.html"
+                        ><i class="bx bx-link-alt me-1"></i> Connections</a
+                      >
+                    </li> -->
+                  </ul>
+                  <div class="card mb-4">
+                    <h5 class="card-header">Account Earnings</h5>
                     <!-- Account -->
                     <div class="card-body">
-                      <div class="  ">
-                        
-                      <table id="" class="table table-responsive text-nowrap">
-                        <thead>
-                          <th>Transaction #</th>
-                          <th>Type</th>
-                          <th>Amount</th>
-                          <th>Date</th>
-                        </thead>
-                        <tbody>
-                        <?php
-                          $conn = $pdo->open();
-
-                          try{
-                            $stmt = $conn->prepare("SELECT * FROM subscriptions WHERE user_id=:user ORDER BY id DESC" );
-                            $stmt->execute(['user'=>$agent['id']]);
-                            foreach($stmt as $row){
-                              $status = ($row['status']) ? '<span class="badge bg-label-success">active</span>' : '<span class="badge bg-label-danger">not verified</span>';
-                              $active = (!$row['status']) ? '<span class="pull-right"><a href="#activate" class="status" data-toggle="modal" data-id="'.$row['id'].'"><i class="fa fa-check-square-o"></i></a></span>' : '';
-                              echo "
-                                <tr>
-                                  <td>".$row['trans_id']."</td>
-                                  <td>".$row['subs_name']."</td>
-                                  <td>$".$row['totalp']."</td>
-                                  <td>".date('M d, Y', strtotime($row['date_added']))."</td>
-                                </tr>
-                              ";
-                            }
-                          }
-                          catch(PDOException $e){
-                            echo $e->getMessage();
-                          }
-
-                          $pdo->close();
-                        ?>
-                        </tbody>
-                      </table>
+                      <div class="d-flex align-items-start align-items-sm-center gap-4">
+                      <img src="<?php echo (!empty($agent['photo'])) ? '../images/'.$agent['photo'] : '../images/default.png'; ?>" alt="user-avatar" class="d-block rounded" height="100" width="100">
+                        <div class="button-wrapper">
+                          <h4><b><?php echo $agent['lastname']; ?>, <?php echo $agent['firstname']; ?></b></h4>
+                          <h4>Earnings : $0.00</h4>
+                        </div>
                       </div>
                     </div>
+                    <hr class="my-0" />
+                    
                     <!-- /Account -->
+                   
                   </div>
-                
+                  <div class="card ">
+                    <h5 class="card-header">Earning Summary</h5>
+                    <div class="card-body">
+                      <div class="mb-3 col-12 mb-0">
+                      <table class="tg">
+                        <thead>
+                          <tr>
+                            <td class="tg-0lax">No data as this moment</td>
+                          </tr>
+                        </thead>
+                      </table>
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -483,9 +461,9 @@
     <!-- / Layout wrapper -->
 
     <?php include 'includes/subs_form.php'; ?>
-
+    <?php include 'includes/prof_form.php'; ?>
+    
     <?php include 'includes/footer_links.php'; ?>
     <?php include 'includes/payment_script.php'; ?>
-    <?php include 'includes/light_datascript.php'; ?>
   </body>
 </html>

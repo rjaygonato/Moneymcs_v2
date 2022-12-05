@@ -436,7 +436,7 @@
 
                                               <button class='btn btn-outline-success btn-sm editclient' data-id='".$row['id']."'><i class=''></i> Edit Client</button>
 
-                                              <button class='btn btn-outline-info btn-sm editclient' data-id='".$row['id']."'><i class=''></i> Login as Client</button>
+                                              <button class='btn btn-outline-info btn-sm ' data-id='".$row['id']."'><i class=''></i> Login as Client</button>
 
                                               <button class='btn btn-outline-success btn-sm ' data-id='".$row['id']."'><i class=''></i> Note</button>
 
