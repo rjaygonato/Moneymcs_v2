@@ -384,12 +384,15 @@
                         </thead>
                         <tbody class="table-border-bottom-0 col-12">
                           <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>mGa7XKgXX</td>
+                            <td>No Ad	</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2022-11-06</td>
                           </tr>
                         </tbody>
                       </table>

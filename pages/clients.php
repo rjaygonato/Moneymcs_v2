@@ -373,6 +373,21 @@
     
                 <div class="row">
                   <div class="col-lg-12 mb-4 order-0">
+                  <?php
+                    if(isset($_SESSION['error'])){
+                        echo "
+                        <div class='alert alert-danger' role='alert'><i class='bx bx-error-circle'></i> ".$_SESSION['error']." </div>
+                        ";
+                        unset($_SESSION['error']);
+                    }
+                    if(isset($_SESSION['success'])){
+                        echo "
+                      
+                        <div class='alert alert-success' role='alert'><i class='bx bx-check-circle'></i> ".$_SESSION['success']." </div>
+                        ";
+                        unset($_SESSION['success']);
+                    }
+                  ?>
                     <div class="card">
                       <!-- <div class="card-header d-flex justify-content-between ">
                         <h5 class="mb-0">All Resources</h5>
@@ -385,7 +400,7 @@
                           <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="mb-0">Clients</h5>
                             <!-- <small class="text-muted float-end">Default label</small> -->
-                            <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addclient">
+                            <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#clientadd">
                                 Add New
                               </button>
                           </div>
@@ -418,8 +433,13 @@
                                               <td>".$row['type']."</td>
                                               <td>
                                               <button class='btn btn-outline-dark btn-sm viewclient' data-id='".$row['id']."'><i class=''></i> View</button>
+
                                               <button class='btn btn-outline-success btn-sm editclient' data-id='".$row['id']."'><i class=''></i> Edit Client</button>
+
                                               <button class='btn btn-outline-info btn-sm editclient' data-id='".$row['id']."'><i class=''></i> Login as Client</button>
+
+                                              <button class='btn btn-outline-success btn-sm ' data-id='".$row['id']."'><i class=''></i> Note</button>
+
                                               <!-- <button class='btn btn-outline-danger btn-sm delete ' data-id='".$row['id']."'><i class=''></i> Delete</button> -->
                                               </td>
                                             </tr>
@@ -468,7 +488,7 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
-         <?php include 'includes/add_client.php'; ?>
+         <?php include 'includes/client_modal.php'; ?>
       
       </div>
 
@@ -482,6 +502,7 @@
 
     <script>
     $(function(){
+
 
       $(document).on('click', '.viewclient', function(e){
         e.preventDefault();
@@ -523,7 +544,8 @@
           $('#clientp').val(response.phonenum);
           $('#clients').val(response.state);
           $('#clientt').val(response.type);
-
+          $('#date_added').val(response.date_join);
+          
 
           $('#editclientf').val(response.firstname);
           $('#editclientl').val(response.lastname);

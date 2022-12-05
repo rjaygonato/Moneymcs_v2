@@ -383,7 +383,7 @@
                           <tbody class="table-border-bottom-0 col-12">
                             <tr>
                               <td>Net Commissions Earned (In Date Range):
-                              <td>$0.00</td>
+                              <td>$33.00</td>
                             </tr>
                           </tbody>
                         </table>

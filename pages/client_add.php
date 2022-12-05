@@ -1,56 +1,45 @@
+
 <?php
 	include 'includes/session.php';
-	$conn = $pdo->open();
-	
-	
-	if(isset($_POST['add'])) {
-		$company_name = ($_POST['company_name']);
-		$firstname = ($_POST['firstname']);
-		$lastname = ($_POST['lastname']);
-		$email = ($_POST['email']);
-		$phonenum = ($_POST['phonenum']);
-		$paid_user = ($_POST['paid_user']);
-		$date_added = date('Y-m-d');
-		$state = ($_POST['state']);
-		$type = ($_POST['type']);
 
-		if(empty($firstname)||empty($lastname)||empty($email)||empty($phonenum)||empty($state)||empty($type)){
-			$_SESSION['error'] = 'Please dont leave the form blank';
-			header('location: clients');
-			return;
+	if(isset($_POST['client_save'])){
+        $user_id = $_POST['user_id'];
+        $firstname = $_POST['firstname'];
+		$lastname = $_POST['lastname'];
+		$email = $_POST['email'];
+		$phonenum = $_POST['phonenum'];
+		$state = $_POST['state'];
+		$type = $_POST['type'];
+
+		$conn = $pdo->open();
+
+		$stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM clients WHERE firstname=:firstname");
+		$stmt->execute(['firstname'=>$firstname]);
+		$row = $stmt->fetch();
+
+		if($row['numrows'] > 0){
+			$_SESSION['error'] = 'Please check if client is already exist';
 		}
-		else{
-			$stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM clients WHERE email=:email OR phonenum=:phonenum");
-			$stmt->execute(['email'=>$email,'phonenum'=>$phonenum]);
-		
-			$row = $stmt->fetch();
-		
-			if($row['numrows'] > 0){
-				$_SESSION['error'] = 'Email or Phone Number is already used. Please use another keyword, Thank you.';
-				header('location: clients');
-				return;
+		else{	
+			try{
+                date_default_timezone_set("Asia/Manila");
+				$now = date('Y-m-d h:i:s');
+
+				$stmt = $conn->prepare("INSERT INTO clients (user_id, firstname, lastname, email, phonenum, state, type, status, date_join) VALUES (:user_id, :firstname, :lastname, :email, :phonenum, :state, :type, :status, :date_join)");
+				$stmt->execute(['user_id'=>$user_id,'firstname'=>$firstname, 'lastname'=>$lastname, 'email'=>$email, 'phonenum'=>$phonenum, 'state'=>$state,'type'=>$type, 'status'=>1, 'date_join'=>$now]);
+				$_SESSION['success'] = 'Client added successfully';
 			}
-		else{
-		
-		try{
-			
-			$stmt = $conn->prepare("INSERT INTO clients(user_id, company_name, firstname, lastname, email, phonenum, paid_user, date_added, state, type) VALUES (:user_id, :company_name, :firstname, :lastname, :email, :phonenum, :paid_user, :date_added, :state, :type)");
-			$stmt->execute(['user_id'=>$agent['id'], 'company_name'=>$company_name, 'firstname'=>$firstname,'lastname'=>$lastname, 'email'=>$email, 'phonenum'=>$phonenum, 'paid_user'=>$paid_user, 'date_added'=>$date_added,'state'=>$state, 'type'=>$type]);
-			//$salesid = $conn->lastInsertId();
-			
-			
-			$_SESSION['success'] = 'Client Added Successfully';
-
+			catch(PDOException $e){
+				$_SESSION['error'] = $e->getMessage();
+			}
 		}
-		catch(PDOException $e){
-			$_SESSION['error'] = $e->getMessage();
-		}
-	}
-	}
-		
-	}	
-	$pdo->close();
 
-	
+		$pdo->close();
+	}
+	else{
+		$_SESSION['error'] = 'Fill up clients form first';
+	}
+
 	header('location: clients');
+
 ?>

@@ -385,7 +385,7 @@
                         <div class="card-body">
                           <h4 class="card-title text-primary"> Welcome to Money MCS, <?php echo $agent['firstname']; ?>! </h4>
                           <p class="mb-4">
-                            Congratulations! You have <span class="fw-bold">$7.00</span> commission(s) today. <br>Check your new downline now.
+                            Congratulations! You have <span class="fw-bold">$0.00</span> commission(s) today. <br>Check your new downline now.
                           </p>
 
                           <!-- <a href="javascript:;" class="btn btn-sm btn-outline-success">Downlines</a>
@@ -503,16 +503,18 @@
               <div class="row">
                 <div class="col-md-6 col-xl-4">
                   <div class="card   mb-3">
-                    <div class="card-header"><b>Link usage last 30 days</b></div>
+                    <div class="card-header"><b>Link usage last 30 Days</b></div>
                     <div class="card-body">
-                      <h5 class="card-title ">0</h5>
+                      <h4 class="card-title " style="color: #137204;">
+                      0
+                      </h4>
                       <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-xl-4">
                   <div class="card   mb-3">
-                    <div class="card-header"><b>Commission last 30 days</b></div>
+                    <div class="card-header"><b>Commission last 30 Days</b></div>
                     <div class="card-body">
                       <h5 class="card-title ">$0.00</h5>
                       <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
@@ -521,9 +523,27 @@
                 </div>
                 <div class="col-md-6 col-xl-4">
                   <div class="card   mb-3">
-                    <div class="card-header"><b>Register last 30 days</b></div>
+                    <div class="card-header"><b>Register last 30 Days</b></div>
                     <div class="card-body">
-                      <h5 class="card-title ">0</h5>
+                      <h4 class="card-title" style="color: #137204;">
+                      <?php
+                      //date_default_timezone_set("Asia/Manila");
+                      $now = date('Y-m-d h:i:s');
+                        $conn = $pdo->open();
+                          try{
+                            $sql = "SELECT count(*) FROM `refer_user` WHERE date_added BETWEEN now() -INTERVAL 30 DAY AND now() AND  refid=:user_id "; 
+                            $result = $conn->prepare($sql); 
+                            $result->execute(['user_id'=>$agent['id']]); 
+                            $number_of_rows = $result->fetchColumn(); 
+                            echo "$number_of_rows"  ;
+                          
+                          }
+                          catch(PDOException $e){
+                            echo $e->getMessage();
+                          }
+                          $pdo->close();
+                        ?>
+                      </h4>
                       <!-- <p class="card-text">Some quick example text to build on the card title and make up.</p> -->
                     </div>
                   </div>
