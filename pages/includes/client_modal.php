@@ -15,34 +15,34 @@
               <form class="form-horizontal" method="POST" action="client_add" enctype="multipart/form-data">
                 <input type="hidden" class="" name="user_id" value="">
                 <div class="mb-3 row">
-                  <label class="col-md-2 col-form-label">Firstname</label>
-                  <div class="col-md-10">
-                    <input class="form-control" type="text" name="firstname" id="" >
+                  <label class="col-md-3 col-form-label">Firstname *</label>
+                  <div class="col-md-9">
+                    <input class="form-control" type="text" name="firstname" id="" required>
                   </div>
                 </div>
                 <div class="mb-3 row">
-                  <label class="col-md-2 col-form-label">Lastname</label>
-                  <div class="col-md-10">
-                    <input class="form-control" type="text" name="lastname" id="" >
+                  <label class="col-md-3 col-form-label">Lastname *</label>
+                  <div class="col-md-9">
+                    <input class="form-control" type="text" name="lastname" id="" required>
                   </div>
                 </div>
                 <div class="mb-3 row">
-                  <label class="col-md-2 col-form-label">Email</label>
-                  <div class="col-md-10">
-                    <input class="form-control" type="text" name="email" id="" >
+                  <label class="col-md-3 col-form-label">Email *</label>
+                  <div class="col-md-9">
+                    <input class="form-control" type="email" name="email" id="" required>
                   </div>
                 </div>
                 <div class="mb-3 row">
-                  <label class="col-md-2 col-form-label">Contact</label>
-                  <div class="col-md-10">
-                    <input class="form-control" type="text" name="phonenum" id="" >
+                  <label class="col-md-3 col-form-label">Contact *</label>
+                  <div class="col-md-9">
+                    <input class="form-control" type="text" name="phonenum" id="" required>
                   </div>
                 </div>
                 <div class="mb-3 row">
-                  <label class="col-md-2 col-form-label">State</label>
-                  <div class="col-md-10">
+                  <label class="col-md-3 col-form-label">State *</label>
+                  <div class="col-md-9">
                     <!-- <input class="form-control" type="text" name="state" id="editclients"> -->
-                    <select class="form-control" name="state" id="" >
+                    <select class="form-control" name="state" id="" required>
                         <option selected disabled>-Select-</option>
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
@@ -98,10 +98,10 @@
                   </div>
                 </div>
                 <div class="mb-3 row">
-                  <label class="col-md-2 col-form-label">Type</label>
-                  <div class="col-md-10">
+                  <label class="col-md-3 col-form-label">Type *</label>
+                  <div class="col-md-9">
                     <!-- <input class="form-control" type="text" name="type" id="editclientt"> -->
-                    <select class="form-control" name="type" id="" >
+                    <select class="form-control" name="type" id="" required>
                         <option selected disabled>-Select-</option>
                         <option value="Business Credit Builder">Business Credit Builder</option>
                         <option value="Direct Funding">Direct Funding</option>   
@@ -358,3 +358,72 @@
         </div>
     </div>
 </div>
+
+
+<!-- Add Note -->
+<div class="modal fade" id="clientnote" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="">Notes</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" method="POST" action="client_add" enctype="multipart/form-data" style="display: none;">
+          <input type="hidden" class="" name="user_id" value="">
+            <div class="mb-3 row">
+              <label class="col-md-3 col-form-label">New Note *</label>
+                <div class="col-md-9">
+                  <textarea class="form-control" id="" name="" placeholder="" rows="4" autofocus=""></textarea>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-outline-success btn-md" name="note_save"><i class="fa fa-check-square-o"></i> Save</button>
+              </form>
+            </div> 
+        </form>
+       
+        <div class="table-responsive">
+          <!-- <table id="" class="table ">
+            <thead>
+              <th>Company </th>
+              <th> Note </th> 
+              <th> Date Added </th>
+            </thead>
+            <tbody>
+             
+            </tbody>
+          </table> -->
+          <?php
+                $conn = $pdo->open();
+                try{
+                  $stmt = $conn->prepare("SELECT * FROM notes WHERE status=:status AND user_id=:user ");
+                  // TODO
+                  // user = user id
+                  $stmt->execute(['status'=>1, 'user'=>$agent['id']]);
+                  foreach($stmt as $row){
+                    $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
+                    echo "
+                      <h5 class='card-title'>".$row['user_name']."</h5>
+                      <div class='card-subtitle text-muted mb-1'>".$row['date_added']."</div>
+                      <p class='card-text'>".$row['note']."</p>
+                    ";
+                  }
+                }
+                catch(PDOException $e){
+                  echo $e->getMessage();
+                }
+                $pdo->close();
+              ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<?php include 'includes/light_datascript.php'; ?>

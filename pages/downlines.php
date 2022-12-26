@@ -210,11 +210,23 @@
               </a>
             </li>
 
-            <li class="menu-item">
-              <a href="contacts" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-phone-outgoing'></i>
-                <div data-i18n="Basic">Helpdesk</div>
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+              <i class='menu-icon tf-icons bx bx-book-reader'></i>
+                <div data-i18n="">Helpdesk</div>
               </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="contacts" class="menu-link">
+                    <div data-i18n="">Submit a Ticket</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ticket_history" class="menu-link">
+                    <div data-i18n="">Ticket History</div>
+                  </a>
+                </li>
+              </ul>
             </li>
 
           <!-- <li class="menu-header small text-uppercase">
@@ -387,7 +399,7 @@
                                   <th>Name</th>
                                   <th>Email</th>
                                   <th>Date Signed up</th> 
-                                  <th>Referral Link</th> 
+                                  <!-- <th>Referral Link</th>  -->
                                 </thead>
                                 <tbody>
                                 <?php
@@ -404,7 +416,7 @@
                                             <td>".$row['firstname']."".$row['firstname']."</td>
                                             <td>".$row['email']."</td>
                                             <td>".date('F d, Y', strtotime($row["date_added"]))."</td>
-                                            <td id='referralLink'>".$row['reflink']."</td>
+                                            <!-- <td id='referralLink'>".$row['reflink']."</td> -->
                                           </tr>
                                         ";
                                       }

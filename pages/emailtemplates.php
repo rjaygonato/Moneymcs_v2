@@ -205,11 +205,23 @@
               </a>
             </li>
 
-            <li class="menu-item">
-              <a href="contacts" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-phone-outgoing'></i>
-                <div data-i18n="Basic">Helpdesk</div>
+            <li class="menu-item" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+              <i class='menu-icon tf-icons bx bx-book-reader'></i>
+                <div data-i18n="">Helpdesk</div>
               </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="contacts" class="menu-link">
+                    <div data-i18n="">Submit a Ticket</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ticket_history" class="menu-link">
+                    <div data-i18n="">Ticket History</div>
+                  </a>
+                </li>
+              </ul>
             </li>
 
             <!-- <li class="menu-header small text-uppercase">
@@ -393,14 +405,14 @@
                                 <form class="" method="" action="#">
                                     <tr>
                                         <td>
-                                        <select class="form-=select" name="">
+                                        <select class="form-control" name="" >
                                             <option value="0">--Select Category--</option>
                                             <option value="Engaging Template">Engaging Template</option>
                                         </select>
                                         </td>
                                         <td><?php echo $agent['firstname'].' '.$agent['lastname']; ?></td>
                                         <td>
-                                        <select class="form-=select" name="">
+                                        <select class="form-control" name="">
                                             <option value="0">--Select Client--</option>
                                             <?php
                                               $conn = $pdo->open();
@@ -416,7 +428,7 @@
                                         </select>
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalScrollable">Generate Email</button>
+                                            <button type="button" class="btn btn-success btn-md" data-bs-toggle="modal" data-bs-target="#modalScrollable">Generate Email</button>
                                         </td>
                                     </tr>
                                 </form>

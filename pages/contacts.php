@@ -210,11 +210,23 @@
               </a>
             </li>
 
-            <li class="menu-item active">
-              <a href="contacts" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-phone-outgoing'></i>
-                <div data-i18n="Basic">Helpdesk</div>
+            <li class="menu-item active open" style="">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+              <i class='menu-icon tf-icons bx bx-book-reader'></i>
+                <div data-i18n="">Helpdesk</div>
               </a>
+              <ul class="menu-sub">
+                <li class="menu-item active">
+                  <a href="contacts" class="menu-link">
+                    <div data-i18n="">Submit a Ticket</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="ticket_history" class="menu-link">
+                    <div data-i18n="">Ticket History</div>
+                  </a>
+                </li>
+              </ul>
             </li>
 
           <!-- <li class="menu-header small text-uppercase">
@@ -378,7 +390,7 @@
                     <div class="d-flex align-items-start row align-center">
                       <div class="col-sm-6 p-5">
                         <div class="card-body">
-                          <h5 class="card-title text-primary">Get in Touch</h5>
+                          <h5 class="card-title text-primary">Contacts</h5>
                           <p class="mb-4">
                             Fill in the form to start a conversation
                           </p>
@@ -403,6 +415,7 @@
                         
                       </div>
                       <div class="col-sm-6 p-5 text-center text-sm-left ">
+                      <h5 class="card-title text-primary">Submit a ticket</h5>
                         <div class="card-body pb-0 px-0 px-md-4">
                         <form id="formAuthentication" class="mb-3" action="submit_contact" method="POST">
                           <div class="mb-3">

@@ -187,7 +187,7 @@
               </ul>
             </li>
 
-            <li class="menu-item active">
+            <li class="menu-item ">
               <a href="clients" class="menu-link">
                 <i class='menu-icon tf-icons bx bxs-user-rectangle'></i>
                 <div data-i18n="Basic">Clients</div>
@@ -208,7 +208,7 @@
               </a>
             </li>
 
-            <li class="menu-item" style="">
+            <li class="menu-item active open" style="">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
               <i class='menu-icon tf-icons bx bx-book-reader'></i>
                 <div data-i18n="">Helpdesk</div>
@@ -219,7 +219,7 @@
                     <div data-i18n="">Submit a Ticket</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="ticket_history" class="menu-link">
                     <div data-i18n="">Ticket History</div>
                   </a>
@@ -423,7 +423,7 @@
                                     <!-- <th>Company </th> -->
                                     <th> Name </th> 
                                     <th> Email </th>
-                                    <!-- <th> Contact </th> -->
+                                    <th> Contact </th>
                                     <th> Type </th>
                                     <th> Actions</th>
                                   </thead>
@@ -432,10 +432,8 @@
                                       $conn = $pdo->open();
 
                                       try{
-                                        $stmt = $conn->prepare("SELECT * FROM clients WHERE status=:status AND user_id=:user ");
-                                        // TODO
-                                        // user = user id
-                                        $stmt->execute(['status'=>1, 'user'=>$agent['id']]);
+                                        $stmt = $conn->prepare("SELECT * FROM tickets WHERE status=:status");
+                                        $stmt->execute(['status'=>1]);
                                         foreach($stmt as $row){
 
                                           $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
@@ -443,7 +441,7 @@
                                             <tr>
                                               <td>".$row['firstname'].",".$row['firstname']."</td>
                                               <td>".$row['email']."</td>
-                                              <!-- <td>".$row['phonenum']."</td> -->
+                                              <td>".$row['phonenum']."</td>
                                               <td>".$row['type']."</td>
                                               <td>
                                               <button class='btn btn-outline-dark btn-sm viewclient' data-id='".$row['id']."'><i class=''></i> View</button>
@@ -452,7 +450,7 @@
 
                                               <button class='btn btn-outline-info btn-sm ' data-id='".$row['id']."'><i class=''></i> Login as Client</button>
 
-                                              <button class='btn btn-outline-success btn-sm addnote' data-id='".$row['id']."'><i class=''></i> Notes</button>
+                                              <button class='btn btn-outline-success btn-sm ' data-id='".$row['id']."'><i class=''></i> Note</button>
 
                                               <!-- <button class='btn btn-outline-danger btn-sm delete ' data-id='".$row['id']."'><i class=''></i> Delete</button> -->
                                               </td>
@@ -533,14 +531,6 @@
 
         //console.log(id);
       });
-
-      $(document).on('click', '.addnote', function(e){
-        e.preventDefault();
-        $('#clientnote').modal('show');
-        var id = $(this).data('id');
-        getRow(id);
-      });
-
 
       // $(document).on('click', '.deleteresource', function(e){
       //   e.preventDefault();
