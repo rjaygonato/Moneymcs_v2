@@ -385,20 +385,20 @@
               <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
                     <div class="">
-                        <div class="d-flex align-items-end row">
+                      <div class="d-flex align-items-end row">
                         <div class="col-sm-4">
-                            <div class="card-body">
-                            <h5 class="card-title text-primary">Monthly Courses Available</h5>
-                            <div class="card shadow-none border-success mb-3">
-                                <div class="card-body text-center">
-                                <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/documents-icon.png" width="80">
-                                </span>
-                                    <h6 class="card-title">Free Courses</h6>
-                                    <hr>
-                                    <center><a href="free_courses" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
-                                </div>
-                            </div>
-                        </div>
+                          <div class="card-body">
+                          <h5 class="card-title text-primary">Monthly Courses Available</h5>
+                          <div class="card shadow-none border-success mb-3">
+                              <div class="card-body text-center">
+                              <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/documents-icon.png" width="80">
+                              </span>
+                                  <h6 class="card-title">Free Courses</h6>
+                                  <hr>
+                                  <center><a href="free_courses" class="btn btn-sm btn-success "> <i class='bx bx-search-alt'></i> View Course</a></center>
+                              </div>
+                          </div>
+                      </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="card-body">
@@ -426,7 +426,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-sm-4">
                         <div class="card-body">
                             <div class="card shadow-none border-success mb-3">
                                 <div class="card-body text-center">
@@ -465,7 +465,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-sm-4">
                         <div class="card-body">
                             <div class="card shadow-none border-success mb-3">
                                 <div class="card-body text-center">
@@ -504,7 +504,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-sm-4">
                         <div class="card-body">
                             <div class="card shadow-none border-success mb-3">
                                 <div class="card-body text-center">
@@ -543,7 +543,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-sm-4">
                         <div class="card-body">
                             <div class="card shadow-none border-success mb-3">
                                 <div class="card-body text-center">
