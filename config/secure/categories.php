@@ -268,7 +268,7 @@
                     </div>
 
                     <div class="table-responsive text-nowrap">
-                      <table id="" class="table table-bordered">
+                      <table id="" class="table table-borderedless ">
                         <thead>
                           <th>Category</th>
                           <th>Status</th>

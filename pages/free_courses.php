@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Comission</title>
+    <title>MoneyMCS - Free Course</title>
 
     <meta name="description" content="" />
 
@@ -250,7 +250,7 @@
                         <div class='card NoCourseCard'>
                             <div class='card-header'>
                                 <div class='card-title'>
-                                <h3 class='m-0 me-2'>No courses available....</h3>
+                                <h3 class='m-0 me-2'>No courses available..</h3>
                                 </div>
                             </div>
                         </div>

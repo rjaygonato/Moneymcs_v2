@@ -268,7 +268,7 @@
                     </div>
 
                     <div class="table-responsive">
-                      <table id="" class="table table-borderedless table-sm" cellspacing="0" width="100%">
+                      <table id="" class="table table-borderedless ">
                         <thead>
                           <th class="text-nowrap">Title</th>
                           <th>Category</th>
@@ -276,8 +276,8 @@
                           <th>Start Date</th>
                           <th>End Date</th>
                           <th>Price</th>
-                          <th class="text-wrap">Description</th>
-                          <th class="text-wrap">Features</th>
+                          <!-- <th class="text-wrap">Description</th> -->
+                          <!-- <th class="text-wrap">Features</th> -->
                           <th>File</th>
                           <th>Status</th>
                           <th class="text-nowrap">Actions</th>
@@ -302,13 +302,13 @@
                                     <td>".$row['start_date']."</td>
                                     <td>".$row['end_date']."</td>
                                     <td>".$row['price']."</td>
-                                    <td class='text-wrap'>".$row['description']."</td>
-                                    <td class='text-wrap'>".$row['features']."</td>
+                                    <!-- <td class='text-wrap'>".$row['description']."</td> -->
+                                    <!-- <td class='text-wrap'>".$row['features']."</td> -->
                                     <td>".$row['filenames']."</td>
                                     <td>".$status."</td>
                                     <td class='text-nowrap'>
                                       <button class='btn btn-outline-success btn-sm editcourse' data-id='".$row['id']."'><i class='fa fa-edit'></i> Edit Course</button>
-                                        <hr>
+                                       
                                       <button class='btn btn-outline-danger btn-sm deletecourse' data-id='".$row['id']."'><i class='fa fa-trash'></i> Delete</button>
                                     </td>
                                   </tr>

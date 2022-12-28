@@ -28,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>MoneyMCS - Comission</title>
+    <title>MoneyMCS - Jan Course</title>
 
     <meta name="description" content="" />
 
@@ -200,7 +200,7 @@
                     </div>
                 </div>
 
-                <div class="row chooselang">
+                <!-- <div class="row chooselang">
                     <div class="container-fluid  mt-100">
                   <div class="row">
                     <div class="col-md-4">
@@ -221,7 +221,7 @@
                     </div>
                   </div>
                 </div>
-                </div>
+                </div> -->
                 
                 <div class="row courses">
                     <?php
@@ -275,7 +275,7 @@
                         <div class='card NoCourseCard'>
                             <div class='card-header'>
                                 <div class='card-title'>
-                                <h3 class='m-0 me-2'>No courses available....</h3>
+                                <h3 class='m-0 me-2'>No courses available..</h3>
                                 </div>
                             </div>
                         </div>
@@ -362,10 +362,10 @@
 
     <script type="text/javascript">
       $( document ).ready(function() {
-          $('.courses').css('display', 'none');
+         // $('.courses').css('display', 'none');
         $('.englishlang').on('click', function(e){
             e.preventDefault();
-            $('.chooselang').css('display', 'none');
+            //$('.chooselang').css('display', 'none');
             $('.courses').css('display', 'block');
                 if($("#hasCourse").length){
                       console.log( "visible!" );
