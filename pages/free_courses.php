@@ -210,7 +210,7 @@
                         //$status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
                         echo "
                           <div class='col-lg-8 mb-4 order-0'>
-                              <div class='card CourseCard'>
+                              <div class='card CourseCard'> 
                                 <img class='d-flex mx-auto my-4' height='300' src='../images/".$row['filenames']."' alt='' />
                                 <div class='card-body'>
                                   <h3 class='card-title text-primary mb-4' id='hasCourse'>".$row['course_name']."</h3>
@@ -246,11 +246,11 @@
                     }
                     $pdo->close();
                     ?>
-                    <div class='col-lg-8 mb-4 order-0'>
+                    <div class='col-lg-12 mb-4 order-0'>
                         <div class='card NoCourseCard'>
                             <div class='card-header'>
                                 <div class='card-title'>
-                                <h3 class='m-0 me-2'>No courses available..</h3>
+                                <h6 class='m-0 me-2'>No courses available..</h6>
                                 </div>
                             </div>
                         </div>

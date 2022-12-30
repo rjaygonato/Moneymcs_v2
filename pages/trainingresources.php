@@ -362,7 +362,7 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-12 mb-4 order-0">
                     <div class="card">
                       <div class="card accordion-item active">
@@ -372,14 +372,14 @@
                           </button>
                         </h2>
 
-                        <!--<div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
+                        <div id="accordionOne" class="accordion-collapsed collapse " data-bs-parent="#accordionExample">
                           <div class="accordion-body">
                           </div>
-                        </div>-->
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
               <!--  -->
               <div class="row">

@@ -301,7 +301,7 @@
                         <div class="card-body">
                         
                           <div class="table-responsive text-nowrap">
-                            <table id="" class="table table-bordered">
+                            <table id="" class="table table-borderedless">
                               <thead>
                                 <th>Names & IP Address</th>
                                 <th>Referral Code</th>

@@ -206,7 +206,7 @@
 
                     try{
                         $stmt = $conn->prepare("SELECT * FROM training_resources WHERE status=:status AND category=:category");
-                        $stmt->execute(['status'=>1, 'category'=> 'April Courses']);
+                        $stmt->execute(['status'=>1, 'category'=> 'April']);
                         foreach($stmt as $row){
 
                         $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
@@ -248,11 +248,11 @@
                     }
                     $pdo->close();
                     ?>
-                    <div class='col-lg-8 mb-4 order-0'>
+                    <div class='col-lg-12 mb-4 order-0'>
                         <div class='card NoCourseCard'>
                             <div class='card-header'>
                                 <div class='card-title'>
-                                <h3 class='m-0 me-2'>No courses available....</h3>
+                                <h6 class='m-0 me-2'>No courses available..</h6>
                                 </div>
                             </div>
                         </div>

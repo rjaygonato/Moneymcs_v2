@@ -262,7 +262,7 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                       <h5 class="mb-0">Training Resources</h5>
                       <!-- <small class="text-muted float-end">Default label</small> -->
-                      <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addtrainingmodal">
+                      <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#trainingadd">
                           Add New
                         </button>
                     </div>
@@ -271,10 +271,10 @@
                       <table id="" class="table table-borderedless ">
                         <thead>
                           <th class="text-nowrap">Title</th>
-                          <th>Category</th>
-                          <th>Language</th>
-                          <th>Start Date</th>
-                          <th>End Date</th>
+                          <th>Month</th>
+                          <!-- <th>Language</th> -->
+                          <!-- <th>Start Date</th> -->
+                          <!-- <th>End Date</th> -->
                           <th>Price</th>
                           <!-- <th class="text-wrap">Description</th> -->
                           <!-- <th class="text-wrap">Features</th> -->
@@ -287,9 +287,9 @@
                             $conn = $pdo->open();
 
                             try{
-                              $stmt = $conn->prepare("SELECT * FROM training_resources WHERE status=:status");
+                              $stmt = $conn->prepare("SELECT * FROM training_resources");
 
-                              $stmt->execute(['status'=>1]);
+                              $stmt->execute();
 
                               foreach($stmt as $row){
 
@@ -298,9 +298,9 @@
                                   <tr>
                                     <td class='text-nowrap'>".$row['course_name']."</td>
                                     <td>".$row['category']."</td>
-                                    <td>".$row['language']."</td>
-                                    <td>".$row['start_date']."</td>
-                                    <td>".$row['end_date']."</td>
+                                    <!-- <td>".$row['language']."</td> -->
+                                    <!-- <td>".$row['start_date']."</td> -->
+                                    <!-- <td>".$row['end_date']."</td> -->
                                     <td>".$row['price']."</td>
                                     <!-- <td class='text-wrap'>".$row['description']."</td> -->
                                     <!-- <td class='text-wrap'>".$row['features']."</td> -->
@@ -352,7 +352,7 @@
           <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
-        <?php include 'includes/training_resources_modal.php'; ?>
+        <?php include 'includes/training_modal.php'; ?>
       </div>
 
       <!-- Overlay -->
@@ -386,6 +386,8 @@
 
   <script>
     $(function(){
+
+      
       $(document).on('click', '.editcourse', function(e){
         e.preventDefault();
         $('#editcourse').modal('show');
