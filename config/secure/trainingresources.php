@@ -390,7 +390,7 @@
       
       $(document).on('click', '.editcourse', function(e){
         e.preventDefault();
-        $('#editcourse').modal('show');
+        $('#trainingedit').modal('show');
         var id = $(this).data('id');
         getRow(id);
 
