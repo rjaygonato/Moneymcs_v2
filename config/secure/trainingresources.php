@@ -417,9 +417,7 @@
           $('.resid').val(response.id);
           $('#edit_course').val(response.course_name);
           $('#editcats').val(response.category);
-          $('#editlang').val(response.description);
-          $('#editSdate').val(response.description);
-          $('#editEdate').val(response.description);
+          $('#edit_feat').val(response.description);
           $('#edit_price').val(response.price);
           $('#edit_desc').val(response.description);
           $('#edit_feat').val(response.features);
