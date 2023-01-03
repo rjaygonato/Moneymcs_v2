@@ -234,9 +234,9 @@
 
                         $status = ($row['status']) ? '<span class="badge rounded-pill bg-label-success">Active</span>' : '<span class="badge bg-label-secondary">Inactive</span>';
                         echo "
-                          <div class='col-lg-8 mb-4 order-0'>
+                          <div class='col-lg-7 mb-4 order-0'>
                               <div class='card CourseCard'>
-                                <img class='d-flex mx-auto my-4' height='300' src='../images/".$row['filenames']."' alt='' />
+                                <img class='d-flex mx-auto ' width='200' height='200' src='../assets/img/docs-icon.png' alt='' />
                                 <div class='card-body'>
                                   <h3 class='card-title text-primary mb-4' id='hasCourse'>".$row['course_name']."</h3>
                                   <h5 class='card-subtitle mb-2'>Objective(s):</h5>
@@ -363,20 +363,22 @@
     <script type="text/javascript">
       $( document ).ready(function() {
          // $('.courses').css('display', 'none');
-        $('.englishlang').on('click', function(e){
-            e.preventDefault();
-            //$('.chooselang').css('display', 'none');
-            $('.courses').css('display', 'block');
-                if($("#hasCourse").length){
-                      console.log( "visible!" );
-                      // $('.sub_button').addClass('isDisabled');
-                       $('.NoCourseCard').css('display', 'none');
-                } else{
-                      //console.log( "hidden!" );
-                    // $('.sub_button').removeClass('isDisabled');
-                    $('.CourseCard').css('display', 'none');
-                }
-        });
+         
+        // $('.englishlang').on('click', function(e){
+        //     e.preventDefault();
+        //     ('.chooselang').css('display', 'none');
+            
+        // });
+        //$('.courses').css('display', 'block');
+          if($("#hasCourse").length){
+                console.log( "visible!" );
+                // $('.sub_button').addClass('isDisabled');
+                  $('.NoCourseCard').css('display', 'none');
+          } else{
+                //console.log( "hidden!" );
+              // $('.sub_button').removeClass('isDisabled');
+              $('.CourseCard').css('display', 'none');
+          }
       });
     </script>
   </body>

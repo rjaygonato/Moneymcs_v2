@@ -200,22 +200,9 @@
                     </div>
                   </div> -->
               </div>
-                <div class="row">
+                <!-- <div class="row">
                   <div class="col-lg-12 mb-4 order-0">
                     <div class="card">
-                      <!-- <div class="d-flex align-items-end row">
-                        <div class="col-sm-12">
-                          <div class="card-body">
-                            <h5 class="card-title">Resource Library</h5>
-                            <p class="card-text">The Partner Resource Library is a wealth of resources at your fingertips to help you with many aspects of growing your business!</p>
-
-                            <p class="card-text">Within each of the Categories you will find many Flyers, Emails, PowerPoints, Videos, Guides, and much more that will help you to market and sell this amazing program to your clients.</p>
-                            <p class="card-text">All you have to do to view what is in a Category is to select it and then the content from that Category will reflect here.</p>
-
-                            <p class="card-text">If you have any questions on any Category, please contact us at 800-497-0499. We are here to help!</p>
-                          </div>
-                        </div>
-                      </div> -->
                       <div class="card accordion-item active">
                         <h2 class="accordion-header" id="headingOne">
                           <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
@@ -235,7 +222,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
                 <div class="row">
                   <div class="col-lg-12 mb-4 order-0">
@@ -243,7 +230,7 @@
                       <div class="d-flex align-items-end row">
                         <div class="col-sm-4">
                           <div class="card-body">
-                            <h5 class="card-title text-primary">Categories</h5>
+                            <h5 class="card-title text-primary">Libraries</h5>
                             <div class="card shadow-none border-success mb-3">
                               <div class="card-body text-center">
                                 <img aria-hidden="true" class="object-contain w-full h-full" src="../assets/img/folder.png" width="80">

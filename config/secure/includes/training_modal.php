@@ -3,7 +3,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="">New Training</h5>
+            <h5 class="modal-title" id="">New Course</h5>
             <button
               type="button"
               class="btn-close"
@@ -85,7 +85,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="">Edit Training</h5>
+            <h5 class="modal-title" id="">Editing a Course</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
             <div class="modal-body">
@@ -104,7 +104,7 @@
                     <select class="form-control" name="category" id="editcats" >
                       <option selected disabled>--Select Month--</option>
                       <option value="Free Courses">Free Courses</option>
-                      <option value="Janaury">Janaury</option>
+                      <option value="January">January</option>
                       <option value="February">February</option>
                       <option value="March">March</option>
                       <option value="April">April</option>
@@ -123,7 +123,7 @@
                   <label class="col-md-3 col-form-label">Description *</label>
                   <div class="col-md-9">
                     <!-- <input class="form-control" type="text" name="description" id="" required> -->
-                    <textarea class="form-control" id="editcats" name="description" placeholder=""
+                    <textarea class="form-control" id="editdesc" name="description" placeholder=""
                       rows="4" ></textarea>
                   </div>
                 </div>
@@ -147,6 +147,17 @@
                     <input type="file" class="form-control" id="" name="filenames">
                   </div>
                 </div> -->
+                <div class="mb-3 row">
+                  <label class="col-md-3 col-form-label">Status</label>
+                  <div class="col-md-9">
+                    <!-- <input class="form-control" type="text" name="price" id="edit_price" > -->
+                    <select class="form-control" name="status" id="editstats" >
+                      <option selected disabled>--Select Status--</option>
+                      <option value="1">Active</option>
+                      <option value="0">Inactive</option>
+                    </select> 
+                  </div>
+                </div>
             </div>
             <div class="modal-footer">
               <button type="submit" class="btn btn-outline-success btn-md" name="training_edit"><i class="fa fa-check-square-o"></i> Save changes</button>
@@ -162,7 +173,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="">Deleting Course</h5>
+            <h5 class="modal-title" id="">Deleting a Course</h5>
             <button
               type="button"
               class="btn-close"

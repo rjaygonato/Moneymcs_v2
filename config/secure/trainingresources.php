@@ -417,12 +417,13 @@
           $('.resid').val(response.id);
           $('#edit_course').val(response.course_name);
           $('#editcats').val(response.category);
-          $('#edit_feat').val(response.description);
+          $('#editdesc').val(response.description);
           $('#edit_price').val(response.price);
           $('#edit_desc').val(response.description);
           $('#edit_feat').val(response.features);
           $('#editfile').val(response.filenames);
           $('#type').val(response.type);
+          $('#editstats').val(response.status);
 
           //$('.edit_course').html(response);
           //console.log(response);
